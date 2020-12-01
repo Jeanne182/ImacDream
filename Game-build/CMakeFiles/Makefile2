@@ -60,57 +60,57 @@ CMAKE_SOURCE_DIR = /home/fanny/ImacDream/Game
 CMAKE_BINARY_DIR = /home/fanny/ImacDream/Game-build
 
 #=============================================================================
-# Directory level rules for directory lib/glimac
+# Directory level rules for directory glimac
 
 # Convenience name for "all" pass in the directory.
-lib/glimac/all: lib/glimac/CMakeFiles/glimac.dir/all
+glimac/all: glimac/CMakeFiles/glimac.dir/all
 
-.PHONY : lib/glimac/all
+.PHONY : glimac/all
 
 # Convenience name for "clean" pass in the directory.
-lib/glimac/clean: lib/glimac/CMakeFiles/glimac.dir/clean
+glimac/clean: glimac/CMakeFiles/glimac.dir/clean
 
-.PHONY : lib/glimac/clean
+.PHONY : glimac/clean
 
 # Convenience name for "preinstall" pass in the directory.
-lib/glimac/preinstall:
+glimac/preinstall:
 
-.PHONY : lib/glimac/preinstall
+.PHONY : glimac/preinstall
 
 #=============================================================================
-# Target rules for target lib/glimac/CMakeFiles/glimac.dir
+# Target rules for target glimac/CMakeFiles/glimac.dir
 
 # All Build rule for target.
-lib/glimac/CMakeFiles/glimac.dir/all:
-	$(MAKE) -f lib/glimac/CMakeFiles/glimac.dir/build.make lib/glimac/CMakeFiles/glimac.dir/depend
-	$(MAKE) -f lib/glimac/CMakeFiles/glimac.dir/build.make lib/glimac/CMakeFiles/glimac.dir/build
+glimac/CMakeFiles/glimac.dir/all:
+	$(MAKE) -f glimac/CMakeFiles/glimac.dir/build.make glimac/CMakeFiles/glimac.dir/depend
+	$(MAKE) -f glimac/CMakeFiles/glimac.dir/build.make glimac/CMakeFiles/glimac.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/fanny/ImacDream/Game-build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9 "Built target glimac"
-.PHONY : lib/glimac/CMakeFiles/glimac.dir/all
+.PHONY : glimac/CMakeFiles/glimac.dir/all
 
 # Include target in all.
-all: lib/glimac/CMakeFiles/glimac.dir/all
+all: glimac/CMakeFiles/glimac.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-lib/glimac/CMakeFiles/glimac.dir/rule: cmake_check_build_system
+glimac/CMakeFiles/glimac.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/fanny/ImacDream/Game-build/CMakeFiles 9
-	$(MAKE) -f CMakeFiles/Makefile2 lib/glimac/CMakeFiles/glimac.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 glimac/CMakeFiles/glimac.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/fanny/ImacDream/Game-build/CMakeFiles 0
-.PHONY : lib/glimac/CMakeFiles/glimac.dir/rule
+.PHONY : glimac/CMakeFiles/glimac.dir/rule
 
 # Convenience name for target.
-glimac: lib/glimac/CMakeFiles/glimac.dir/rule
+glimac: glimac/CMakeFiles/glimac.dir/rule
 
 .PHONY : glimac
 
 # clean rule for target.
-lib/glimac/CMakeFiles/glimac.dir/clean:
-	$(MAKE) -f lib/glimac/CMakeFiles/glimac.dir/build.make lib/glimac/CMakeFiles/glimac.dir/clean
-.PHONY : lib/glimac/CMakeFiles/glimac.dir/clean
+glimac/CMakeFiles/glimac.dir/clean:
+	$(MAKE) -f glimac/CMakeFiles/glimac.dir/build.make glimac/CMakeFiles/glimac.dir/clean
+.PHONY : glimac/CMakeFiles/glimac.dir/clean
 
 # clean rule for target.
-clean: lib/glimac/CMakeFiles/glimac.dir/clean
+clean: glimac/CMakeFiles/glimac.dir/clean
 
 .PHONY : clean
 

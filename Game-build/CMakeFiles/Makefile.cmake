@@ -12,7 +12,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.10.2/CMakeSystem.cmake"
   "/home/fanny/ImacDream/Game/CMake/FindGLEW.cmake"
   "/home/fanny/ImacDream/Game/CMakeLists.txt"
-  "/home/fanny/ImacDream/Game/lib/glimac/CMakeLists.txt"
+  "/home/fanny/ImacDream/Game/glimac/CMakeLists.txt"
   "/usr/share/cmake-3.10/Modules/CMakeCInformation.cmake"
   "/usr/share/cmake-3.10/Modules/CMakeCXXInformation.cmake"
   "/usr/share/cmake-3.10/Modules/CMakeCommonLanguageInclude.cmake"
@@ -48,10 +48,10 @@ set(CMAKE_MAKEFILE_OUTPUTS
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
-  "lib/glimac/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "glimac/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "lib/glimac/CMakeFiles/glimac.dir/DependInfo.cmake"
+  "glimac/CMakeFiles/glimac.dir/DependInfo.cmake"
   )

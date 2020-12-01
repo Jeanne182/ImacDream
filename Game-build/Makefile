@@ -120,7 +120,7 @@ glimac: cmake_check_build_system
 
 # fast build rule for target.
 glimac/fast:
-	$(MAKE) -f lib/glimac/CMakeFiles/glimac.dir/build.make lib/glimac/CMakeFiles/glimac.dir/build
+	$(MAKE) -f glimac/CMakeFiles/glimac.dir/build.make glimac/CMakeFiles/glimac.dir/build
 .PHONY : glimac/fast
 
 # Help Target
