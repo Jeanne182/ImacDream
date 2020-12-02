@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/src_main.dir/main.cpp.o  -o src_main ../glimac/libglimac.a -Wl,-Bstatic -lSDLmain -Wl,-Bdynamic -lSDL -lpthread /usr/lib/x86_64-linux-gnu/libGL.so.1 -lGLEW -lassimp 

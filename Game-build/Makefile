@@ -123,6 +123,110 @@ glimac/fast:
 	$(MAKE) -f glimac/CMakeFiles/glimac.dir/build.make glimac/CMakeFiles/glimac.dir/build
 .PHONY : glimac/fast
 
+#=============================================================================
+# Target rules for targets named TP1_exo5_circle
+
+# Build rule for target.
+TP1_exo5_circle: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 TP1_exo5_circle
+.PHONY : TP1_exo5_circle
+
+# fast build rule for target.
+TP1_exo5_circle/fast:
+	$(MAKE) -f src/TP1/CMakeFiles/TP1_exo5_circle.dir/build.make src/TP1/CMakeFiles/TP1_exo5_circle.dir/build
+.PHONY : TP1_exo5_circle/fast
+
+#=============================================================================
+# Target rules for targets named TP1_exo6_buffers_index
+
+# Build rule for target.
+TP1_exo6_buffers_index: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 TP1_exo6_buffers_index
+.PHONY : TP1_exo6_buffers_index
+
+# fast build rule for target.
+TP1_exo6_buffers_index/fast:
+	$(MAKE) -f src/TP1/CMakeFiles/TP1_exo6_buffers_index.dir/build.make src/TP1/CMakeFiles/TP1_exo6_buffers_index.dir/build
+.PHONY : TP1_exo6_buffers_index/fast
+
+#=============================================================================
+# Target rules for targets named TP1_exo4_quad
+
+# Build rule for target.
+TP1_exo4_quad: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 TP1_exo4_quad
+.PHONY : TP1_exo4_quad
+
+# fast build rule for target.
+TP1_exo4_quad/fast:
+	$(MAKE) -f src/TP1/CMakeFiles/TP1_exo4_quad.dir/build.make src/TP1/CMakeFiles/TP1_exo4_quad.dir/build
+.PHONY : TP1_exo4_quad/fast
+
+#=============================================================================
+# Target rules for targets named TP1_SDLtemplate
+
+# Build rule for target.
+TP1_SDLtemplate: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 TP1_SDLtemplate
+.PHONY : TP1_SDLtemplate
+
+# fast build rule for target.
+TP1_SDLtemplate/fast:
+	$(MAKE) -f src/TP1/CMakeFiles/TP1_SDLtemplate.dir/build.make src/TP1/CMakeFiles/TP1_SDLtemplate.dir/build
+.PHONY : TP1_SDLtemplate/fast
+
+#=============================================================================
+# Target rules for targets named TP1_exo1_triangle_blanc
+
+# Build rule for target.
+TP1_exo1_triangle_blanc: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 TP1_exo1_triangle_blanc
+.PHONY : TP1_exo1_triangle_blanc
+
+# fast build rule for target.
+TP1_exo1_triangle_blanc/fast:
+	$(MAKE) -f src/TP1/CMakeFiles/TP1_exo1_triangle_blanc.dir/build.make src/TP1/CMakeFiles/TP1_exo1_triangle_blanc.dir/build
+.PHONY : TP1_exo1_triangle_blanc/fast
+
+#=============================================================================
+# Target rules for targets named TP1_exo2_triangle_couleurs
+
+# Build rule for target.
+TP1_exo2_triangle_couleurs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 TP1_exo2_triangle_couleurs
+.PHONY : TP1_exo2_triangle_couleurs
+
+# fast build rule for target.
+TP1_exo2_triangle_couleurs/fast:
+	$(MAKE) -f src/TP1/CMakeFiles/TP1_exo2_triangle_couleurs.dir/build.make src/TP1/CMakeFiles/TP1_exo2_triangle_couleurs.dir/build
+.PHONY : TP1_exo2_triangle_couleurs/fast
+
+#=============================================================================
+# Target rules for targets named TP1_exercise5
+
+# Build rule for target.
+TP1_exercise5: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 TP1_exercise5
+.PHONY : TP1_exercise5
+
+# fast build rule for target.
+TP1_exercise5/fast:
+	$(MAKE) -f src/TP1/CMakeFiles/TP1_exercise5.dir/build.make src/TP1/CMakeFiles/TP1_exercise5.dir/build
+.PHONY : TP1_exercise5/fast
+
+#=============================================================================
+# Target rules for targets named TP1_exo3_structure_vertex
+
+# Build rule for target.
+TP1_exo3_structure_vertex: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 TP1_exo3_structure_vertex
+.PHONY : TP1_exo3_structure_vertex
+
+# fast build rule for target.
+TP1_exo3_structure_vertex/fast:
+	$(MAKE) -f src/TP1/CMakeFiles/TP1_exo3_structure_vertex.dir/build.make src/TP1/CMakeFiles/TP1_exo3_structure_vertex.dir/build
+.PHONY : TP1_exo3_structure_vertex/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -132,6 +236,14 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... glimac"
+	@echo "... TP1_exo5_circle"
+	@echo "... TP1_exo6_buffers_index"
+	@echo "... TP1_exo4_quad"
+	@echo "... TP1_SDLtemplate"
+	@echo "... TP1_exo1_triangle_blanc"
+	@echo "... TP1_exo2_triangle_couleurs"
+	@echo "... TP1_exercise5"
+	@echo "... TP1_exo3_structure_vertex"
 .PHONY : help
 
 

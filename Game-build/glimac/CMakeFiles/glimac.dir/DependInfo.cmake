@@ -19,8 +19,8 @@ set(CMAKE_CXX_COMPILER_ID "GNU")
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/usr/include/SDL"
   "/home/fanny/ImacDream/Game/glimac/include"
-  "/home/fanny/ImacDream/Game/third-party/glm"
-  "/home/fanny/ImacDream/Game/third-party/assimp"
+  "/home/fanny/ImacDream/Game/third-party/include"
+  "/home/fanny/ImacDream/Game/third-party"
   )
 
 # Targets to which this target links.

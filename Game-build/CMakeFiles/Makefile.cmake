@@ -13,6 +13,13 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/home/fanny/ImacDream/Game/CMake/FindGLEW.cmake"
   "/home/fanny/ImacDream/Game/CMakeLists.txt"
   "/home/fanny/ImacDream/Game/glimac/CMakeLists.txt"
+  "/home/fanny/ImacDream/Game/src/CMakeLists.txt"
+  "/home/fanny/ImacDream/Game/src/Camera/CMakeLists.txt"
+  "/home/fanny/ImacDream/Game/src/Map/CMakeLists.txt"
+  "/home/fanny/ImacDream/Game/src/Map/Landscapes/CMakeLists.txt"
+  "/home/fanny/ImacDream/Game/src/Map/Lights/CMakeLists.txt"
+  "/home/fanny/ImacDream/Game/src/Map/Objects/CMakeLists.txt"
+  "/home/fanny/ImacDream/Game/src/TP1/CMakeLists.txt"
   "/usr/share/cmake-3.10/Modules/CMakeCInformation.cmake"
   "/usr/share/cmake-3.10/Modules/CMakeCXXInformation.cmake"
   "/usr/share/cmake-3.10/Modules/CMakeCommonLanguageInclude.cmake"
@@ -49,9 +56,24 @@ set(CMAKE_MAKEFILE_OUTPUTS
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   "glimac/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "src/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "src/TP1/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "src/Camera/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "src/Map/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "src/Map/Landscapes/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "src/Map/Lights/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "src/Map/Objects/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "glimac/CMakeFiles/glimac.dir/DependInfo.cmake"
+  "src/TP1/CMakeFiles/TP1_exo5_circle.dir/DependInfo.cmake"
+  "src/TP1/CMakeFiles/TP1_exo6_buffers_index.dir/DependInfo.cmake"
+  "src/TP1/CMakeFiles/TP1_exo4_quad.dir/DependInfo.cmake"
+  "src/TP1/CMakeFiles/TP1_SDLtemplate.dir/DependInfo.cmake"
+  "src/TP1/CMakeFiles/TP1_exo1_triangle_blanc.dir/DependInfo.cmake"
+  "src/TP1/CMakeFiles/TP1_exo2_triangle_couleurs.dir/DependInfo.cmake"
+  "src/TP1/CMakeFiles/TP1_exercise5.dir/DependInfo.cmake"
+  "src/TP1/CMakeFiles/TP1_exo3_structure_vertex.dir/DependInfo.cmake"
   )
