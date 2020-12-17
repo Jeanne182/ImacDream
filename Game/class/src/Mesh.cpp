@@ -8,7 +8,7 @@
 
 namespace glimac {
 
-    Mesh::~Mesh()
+    void Mesh::deleteBuffers()
     {
         glDeleteBuffers(1,&_vbo);
         glDeleteBuffers(1,&_ibo);
@@ -17,7 +17,7 @@ namespace glimac {
 
 
 
-    void Mesh::Draw(Program &program) {
+    void Mesh::Draw() {
 //        GLuint diffuseNr = 1;
 //        GLuint specularNr = 1;
 //        for (GLuint i = 0; i < _textures.size(); i++) {

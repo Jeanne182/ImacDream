@@ -260,8 +260,10 @@ CMakeFiles/IMACDream.dir/class/src/Model.cpp.o
 CMakeFiles/IMACDream.dir/class/src/main.cpp.o
  /home/matteo/Documents/imac2/openGL/ImacDream/Game/class/include/Mesh.hpp
  /home/matteo/Documents/imac2/openGL/ImacDream/Game/class/include/Model.hpp
+ /home/matteo/Documents/imac2/openGL/ImacDream/Game/class/include/TrackballCamera.hpp
  /home/matteo/Documents/imac2/openGL/ImacDream/Game/class/src/main.cpp
  /home/matteo/Documents/imac2/openGL/ImacDream/Game/glimac/include/glimac/FilePath.hpp
+ /home/matteo/Documents/imac2/openGL/ImacDream/Game/glimac/include/glimac/Image.hpp
  /home/matteo/Documents/imac2/openGL/ImacDream/Game/glimac/include/glimac/Program.hpp
  /home/matteo/Documents/imac2/openGL/ImacDream/Game/glimac/include/glimac/SDLWindowManager.hpp
  /home/matteo/Documents/imac2/openGL/ImacDream/Game/glimac/include/glimac/Shader.hpp
