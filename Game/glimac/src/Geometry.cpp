@@ -93,8 +93,8 @@ bool Geometry::loadOBJ(const FilePath& filepath, const FilePath& mtlBasePath, bo
         nbIndex += shape.mesh.indices.size();
     }
 
-    std::clog << "Number of meshes: " << shapes.size() << std::endl;
-    std::clog << "Number of vertices: " << nbVertex << std::endl;
+    std::clog << "Number of _meshes: " << shapes.size() << std::endl;
+    std::clog << "Number of _vertices: " << nbVertex << std::endl;
     std::clog << "Number of triangles: " << (nbIndex) / 3 << std::endl;
 
     m_BBox = BBox3f(glm::vec3(shapes[0].mesh.positions[0], shapes[0].mesh.positions[1], shapes[0].mesh.positions[2]));

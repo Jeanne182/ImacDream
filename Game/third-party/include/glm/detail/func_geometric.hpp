@@ -129,8 +129,8 @@ namespace glm
 		genType const & I,
 		genType const & N);
 
-	/// For the incident vector I and surface normal N, 
-	/// and the ratio of indices of refraction eta, 
+	/// For the incident vector I and surface normal N,
+	/// and the ratio of _indices of refraction eta,
 	/// return the refraction vector.
 	///
 	/// @tparam genType Floating-point vector types.

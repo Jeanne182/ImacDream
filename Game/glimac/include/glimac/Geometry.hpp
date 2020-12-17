@@ -20,7 +20,7 @@ public:
     struct Mesh {
         std::string m_sName;
         unsigned int m_nIndexOffset; // Offset in the index buffer
-        unsigned int m_nIndexCount; // Number of indices
+        unsigned int m_nIndexCount; // Number of _indices
         int m_nMaterialIndex; // -1 if no material assigned
 
         Mesh(std::string name, unsigned int indexOffset, unsigned int indexCount, int materialIndex):

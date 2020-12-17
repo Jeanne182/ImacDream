@@ -242,7 +242,7 @@ exportFaceGroupToShape(
 
   offset = shape.mesh.indices.size();
 
-  // Flatten vertices and indices
+  // Flatten _vertices and _indices
   for (size_t i = 0; i < faceGroup.size(); i++) {
     const std::vector<vertex_index>& face = faceGroup[i];
 

@@ -66,10 +66,10 @@ RM = /usr/bin/cmake -E rm -f
 # Escaping for special characters.
 EQUALS = =
 
-# The top-level source directory on which CMake was run.
+# The top-level source _directory on which CMake was run.
 CMAKE_SOURCE_DIR = /home/jeanne/Documents/S3/OpenGL/GLImac-Template
 
-# The top-level build directory on which CMake was run.
+# The top-level build _directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/jeanne/Documents/S3/OpenGL/GLImac-Template
 
 #=============================================================================
