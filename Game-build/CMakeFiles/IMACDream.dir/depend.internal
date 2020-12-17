@@ -258,10 +258,44 @@ CMakeFiles/IMACDream.dir/class/src/Model.cpp.o
  /home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include/glm/vec4.hpp
  /home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include/glm/vector_relational.hpp
 CMakeFiles/IMACDream.dir/class/src/main.cpp.o
+ /home/matteo/Documents/imac2/openGL/ImacDream/Game/class/include/Mesh.hpp
+ /home/matteo/Documents/imac2/openGL/ImacDream/Game/class/include/Model.hpp
  /home/matteo/Documents/imac2/openGL/ImacDream/Game/class/src/main.cpp
+ /home/matteo/Documents/imac2/openGL/ImacDream/Game/glimac/include/glimac/FilePath.hpp
+ /home/matteo/Documents/imac2/openGL/ImacDream/Game/glimac/include/glimac/Program.hpp
  /home/matteo/Documents/imac2/openGL/ImacDream/Game/glimac/include/glimac/SDLWindowManager.hpp
+ /home/matteo/Documents/imac2/openGL/ImacDream/Game/glimac/include/glimac/Shader.hpp
+ /home/matteo/Documents/imac2/openGL/ImacDream/Game/glimac/include/glimac/Sphere.hpp
+ /home/matteo/Documents/imac2/openGL/ImacDream/Game/glimac/include/glimac/common.hpp
  /home/matteo/Documents/imac2/openGL/ImacDream/Game/glimac/include/glimac/glm.hpp
- /home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include/glm/common.hpp
+ /home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include/assimp/Compiler/poppack1.h
+ /home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include/assimp/Compiler/pstdint.h
+ /home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include/assimp/Compiler/pushpack1.h
+ /home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include/assimp/Importer.hpp
+ /home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include/assimp/anim.h
+ /home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include/assimp/camera.h
+ /home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include/assimp/color4.h
+ /home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include/assimp/color4.inl
+ /home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include/assimp/config.h
+ /home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include/assimp/defs.h
+ /home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include/assimp/light.h
+ /home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include/assimp/material.h
+ /home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include/assimp/material.inl
+ /home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include/assimp/matrix3x3.h
+ /home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include/assimp/matrix3x3.inl
+ /home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include/assimp/matrix4x4.h
+ /home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include/assimp/matrix4x4.inl
+ /home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include/assimp/mesh.h
+ /home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include/assimp/metadata.h
+ /home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include/assimp/postprocess.h
+ /home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include/assimp/quaternion.h
+ /home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include/assimp/scene.h
+ /home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include/assimp/texture.h
+ /home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include/assimp/types.h
+ /home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include/assimp/vector2.h
+ /home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include/assimp/vector2.inl
+ /home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include/assimp/vector3.h
+ /home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include/assimp/vector3.inl
  /home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include/glm/detail/_fixes.hpp
  /home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include/glm/detail/_swizzle.hpp
  /home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include/glm/detail/_swizzle_func.hpp

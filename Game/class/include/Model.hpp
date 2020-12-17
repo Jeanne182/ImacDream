@@ -20,6 +20,7 @@ namespace glimac {
     class Model {
     public:
         Model(std::string path);
+        ~Model(){};
         void Draw(Program &program);
 
     private:

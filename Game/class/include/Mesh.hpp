@@ -30,12 +30,18 @@ namespace glimac {
         std::vector<Texture> _textures;
 
         // constructor
-        Mesh(std::vector<ShapeVertex> vertices, std::vector<GLuint> indices, std::vector<Texture> textures);
+        Mesh(std::vector<ShapeVertex> vertices, std::vector<GLuint> indices, std::vector<Texture> textures):
+        _vertices(vertices), _indices(indices), _textures(textures)
+        {
+            // now that we have all the required data, set the vertex buffers and its attribute pointers.
+            setupMesh();
+        };
+        ~Mesh();
         void Draw(Program &program);
 
     private:
         //  render data
-        unsigned int VAO, VBO, EBO;
+        unsigned int _vao, _vbo, _ibo;
 
         void setupMesh();
     };

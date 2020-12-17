@@ -52,20 +52,6 @@ iostream
 ./Mesh.hpp
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/class/include/Mesh.hpp
 
-/home/matteo/Documents/imac2/openGL/ImacDream/Game/class/src/Mesh.cpp
-./../include/Mesh.hpp
-/home/matteo/Documents/imac2/openGL/ImacDream/Game/class/include/Mesh.hpp
-vector
--
-
-/home/matteo/Documents/imac2/openGL/ImacDream/Game/class/src/Model.cpp
-./../include/Model.hpp
-/home/matteo/Documents/imac2/openGL/ImacDream/Game/class/include/Model.hpp
-glimac/Image.hpp
--
-vector
--
-
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/class/src/main.cpp
 glimac/SDLWindowManager.hpp
 -
@@ -73,22 +59,18 @@ GL/glew.h
 -
 iostream
 -
+glimac/Program.hpp
+-
+glimac/FilePath.hpp
+-
+glimac/Sphere.hpp
+-
+./../include/Model.hpp
+/home/matteo/Documents/imac2/openGL/ImacDream/Game/class/include/Model.hpp
 
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/glimac/include/glimac/FilePath.hpp
 string
 -
-
-/home/matteo/Documents/imac2/openGL/ImacDream/Game/glimac/include/glimac/Image.hpp
-vector
--
-memory
--
-unordered_map
--
-glm.hpp
-/home/matteo/Documents/imac2/openGL/ImacDream/Game/glimac/include/glimac/glm.hpp
-FilePath.hpp
-/home/matteo/Documents/imac2/openGL/ImacDream/Game/glimac/include/glimac/FilePath.hpp
 
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/glimac/include/glimac/Program.hpp
 GL/glew.h
@@ -113,6 +95,12 @@ string
 -
 FilePath.hpp
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/glimac/include/glimac/FilePath.hpp
+
+/home/matteo/Documents/imac2/openGL/ImacDream/Game/glimac/include/glimac/Sphere.hpp
+vector
+-
+common.hpp
+/home/matteo/Documents/imac2/openGL/ImacDream/Game/glimac/include/glimac/common.hpp
 
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/glimac/include/glimac/common.hpp
 GL/glew.h
@@ -258,12 +246,6 @@ types.h
 defs.h
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include/assimp/defs.h
 
-/home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include/assimp/quaternion.inl
-quaternion.h
-/home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include/assimp/quaternion.h
-cmath
--
-
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include/assimp/scene.h
 types.h
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include/assimp/types.h
@@ -363,10 +345,6 @@ vector3.h
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include/assimp/vector3.h
 cmath
 -
-
-/home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include/glm/common.hpp
-detail/func_common.hpp
-/home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include/glm/detail/func_common.hpp
 
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include/glm/detail/_fixes.hpp
 cmath
