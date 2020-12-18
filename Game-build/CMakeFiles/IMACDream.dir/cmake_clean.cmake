@@ -1,7 +1,9 @@
 file(REMOVE_RECURSE
   "CMakeFiles/IMACDream.dir/class/src/Camera.cpp.o"
+  "CMakeFiles/IMACDream.dir/class/src/GameObject.cpp.o"
   "CMakeFiles/IMACDream.dir/class/src/Mesh.cpp.o"
   "CMakeFiles/IMACDream.dir/class/src/Model.cpp.o"
+  "CMakeFiles/IMACDream.dir/class/src/Water.cpp.o"
   "CMakeFiles/IMACDream.dir/class/src/main.cpp.o"
   "IMACDream"
   "IMACDream.pdb"

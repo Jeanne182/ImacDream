@@ -152,6 +152,9 @@
 		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/class/include/FreeflyCamera.hpp">
 			<Option target="IMACDream"/>
 		</Unit>
+		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/class/include/GameObject.hpp">
+			<Option target="IMACDream"/>
+		</Unit>
 		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/class/include/Mesh.hpp">
 			<Option target="IMACDream"/>
 		</Unit>
@@ -161,13 +164,22 @@
 		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/class/include/TrackballCamera.hpp">
 			<Option target="IMACDream"/>
 		</Unit>
+		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/class/include/Water.hpp">
+			<Option target="IMACDream"/>
+		</Unit>
 		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/class/src/Camera.cpp">
+			<Option target="IMACDream"/>
+		</Unit>
+		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/class/src/GameObject.cpp">
 			<Option target="IMACDream"/>
 		</Unit>
 		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/class/src/Mesh.cpp">
 			<Option target="IMACDream"/>
 		</Unit>
 		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/class/src/Model.cpp">
+			<Option target="IMACDream"/>
+		</Unit>
+		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/class/src/Water.cpp">
 			<Option target="IMACDream"/>
 		</Unit>
 		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/class/src/main.cpp">

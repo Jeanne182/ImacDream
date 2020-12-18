@@ -7,6 +7,7 @@
 #include <glimac/common.hpp>
 #include <glimac/Sphere.hpp>
 #include "./../include/Camera.hpp"
+#include "./../include/Mesh.hpp"
 
 using namespace glimac;
 
@@ -60,79 +61,86 @@ int main(int argc, char** argv) {
     /*********************************
      * VBO
      *********************************/
-    GLuint vbo; //Ou GLuint vbos[16]
-    glGenBuffers(1, &vbo); //Ou (16,vbos)
+//    GLuint vbo; //Ou GLuint vbos[16]
+//    glGenBuffers(1, &vbo); //Ou (16,vbos)
+//
+//    // Binding d'un VBO sur la cible GL_ARRAY_BUFFER :
+//    glBindBuffer(GL_ARRAY_BUFFER, vbo);
+//    //On peut à présent modifier le VBO en passant par la cible GL_ARRAY_BUFFER
+//
+//
+//    const ShapeVertex* vertices = sphere.getDataPointer();
 
-    // Binding d'un VBO sur la cible GL_ARRAY_BUFFER :
-    glBindBuffer(GL_ARRAY_BUFFER, vbo);
-    //On peut à présent modifier le VBO en passant par la cible GL_ARRAY_BUFFER
+    std::vector<GLuint> indices;
+    std::vector<Texture> textures;
+    std::vector<ShapeVertex> meshVertices;
+    for (GLint i = 0; i<sizeof(sphere.getDataPointer());i++){
+        indices.push_back(i);
+        meshVertices.push_back(sphere.getDataPointer()[i]);
+    }
 
+    Mesh mesh(meshVertices, indices, textures);
 
-    const ShapeVertex* vertices = sphere.getDataPointer();
-
-
-    glBufferData(GL_ARRAY_BUFFER, nbVertex * sizeof(ShapeVertex), sphere.getDataPointer(), GL_STATIC_DRAW);
-
-    //On débind le VBO de la cible après l'avoir modifié pour éviter de le modifier par erreur
-    glBindBuffer(GL_ARRAY_BUFFER, 0);
-
-    /*********************************
-     * VAO
-     *********************************/
-    //Création d'un VAO
-    GLuint vao;
-    glGenVertexArrays(1, &vao);
-    glBindVertexArray(vao);
-    glBindBuffer(GL_ARRAY_BUFFER, vbo);
-
-    //On indique à OpenGL quels attributs il va utiliser
-    const GLuint VERTEX_ATTR_POSITION = 0;
-    glEnableVertexAttribArray(VERTEX_ATTR_POSITION); //Par défaut, l'attribut position est représenté par 0
-    glVertexAttribPointer(VERTEX_ATTR_POSITION, //Index de l'attribut à spécifier
-                          3, // Nombre de composantes de l'attribut
-                          GL_FLOAT, //Type des composantes
-                          GL_FALSE, // GLboolean normalized
-                          sizeof(ShapeVertex), //Nombre d'octets séparant l'attribut pour deux sommets consécutifs
-                          (const GLvoid*)offsetof(ShapeVertex, position) //offset (en octets) de la première instance de l'attribut dans le tableau
-    );
-
-    const GLuint VERTEX_ATTR_NORMAL = 1;
-    glEnableVertexAttribArray(VERTEX_ATTR_NORMAL); //Par défaut, l'attribut position est représenté par 0
-    glVertexAttribPointer(VERTEX_ATTR_NORMAL, //Index de l'attribut à spécifier
-                          3, // Nombre de composantes de l'attribut
-                          GL_FLOAT, //Type des composantes
-                          GL_FALSE, // GLboolean normalized
-                          sizeof(ShapeVertex), //Nombre d'octets séparant l'attribut pour deux sommets consécutifs
-                          (const GLvoid*)offsetof(ShapeVertex, normal) //offset (en octets) de la première instance de l'attribut dans le tableau
-    );
-
-    const GLuint VERTEX_ATTR_TEXT = 2;
-    glEnableVertexAttribArray(VERTEX_ATTR_TEXT); //Par défaut, l'attribut position est représenté par 0
-    glVertexAttribPointer(VERTEX_ATTR_TEXT, //Index de l'attribut à spécifier
-                          3, // Nombre de composantes de l'attribut
-                          GL_FLOAT, //Type des composantes
-                          GL_FALSE, // GLboolean normalized
-                          sizeof(ShapeVertex), //Nombre d'octets séparant l'attribut pour deux sommets consécutifs
-                          (const GLvoid*)offsetof(ShapeVertex, texCoords) //offset (en octets) de la première instance de l'attribut dans le tableau
-    );
-
-    glBindBuffer(GL_ARRAY_BUFFER, 0); // On débind le vbo
-    glBindVertexArray(0); // On débind le VAO
+//    glBufferData(GL_ARRAY_BUFFER, nbVertex * sizeof(ShapeVertex), sphere.getDataPointer(), GL_STATIC_DRAW);
+//
+//    //On débind le VBO de la cible après l'avoir modifié pour éviter de le modifier par erreur
+//    glBindBuffer(GL_ARRAY_BUFFER, 0);
+//
+//    /*********************************
+//     * VAO
+//     *********************************/
+//    //Création d'un VAO
+//    GLuint vao;
+//    glGenVertexArrays(1, &vao);
+//    glBindVertexArray(vao);
+//    glBindBuffer(GL_ARRAY_BUFFER, vbo);
+//
+//    //On indique à OpenGL quels attributs il va utiliser
+//    const GLuint VERTEX_ATTR_POSITION = 0;
+//    glEnableVertexAttribArray(VERTEX_ATTR_POSITION); //Par défaut, l'attribut position est représenté par 0
+//    glVertexAttribPointer(VERTEX_ATTR_POSITION, //Index de l'attribut à spécifier
+//                          3, // Nombre de composantes de l'attribut
+//                          GL_FLOAT, //Type des composantes
+//                          GL_FALSE, // GLboolean normalized
+//                          sizeof(ShapeVertex), //Nombre d'octets séparant l'attribut pour deux sommets consécutifs
+//                          (const GLvoid*)offsetof(ShapeVertex, position) //offset (en octets) de la première instance de l'attribut dans le tableau
+//    );
+//
+//    const GLuint VERTEX_ATTR_NORMAL = 1;
+//    glEnableVertexAttribArray(VERTEX_ATTR_NORMAL); //Par défaut, l'attribut position est représenté par 0
+//    glVertexAttribPointer(VERTEX_ATTR_NORMAL, //Index de l'attribut à spécifier
+//                          3, // Nombre de composantes de l'attribut
+//                          GL_FLOAT, //Type des composantes
+//                          GL_FALSE, // GLboolean normalized
+//                          sizeof(ShapeVertex), //Nombre d'octets séparant l'attribut pour deux sommets consécutifs
+//                          (const GLvoid*)offsetof(ShapeVertex, normal) //offset (en octets) de la première instance de l'attribut dans le tableau
+//    );
+//
+//    const GLuint VERTEX_ATTR_TEXT = 2;
+//    glEnableVertexAttribArray(VERTEX_ATTR_TEXT); //Par défaut, l'attribut position est représenté par 0
+//    glVertexAttribPointer(VERTEX_ATTR_TEXT, //Index de l'attribut à spécifier
+//                          3, // Nombre de composantes de l'attribut
+//                          GL_FLOAT, //Type des composantes
+//                          GL_FALSE, // GLboolean normalized
+//                          sizeof(ShapeVertex), //Nombre d'octets séparant l'attribut pour deux sommets consécutifs
+//                          (const GLvoid*)offsetof(ShapeVertex, texCoords) //offset (en octets) de la première instance de l'attribut dans le tableau
+//    );
+//
+//    glBindBuffer(GL_ARRAY_BUFFER, 0); // On débind le vbo
+//    glBindVertexArray(0); // On débind le VAO
 
     // Application loop:
 
-    float xOld = 0;
-    float yOld = 0;
-    float OriginX = 0.f;
-    float OriginY = 0.f;
     bool done = false;
     while(!done) {
-        // Event loop:
+
+        /*********************************
+          EVENT LOOP
+         *********************************/
+
         SDL_Event e;
         while(windowManager.pollEvent(e)) {
             camera.event(e);
-
-
             switch(e.type) {
                 case SDL_QUIT:
                     done = true; // Leave the loop after this iteration
@@ -141,12 +149,11 @@ int main(int argc, char** argv) {
         }
         camera.update();
 
-        /*********************************
-         * HERE SHOULD COME THE RENDERING CODE
-         *********************************/
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); // On nettoie la fenêtre afin de ne pas avoir de résidu du tour précédent
 
-        //Matrices variables uniformes
+        /*********************************
+         MATRICES
+         *********************************/
 
         glm::mat4 VPMatrix = ProjMatrix * camera.getViewMatrix()* glm::translate(glm::mat4(), glm::vec3(0.,0.,5.));
         glm::mat4 globalMVMatrix =  glm::translate(glm::mat4(1.f), glm::vec3(0, 0, -5));
@@ -157,20 +164,24 @@ int main(int argc, char** argv) {
         glUniformMatrix4fv(uMVMatrix_Location, 1, GL_FALSE, glm::value_ptr(sphereMVMatrix));
         glUniformMatrix4fv(uNormalMatrix_Location, 1, GL_FALSE, glm::value_ptr(sphereMVMatrix));
 
+        /*********************************
+         RENDERING CODE
+         *********************************/
 
-        glBindVertexArray(vao);
-        //On lance le pipeline sur un ensemble de sommets spécifiés par un VAO
-        glDrawArrays(GL_TRIANGLES, // Type de primitives à dessiner
-                     0, // Indice du premier sommet à dessiner
-                     nbVertex // Nombre de sommets à dessiner
-        );
-        glBindVertexArray(0);
+        mesh.Draw(program);
+//        glBindVertexArray(vao);
+//        //On lance le pipeline sur un ensemble de sommets spécifiés par un VAO
+//        glDrawArrays(GL_TRIANGLES, // Type de primitives à dessiner
+//                     0, // Indice du premier sommet à dessiner
+//                     nbVertex // Nombre de sommets à dessiner
+//        );
+//        glBindVertexArray(0);
 
         // Update the display
         windowManager.swapBuffers();
     }
 
-    glDeleteBuffers(1, &vbo);
-    glDeleteBuffers(1, &vao);
+//    glDeleteBuffers(1, &vbo);
+//    glDeleteBuffers(1, &vao);
     return EXIT_SUCCESS;
 }

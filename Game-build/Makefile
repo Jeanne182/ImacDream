@@ -183,6 +183,33 @@ class/src/Camera.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/IMACDream.dir/build.make CMakeFiles/IMACDream.dir/class/src/Camera.cpp.s
 .PHONY : class/src/Camera.cpp.s
 
+class/src/GameObject.o: class/src/GameObject.cpp.o
+
+.PHONY : class/src/GameObject.o
+
+# target to build an object file
+class/src/GameObject.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/IMACDream.dir/build.make CMakeFiles/IMACDream.dir/class/src/GameObject.cpp.o
+.PHONY : class/src/GameObject.cpp.o
+
+class/src/GameObject.i: class/src/GameObject.cpp.i
+
+.PHONY : class/src/GameObject.i
+
+# target to preprocess a source file
+class/src/GameObject.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/IMACDream.dir/build.make CMakeFiles/IMACDream.dir/class/src/GameObject.cpp.i
+.PHONY : class/src/GameObject.cpp.i
+
+class/src/GameObject.s: class/src/GameObject.cpp.s
+
+.PHONY : class/src/GameObject.s
+
+# target to generate assembly for a file
+class/src/GameObject.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/IMACDream.dir/build.make CMakeFiles/IMACDream.dir/class/src/GameObject.cpp.s
+.PHONY : class/src/GameObject.cpp.s
+
 class/src/Mesh.o: class/src/Mesh.cpp.o
 
 .PHONY : class/src/Mesh.o
@@ -237,6 +264,33 @@ class/src/Model.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/IMACDream.dir/build.make CMakeFiles/IMACDream.dir/class/src/Model.cpp.s
 .PHONY : class/src/Model.cpp.s
 
+class/src/Water.o: class/src/Water.cpp.o
+
+.PHONY : class/src/Water.o
+
+# target to build an object file
+class/src/Water.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/IMACDream.dir/build.make CMakeFiles/IMACDream.dir/class/src/Water.cpp.o
+.PHONY : class/src/Water.cpp.o
+
+class/src/Water.i: class/src/Water.cpp.i
+
+.PHONY : class/src/Water.i
+
+# target to preprocess a source file
+class/src/Water.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/IMACDream.dir/build.make CMakeFiles/IMACDream.dir/class/src/Water.cpp.i
+.PHONY : class/src/Water.cpp.i
+
+class/src/Water.s: class/src/Water.cpp.s
+
+.PHONY : class/src/Water.s
+
+# target to generate assembly for a file
+class/src/Water.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/IMACDream.dir/build.make CMakeFiles/IMACDream.dir/class/src/Water.cpp.s
+.PHONY : class/src/Water.cpp.s
+
 class/src/main.o: class/src/main.cpp.o
 
 .PHONY : class/src/main.o
@@ -277,12 +331,18 @@ help:
 	@echo "... class/src/Camera.o"
 	@echo "... class/src/Camera.i"
 	@echo "... class/src/Camera.s"
+	@echo "... class/src/GameObject.o"
+	@echo "... class/src/GameObject.i"
+	@echo "... class/src/GameObject.s"
 	@echo "... class/src/Mesh.o"
 	@echo "... class/src/Mesh.i"
 	@echo "... class/src/Mesh.s"
 	@echo "... class/src/Model.o"
 	@echo "... class/src/Model.i"
 	@echo "... class/src/Model.s"
+	@echo "... class/src/Water.o"
+	@echo "... class/src/Water.i"
+	@echo "... class/src/Water.s"
 	@echo "... class/src/main.o"
 	@echo "... class/src/main.i"
 	@echo "... class/src/main.s"
