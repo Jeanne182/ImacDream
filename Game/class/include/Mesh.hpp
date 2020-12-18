@@ -37,11 +37,11 @@ namespace glimac {
             setupMesh();
         };
         void deleteBuffers();
-        void Draw();
+        void Draw(Program &program) const;
         //void Draw(Program &program);
 
 
-    private:
+    public:
         //  render data
         unsigned int _vao, _vbo, _ibo;
 

@@ -17,7 +17,7 @@ namespace glimac {
 
 
 
-    void Mesh::Draw() {
+    void Mesh::Draw(Program &program) const{
 //        GLuint diffuseNr = 1;
 //        GLuint specularNr = 1;
 //        for (GLuint i = 0; i < _textures.size(); i++) {
@@ -33,12 +33,12 @@ namespace glimac {
 //            }
 //            else if (name == "texture_specular")
 //                number = std::to_string(specularNr++);
-//            program.use();
 //            glUniform1f(glGetUniformLocation(program.getGLId(), ("material." + name + number).c_str()), i);
 //            //shader.setFloat(("material." + name + number).c_str(), i);
 //            glBindTexture(GL_TEXTURE_2D, _textures[i].id);
 //        }
 //        glActiveTexture(GL_TEXTURE0);
+
 //        // draw mesh
         glBindVertexArray(_vao);
         glDrawElements(GL_TRIANGLES, _indices.size(), GL_UNSIGNED_INT, 0);
@@ -60,6 +60,7 @@ namespace glimac {
 
         //Vao Binding
         glBindVertexArray(_vao);
+        glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, _ibo);
 
         const GLuint VERTEX_ATTR_POSITION = 0;
         const GLuint VERTEX_ATTR_NORMAL = 1;
@@ -84,4 +85,4 @@ namespace glimac {
         //Debind vao
         glBindVertexArray(0);
     }
-};
+}

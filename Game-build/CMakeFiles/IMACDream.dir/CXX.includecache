@@ -6,6 +6,10 @@
 
 #IncludeRegexTransform: 
 
+/home/matteo/Documents/imac2/openGL/ImacDream/Game/class/include/FreeflyCamera.hpp
+glimac/glm.hpp
+-
+
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/class/include/Mesh.hpp
 glimac/Program.hpp
 -
@@ -52,13 +56,27 @@ iostream
 ./Mesh.hpp
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/class/include/Mesh.hpp
 
-/home/matteo/Documents/imac2/openGL/ImacDream/Game/class/src/Model.cpp
-./../include/Model.hpp
-/home/matteo/Documents/imac2/openGL/ImacDream/Game/class/include/Model.hpp
+/home/matteo/Documents/imac2/openGL/ImacDream/Game/class/src/main.cpp
+glimac/SDLWindowManager.hpp
+-
+GL/glew.h
+-
+iostream
+-
 glimac/Image.hpp
+-
+glimac/Program.hpp
+-
+glimac/FilePath.hpp
+-
+glimac/Sphere.hpp
 -
 vector
 -
+./../include/FreeflyCamera.hpp
+/home/matteo/Documents/imac2/openGL/ImacDream/Game/class/include/FreeflyCamera.hpp
+./../include/Model.hpp
+/home/matteo/Documents/imac2/openGL/ImacDream/Game/class/include/Model.hpp
 
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/glimac/include/glimac/FilePath.hpp
 string
@@ -84,6 +102,14 @@ Shader.hpp
 FilePath.hpp
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/glimac/include/glimac/FilePath.hpp
 
+/home/matteo/Documents/imac2/openGL/ImacDream/Game/glimac/include/glimac/SDLWindowManager.hpp
+cstdint
+-
+SDL/SDL.h
+-
+glm.hpp
+/home/matteo/Documents/imac2/openGL/ImacDream/Game/glimac/include/glimac/glm.hpp
+
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/glimac/include/glimac/Shader.hpp
 GL/glew.h
 -
@@ -91,6 +117,12 @@ string
 -
 FilePath.hpp
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/glimac/include/glimac/FilePath.hpp
+
+/home/matteo/Documents/imac2/openGL/ImacDream/Game/glimac/include/glimac/Sphere.hpp
+vector
+-
+common.hpp
+/home/matteo/Documents/imac2/openGL/ImacDream/Game/glimac/include/glimac/common.hpp
 
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/glimac/include/glimac/common.hpp
 GL/glew.h
@@ -335,10 +367,6 @@ vector3.h
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include/assimp/vector3.h
 cmath
 -
-
-/home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include/glm/common.hpp
-detail/func_common.hpp
-/home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include/glm/detail/func_common.hpp
 
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include/glm/detail/_fixes.hpp
 cmath

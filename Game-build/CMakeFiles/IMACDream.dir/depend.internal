@@ -258,9 +258,9 @@ CMakeFiles/IMACDream.dir/class/src/Model.cpp.o
  /home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include/glm/vec4.hpp
  /home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include/glm/vector_relational.hpp
 CMakeFiles/IMACDream.dir/class/src/main.cpp.o
+ /home/matteo/Documents/imac2/openGL/ImacDream/Game/class/include/FreeflyCamera.hpp
  /home/matteo/Documents/imac2/openGL/ImacDream/Game/class/include/Mesh.hpp
  /home/matteo/Documents/imac2/openGL/ImacDream/Game/class/include/Model.hpp
- /home/matteo/Documents/imac2/openGL/ImacDream/Game/class/include/TrackballCamera.hpp
  /home/matteo/Documents/imac2/openGL/ImacDream/Game/class/src/main.cpp
  /home/matteo/Documents/imac2/openGL/ImacDream/Game/glimac/include/glimac/FilePath.hpp
  /home/matteo/Documents/imac2/openGL/ImacDream/Game/glimac/include/glimac/Image.hpp

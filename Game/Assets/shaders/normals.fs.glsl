@@ -8,5 +8,7 @@ in vec2 vTexCoords;
 out vec3 fFragColor;
 
 void main() {
-  fFragColor = normalize(vNormal_vs);
+
+    fFragColor = normalize(vNormal_vs);
+
 };

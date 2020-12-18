@@ -7,7 +7,7 @@
 #include <glimac/Sphere.hpp>
 
 #include <vector>
-#include "./../include/TrackballCamera.hpp"
+#include "./../include/FreeflyCamera.hpp"
 
 #include "./../include/Model.hpp"
 
@@ -32,142 +32,138 @@ struct EarthProgram {
     }
 };
 
+glm::mat4 FreeflyCamera::getViewMatrix() const{return glm::lookAt(m_Position, m_Position+m_FrontVector, m_UpVector);}
 
 
-glm::mat4 TrackballCamera::getViewMatrix() const
-{
-    glm::mat4 viewMatrix = glm::translate(glm::mat4(1.f),glm::vec3(0, 0, -m_fDistance));
-    viewMatrix = glm::rotate(viewMatrix, glm::radians(m_fAngleY), glm::vec3(0,1,0));
-    viewMatrix = glm::rotate(viewMatrix, glm::radians(m_fAngleX), glm::vec3(1,0,0));
-    return viewMatrix;
+void FreeflyCamera::computeDirectionVectors(){
+    this->m_FrontVector = glm::vec3(cos(this->m_fTheta)*sin(this->m_fPhi),
+                                    sin(this->m_fTheta),
+                                    cos(this->m_fTheta)*cos(this->m_fPhi));
+    this->m_LeftVector = glm::vec3(sin(this->m_fPhi+M_PI/2),
+                                   0,
+                                   cos(this->m_fPhi+M_PI/2));
+    this->m_UpVector = glm::cross(this->m_FrontVector, this->m_LeftVector);
 }
 
+void FreeflyCamera::rotateLeft(float degrees){
+    m_fPhi+=glm::radians(degrees);
+    computeDirectionVectors();
+};
+
+void FreeflyCamera::rotateUp(float degrees){
+    m_fTheta+=glm::radians(degrees);
+    computeDirectionVectors();}
+
+
 int main(int argc, char** argv) {
-// Initialize SDL and open a window
-    float WINDOW_W = 800.;
-    float WINDOW_H = 600.;
+    // Initialize SDL and open a window
+    float WINDOW_W = 1200;
+    float WINDOW_H = 1000;
+    SDLWindowManager windowManager(WINDOW_W, WINDOW_H, "IMAC Dream");
 
-    SDLWindowManager windowManager(WINDOW_W, WINDOW_H, "cc");
-
-// Initialize glew for OpenGL3+ support
+    // Initialize glew for OpenGL3+ support
     GLenum glewInitError = glewInit();
     if(GLEW_OK != glewInitError) {
         std::cerr << glewGetErrorString(glewInitError) << std::endl;
         return EXIT_FAILURE;
     }
 
+    //Load shaders
+    FilePath applicationPath(argv[0]);
+    Program program = loadProgram(
+            applicationPath.dirPath() + "Assets/shaders/3D.vs.glsl",
+            applicationPath.dirPath() + "Assets/shaders/normals.fs.glsl"
+    );
+    program.use();
+
+    //location variables uniformes
+    const GLuint idProg = program.getGLId();
+    GLint locationMVPMatrix = glGetUniformLocation(idProg, "uMVPMatrix");
+    GLint locationMVMatrix = glGetUniformLocation(idProg, "uMVMatrix");
+    GLint locationNormal = glGetUniformLocation(idProg, "uNormalMatrix");
+
+    glEnable(GL_DEPTH_TEST);
+
+    glm::mat4 ProjMatrix = glm::perspective(glm::radians(70.f), 800.f/600.f, 0.1f, 100.f);
+    glm::mat4 MVMatrix = glm::translate(glm::mat4(1), glm::vec3(0, 0, -5));
+    glm::mat4 NormalMatrix = glm::transpose(glm::inverse(MVMatrix));
+
+
     std::cout << "OpenGL Version : " << glGetString(GL_VERSION) << std::endl;
     std::cout << "GLEW Version : " << glewGetString(GLEW_VERSION) << std::endl;
 
-    FilePath applicationPath(argv[0]);
-    EarthProgram earthProgram(applicationPath);
+    /*********************************
+     * HERE SHOULD COME THE INITIALIZATION CODE
+     *********************************/
 
-/*********************************
-* HERE SHOULD COME THE INITIALIZATION CODE
-*********************************/
+    //définition du cube
+    //bon chemin à garder
+    // std::string cubePath = "assets/models/cube.obj";
+    // Model cube(cubePath);
 
+    //gobelet Nils
+    std::string gobeletPath = applicationPath.dirPath() + "Assets/models/Arbol.obj";
+    Model gobelet(gobeletPath);
 
-    float ratio = WINDOW_W/WINDOW_H;
-    glEnable(GL_DEPTH_TEST);
+    //création de la caméra
+    FreeflyCamera camera;
 
-//Matrices
-    glm::mat4 ProjMatrix, MVMatrix, ModelMatrix, NormalMatrix;
-    ProjMatrix = glm::perspective(glm::radians(70.f), ratio, 0.1f, 100.f); //glm::perspective(angle vert de vue, ratio,near, far);
-    MVMatrix = glm::translate(glm::mat4(1.),glm::vec3(0.,0.,-5.));
-
-    TrackballCamera Camera;
-
-    //Create a cube
-    Model cube(applicationPath.dirPath() + "Assets/cube.obj");
-    /*//Create a sphere
-    Sphere sphere(1,32,16);
-    //Create a vbo
-    GLuint vbo;
-    glGenBuffers(1, &vbo);
-    //Vbo Binding
-    glBindBuffer(GL_ARRAY_BUFFER, vbo);
-
-    // Send data (related to the sphere) into the VBO
-    glBufferData(GL_ARRAY_BUFFER, sphere.getVertexCount()*sizeof(ShapeVertex), sphere.getDataPointer(), GL_STATIC_DRAW);
-
-    // Unbind the VBO (to avoid errors)
-    glBindBuffer(GL_ARRAY_BUFFER, 0);
-
-    //VAO creation
-    GLuint vao;
-    glGenBuffers(1, &vao);
-    //VAO binding
-    glBindVertexArray(vao);
-
-    const GLuint VERTEX_ATTR_POSITION = 0;
-    const GLuint VERTEX_ATTR_NORMAL = 1;
-    const GLuint VERTEX_ATTR_TEX_COORD = 2;
-
-    // Enable vertex attributes array
-    glEnableVertexAttribArray(VERTEX_ATTR_POSITION);
-    glEnableVertexAttribArray(VERTEX_ATTR_NORMAL);
-    glEnableVertexAttribArray(VERTEX_ATTR_TEX_COORD);
-
-    // Activation of vertex attributs
-    glBindBuffer(GL_ARRAY_BUFFER, vbo);
-
-    // Define arrays of attribute data
-    glVertexAttribPointer(VERTEX_ATTR_POSITION, 3, GL_FLOAT, GL_FALSE, sizeof(ShapeVertex), (const GLvoid*)offsetof(ShapeVertex, position)); //parametre 2 à changer en fonction du nombre d'attributs
-    glVertexAttribPointer(VERTEX_ATTR_NORMAL, 3, GL_FLOAT, GL_FALSE, sizeof(ShapeVertex), (const GLvoid*)offsetof(ShapeVertex, normal));
-    glVertexAttribPointer(VERTEX_ATTR_TEX_COORD, 3, GL_FLOAT, GL_FALSE, sizeof(ShapeVertex), (const GLvoid*)offsetof(ShapeVertex, texCoords));
-
-    //Debind VBO
-    glBindBuffer(GL_ARRAY_BUFFER, 0);
-
-    //Debind vao
-    glBindVertexArray(0);*/
-
+    // Application loop:
     bool done = false;
     while(!done) {
-        //Viewprojection matrix:
-        glm::mat4 VPmatrix = ProjMatrix * Camera.getViewMatrix() * glm::translate(glm::mat4(), glm::vec3(0.,0.,5.));
-
-
+        // Event loop:
         SDL_Event e;
         while(windowManager.pollEvent(e)) {
             if(e.type == SDL_QUIT) {
                 done = true; // Leave the loop after this iteration
             }
-            if (windowManager.isMouseButtonPressed(SDL_BUTTON_MIDDLE))
-            {
-                if(e.button.button == SDL_BUTTON_WHEELUP)
-                    Camera.moveFront(0.01);
-                else if(e.button.button == SDL_BUTTON_WHEELDOWN)
-                    Camera.moveFront(-0.01);
-            }
-            if(windowManager.isMouseButtonPressed(SDL_BUTTON_RIGHT)){
-                Camera.rotateLeft((windowManager.getMousePosition().y*0.01));
-                Camera.rotateUp((windowManager.getMousePosition().x*0.01));
+            if(windowManager.isKeyPressed(SDLK_z))camera.moveFront(0.1);
+            if(windowManager.isKeyPressed(SDLK_s))camera.moveFront(-0.1);
+            if(windowManager.isKeyPressed(SDLK_q))camera.moveLeft(0.1);
+            if(windowManager.isKeyPressed(SDLK_d))camera.moveLeft(-0.1);
 
+            if(windowManager.isMouseButtonPressed(SDL_BUTTON_RIGHT)){
+                //Ici on récupère les positions de la souris
+                glm::vec2 mousePos = windowManager.getMousePosition();
+                float mousePosX = mousePos.x/800.0f - 0.5;
+                float mousePosY = mousePos.y/600.0f - 0.5;
+
+                camera.rotateLeft(-2*mousePosX);
+                camera.rotateUp(-2*mousePosY);
+                std::cout<<"hola"<<std::endl;
             }
         }
 
-        //update display
+        glm::mat4 ViewMatrix = camera.getViewMatrix();
+
+        ProjMatrix =  glm::perspective(glm::radians(70.f), 800.f/600.f, 0.1f, 100.f);
+        MVMatrix = ViewMatrix * glm::translate(glm::mat4(1), glm::vec3(0, 0, -5));
+        NormalMatrix = glm::transpose(glm::inverse(MVMatrix));
+
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-        earthProgram.m_Program.use();
+        glUniformMatrix4fv(
+                locationMVPMatrix,
+                1,
+                GL_FALSE,
+                glm::value_ptr(ProjMatrix * MVMatrix));
 
-        glUniform1i(earthProgram.uEarthTexture, 0);
+        glUniformMatrix4fv(
+                locationMVMatrix,
+                1,
+                GL_FALSE,
+                glm::value_ptr(MVMatrix));
 
-        glm::mat4 earthMVMatrix = MVMatrix;
-        glUniformMatrix4fv(earthProgram.uMVMatrix, 1, GL_FALSE, glm::value_ptr(Camera.getViewMatrix()*earthMVMatrix));
-        glUniformMatrix4fv(earthProgram.uNormalMatrix, 1, GL_FALSE, glm::value_ptr(glm::transpose(glm::inverse(earthMVMatrix))));
-        glUniformMatrix4fv(earthProgram.uMVPMatrix, 1, GL_FALSE, glm::value_ptr(VPmatrix * earthMVMatrix));
+        glUniformMatrix4fv(
+                locationNormal,
+                1,
+                GL_FALSE,
+                glm::value_ptr(NormalMatrix));
 
-        cube.Draw();
+        gobelet.Draw(program);
 
-        //glDrawArrays(GL_TRIANGLES, 0, sphere.getVertexCount());
-
+        // Update the display
         windowManager.swapBuffers();
-
     }
-    /*glDeleteBuffers(1, &vbo);
-    glDeleteBuffers(1, &vao);*/
-    cube.deleteBuffers();
 
     return EXIT_SUCCESS;
 }

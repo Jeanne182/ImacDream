@@ -4,17 +4,17 @@
 
 namespace glimac {
 
-    Model::Model(std::string path) {
+    Model::Model(const std::string& path) {
         loadModel(path);
     }
     void Model::deleteBuffers(){
         for(unsigned int i = 0; i < _meshes.size(); i++)
             _meshes[i].deleteBuffers();
     }
-    void Model::Draw()
+    void Model::Draw(Program &program)
     {
         for(unsigned int i = 0; i < _meshes.size(); i++)
-            _meshes[i].Draw();
+            _meshes[i].Draw(program);
     }
 
     void Model::loadModel(std::string const &path)
@@ -66,6 +66,7 @@ namespace glimac {
                 position.y = mesh->mNormals[i].y;
                 position.z = mesh->mNormals[i].z;
                 vertex.normal = position;
+                std::cout<<vertex.normal<<std::endl;
             }
             // texture coordinates
             if (mesh->mTextureCoords[0]) // does the mesh contain texture coordinates?
@@ -113,7 +114,7 @@ namespace glimac {
         return Mesh(vertices, indices, textures);
     }
 
-    std::vector<Texture> Model::loadMaterialTextures(aiMaterial *mat, aiTextureType type, std::string typeName) {
+    std::vector<Texture> Model::loadMaterialTextures(aiMaterial *mat, aiTextureType type, const std::string& typeName) {
             std::vector<Texture> textures;
 
         for (unsigned int i = 0; i < mat->GetTextureCount(type); i++) {
@@ -138,7 +139,7 @@ namespace glimac {
         FilePath filepath(filename);
 
         std::unique_ptr<Image> image = loadImage(filepath);
-        if(image == NULL){
+        if(image == nullptr){
             std::cerr << "Image" << filename << "could not be loaded" <<std::endl;
             return EXIT_FAILURE;
         }
