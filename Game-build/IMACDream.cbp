@@ -149,9 +149,6 @@
 		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/class/include/Camera.hpp">
 			<Option target="IMACDream"/>
 		</Unit>
-		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/class/include/FreeflyCamera.hpp">
-			<Option target="IMACDream"/>
-		</Unit>
 		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/class/include/GameObject.hpp">
 			<Option target="IMACDream"/>
 		</Unit>
@@ -159,9 +156,6 @@
 			<Option target="IMACDream"/>
 		</Unit>
 		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/class/include/Model.hpp">
-			<Option target="IMACDream"/>
-		</Unit>
-		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/class/include/TrackballCamera.hpp">
 			<Option target="IMACDream"/>
 		</Unit>
 		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/class/include/Water.hpp">

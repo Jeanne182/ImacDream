@@ -6,15 +6,13 @@
 
 #IncludeRegexTransform: 
 
-<<<<<<< HEAD
-/home/jeanne/Documents/S3/ImacDream/Game/class/include/Mesh.hpp
-=======
-/home/matteo/Documents/imac2/openGL/ImacDream/Game/class/include/FreeflyCamera.hpp
+/home/jeanne/Documents/S3/ImacDream/Game/class/include/Camera.hpp
 glimac/glm.hpp
 -
+glimac/SDLWindowManager.hpp
+-
 
-/home/matteo/Documents/imac2/openGL/ImacDream/Game/class/include/Mesh.hpp
->>>>>>> assimp
+/home/jeanne/Documents/S3/ImacDream/Game/class/include/Mesh.hpp
 glimac/Program.hpp
 -
 GL/glew.h
@@ -40,59 +38,29 @@ assimp/scene.h
 assimp/postprocess.h
 -
 
-<<<<<<< HEAD
-/home/jeanne/Documents/S3/ImacDream/Game/class/src/Mesh.cpp
-./../include/Mesh.hpp
-/home/jeanne/Documents/S3/ImacDream/Game/class/include/Mesh.hpp
-vector
--
-
-/home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/FilePath.hpp
-=======
-/home/matteo/Documents/imac2/openGL/ImacDream/Game/class/include/Model.hpp
-glimac/Program.hpp
--
-GL/glew.h
--
-glimac/glm.hpp
--
-vector
--
-string
--
-fstream
--
-sstream
--
-iostream
--
-./Mesh.hpp
-/home/matteo/Documents/imac2/openGL/ImacDream/Game/class/include/Mesh.hpp
-
-/home/matteo/Documents/imac2/openGL/ImacDream/Game/class/src/main.cpp
+/home/jeanne/Documents/S3/ImacDream/Game/class/src/main.cpp
 glimac/SDLWindowManager.hpp
 -
 GL/glew.h
 -
 iostream
 -
-glimac/Image.hpp
--
 glimac/Program.hpp
 -
 glimac/FilePath.hpp
 -
+glimac/glm.hpp
+-
+glimac/common.hpp
+-
 glimac/Sphere.hpp
 -
-vector
--
-./../include/FreeflyCamera.hpp
-/home/matteo/Documents/imac2/openGL/ImacDream/Game/class/include/FreeflyCamera.hpp
-./../include/Model.hpp
-/home/matteo/Documents/imac2/openGL/ImacDream/Game/class/include/Model.hpp
+./../include/Camera.hpp
+/home/jeanne/Documents/S3/ImacDream/Game/class/include/Camera.hpp
+./../include/Mesh.hpp
+/home/jeanne/Documents/S3/ImacDream/Game/class/include/Mesh.hpp
 
-/home/matteo/Documents/imac2/openGL/ImacDream/Game/glimac/include/glimac/FilePath.hpp
->>>>>>> assimp
+/home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/FilePath.hpp
 string
 -
 
@@ -104,6 +72,14 @@ Shader.hpp
 FilePath.hpp
 /home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/FilePath.hpp
 
+/home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/SDLWindowManager.hpp
+cstdint
+-
+SDL/SDL.h
+-
+glm.hpp
+/home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/glm.hpp
+
 /home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/Shader.hpp
 GL/glew.h
 -
@@ -112,17 +88,13 @@ string
 FilePath.hpp
 /home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/FilePath.hpp
 
-<<<<<<< HEAD
-/home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/common.hpp
-=======
-/home/matteo/Documents/imac2/openGL/ImacDream/Game/glimac/include/glimac/Sphere.hpp
+/home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/Sphere.hpp
 vector
 -
 common.hpp
-/home/matteo/Documents/imac2/openGL/ImacDream/Game/glimac/include/glimac/common.hpp
+/home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/common.hpp
 
-/home/matteo/Documents/imac2/openGL/ImacDream/Game/glimac/include/glimac/common.hpp
->>>>>>> assimp
+/home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/common.hpp
 GL/glew.h
 -
 glm.hpp
@@ -266,17 +238,7 @@ types.h
 defs.h
 /home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/defs.h
 
-<<<<<<< HEAD
-/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/quaternion.inl
-quaternion.h
-/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/quaternion.h
-cmath
--
-
 /home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/scene.h
-=======
-/home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include/assimp/scene.h
->>>>>>> assimp
 types.h
 /home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/types.h
 texture.h
@@ -376,15 +338,7 @@ vector3.h
 cmath
 -
 
-<<<<<<< HEAD
-/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/glm/common.hpp
-detail/func_common.hpp
-/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/glm/detail/func_common.hpp
-
 /home/jeanne/Documents/S3/ImacDream/Game/third-party/include/glm/detail/_fixes.hpp
-=======
-/home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include/glm/detail/_fixes.hpp
->>>>>>> assimp
 cmath
 -
 
@@ -939,6 +893,16 @@ matrix_transform.inl
 /home/jeanne/Documents/S3/ImacDream/Game/third-party/include/glm/gtc/constants.hpp
 quaternion.inl
 /home/jeanne/Documents/S3/ImacDream/Game/third-party/include/glm/gtc/quaternion.inl
+
+/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/glm/gtc/quaternion.inl
+../trigonometric.hpp
+/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/glm/trigonometric.hpp
+../geometric.hpp
+/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/glm/geometric.hpp
+../exponential.hpp
+/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/glm/exponential.hpp
+limits
+-
 
 /home/jeanne/Documents/S3/ImacDream/Game/third-party/include/glm/gtc/random.hpp
 ../vec2.hpp
