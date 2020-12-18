@@ -6,7 +6,7 @@
 
 
 class Camera {
-public :
+private :
     glm::vec3 m_Position;
     float m_fPhi, m_fTheta;
     glm::vec3 m_FrontVector, m_LeftVector, m_UpVector;

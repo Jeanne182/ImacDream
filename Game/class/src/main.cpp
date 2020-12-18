@@ -131,7 +131,7 @@ int main(int argc, char** argv) {
         SDL_Event e;
         while(windowManager.pollEvent(e)) {
             camera.event(e);
-            camera.update();
+
 
             switch(e.type) {
                 case SDL_QUIT:
@@ -139,6 +139,7 @@ int main(int argc, char** argv) {
                     break;
             }
         }
+        camera.update();
 
         /*********************************
          * HERE SHOULD COME THE RENDERING CODE
