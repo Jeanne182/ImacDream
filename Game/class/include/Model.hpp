@@ -19,10 +19,11 @@ namespace glimac {
 
     class Model {
     public:
-        Model(std::string path);
+        Model(const std::string& path);
+        void deleteBuffers();
         void Draw(Program &program);
 
-    private:
+    public:
         // model data
         std::vector<Mesh> _meshes;
         std::string _directory;
@@ -34,7 +35,7 @@ namespace glimac {
 
         Mesh processMesh(aiMesh *mesh, const aiScene *scene);
 
-        std::vector<Texture> loadMaterialTextures(aiMaterial *mat, aiTextureType type, std::string typeName);
+        std::vector<Texture> loadMaterialTextures(aiMaterial *mat, aiTextureType type, const std::string& typeName);
 
 
     };

@@ -4,10 +4,13 @@
 
 namespace glimac {
 
-    Model::Model(std::string path) {
+    Model::Model(const std::string& path) {
         loadModel(path);
     }
-
+    void Model::deleteBuffers(){
+        for(unsigned int i = 0; i < _meshes.size(); i++)
+            _meshes[i].deleteBuffers();
+    }
     void Model::Draw(Program &program)
     {
         for(unsigned int i = 0; i < _meshes.size(); i++)
@@ -19,6 +22,7 @@ namespace glimac {
         // read file via ASSIMP
         Assimp::Importer importer;
         const aiScene* scene = importer.ReadFile(path, aiProcess_Triangulate | aiProcess_GenSmoothNormals | aiProcess_FlipUVs | aiProcess_CalcTangentSpace);
+
         // check for errors
         if(!scene || scene->mFlags & AI_SCENE_FLAGS_INCOMPLETE || !scene->mRootNode) // if is Not Zero
         {
@@ -50,38 +54,39 @@ namespace glimac {
 
         for (unsigned int i = 0; i < mesh->mNumVertices; i++) {
             ShapeVertex vertex;
-            glm::vec3 vector; // we declare a placeholder vector since assimp uses its own vector class that doesn't directly convert to glm's vec3 class so we transfer the data to this placeholder glm::vec3 first.
+            glm::vec3 position;
             // positions
-            vector.x = mesh->mVertices[i].x;
-            vector.y = mesh->mVertices[i].y;
-            vector.z = mesh->mVertices[i].z;
-            vertex.position = vector;
+            position.x = mesh->mVertices[i].x;
+            position.y = mesh->mVertices[i].y;
+            position.z = mesh->mVertices[i].z;
+            vertex.position = position;
             // normals
             if (mesh->HasNormals()) {
-                vector.x = mesh->mNormals[i].x;
-                vector.y = mesh->mNormals[i].y;
-                vector.z = mesh->mNormals[i].z;
-                vertex.normal = vector;
+                position.x = mesh->mNormals[i].x;
+                position.y = mesh->mNormals[i].y;
+                position.z = mesh->mNormals[i].z;
+                vertex.normal = position;
+                std::cout<<vertex.normal<<std::endl;
             }
             // texture coordinates
             if (mesh->mTextureCoords[0]) // does the mesh contain texture coordinates?
             {
-                glm::vec2 vec;
+                glm::vec2 texture;
                 // a vertex can contain up to 8 different texture coordinates. We thus make the assumption that we won't
                 // use models where a vertex can have multiple texture coordinates so we always take the first set (0).
-                vec.x = mesh->mTextureCoords[0][i].x;
-                vec.y = mesh->mTextureCoords[0][i].y;
-                vertex.texCoords = vec;
+                texture.x = mesh->mTextureCoords[0][i].x;
+                texture.y = mesh->mTextureCoords[0][i].y;
+                vertex.texCoords = texture;
                 /*// tangent
-                vector.x = mesh->mTangents[i].x;
-                vector.y = mesh->mTangents[i].y;
-                vector.z = mesh->mTangents[i].z;
-                vertex.Tangent = vector;
+                position.x = mesh->mTangents[i].x;
+                position.y = mesh->mTangents[i].y;
+                position.z = mesh->mTangents[i].z;
+                vertex.Tangent = position;
                 // bitangent
-                vector.x = mesh->mBitangents[i].x;
-                vector.y = mesh->mBitangents[i].y;
-                vector.z = mesh->mBitangents[i].z;
-                vertex.Bitangent = vector;*/
+                position.x = mesh->mBitangents[i].x;
+                position.y = mesh->mBitangents[i].y;
+                position.z = mesh->mBitangents[i].z;
+                vertex.Bitangent = position;*/
             } else
                 vertex.texCoords = glm::vec2(0.0f, 0.0f);
 
@@ -109,7 +114,7 @@ namespace glimac {
         return Mesh(vertices, indices, textures);
     }
 
-    std::vector<Texture> Model::loadMaterialTextures(aiMaterial *mat, aiTextureType type, std::string typeName) {
+    std::vector<Texture> Model::loadMaterialTextures(aiMaterial *mat, aiTextureType type, const std::string& typeName) {
             std::vector<Texture> textures;
 
         for (unsigned int i = 0; i < mat->GetTextureCount(type); i++) {
@@ -133,8 +138,8 @@ namespace glimac {
 
         FilePath filepath(filename);
 
-        std::unique_ptr<Image> image = loadImage("/home/matteo/Documents/imac2/openGL/GLImac-Template/assets/textures/EarthMap.jpg");
-        if(image == NULL){
+        std::unique_ptr<Image> image = loadImage(filepath);
+        if(image == nullptr){
             std::cerr << "Image" << filename << "could not be loaded" <<std::endl;
             return EXIT_FAILURE;
         }
@@ -148,9 +153,6 @@ namespace glimac {
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
         glBindTexture(GL_TEXTURE_2D,0);
-
-        std::cout<<"Hola6"<<std::endl;
-
         return texture;
     }
 
