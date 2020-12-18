@@ -5,8 +5,10 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/jeanne/Documents/S3/ImacDream/Game/class/src/Camera.cpp" "/home/jeanne/Documents/S3/ImacDream/Game-build/CMakeFiles/IMACDream.dir/class/src/Camera.cpp.o"
+  "/home/jeanne/Documents/S3/ImacDream/Game/class/src/GameObject.cpp" "/home/jeanne/Documents/S3/ImacDream/Game-build/CMakeFiles/IMACDream.dir/class/src/GameObject.cpp.o"
   "/home/jeanne/Documents/S3/ImacDream/Game/class/src/Mesh.cpp" "/home/jeanne/Documents/S3/ImacDream/Game-build/CMakeFiles/IMACDream.dir/class/src/Mesh.cpp.o"
   "/home/jeanne/Documents/S3/ImacDream/Game/class/src/Model.cpp" "/home/jeanne/Documents/S3/ImacDream/Game-build/CMakeFiles/IMACDream.dir/class/src/Model.cpp.o"
+  "/home/jeanne/Documents/S3/ImacDream/Game/class/src/Water.cpp" "/home/jeanne/Documents/S3/ImacDream/Game-build/CMakeFiles/IMACDream.dir/class/src/Water.cpp.o"
   "/home/jeanne/Documents/S3/ImacDream/Game/class/src/main.cpp" "/home/jeanne/Documents/S3/ImacDream/Game-build/CMakeFiles/IMACDream.dir/class/src/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
