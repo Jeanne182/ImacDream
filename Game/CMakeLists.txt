@@ -27,5 +27,5 @@ file(GLOB SRC_FILES ${CMAKE_SOURCE_DIR}/class/src/*.cpp)
 file(GLOB SHADER_FILES ${CMAKE_SOURCE_DIR}/class/shaders/*.glsl)
 
 set(OUTPUT ${PROJECT_NAME})
-add_executable(${OUTPUT} ${HEADER_FILES} ${SRC_FILES} ${SHADER_FILES})
+add_executable(${OUTPUT} ${HEADER_FILES} ${SRC_FILES} ${SHADER_FILES} class/include/Camera.hpp class/src/Camera.cpp)
 target_link_libraries(${OUTPUT} ${ALL_LIBRARIES})
