@@ -114,12 +114,12 @@ glimac/clean: glimac/CMakeFiles/glimac.dir/clean
 CMakeFiles/IMACDream.dir/all: glimac/CMakeFiles/glimac.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/IMACDream.dir/build.make CMakeFiles/IMACDream.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/IMACDream.dir/build.make CMakeFiles/IMACDream.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jeanne/Documents/S3/ImacDream/Game-build/CMakeFiles --progress-num=1,2,3,4,5,6,7 "Built target IMACDream"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jeanne/Documents/S3/ImacDream/Game-build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8 "Built target IMACDream"
 .PHONY : CMakeFiles/IMACDream.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/IMACDream.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jeanne/Documents/S3/ImacDream/Game-build/CMakeFiles 17
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jeanne/Documents/S3/ImacDream/Game-build/CMakeFiles 18
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/IMACDream.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/jeanne/Documents/S3/ImacDream/Game-build/CMakeFiles 0
 .PHONY : CMakeFiles/IMACDream.dir/rule
@@ -141,7 +141,7 @@ CMakeFiles/IMACDream.dir/clean:
 glimac/CMakeFiles/glimac.dir/all:
 	$(MAKE) $(MAKESILENT) -f glimac/CMakeFiles/glimac.dir/build.make glimac/CMakeFiles/glimac.dir/depend
 	$(MAKE) $(MAKESILENT) -f glimac/CMakeFiles/glimac.dir/build.make glimac/CMakeFiles/glimac.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jeanne/Documents/S3/ImacDream/Game-build/CMakeFiles --progress-num=8,9,10,11,12,13,14,15,16,17 "Built target glimac"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jeanne/Documents/S3/ImacDream/Game-build/CMakeFiles --progress-num=9,10,11,12,13,14,15,16,17,18 "Built target glimac"
 .PHONY : glimac/CMakeFiles/glimac.dir/all
 
 # Build rule for subdir invocation for target.
