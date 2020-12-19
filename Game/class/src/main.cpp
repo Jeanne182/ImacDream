@@ -4,10 +4,11 @@
 #include <glimac/Program.hpp>
 #include <glimac/FilePath.hpp>
 #include <glimac/glm.hpp>
-#include <glimac/common.hpp>
-#include <glimac/Sphere.hpp>
 #include "./../include/Camera.hpp"
 #include "./../include/Mesh.hpp"
+#include "./../include/GameObject.hpp"
+#include "./../include/Terrain.hpp"
+
 
 using namespace glimac;
 
@@ -34,40 +35,23 @@ int main(int argc, char** argv) {
                                   applicationPath.dirPath() + "Assets/shaders/normals.fs.glsl");
     program.use();
 
-    GLint uMVPMatrix_Location = glGetUniformLocation(program.getGLId(), "uMVPMatrix");
-    GLint uMVMatrix_Location = glGetUniformLocation(program.getGLId(), "uMVMatrix");
-    GLint uNormalMatrix_Location = glGetUniformLocation(program.getGLId(), "uNormalMatrix");
-
+    GLint MVP_Location = glGetUniformLocation(program.getGLId(), "uMVPMatrix");
+    GLint MV_Location = glGetUniformLocation(program.getGLId(), "uMVMatrix");
+    GLint N_Location = glGetUniformLocation(program.getGLId(), "uNormalMatrix");
+    GLint M_Location = glGetUniformLocation(program.getGLId(), "uMMatrix");
 
     glEnable(GL_DEPTH_TEST); // Activation du test de profondeur GPU
 
-    glm::mat4 ProjMatrix, MVMatrix, NormalMatrix;
-    ProjMatrix = glm::perspective(glm::radians(70.f), ratio, 0.1f, 100.f);
-    MVMatrix = glm::translate(glm::mat4(1.), glm::vec3(0.,0.,-5.));
-    NormalMatrix = glm::transpose(glm::inverse(MVMatrix));
+    glm::mat4 ProjMatrix = glm::perspective(glm::radians(70.f), ratio, 0.1f, 100.f);
 
-    /*********************************
-          SPHERE (to delete later)
-    *********************************/
-    Sphere sphere(1,32,32);
-    std::vector<GLuint> indices;
-    std::vector<Texture> textures;
-    std::vector<ShapeVertex> meshVertices;
-    for (GLint i = 0; i < sphere.getVertexCount();i++){
-        indices.push_back(i);
-        meshVertices.push_back(sphere.getDataPointer()[i]);
-    }
-    Mesh sphereMesh(meshVertices, indices, textures);
-
+    std::vector<GameObject>* objects(ObjectsManager(applicationPath));
+    Terrain terrain(*objects);
 
     // Application loop:
     bool done = false;
     while(!done) {
 
-        /*********************************
-          EVENT LOOP
-         *********************************/
-
+        //EVENTS
         SDL_Event e;
         while(windowManager.pollEvent(e)) {
             camera.event(e);
@@ -77,34 +61,16 @@ int main(int argc, char** argv) {
                     break;
             }
         }
+        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); // On nettoie la fenêtre afin de ne pas avoir de résidu du tour précédent
         camera.update();
 
-        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); // On nettoie la fenêtre afin de ne pas avoir de résidu du tour précédent
+        //TERRAIN
+        terrain.computeMatrix(camera.getViewMatrix(), ProjMatrix);
+        terrain.display(program, M_Location, MV_Location, MVP_Location, N_Location);
 
-        /*********************************
-         MATRICES
-         *********************************/
-
-        glm::mat4 VPMatrix = ProjMatrix * camera.getViewMatrix()* glm::translate(glm::mat4(), glm::vec3(0.,0.,5.));
-        glm::mat4 globalMVMatrix =  glm::translate(glm::mat4(1.f), glm::vec3(0, 0, -5));
-        glm::mat4 sphereMVMatrix = glm::rotate(globalMVMatrix, windowManager.getTime()*0, glm::vec3(0, 1, 0));
-
-        //On modifie la valeur d'une variable uniforme
-        glUniformMatrix4fv(uMVPMatrix_Location, 1, GL_FALSE, glm::value_ptr(VPMatrix *  sphereMVMatrix));
-        glUniformMatrix4fv(uMVMatrix_Location, 1, GL_FALSE, glm::value_ptr(sphereMVMatrix));
-        glUniformMatrix4fv(uNormalMatrix_Location, 1, GL_FALSE, glm::value_ptr(sphereMVMatrix));
-
-        /*********************************
-         RENDERING CODE
-         *********************************/
-
-        sphereMesh.Draw(program);
-
-        // Update the display
         windowManager.swapBuffers();
     }
 
-    sphereMesh.deleteBuffers();
-
+    terrain.deleteBuffers();
     return EXIT_SUCCESS;
 }

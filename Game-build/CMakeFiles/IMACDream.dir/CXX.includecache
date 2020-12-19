@@ -12,6 +12,14 @@ glimac/glm.hpp
 glimac/SDLWindowManager.hpp
 -
 
+/home/jeanne/Documents/S3/ImacDream/Game/class/include/GameObject.hpp
+glimac/common.hpp
+-
+./Mesh.hpp
+/home/jeanne/Documents/S3/ImacDream/Game/class/include/Mesh.hpp
+./Model.hpp
+/home/jeanne/Documents/S3/ImacDream/Game/class/include/Model.hpp
+
 /home/jeanne/Documents/S3/ImacDream/Game/class/include/Mesh.hpp
 glimac/Program.hpp
 -
@@ -38,6 +46,32 @@ assimp/scene.h
 assimp/postprocess.h
 -
 
+/home/jeanne/Documents/S3/ImacDream/Game/class/include/Model.hpp
+glimac/Program.hpp
+-
+GL/glew.h
+-
+glimac/glm.hpp
+-
+vector
+-
+string
+-
+fstream
+-
+sstream
+-
+iostream
+-
+./Mesh.hpp
+/home/jeanne/Documents/S3/ImacDream/Game/class/include/Mesh.hpp
+
+/home/jeanne/Documents/S3/ImacDream/Game/class/include/Terrain.hpp
+./GameObject.hpp
+/home/jeanne/Documents/S3/ImacDream/Game/class/include/GameObject.hpp
+vector
+-
+
 /home/jeanne/Documents/S3/ImacDream/Game/class/src/main.cpp
 glimac/SDLWindowManager.hpp
 -
@@ -51,14 +85,14 @@ glimac/FilePath.hpp
 -
 glimac/glm.hpp
 -
-glimac/common.hpp
--
-glimac/Sphere.hpp
--
 ./../include/Camera.hpp
 /home/jeanne/Documents/S3/ImacDream/Game/class/include/Camera.hpp
 ./../include/Mesh.hpp
 /home/jeanne/Documents/S3/ImacDream/Game/class/include/Mesh.hpp
+./../include/GameObject.hpp
+/home/jeanne/Documents/S3/ImacDream/Game/class/include/GameObject.hpp
+./../include/Terrain.hpp
+/home/jeanne/Documents/S3/ImacDream/Game/class/include/Terrain.hpp
 
 /home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/FilePath.hpp
 string
@@ -87,12 +121,6 @@ string
 -
 FilePath.hpp
 /home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/FilePath.hpp
-
-/home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/Sphere.hpp
-vector
--
-common.hpp
-/home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/common.hpp
 
 /home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/common.hpp
 GL/glew.h
@@ -337,6 +365,10 @@ vector3.h
 /home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/vector3.h
 cmath
 -
+
+/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/glm/common.hpp
+detail/func_common.hpp
+/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/glm/detail/func_common.hpp
 
 /home/jeanne/Documents/S3/ImacDream/Game/third-party/include/glm/detail/_fixes.hpp
 cmath

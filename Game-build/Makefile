@@ -264,6 +264,33 @@ class/src/Model.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/IMACDream.dir/build.make CMakeFiles/IMACDream.dir/class/src/Model.cpp.s
 .PHONY : class/src/Model.cpp.s
 
+class/src/Terrain.o: class/src/Terrain.cpp.o
+
+.PHONY : class/src/Terrain.o
+
+# target to build an object file
+class/src/Terrain.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/IMACDream.dir/build.make CMakeFiles/IMACDream.dir/class/src/Terrain.cpp.o
+.PHONY : class/src/Terrain.cpp.o
+
+class/src/Terrain.i: class/src/Terrain.cpp.i
+
+.PHONY : class/src/Terrain.i
+
+# target to preprocess a source file
+class/src/Terrain.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/IMACDream.dir/build.make CMakeFiles/IMACDream.dir/class/src/Terrain.cpp.i
+.PHONY : class/src/Terrain.cpp.i
+
+class/src/Terrain.s: class/src/Terrain.cpp.s
+
+.PHONY : class/src/Terrain.s
+
+# target to generate assembly for a file
+class/src/Terrain.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/IMACDream.dir/build.make CMakeFiles/IMACDream.dir/class/src/Terrain.cpp.s
+.PHONY : class/src/Terrain.cpp.s
+
 class/src/Water.o: class/src/Water.cpp.o
 
 .PHONY : class/src/Water.o
@@ -340,6 +367,9 @@ help:
 	@echo "... class/src/Model.o"
 	@echo "... class/src/Model.i"
 	@echo "... class/src/Model.s"
+	@echo "... class/src/Terrain.o"
+	@echo "... class/src/Terrain.i"
+	@echo "... class/src/Terrain.s"
 	@echo "... class/src/Water.o"
 	@echo "... class/src/Water.i"
 	@echo "... class/src/Water.s"
