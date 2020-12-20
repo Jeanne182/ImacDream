@@ -5,7 +5,6 @@ Terrain::Terrain(std::vector<GameObject> &objects):
         _objects(objects){}
 
 void Terrain::computeMatrix(const glm::mat4 &cameraView, glm::mat4 &projMatrix) {
-    std::cout<<"Objects size : "<< _objects.size() <<std::endl;
     for(int i = 0; i < _objects.size(); i++){
         _objects[i].computeMatrix(cameraView, projMatrix);
     }
