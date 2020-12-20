@@ -41,24 +41,34 @@ namespace glimac {
 
 //        // draw mesh
         glBindVertexArray(_vao);
+        glBindBufferRange(GL_UNIFORM_BUFFER, 0 , _ubo, 0, sizeof(Material));
         glDrawElements(GL_TRIANGLES, _indices.size(), GL_UNSIGNED_INT, 0);
         glBindVertexArray(0);
     }
 
     void Mesh::setupMesh() {
 
-        //Vbo Binding, send data into the vbo, unbind
+        //Buffers creation
         glGenBuffers(1, &_vbo);
+        glGenBuffers(1,&_ibo);
+        glGenBuffers(1, &_ubo);
         glBindBuffer(GL_ARRAY_BUFFER, _vbo);
-        glBufferData(GL_ARRAY_BUFFER, _vertices.size()*sizeof(ShapeVertex), _vertices.data(), GL_STATIC_DRAW);
+        glBufferData(GL_ARRAY_BUFFER, _vertices.size()*sizeof(ShapeVertex) + sizeof(Material), _vertices.data(), GL_STATIC_DRAW);
         glBindBuffer(GL_ARRAY_BUFFER, 0);
 
-        glGenBuffers(1,&_ibo);
+        glBindBuffer(GL_UNIFORM_BUFFER, _ubo);
+        glBufferData(GL_UNIFORM_BUFFER,sizeof(_materials),(void*)(&_materials), GL_STATIC_DRAW);
+        glBindBuffer(GL_UNIFORM_BUFFER, 0);
+
+        //ibo binding
         glBindBuffer(GL_ELEMENT_ARRAY_BUFFER,_ibo);
         glBufferData(GL_ELEMENT_ARRAY_BUFFER,_indices.size()*sizeof(unsigned int),_indices.data(),GL_STATIC_DRAW);
         glBindBuffer(GL_ELEMENT_ARRAY_BUFFER,0);
 
-        //Vao Binding
+
+
+        //Vao creation and binding
+        glGenVertexArrays(1, &_vao);
         glBindVertexArray(_vao);
         glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, _ibo);
 

@@ -1,22 +1,25 @@
 Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
-Change Dir: /home/jeanne/Documents/S3/ImacDream/Game-build/CMakeFiles/CMakeTmp
+Change Dir: /home/matteo/Documents/imac2/openGL/ImacDream/Game-build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_caefd/fast && /usr/bin/make  -f CMakeFiles/cmTC_caefd.dir/build.make CMakeFiles/cmTC_caefd.dir/build
-make[1] : on entre dans le répertoire « /home/jeanne/Documents/S3/ImacDream/Game-build/CMakeFiles/CMakeTmp »
-Building C object CMakeFiles/cmTC_caefd.dir/src.c.o
-/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_caefd.dir/src.c.o   -c /home/jeanne/Documents/S3/ImacDream/Game-build/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_caefd
-/snap/clion/135/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_caefd.dir/link.txt --verbose=1
-/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    -rdynamic CMakeFiles/cmTC_caefd.dir/src.c.o  -o cmTC_caefd 
-/usr/bin/ld : CMakeFiles/cmTC_caefd.dir/src.c.o : dans la fonction « main » :
-src.c:(.text+0x46) : référence indéfinie vers « pthread_create »
-/usr/bin/ld : src.c:(.text+0x52) : référence indéfinie vers « pthread_detach »
-/usr/bin/ld : src.c:(.text+0x5e) : référence indéfinie vers « pthread_cancel »
-/usr/bin/ld : src.c:(.text+0x6f) : référence indéfinie vers « pthread_join »
+Run Build Command(s):/usr/bin/make cmTC_40f3b/fast && /usr/bin/make  -f CMakeFiles/cmTC_40f3b.dir/build.make CMakeFiles/cmTC_40f3b.dir/build
+make[1] : on entre dans le répertoire « /home/matteo/Documents/imac2/openGL/ImacDream/Game-build/CMakeFiles/CMakeTmp »
+Building C object CMakeFiles/cmTC_40f3b.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_40f3b.dir/src.c.o   -c /home/matteo/Documents/imac2/openGL/ImacDream/Game-build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_40f3b
+/snap/clion/137/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_40f3b.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    -rdynamic CMakeFiles/cmTC_40f3b.dir/src.c.o  -o cmTC_40f3b 
+CMakeFiles/cmTC_40f3b.dir/src.c.o : Dans la fonction « main » :
+src.c:(.text+0x3e) : référence indéfinie vers « pthread_create »
+src.c:(.text+0x4a) : référence indéfinie vers « pthread_detach »
+src.c:(.text+0x56) : référence indéfinie vers « pthread_cancel »
+src.c:(.text+0x67) : référence indéfinie vers « pthread_join »
+src.c:(.text+0x7b) : référence indéfinie vers « pthread_atfork »
 collect2: error: ld returned 1 exit status
-make[1]: *** [CMakeFiles/cmTC_caefd.dir/build.make:107: cmTC_caefd] Error 1
-make[1] : on quitte le répertoire « /home/jeanne/Documents/S3/ImacDream/Game-build/CMakeFiles/CMakeTmp »
-make: *** [Makefile:141: cmTC_caefd/fast] Error 2
+CMakeFiles/cmTC_40f3b.dir/build.make:106: recipe for target 'cmTC_40f3b' failed
+make[1]: *** [cmTC_40f3b] Error 1
+make[1] : on quitte le répertoire « /home/matteo/Documents/imac2/openGL/ImacDream/Game-build/CMakeFiles/CMakeTmp »
+Makefile:141: recipe for target 'cmTC_40f3b/fast' failed
+make: *** [cmTC_40f3b/fast] Error 2
 
 
 Source file was:
@@ -41,20 +44,22 @@ int main(void)
 }
 
 Determining if the function pthread_create exists in the pthreads failed with the following output:
-Change Dir: /home/jeanne/Documents/S3/ImacDream/Game-build/CMakeFiles/CMakeTmp
+Change Dir: /home/matteo/Documents/imac2/openGL/ImacDream/Game-build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_16bb4/fast && /usr/bin/make  -f CMakeFiles/cmTC_16bb4.dir/build.make CMakeFiles/cmTC_16bb4.dir/build
-make[1] : on entre dans le répertoire « /home/jeanne/Documents/S3/ImacDream/Game-build/CMakeFiles/CMakeTmp »
-Building C object CMakeFiles/cmTC_16bb4.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_16bb4.dir/CheckFunctionExists.c.o   -c /snap/clion/135/bin/cmake/linux/share/cmake-3.17/Modules/CheckFunctionExists.c
-Linking C executable cmTC_16bb4
-/snap/clion/135/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_16bb4.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_16bb4.dir/CheckFunctionExists.c.o  -o cmTC_16bb4  -lpthreads 
+Run Build Command(s):/usr/bin/make cmTC_ab11d/fast && /usr/bin/make  -f CMakeFiles/cmTC_ab11d.dir/build.make CMakeFiles/cmTC_ab11d.dir/build
+make[1] : on entre dans le répertoire « /home/matteo/Documents/imac2/openGL/ImacDream/Game-build/CMakeFiles/CMakeTmp »
+Building C object CMakeFiles/cmTC_ab11d.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_ab11d.dir/CheckFunctionExists.c.o   -c /snap/clion/137/bin/cmake/linux/share/cmake-3.17/Modules/CheckFunctionExists.c
+Linking C executable cmTC_ab11d
+/snap/clion/137/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ab11d.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_ab11d.dir/CheckFunctionExists.c.o  -o cmTC_ab11d  -lpthreads 
 /usr/bin/ld : ne peut trouver -lpthreads
 collect2: error: ld returned 1 exit status
-make[1]: *** [CMakeFiles/cmTC_16bb4.dir/build.make:107: cmTC_16bb4] Error 1
-make[1] : on quitte le répertoire « /home/jeanne/Documents/S3/ImacDream/Game-build/CMakeFiles/CMakeTmp »
-make: *** [Makefile:141: cmTC_16bb4/fast] Error 2
+CMakeFiles/cmTC_ab11d.dir/build.make:106: recipe for target 'cmTC_ab11d' failed
+make[1]: *** [cmTC_ab11d] Error 1
+make[1] : on quitte le répertoire « /home/matteo/Documents/imac2/openGL/ImacDream/Game-build/CMakeFiles/CMakeTmp »
+Makefile:141: recipe for target 'cmTC_ab11d/fast' failed
+make: *** [cmTC_ab11d/fast] Error 2
 
 
 

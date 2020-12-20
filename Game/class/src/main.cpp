@@ -7,7 +7,7 @@
 #include <glimac/common.hpp>
 #include <glimac/Sphere.hpp>
 #include "./../include/Camera.hpp"
-#include "./../include/Mesh.hpp"
+#include "./../include/Model.hpp"
 
 using namespace glimac;
 
@@ -49,15 +49,16 @@ int main(int argc, char** argv) {
     /*********************************
           SPHERE (to delete later)
     *********************************/
-    Sphere sphere(1,32,32);
-    std::vector<GLuint> indices;
-    std::vector<Texture> textures;
-    std::vector<ShapeVertex> meshVertices;
-    for (GLint i = 0; i < sphere.getVertexCount();i++){
-        indices.push_back(i);
-        meshVertices.push_back(sphere.getDataPointer()[i]);
-    }
-    Mesh sphereMesh(meshVertices, indices, textures);
+//    Sphere sphere(1,32,32);
+//    std::vector<GLuint> indices;
+//    std::vector<Texture> textures;
+//    std::vector<ShapeVertex> meshVertices;
+//    for (GLint i = 0; i < sphere.getVertexCount();i++){
+//        indices.push_back(i);
+//        meshVertices.push_back(sphere.getDataPointer()[i]);
+//    }
+//    Mesh sphereMesh(meshVertices, indices, textures);
+    Model arbre(applicationPath.dirPath() + "Assets/models/trunk.obj");
 
 
     // Application loop:
@@ -98,13 +99,15 @@ int main(int argc, char** argv) {
          RENDERING CODE
          *********************************/
 
-        sphereMesh.Draw(program);
+        //sphereMesh.Draw(program);
+        arbre.Draw(program);
 
         // Update the display
         windowManager.swapBuffers();
     }
 
-    sphereMesh.deleteBuffers();
+    arbre.deleteBuffers();
+    //sphereMesh.deleteBuffers();
 
     return EXIT_SUCCESS;
 }
