@@ -8,6 +8,7 @@
 #include "./../include/Mesh.hpp"
 #include "./../include/GameObject.hpp"
 #include "./../include/Terrain.hpp"
+#include "./../include/Model.hpp"
 
 
 using namespace glimac;
@@ -46,6 +47,7 @@ int main(int argc, char** argv) {
 
     std::vector<GameObject>* objects(ObjectsManager(applicationPath));
     Terrain terrain(*objects);
+    Model arbre(applicationPath.dirPath() + "Assets/models/trunk.obj");
 
     // Application loop:
     bool done = false;
@@ -68,9 +70,11 @@ int main(int argc, char** argv) {
         terrain.computeMatrix(camera.getViewMatrix(), ProjMatrix);
         terrain.display(program, M_Location, MV_Location, MVP_Location, N_Location);
 
+        arbre.Draw(program);
         windowManager.swapBuffers();
     }
 
+    arbre.deleteBuffers();
     terrain.deleteBuffers();
     return EXIT_SUCCESS;
 }

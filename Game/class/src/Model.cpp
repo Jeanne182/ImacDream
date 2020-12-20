@@ -66,7 +66,6 @@ namespace glimac {
                 position.y = mesh->mNormals[i].y;
                 position.z = mesh->mNormals[i].z;
                 vertex.normal = position;
-                std::cout<<vertex.normal<<std::endl;
             }
             // texture coordinates
             if (mesh->mTextureCoords[0]) // does the mesh contain texture coordinates?
@@ -99,19 +98,24 @@ namespace glimac {
                 indices.push_back(face.mIndices[j]);
         }
         // process material
-        if (mesh->mMaterialIndex >= 0) {
 
-            if (mesh->mMaterialIndex >= 0) {
+        aiMaterial *material = scene->mMaterials[mesh->mMaterialIndex];
+        Material mat;
+        aiColor3D color;
 
-                aiMaterial *material = scene->mMaterials[mesh->mMaterialIndex];
-                std::vector<Texture> diffuseMaps = loadMaterialTextures(material, aiTextureType_DIFFUSE, "texture_diffuse");
-                textures.insert(textures.end(), diffuseMaps.begin(), diffuseMaps.end());
-                std::vector<Texture> specularMaps = loadMaterialTextures(material, aiTextureType_SPECULAR, "texture_specular");
-                textures.insert(textures.end(), specularMaps.begin(), specularMaps.end());
-            }
-        }
+        material->Get(AI_MATKEY_COLOR_AMBIENT, color);
+        mat.Ka = glm::vec4(color.r, color.g, color.b,1.0);
+        material->Get(AI_MATKEY_COLOR_DIFFUSE, color);
+        mat.Kd = glm::vec4(color.r, color.g, color.b,1.0);
+        material->Get(AI_MATKEY_COLOR_SPECULAR, color);
+        mat.Ks = glm::vec4(color.r, color.g, color.b,1.0);
 
-        return Mesh(vertices, indices, textures);
+        std::vector<Texture> diffuseMaps = loadMaterialTextures(material, aiTextureType_DIFFUSE, "texture_diffuse");
+        textures.insert(textures.end(), diffuseMaps.begin(), diffuseMaps.end());
+        std::vector<Texture> specularMaps = loadMaterialTextures(material, aiTextureType_SPECULAR, "texture_specular");
+        textures.insert(textures.end(), specularMaps.begin(), specularMaps.end());
+
+        return Mesh(vertices, indices, textures, mat);
     }
 
     std::vector<Texture> Model::loadMaterialTextures(aiMaterial *mat, aiTextureType type, const std::string& typeName) {
