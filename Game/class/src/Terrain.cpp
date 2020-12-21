@@ -29,12 +29,13 @@ std::vector<GameObject>* ObjectsManager(const FilePath &applicationPath){
     Sphere sphere(1,32,32);
     std::vector<GLuint> indices;
     std::vector<Texture> textures;
+    Material material;
     std::vector<ShapeVertex> meshVertices;
     for (GLint i = 0; i < sphere.getVertexCount();i++){
         indices.push_back(i);
         meshVertices.push_back(sphere.getDataPointer()[i]);
     }
-    Mesh* sphereMesh = new Mesh(meshVertices, indices, textures);
+    Mesh* sphereMesh = new Mesh(meshVertices, indices, textures, material);
     GameObject sphereObject(glm::vec3(0.f,0.f,-5.f), 1.f, glm::vec3(0.f, 0.f, 0.f), *sphereMesh);
     objects->push_back(sphereObject);
 
@@ -43,6 +44,11 @@ std::vector<GameObject>* ObjectsManager(const FilePath &applicationPath){
     Model* tree = new Model(pathModelTree);
     GameObject treeObject(glm::vec3(0.f,0.f,-5.f), 1.f, glm::vec3(0.f, 0.f, 0.f), tree->_meshes[0]);
     objects->push_back(treeObject);
+
+    //TRUNK
+    Model* trunk = new Model(applicationPath.dirPath() + "Assets/models/trunk.obj");
+    GameObject trunkObject(glm::vec3(-5.f,0.f,-5.f), 1.f, glm::vec3(0.f, 0.f, 0.f), trunk->_meshes[0]);
+    objects->push_back(trunkObject);
 
     return objects;
 }
