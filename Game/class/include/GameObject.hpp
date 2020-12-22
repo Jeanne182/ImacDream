@@ -6,8 +6,6 @@
 
 using namespace glimac;
 
-
-
 class GameObject {
 protected:
     glm::vec3 _position, _angles;
@@ -25,15 +23,21 @@ public :
 
     //SETTERS
     inline void setPosition(glm::vec3 position){ _position = position; }
+    inline void setAngles(glm::vec3 angles){ _angles = angles; }
+    inline void setScale(float scale){ _scale = scale; }
+
+    inline void addPosition(glm::vec3 position){ _position += position; }
+    inline void addAngles(glm::vec3 angles){ _angles += angles; }
+    inline void addScale(float scale){ _scale += scale; }
 
     //METHODS
     void display(Program &program, GLint &M_Location, GLint &MV_Location, GLint &MVP_Location, GLint &N_Location);
     void setMatrix();
     void computeMatrix(const glm::mat4 &cameraView, glm::mat4 &projMatrix);
     void useMatrix(GLint &M_Location, GLint &MV_Location, GLint &MVP_Location, GLint &N_Location) const;
+    void update(const glm::mat4 &cameraView, glm::mat4 &projMatrix, Program &program, GLint &M_Location, GLint &MV_Location, GLint &MVP_Location, GLint &N_Location);
     void deleteBuffers();
 
 };
-
 
 #endif //IMACDREAM_GAMEOBJECT_HPP

@@ -156,6 +156,33 @@ glimac/fast:
 	$(MAKE) $(MAKESILENT) -f glimac/CMakeFiles/glimac.dir/build.make glimac/CMakeFiles/glimac.dir/build
 .PHONY : glimac/fast
 
+class/src/App.o: class/src/App.cpp.o
+
+.PHONY : class/src/App.o
+
+# target to build an object file
+class/src/App.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/IMACDream.dir/build.make CMakeFiles/IMACDream.dir/class/src/App.cpp.o
+.PHONY : class/src/App.cpp.o
+
+class/src/App.i: class/src/App.cpp.i
+
+.PHONY : class/src/App.i
+
+# target to preprocess a source file
+class/src/App.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/IMACDream.dir/build.make CMakeFiles/IMACDream.dir/class/src/App.cpp.i
+.PHONY : class/src/App.cpp.i
+
+class/src/App.s: class/src/App.cpp.s
+
+.PHONY : class/src/App.s
+
+# target to generate assembly for a file
+class/src/App.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/IMACDream.dir/build.make CMakeFiles/IMACDream.dir/class/src/App.cpp.s
+.PHONY : class/src/App.cpp.s
+
 class/src/Camera.o: class/src/Camera.cpp.o
 
 .PHONY : class/src/Camera.o
@@ -183,6 +210,33 @@ class/src/Camera.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/IMACDream.dir/build.make CMakeFiles/IMACDream.dir/class/src/Camera.cpp.s
 .PHONY : class/src/Camera.cpp.s
 
+class/src/Game.o: class/src/Game.cpp.o
+
+.PHONY : class/src/Game.o
+
+# target to build an object file
+class/src/Game.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/IMACDream.dir/build.make CMakeFiles/IMACDream.dir/class/src/Game.cpp.o
+.PHONY : class/src/Game.cpp.o
+
+class/src/Game.i: class/src/Game.cpp.i
+
+.PHONY : class/src/Game.i
+
+# target to preprocess a source file
+class/src/Game.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/IMACDream.dir/build.make CMakeFiles/IMACDream.dir/class/src/Game.cpp.i
+.PHONY : class/src/Game.cpp.i
+
+class/src/Game.s: class/src/Game.cpp.s
+
+.PHONY : class/src/Game.s
+
+# target to generate assembly for a file
+class/src/Game.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/IMACDream.dir/build.make CMakeFiles/IMACDream.dir/class/src/Game.cpp.s
+.PHONY : class/src/Game.cpp.s
+
 class/src/GameObject.o: class/src/GameObject.cpp.o
 
 .PHONY : class/src/GameObject.o
@@ -209,6 +263,33 @@ class/src/GameObject.s: class/src/GameObject.cpp.s
 class/src/GameObject.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/IMACDream.dir/build.make CMakeFiles/IMACDream.dir/class/src/GameObject.cpp.s
 .PHONY : class/src/GameObject.cpp.s
+
+class/src/MapManager.o: class/src/MapManager.cpp.o
+
+.PHONY : class/src/MapManager.o
+
+# target to build an object file
+class/src/MapManager.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/IMACDream.dir/build.make CMakeFiles/IMACDream.dir/class/src/MapManager.cpp.o
+.PHONY : class/src/MapManager.cpp.o
+
+class/src/MapManager.i: class/src/MapManager.cpp.i
+
+.PHONY : class/src/MapManager.i
+
+# target to preprocess a source file
+class/src/MapManager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/IMACDream.dir/build.make CMakeFiles/IMACDream.dir/class/src/MapManager.cpp.i
+.PHONY : class/src/MapManager.cpp.i
+
+class/src/MapManager.s: class/src/MapManager.cpp.s
+
+.PHONY : class/src/MapManager.s
+
+# target to generate assembly for a file
+class/src/MapManager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/IMACDream.dir/build.make CMakeFiles/IMACDream.dir/class/src/MapManager.cpp.s
+.PHONY : class/src/MapManager.cpp.s
 
 class/src/Mesh.o: class/src/Mesh.cpp.o
 
@@ -355,12 +436,21 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... IMACDream"
 	@echo "... glimac"
+	@echo "... class/src/App.o"
+	@echo "... class/src/App.i"
+	@echo "... class/src/App.s"
 	@echo "... class/src/Camera.o"
 	@echo "... class/src/Camera.i"
 	@echo "... class/src/Camera.s"
+	@echo "... class/src/Game.o"
+	@echo "... class/src/Game.i"
+	@echo "... class/src/Game.s"
 	@echo "... class/src/GameObject.o"
 	@echo "... class/src/GameObject.i"
 	@echo "... class/src/GameObject.s"
+	@echo "... class/src/MapManager.o"
+	@echo "... class/src/MapManager.i"
+	@echo "... class/src/MapManager.s"
 	@echo "... class/src/Mesh.o"
 	@echo "... class/src/Mesh.i"
 	@echo "... class/src/Mesh.s"

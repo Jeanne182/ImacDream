@@ -38,6 +38,8 @@ glm::mat4 Camera::getViewMatrix() const{
 }
 
 void Camera::event(const SDL_Event &e) {
+    float speed_mouse = 0.1f;
+    int static counterX;
     switch(e.type)
     {
         case SDL_MOUSEBUTTONUP :
@@ -51,42 +53,52 @@ void Camera::event(const SDL_Event &e) {
 //        case SDL_MOUSEBUTTONDOWN:
 //            OriginX = e.button.x - WINDOW_WIDTH/2;
 //            OriginY = e.button.y - WINDOW_HEIGHT/2;
+        case SDL_MOUSEMOTION:
+            counterX += e.motion.xrel;
+            rotateLeft(- (e.motion.xrel) * speed_mouse);
+//            rotateUp((e.motion.yrel) * speed_mouse);
+//            SDL_WarpMouse(800/2, 600/2);
+
+            std::cout<<"(x, y) = ("<<e.button.x<<","<<e.button.y<<")"<<std::endl;
+            std::cout<<"(xRel, yRel) = ("<<e.motion.xrel<<","<<e.motion.xrel<<")"<<std::endl;
+            break;
+
 
             /* Touche clavier */
         case SDL_KEYDOWN:
-            if (e.key.keysym.sym==SDLK_z)
+            if (e.key.keysym.sym==SDLK_z || e.key.keysym.sym==SDLK_UP)
             {
                 KEY_UP_PRESSED = true;
 
             }
-            if (e.key.keysym.sym==SDLK_s)
+            if (e.key.keysym.sym==SDLK_s || e.key.keysym.sym==SDLK_DOWN)
             {
                 KEY_DOWN_PRESSED = true;
             }
-            if (e.key.keysym.sym==SDLK_q)
+            if (e.key.keysym.sym==SDLK_q || e.key.keysym.sym==SDLK_LEFT)
             {
                 KEY_LEFT_PRESSED = true;
             }
-            if (e.key.keysym.sym==SDLK_d)
+            if (e.key.keysym.sym==SDLK_d || e.key.keysym.sym==SDLK_RIGHT)
             {
                 KEY_RIGHT_PRESSED = true;
             }
             break;
 
         case SDL_KEYUP:
-            if (e.key.keysym.sym==SDLK_z)
+            if (e.key.keysym.sym==SDLK_z || e.key.keysym.sym==SDLK_UP)
             {
                 KEY_UP_PRESSED = false;
             }
-            if (e.key.keysym.sym==SDLK_s)
+            if (e.key.keysym.sym==SDLK_s || e.key.keysym.sym==SDLK_DOWN)
             {
                 KEY_DOWN_PRESSED = false;
             }
-            if (e.key.keysym.sym==SDLK_q)
+            if (e.key.keysym.sym==SDLK_q || e.key.keysym.sym==SDLK_LEFT)
             {
                 KEY_LEFT_PRESSED = false;
             }
-            if (e.key.keysym.sym==SDLK_d)
+            if (e.key.keysym.sym==SDLK_d || e.key.keysym.sym==SDLK_RIGHT)
             {
                 KEY_RIGHT_PRESSED = false;
             }
@@ -96,28 +108,10 @@ void Camera::event(const SDL_Event &e) {
             break;
     }
 
-//    if(windowManager.isMouseButtonPressed(SDL_BUTTON_RIGHT)){
-//        float x = windowManager.getMousePosition().x - WINDOW_WIDTH/2;
-//        std::cout<<"x Position =  "<<x<<std::endl;
-//        std::cout<<"Origin =  "<<OriginX <<" , "<<OriginY<<std::endl;
-//        std::cout<<"Distance =  "<<x - OriginX<<std::endl<<std::endl;
-//
-//        rotateLeft((OriginX - x)*0.01);
-//        if(xOld >= x){
-//            OriginX = x;
-//        }
-//        xOld = x;
-//        float y = windowManager.getMousePosition().y - WINDOW_HEIGHT/2;
-//        rotateUp((-y + OriginY)*0.01);
-//        if(yOld >= y){
-//            OriginY = y;
-//        }
-//        yOld = y;
-//    }
 }
 
 void Camera::update() {
-    float speed = 0.01f;
+    float speed = 0.05f;
 
     if (KEY_UP_PRESSED)
     {

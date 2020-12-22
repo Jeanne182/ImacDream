@@ -4,8 +4,11 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/jeanne/Documents/S3/ImacDream/Game/class/src/App.cpp" "/home/jeanne/Documents/S3/ImacDream/Game-build/CMakeFiles/IMACDream.dir/class/src/App.cpp.o"
   "/home/jeanne/Documents/S3/ImacDream/Game/class/src/Camera.cpp" "/home/jeanne/Documents/S3/ImacDream/Game-build/CMakeFiles/IMACDream.dir/class/src/Camera.cpp.o"
+  "/home/jeanne/Documents/S3/ImacDream/Game/class/src/Game.cpp" "/home/jeanne/Documents/S3/ImacDream/Game-build/CMakeFiles/IMACDream.dir/class/src/Game.cpp.o"
   "/home/jeanne/Documents/S3/ImacDream/Game/class/src/GameObject.cpp" "/home/jeanne/Documents/S3/ImacDream/Game-build/CMakeFiles/IMACDream.dir/class/src/GameObject.cpp.o"
+  "/home/jeanne/Documents/S3/ImacDream/Game/class/src/MapManager.cpp" "/home/jeanne/Documents/S3/ImacDream/Game-build/CMakeFiles/IMACDream.dir/class/src/MapManager.cpp.o"
   "/home/jeanne/Documents/S3/ImacDream/Game/class/src/Mesh.cpp" "/home/jeanne/Documents/S3/ImacDream/Game-build/CMakeFiles/IMACDream.dir/class/src/Mesh.cpp.o"
   "/home/jeanne/Documents/S3/ImacDream/Game/class/src/Model.cpp" "/home/jeanne/Documents/S3/ImacDream/Game-build/CMakeFiles/IMACDream.dir/class/src/Model.cpp.o"
   "/home/jeanne/Documents/S3/ImacDream/Game/class/src/Terrain.cpp" "/home/jeanne/Documents/S3/ImacDream/Game-build/CMakeFiles/IMACDream.dir/class/src/Terrain.cpp.o"

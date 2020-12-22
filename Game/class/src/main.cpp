@@ -8,15 +8,18 @@
 #include "./../include/Mesh.hpp"
 #include "./../include/GameObject.hpp"
 #include "./../include/Terrain.hpp"
+//#include "./../include/App.hpp"
 
 using namespace glimac;
 
 int main(int argc, char** argv) {
     // Initialize SDL and open a window
     Camera camera;
+
     int WINDOW_WIDTH = 800;
     int WINDOW_HEIGHT = 600;
-    float ratio = (float) WINDOW_WIDTH / WINDOW_HEIGHT;
+    float ratio = (float)WINDOW_WIDTH/WINDOW_HEIGHT;
+
 
     SDLWindowManager windowManager(WINDOW_WIDTH, WINDOW_HEIGHT, "GLImac");
 
@@ -33,6 +36,7 @@ int main(int argc, char** argv) {
     Program program = loadProgram(applicationPath.dirPath() + "Assets/shaders/3D.vs.glsl",
                                   applicationPath.dirPath() + "Assets/shaders/normals.fs.glsl");
     program.use();
+//    App app(WINDOW_WIDTH, WINDOW_HEIGHT, applicationPath);
 
     GLint MVP_Location = glGetUniformLocation(program.getGLId(), "uMVPMatrix");
     GLint MV_Location = glGetUniformLocation(program.getGLId(), "uMVMatrix");
@@ -43,11 +47,10 @@ int main(int argc, char** argv) {
 
     glm::mat4 ProjMatrix = glm::perspective(glm::radians(70.f), ratio, 0.1f, 100.f);
 
-    std::vector<GameObject>* objects(ObjectsManager(applicationPath));
-    Terrain terrain(*objects);
-
+    Terrain terrain(applicationPath);
 
     // Application loop:
+    SDL_WM_GrabInput( SDL_GRAB_ON );
     bool done = false;
     while(!done) {
 
@@ -55,19 +58,20 @@ int main(int argc, char** argv) {
         SDL_Event e;
         while(windowManager.pollEvent(e)) {
             camera.event(e);
+
             switch(e.type) {
                 case SDL_QUIT:
                     done = true; // Leave the loop after this iteration
                     break;
+                case SDL_KEYDOWN:
+                    if (e.key.keysym.sym==SDLK_ESCAPE) {done = true;}
+                    break;
             }
         }
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); // On nettoie la fenêtre afin de ne pas avoir de résidu du tour précédent
+
         camera.update();
-
-        //TERRAIN
-        terrain.computeMatrix(camera.getViewMatrix(), ProjMatrix);
-        terrain.display(program, M_Location, MV_Location, MVP_Location, N_Location);
-
+        terrain.display(camera.getViewMatrix(), ProjMatrix, program, M_Location, MV_Location, MVP_Location, N_Location);
 
         windowManager.swapBuffers();
     }

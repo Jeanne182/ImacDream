@@ -37,6 +37,12 @@ void GameObject::computeMatrix(const glm::mat4 &cameraView, glm::mat4 &projMatri
     _N = glm::transpose(glm::inverse(_MV));
 }
 
+void GameObject::update(const glm::mat4 &cameraView, glm::mat4 &projMatrix, Program &program, GLint &M_Location, GLint &MV_Location, GLint &MVP_Location, GLint &N_Location) {
+    setMatrix();
+    computeMatrix(cameraView, projMatrix);
+    display(program, M_Location, MV_Location, MVP_Location, N_Location);
+}
+
 void GameObject::useMatrix(GLint &M_Location, GLint &MV_Location, GLint &MVP_Location, GLint &N_Location) const {
     glUniformMatrix4fv(M_Location, 1, GL_FALSE, glm::value_ptr(_M));
     glUniformMatrix4fv(MV_Location, 1, GL_FALSE, glm::value_ptr(_MV));
