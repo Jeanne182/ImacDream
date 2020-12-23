@@ -64,22 +64,22 @@ namespace glm
 		genType const & p0, 
 		genType const & p1);
 
-	/// Returns the dot product of x and y, i.e., result = x * y.
+	/// Returns the dotProduct product of x and y, i.e., result = x * y.
 	///
 	/// @tparam genType Floating-point vector types.
 	/// 
-	/// @see <a href="http://www.opengl.org/sdk/docs/manglsl/xhtml/dot.xml">GLSL dot man page</a>
+	/// @see <a href="http://www.opengl.org/sdk/docs/manglsl/xhtml/dot.xml">GLSL dotProduct man page</a>
 	/// @see <a href="http://www.opengl.org/registry/doc/GLSLangSpec.4.20.8.pdf">GLSL 4.20.8 specification, section 8.5 Geometric Functions</a>
 	template <typename T, precision P, template <typename, precision> class vecType>
 	GLM_FUNC_DECL T dot(
 		vecType<T, P> const & x,
 		vecType<T, P> const & y);
 
-	/// Returns the dot product of x and y, i.e., result = x * y.
+	/// Returns the dotProduct product of x and y, i.e., result = x * y.
 	///
 	/// @tparam genType Floating-point vector types.
 	/// 
-	/// @see <a href="http://www.opengl.org/sdk/docs/manglsl/xhtml/dot.xml">GLSL dot man page</a>
+	/// @see <a href="http://www.opengl.org/sdk/docs/manglsl/xhtml/dot.xml">GLSL dotProduct man page</a>
 	/// @see <a href="http://www.opengl.org/registry/doc/GLSLangSpec.4.20.8.pdf">GLSL 4.20.8 specification, section 8.5 Geometric Functions</a>
 	template <typename genType>
 	GLM_FUNC_DECL genType dot(
@@ -105,7 +105,7 @@ namespace glm
 	GLM_FUNC_DECL genType normalize(
 		genType const & x);
 
-	/// If dot(Nref, I) < 0.0, return N, otherwise, return -N.
+	/// If dotProduct(Nref, I) < 0.0, return N, otherwise, return -N.
 	///
 	/// @tparam genType Floating-point vector types.
 	/// 
@@ -118,7 +118,7 @@ namespace glm
 		genType const & Nref);
 
 	/// For the incident vector I and surface orientation N, 
-	/// returns the reflection direction : result = I - 2.0 * dot(N, I) * N.
+	/// returns the reflection direction : result = I - 2.0 * dotProduct(N, I) * N.
 	///
 	/// @tparam genType Floating-point vector types.
 	/// 

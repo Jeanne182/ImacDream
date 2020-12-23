@@ -8,6 +8,7 @@
 #include "./../include/Mesh.hpp"
 #include "./../include/GameObject.hpp"
 #include "./../include/Terrain.hpp"
+#include "./../include/InteractiveObject.hpp"
 
 
 using namespace glimac;
@@ -58,6 +59,21 @@ int main(int argc, char** argv) {
             switch(e.type) {
                 case SDL_QUIT:
                     done = true; // Leave the loop after this iteration
+                    break;
+
+                case SDL_MOUSEBUTTONDOWN:
+                    for(auto objectToFind : *objects){
+                        glm::vec3 P1 = glm::vec3(0., 0., 0.);
+                        glm::vec3 P2 = glm::vec3(0., 0., 0.);
+
+                        if(objectToFind.isSelected(camera.getPosition(), &P1, &P2)){
+                            std::cout << "Object selected" << std::endl;
+                        }
+                        else{
+                            std::cout << "Object not selected" << std::endl;
+                        }
+
+                    }
                     break;
             }
         }

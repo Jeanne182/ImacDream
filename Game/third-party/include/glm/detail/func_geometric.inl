@@ -171,7 +171,7 @@ namespace detail
 		return length(p1 - p0);
 	}
 
-	// dot
+	// dotProduct
 	template <typename T>
 	GLM_FUNC_QUALIFIER T dot
 	(
@@ -179,7 +179,7 @@ namespace detail
 		T const & y
 	)
 	{
-		GLM_STATIC_ASSERT(std::numeric_limits<T>::is_iec559, "'dot' only accept floating-point inputs");
+		GLM_STATIC_ASSERT(std::numeric_limits<T>::is_iec559, "'dotProduct' only accept floating-point inputs");
 		return detail::compute_dot<detail::tvec1, T, highp>::call(x, y);
 	}
 
@@ -190,12 +190,12 @@ namespace detail
 		vecType<T, P> const & y
 	)
 	{
-		GLM_STATIC_ASSERT(std::numeric_limits<T>::is_iec559, "'dot' only accept floating-point inputs");
+		GLM_STATIC_ASSERT(std::numeric_limits<T>::is_iec559, "'dotProduct' only accept floating-point inputs");
 		return detail::compute_dot<vecType, T, P>::call(x, y);
 	}
 
 /* // SSE3
-	GLM_FUNC_QUALIFIER float dot(const tvec4<float>& x, const tvec4<float>& y)
+	GLM_FUNC_QUALIFIER float dotProduct(const tvec4<float>& x, const tvec4<float>& y)
 	{
 		float Result;
 		__asm

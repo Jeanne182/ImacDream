@@ -3,6 +3,8 @@
 #include <glimac/common.hpp>
 #include "./Mesh.hpp"
 #include "./Model.hpp"
+#include <glimac/SDLWindowManager.hpp>
+#include "./Camera.hpp"
 
 using namespace glimac;
 
@@ -32,6 +34,8 @@ public :
     void computeMatrix(const glm::mat4 &cameraView, glm::mat4 &projMatrix);
     void useMatrix(GLint &M_Location, GLint &MV_Location, GLint &MVP_Location, GLint &N_Location) const;
     void deleteBuffers();
+    bool isSelected(const glm::vec3 &cameraPosition, glm::vec3 *P1, glm::vec3 *P2);
+
 
 };
 

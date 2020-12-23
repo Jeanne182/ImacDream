@@ -28,6 +28,7 @@ public:
     void rotateLeft(float degrees);
     void rotateUp(float degrees);
     glm::mat4 getViewMatrix() const;
+    inline glm::vec3 getPosition() const { return m_Position;};
 
     void event(const SDL_Event &e);
     void update();
