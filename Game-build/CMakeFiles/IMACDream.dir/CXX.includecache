@@ -92,6 +92,16 @@ vector
 glimac/glm.hpp
 -
 
+/home/fanny/ImacDream/Game/class/src/Camera.cpp
+./../include/Camera.hpp
+/home/fanny/ImacDream/Game/class/include/Camera.hpp
+cmath
+-
+glimac/FreeflyCamera.hpp
+/home/fanny/ImacDream/Game/class/src/glimac/FreeflyCamera.hpp
+iostream
+-
+
 /home/fanny/ImacDream/Game/class/src/GameObject.cpp
 ../include/GameObject.hpp
 /home/fanny/ImacDream/Game/class/include/GameObject.hpp
@@ -112,11 +122,35 @@ iostream
 cmath
 -
 
+/home/fanny/ImacDream/Game/class/src/Mesh.cpp
+./../include/Mesh.hpp
+/home/fanny/ImacDream/Game/class/include/Mesh.hpp
+vector
+-
+
+/home/fanny/ImacDream/Game/class/src/Model.cpp
+./../include/Model.hpp
+/home/fanny/ImacDream/Game/class/include/Model.hpp
+glimac/Image.hpp
+-
+vector
+-
+
 /home/fanny/ImacDream/Game/class/src/Terrain.cpp
 ../include/Terrain.hpp
 /home/fanny/ImacDream/Game/class/include/Terrain.hpp
 glimac/Sphere.hpp
 -
+
+/home/fanny/ImacDream/Game/class/src/Utils.cpp
+../include/Utils.hpp
+/home/fanny/ImacDream/Game/class/include/Utils.hpp
+cmath
+-
+
+/home/fanny/ImacDream/Game/class/src/Water.cpp
+./../include/Model.hpp
+/home/fanny/ImacDream/Game/class/include/Model.hpp
 
 /home/fanny/ImacDream/Game/class/src/main.cpp
 glimac/SDLWindowManager.hpp
@@ -145,6 +179,24 @@ glimac/glm.hpp
 /home/fanny/ImacDream/Game/glimac/include/glimac/FilePath.hpp
 string
 -
+
+/home/fanny/ImacDream/Game/glimac/include/glimac/FreeflyCamera.hpp
+cmath
+-
+glimac/glm.hpp
+-
+
+/home/fanny/ImacDream/Game/glimac/include/glimac/Image.hpp
+vector
+-
+memory
+-
+unordered_map
+-
+glm.hpp
+/home/fanny/ImacDream/Game/glimac/include/glimac/glm.hpp
+FilePath.hpp
+/home/fanny/ImacDream/Game/glimac/include/glimac/FilePath.hpp
 
 /home/fanny/ImacDream/Game/glimac/include/glimac/Program.hpp
 GL/glew.h

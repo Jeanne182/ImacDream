@@ -44,42 +44,7 @@ std::vector<GameObject>* ObjectsManager(const FilePath &applicationPath){
     GameObject treeObject(glm::vec3(0.f,0.f,-5.f), 1.f, glm::vec3(0.f, 0.f, 0.f), tree->_meshes[0]);
     objects->push_back(treeObject);*/
 
-/*
-    //CUBE
-    std::vector<GLuint> indicesCube;
-    std::vector<Texture> texturesCube;
-    std::vector<ShapeVertex> meshVerticesCube = {
-    ShapeVertex(glm::vec3(-0.5, 0.5, -0.5), glm::vec3(1, 0, 0), glm::vec2(1, 0)),//0
-    ShapeVertex(glm::vec3(0.5, 0.5, 0.5), glm::vec3(0, 1, 0), glm::vec2(1, 0)),//1
-    ShapeVertex(glm::vec3(-0.5, 0.5, 0.5), glm::vec3(0, 1, 0), glm::vec2(1, 0)),//2
-    ShapeVertex(glm::vec3(-0.5, -0.5, -0.5), glm::vec3(0, 1, 0), glm::vec2(1, 0)),//3
-    ShapeVertex(glm::vec3(0.5, 0.5, -0.5), glm::vec3(0, 1, 0), glm::vec2(1, 0)),//4
-    ShapeVertex(glm::vec3(0.5, -0.5, 0.5), glm::vec3(0, 1, 0), glm::vec2(1, 0)),//5
-    ShapeVertex(glm::vec3(0.5, -0.5, -0.5), glm::vec3(0, 1, 0), glm::vec2(1, 0)),//6
-    ShapeVertex(glm::vec3(-0.5, -0.5, 0.5), glm::vec3(0, 1, 0), glm::vec2(1, 0))};//7
 
-
-    indicesCube = {
-      0, 1, 2,
-      0, 1, 4,//haut
-      0, 4, 3,
-      4, 3, 6,//face
-      4, 1, 6,
-      1, 6, 5,//droite
-      0, 2, 3,
-      2, 3, 7,//gauche
-      2, 1, 5,
-      2, 5, 7,//dos
-      7, 5, 3,
-      5, 3, 6//bas
-    };
-
-
-    Mesh* cubeMesh = new Mesh(meshVerticesCube, indicesCube, texturesCube);
-    GameObject cubeObject(glm::vec3(0.f,0.f,-5.f), 1.f, glm::vec3(0.f, 0.f, 0.f), *cubeMesh);
-    objects->push_back(cubeObject);
-
-*/
 
     return objects;
 }

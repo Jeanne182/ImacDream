@@ -8,7 +8,7 @@
 class Terrain {
 private:
     std::vector<GameObject> _objects;
-    //std::vector<InteractiveObject> _InteractiveObjects;
+
 public:
     Terrain(std::vector<GameObject> &objects);
     void computeMatrix(const glm::mat4 &cameraView, glm::mat4 &projMatrix);

@@ -46,6 +46,7 @@ int main(int argc, char** argv) {
     glm::mat4 ProjMatrix = glm::perspective(glm::radians(70.f), ratio, 0.1f, 100.f);
 
     std::vector<GameObject>* objects(ObjectsManager(applicationPath));
+
     Terrain terrain(*objects);
 
     // Application loop:
