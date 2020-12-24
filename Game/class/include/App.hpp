@@ -30,6 +30,7 @@ public:
 
     void draw();
     void event(const SDL_Event &e);
+    inline void Delete(){ _game.Delete(); };
 
 };
 

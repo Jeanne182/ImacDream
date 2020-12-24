@@ -39,7 +39,7 @@ namespace glimac {
             setupMesh();
         };
         void deleteBuffers();
-        void Draw(Program &program) const;
+        void Draw() const;
         //void Draw(Program &program);
 
 

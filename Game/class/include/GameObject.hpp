@@ -31,7 +31,7 @@ public :
     inline void addScale(float scale){ _scale += scale; }
 
     //METHODS
-    void display(Program &program);
+    void display();
     void setMatrix();
     void computeMatrix(const glm::mat4 &cameraView);
     void useMatrix() const;

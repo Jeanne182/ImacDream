@@ -7,16 +7,17 @@
 
 using namespace glimac;
 
-class AssetProgram {
+class MultiLightsProgram {
 private:
     GLint _M_Location, _MV_Location, _MVP_Location, _N_Location;
 public:
     Program _program;
 
     //CONSTRUCTOR
-    AssetProgram(const FilePath &applicationPath):
-        _program(loadProgram(applicationPath.dirPath() + "shaders/3D.vs.glsl",
-                  applicationPath.dirPath() + "shaders/multiTex3D.fs.glsl")){
+    MultiLightsProgram(const FilePath &applicationPath):
+        _program(loadProgram(applicationPath.dirPath() + "Assets/shaders/3D.vs.glsl",
+                  applicationPath.dirPath() + "Assets/shaders/normals.fs.glsl")){
+        _program.use();
         _M_Location = glGetUniformLocation(_program.getGLId(), "uMMatrix");
         _MV_Location = glGetUniformLocation(_program.getGLId(), "uMVMatrix");
         _MVP_Location = glGetUniformLocation(_program.getGLId(), "uMVPMatrix");

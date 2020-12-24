@@ -14,7 +14,7 @@ namespace glimac {
     void Model::Draw(Program &program)
     {
         for(unsigned int i = 0; i < _meshes.size(); i++)
-            _meshes[i].Draw(program);
+            _meshes[i].Draw();
     }
 
     void Model::loadModel(std::string const &path)

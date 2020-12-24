@@ -17,12 +17,10 @@ string
 -
 glimac/common.hpp
 -
-glimac/FilePath.hpp
--
-glimac/Program.hpp
--
 ./Model.hpp
 /home/jeanne/Documents/S3/ImacDream/Game/class/include/Model.hpp
+./Program.hpp
+/home/jeanne/Documents/S3/ImacDream/Game/class/include/Program.hpp
 map
 -
 
@@ -98,30 +96,16 @@ iostream
 ./Mesh.hpp
 /home/jeanne/Documents/S3/ImacDream/Game/class/include/Mesh.hpp
 
+/home/jeanne/Documents/S3/ImacDream/Game/class/include/Program.hpp
+glimac/Program.hpp
+-
+glimac/FilePath.hpp
+-
+
 /home/jeanne/Documents/S3/ImacDream/Game/class/include/Terrain.hpp
 ./GameObject.hpp
 /home/jeanne/Documents/S3/ImacDream/Game/class/include/GameObject.hpp
 vector
--
-
-/home/jeanne/Documents/S3/ImacDream/Game/class/src/AssetsManager.cpp
-../include/AssetsManager.hpp
-/home/jeanne/Documents/S3/ImacDream/Game/class/include/AssetsManager.hpp
-
-/home/jeanne/Documents/S3/ImacDream/Game/class/src/GameObject.cpp
-../include/GameObject.hpp
-/home/jeanne/Documents/S3/ImacDream/Game/class/include/GameObject.hpp
-../include/AssetsManager.hpp
-/home/jeanne/Documents/S3/ImacDream/Game/class/include/AssetsManager.hpp
-glimac/Program.hpp
--
-
-/home/jeanne/Documents/S3/ImacDream/Game/class/src/Terrain.cpp
-../include/Terrain.hpp
-/home/jeanne/Documents/S3/ImacDream/Game/class/include/Terrain.hpp
-../include/AssetsManager.hpp
-/home/jeanne/Documents/S3/ImacDream/Game/class/include/AssetsManager.hpp
-glimac/Sphere.hpp
 -
 
 /home/jeanne/Documents/S3/ImacDream/Game/class/src/main.cpp
@@ -130,8 +114,6 @@ glimac/SDLWindowManager.hpp
 GL/glew.h
 -
 iostream
--
-glimac/Program.hpp
 -
 glimac/FilePath.hpp
 -
@@ -147,10 +129,6 @@ glimac/glm.hpp
 /home/jeanne/Documents/S3/ImacDream/Game/class/include/Terrain.hpp
 ./../include/App.hpp
 /home/jeanne/Documents/S3/ImacDream/Game/class/include/App.hpp
-./../include/Game.hpp
-/home/jeanne/Documents/S3/ImacDream/Game/class/include/Game.hpp
-./../include/MapManager.hpp
-/home/jeanne/Documents/S3/ImacDream/Game/class/include/MapManager.hpp
 ./../include/AssetsManager.hpp
 /home/jeanne/Documents/S3/ImacDream/Game/class/include/AssetsManager.hpp
 
@@ -181,12 +159,6 @@ string
 -
 FilePath.hpp
 /home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/FilePath.hpp
-
-/home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/Sphere.hpp
-vector
--
-common.hpp
-/home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/common.hpp
 
 /home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/common.hpp
 GL/glew.h
@@ -331,12 +303,6 @@ types.h
 /home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/quaternion.h
 defs.h
 /home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/defs.h
-
-/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/quaternion.inl
-quaternion.h
-/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/quaternion.h
-cmath
--
 
 /home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/scene.h
 types.h

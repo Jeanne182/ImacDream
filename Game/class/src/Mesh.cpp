@@ -17,7 +17,7 @@ namespace glimac {
 
 
 
-    void Mesh::Draw(Program &program) const{
+    void Mesh::Draw() const{
 //        GLuint diffuseNr = 1;
 //        GLuint specularNr = 1;
 //        for (GLuint i = 0; i < _textures.size(); i++) {

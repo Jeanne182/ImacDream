@@ -10,6 +10,7 @@ private:
 public:
     inline MapManager():_terrain(){}
     void display(const glm::mat4 &cameraView);
+    inline void Delete(){ _terrain.deleteBuffers(); };
 };
 
 
