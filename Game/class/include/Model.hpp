@@ -19,9 +19,10 @@ namespace glimac {
 
     class Model {
     public:
+        Model();
         Model(const std::string& path);
         void deleteBuffers();
-        void Draw(Program &program);
+        void Draw();
 
     public:
         // model data

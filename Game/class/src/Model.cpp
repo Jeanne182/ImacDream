@@ -3,6 +3,7 @@
 #include <vector>
 
 namespace glimac {
+    Model::Model() {}
 
     Model::Model(const std::string& path) {
         loadModel(path);
@@ -11,7 +12,7 @@ namespace glimac {
         for(unsigned int i = 0; i < _meshes.size(); i++)
             _meshes[i].deleteBuffers();
     }
-    void Model::Draw(Program &program)
+    void Model::Draw()
     {
         for(unsigned int i = 0; i < _meshes.size(); i++)
             _meshes[i].Draw();

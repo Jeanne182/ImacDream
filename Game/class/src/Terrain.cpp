@@ -4,13 +4,15 @@
 
 
 void Terrain::display(const glm::mat4 &cameraView) {
+    _objects[TREE].setPosition(glm::vec3(0.5f, 0.f, -5.f));
+    _objects[TREE].update(cameraView);
 
-    _objects[1].setPosition(glm::vec3(0.5f, 0.f, -5.f));
-    _objects[1].update(cameraView);
+    _objects[SPHERE].setPosition(glm::vec3(0.5f, 0.f, -5.f));
+    _objects[SPHERE].update(cameraView);
 
-    _objects[1].setPosition(glm::vec3(-5.f, 0.f, -4.f));
-    _objects[1].setScale(2.f);
-    _objects[1].update(cameraView);
+    _objects[TREE].setPosition(glm::vec3(-5.f, 0.f, -4.f));
+    _objects[TREE].setScale(2.f);
+    _objects[TREE].update(cameraView);
 }
 
 void Terrain::deleteBuffers() {
@@ -35,18 +37,20 @@ void Terrain::ObjectsManager() {
         meshVertices.push_back(sphere.getDataPointer()[i]);
     }
     Mesh* sphereMesh = new Mesh(meshVertices, indices, textures, material);
-    GameObject sphereObject(glm::vec3(0.f,0.f,0.f), 1.f, glm::vec3(0.f, 0.f, 0.f), *sphereMesh);
+    Model* sphereModel = new Model();
+    sphereModel->_meshes.push_back(*sphereMesh);
+    GameObject sphereObject(glm::vec3(0.f,0.f,0.f), 1.f, glm::vec3(0.f, 0.f, 0.f), *sphereModel);
     objects->push_back(sphereObject);
 
     //TREE
     std::string pathModelTree = modelsPath + "/Arbol.obj";
     auto* tree = new Model(pathModelTree);
-    GameObject treeObject(glm::vec3(0.f,0.f,0.f), 1.f, glm::vec3(0.f, 0.f, 0.f), tree->_meshes[0]);
+    GameObject treeObject(glm::vec3(0.f,0.f,0.f), 1.f, glm::vec3(0.f, 0.f, 0.f), *tree);
     objects->push_back(treeObject);
 
     //TRUNK
     auto* trunk = new Model(modelsPath + "/trunk.obj");
-    GameObject trunkObject(glm::vec3(0.f,0.f,0.f), 1.f, glm::vec3(0.f, 0.f, 0.f), trunk->_meshes[0]);
+    GameObject trunkObject(glm::vec3(0.f,0.f,0.f), 1.f, glm::vec3(0.f, 0.f, 0.f), *trunk);
     objects->push_back(trunkObject);
 
     _objects = *objects;

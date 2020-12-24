@@ -2,11 +2,11 @@
 #include "../include/AssetsManager.hpp"
 #include <glimac/Program.hpp>
 
-GameObject::GameObject(const glm::vec3 &position, const float &scale, const glm::vec3 &angles, Mesh &mesh)
+GameObject::GameObject(const glm::vec3 &position, const float &scale, const glm::vec3 &angles, Model &model)
     : _position(position),
             _scale(scale),
             _angles(angles),
-            _mesh(&mesh)
+            _model(&model)
 {
     setMatrix();
 }
@@ -15,14 +15,14 @@ GameObject::GameObject(const GameObject &object)
         : _position(object._position),
           _scale(object._scale),
           _angles(object._angles),
-          _mesh(object._mesh)
+          _model(object._model)
 {
     setMatrix();
 }
 
 void GameObject::display() {
     useMatrix();
-    _mesh->Draw();
+    _model->Draw();
 }
 
 void GameObject::setMatrix() {
@@ -54,7 +54,7 @@ void GameObject::useMatrix() const {
 }
 
 void GameObject::deleteBuffers() {
-    _mesh->deleteBuffers();
+    _model->deleteBuffers();
 }
 
 
