@@ -44,10 +44,10 @@ void Camera::event(const SDL_Event &e) {
     {
         case SDL_MOUSEBUTTONUP :
             if(e.button.button == SDL_BUTTON_WHEELUP){
-                moveFront(0.5f);
+                moveFront(1.f);
             }
             else if(e.button.button == SDL_BUTTON_WHEELDOWN){
-                moveFront(-0.5f);
+                moveFront(-1.f);
             }
             break;
 //        case SDL_MOUSEBUTTONDOWN:
@@ -111,7 +111,7 @@ void Camera::event(const SDL_Event &e) {
 }
 
 void Camera::update() {
-    float speed = 0.05f;
+    float speed = 0.1f;
 
     if (KEY_UP_PRESSED)
     {

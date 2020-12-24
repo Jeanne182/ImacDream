@@ -59,19 +59,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /snap/clion/137/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /snap/clion/135/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /snap/clion/137/bin/cmake/linux/bin/cmake -E rm -f
+RM = /snap/clion/135/bin/cmake/linux/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/matteo/Documents/imac2/openGL/ImacDream/Game
+CMAKE_SOURCE_DIR = /home/jeanne/Documents/S3/ImacDream/Game
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/matteo/Documents/imac2/openGL/ImacDream/Game-build
+CMAKE_BINARY_DIR = /home/jeanne/Documents/S3/ImacDream/Game-build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -79,7 +79,7 @@ CMAKE_BINARY_DIR = /home/matteo/Documents/imac2/openGL/ImacDream/Game-build
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/snap/clion/137/bin/cmake/linux/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/snap/clion/135/bin/cmake/linux/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -90,7 +90,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/snap/clion/137/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/snap/clion/135/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -100,9 +100,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/matteo/Documents/imac2/openGL/ImacDream/Game-build/CMakeFiles /home/matteo/Documents/imac2/openGL/ImacDream/Game-build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jeanne/Documents/S3/ImacDream/Game-build/CMakeFiles /home/jeanne/Documents/S3/ImacDream/Game-build/CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/matteo/Documents/imac2/openGL/ImacDream/Game-build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jeanne/Documents/S3/ImacDream/Game-build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -291,34 +291,6 @@ class/src/GameObject.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/IMACDream.dir/build.make CMakeFiles/IMACDream.dir/class/src/GameObject.cpp.s
 .PHONY : class/src/GameObject.cpp.s
 
-<<<<<<< HEAD
-class/src/MapManager.o: class/src/MapManager.cpp.o
-
-.PHONY : class/src/MapManager.o
-
-# target to build an object file
-class/src/MapManager.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/IMACDream.dir/build.make CMakeFiles/IMACDream.dir/class/src/MapManager.cpp.o
-.PHONY : class/src/MapManager.cpp.o
-
-class/src/MapManager.i: class/src/MapManager.cpp.i
-
-.PHONY : class/src/MapManager.i
-
-# target to preprocess a source file
-class/src/MapManager.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/IMACDream.dir/build.make CMakeFiles/IMACDream.dir/class/src/MapManager.cpp.i
-.PHONY : class/src/MapManager.cpp.i
-
-class/src/MapManager.s: class/src/MapManager.cpp.s
-
-.PHONY : class/src/MapManager.s
-
-# target to generate assembly for a file
-class/src/MapManager.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/IMACDream.dir/build.make CMakeFiles/IMACDream.dir/class/src/MapManager.cpp.s
-.PHONY : class/src/MapManager.cpp.s
-=======
 class/src/Light.o: class/src/Light.cpp.o
 
 .PHONY : class/src/Light.o
@@ -345,7 +317,33 @@ class/src/Light.s: class/src/Light.cpp.s
 class/src/Light.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/IMACDream.dir/build.make CMakeFiles/IMACDream.dir/class/src/Light.cpp.s
 .PHONY : class/src/Light.cpp.s
->>>>>>> LightAndMaterials
+
+class/src/MapManager.o: class/src/MapManager.cpp.o
+
+.PHONY : class/src/MapManager.o
+
+# target to build an object file
+class/src/MapManager.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/IMACDream.dir/build.make CMakeFiles/IMACDream.dir/class/src/MapManager.cpp.o
+.PHONY : class/src/MapManager.cpp.o
+
+class/src/MapManager.i: class/src/MapManager.cpp.i
+
+.PHONY : class/src/MapManager.i
+
+# target to preprocess a source file
+class/src/MapManager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/IMACDream.dir/build.make CMakeFiles/IMACDream.dir/class/src/MapManager.cpp.i
+.PHONY : class/src/MapManager.cpp.i
+
+class/src/MapManager.s: class/src/MapManager.cpp.s
+
+.PHONY : class/src/MapManager.s
+
+# target to generate assembly for a file
+class/src/MapManager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/IMACDream.dir/build.make CMakeFiles/IMACDream.dir/class/src/MapManager.cpp.s
+.PHONY : class/src/MapManager.cpp.s
 
 class/src/Mesh.o: class/src/Mesh.cpp.o
 
@@ -534,15 +532,12 @@ help:
 	@echo "... class/src/GameObject.o"
 	@echo "... class/src/GameObject.i"
 	@echo "... class/src/GameObject.s"
-<<<<<<< HEAD
-	@echo "... class/src/MapManager.o"
-	@echo "... class/src/MapManager.i"
-	@echo "... class/src/MapManager.s"
-=======
 	@echo "... class/src/Light.o"
 	@echo "... class/src/Light.i"
 	@echo "... class/src/Light.s"
->>>>>>> LightAndMaterials
+	@echo "... class/src/MapManager.o"
+	@echo "... class/src/MapManager.i"
+	@echo "... class/src/MapManager.s"
 	@echo "... class/src/Mesh.o"
 	@echo "... class/src/Mesh.i"
 	@echo "... class/src/Mesh.s"

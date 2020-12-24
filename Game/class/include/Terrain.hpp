@@ -7,7 +7,10 @@
 enum TerrainObjects{
     SPHERE,
     TREE,
-    TRUNK
+    TRUNK,
+    RUNE,
+    HUT,
+    TERRAIN
 };
 
 class Terrain {

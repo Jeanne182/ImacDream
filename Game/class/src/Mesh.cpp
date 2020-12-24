@@ -1,8 +1,5 @@
-//
-// Created by matteo on 14/12/2020.
-//
-
 #include "./../include/Mesh.hpp"
+#include "./../include/AssetsManager.hpp"
 #include <vector>
 
 
@@ -15,8 +12,7 @@ namespace glimac {
         glDeleteVertexArrays(1,&_vao);
     }
 
-
-
+    void Mesh::Draw() const{
         GLuint diffuseNr = 1;
         GLuint specularNr = 1;
         for (GLuint i = 0; i < _textures.size(); i++) {
@@ -24,19 +20,18 @@ namespace glimac {
             // retrieve texture number (the N in diffuse_textureN)
             std::string number;
             std::string name = _textures[i].type;
-    void Mesh::Draw(Program &program) const{
 
             if (name == "texture_diffuse") {
                 number = std::to_string(diffuseNr++);
             }
             else if (name == "texture_specular")
                 number = std::to_string(specularNr++);
-            glUniform1i(glGetUniformLocation(program.getGLId(), (name + number).c_str()), i);
+            glUniform1i(glGetUniformLocation(AssetManager::Get()->_multiLightsProgram._program.getGLId(), (name + number).c_str()), i);
 
             glBindTexture(GL_TEXTURE_2D, _textures[i].id);
         }
 
-//        // draw mesh
+        // draw mesh
         glBindVertexArray(_vao);
         glBindBufferRange(GL_UNIFORM_BUFFER, 0 , _ubo, 0, sizeof(Material));
         glDrawElements(GL_TRIANGLES, _indices.size(), GL_UNSIGNED_INT, 0);

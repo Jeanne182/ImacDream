@@ -34,15 +34,12 @@ int main(int argc, char** argv) {
     glm::mat4 ProjMatrix = glm::perspective(glm::radians(70.f), ratio, 0.1f, 100.f);
     AssetManager::Create(argv, ProjMatrix);
     App app;
-    GLint ViewPos_Location = glGetUniformLocation(program.getGLId(), "uViewPos");
-    GLint Shininess_Location = glGetUniformLocation(program.getGLId(), "uShininess");
-    GLint LightPos_Location = glGetUniformLocation(program.getGLId(), "uLightPos_vs");
-    GLint LightIntensity_Location = glGetUniformLocation(program.getGLId(), "uLightIntensity");
 
     glEnable(GL_DEPTH_TEST); // Activation du test de profondeur GPU
     SDL_WM_GrabInput( SDL_GRAB_ON );
 
-    Light pointLight(camera.getViewMatrix());
+    Light pointLight(app._game._camera.getViewMatrix());
+
     // Application loop:
     bool done = false;
     while(!done) {
@@ -57,8 +54,6 @@ int main(int argc, char** argv) {
                     break;
                 case SDL_KEYDOWN:
                     if (e.key.keysym.sym==SDLK_ESCAPE) {done = true;}
-                    break;
-                case SDL_KEYDOWN:
                     if (e.key.keysym.sym==SDLK_a)
                     {
                         if(!pointLight.getLightOn()){
@@ -75,12 +70,12 @@ int main(int argc, char** argv) {
         }
 
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); // On nettoie la fenêtre afin de ne pas avoir de résidu du tour précédent
-        glUniform3fv(ViewPos_Location, 1, glm::value_ptr( camera.getPosition()));
+        glUniform3fv(AssetManager::Get()->_multiLightsProgram.ViewPos_Location(), 1, glm::value_ptr( app._game._camera.getPosition()));
 
         app.draw();
-        glUniform1f(Shininess_Location, pointLight.getShininess()); // taille de la tache glossy
-        glUniform3fv(LightPos_Location, 1, glm::value_ptr(pointLight.getPosition()));
-        glUniform3fv(LightIntensity_Location, 1, glm::value_ptr(pointLight.getIntensity()));
+        glUniform1f(AssetManager::Get()->_multiLightsProgram.Shininess_Location(), pointLight.getShininess()); // taille de la tache glossy
+        glUniform3fv(AssetManager::Get()->_multiLightsProgram.LightPos_Location(), 1, glm::value_ptr(pointLight.getPosition()));
+        glUniform3fv(AssetManager::Get()->_multiLightsProgram.LightIntensity_Location(), 1, glm::value_ptr(pointLight.getIntensity()));
         windowManager.swapBuffers();
     }
 

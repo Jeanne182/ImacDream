@@ -18,10 +18,11 @@ enum LAYOUT
 
 class App {
 private:
-    Game _game;
+
     int _layout = LAYOUT_GAME;
 
 public:
+    Game _game; //PRIVATE
     //Constructor
     inline App():_game(){};
 

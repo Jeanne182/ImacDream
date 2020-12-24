@@ -7,9 +7,10 @@
 class Game {
 private:
     int _score = 0;
-    Camera _camera;
+
     MapManager *_map;
 public:
+    Camera _camera;// PRIVATE
     //CONSTRUCTOR
     inline Game():_map(new MapManager()), _camera(){};
 
