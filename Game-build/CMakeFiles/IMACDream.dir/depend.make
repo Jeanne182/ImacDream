@@ -5,6 +5,7 @@ CMakeFiles/IMACDream.dir/class/src/App.cpp.o: /home/jeanne/Documents/S3/ImacDrea
 CMakeFiles/IMACDream.dir/class/src/App.cpp.o: /home/jeanne/Documents/S3/ImacDream/Game/class/include/Camera.hpp
 CMakeFiles/IMACDream.dir/class/src/App.cpp.o: /home/jeanne/Documents/S3/ImacDream/Game/class/include/Game.hpp
 CMakeFiles/IMACDream.dir/class/src/App.cpp.o: /home/jeanne/Documents/S3/ImacDream/Game/class/include/GameObject.hpp
+CMakeFiles/IMACDream.dir/class/src/App.cpp.o: /home/jeanne/Documents/S3/ImacDream/Game/class/include/Light.hpp
 CMakeFiles/IMACDream.dir/class/src/App.cpp.o: /home/jeanne/Documents/S3/ImacDream/Game/class/include/MapManager.hpp
 CMakeFiles/IMACDream.dir/class/src/App.cpp.o: /home/jeanne/Documents/S3/ImacDream/Game/class/include/Mesh.hpp
 CMakeFiles/IMACDream.dir/class/src/App.cpp.o: /home/jeanne/Documents/S3/ImacDream/Game/class/include/Model.hpp
@@ -366,6 +367,7 @@ CMakeFiles/IMACDream.dir/class/src/Camera.cpp.o: /home/jeanne/Documents/S3/ImacD
 CMakeFiles/IMACDream.dir/class/src/Game.cpp.o: /home/jeanne/Documents/S3/ImacDream/Game/class/include/Camera.hpp
 CMakeFiles/IMACDream.dir/class/src/Game.cpp.o: /home/jeanne/Documents/S3/ImacDream/Game/class/include/Game.hpp
 CMakeFiles/IMACDream.dir/class/src/Game.cpp.o: /home/jeanne/Documents/S3/ImacDream/Game/class/include/GameObject.hpp
+CMakeFiles/IMACDream.dir/class/src/Game.cpp.o: /home/jeanne/Documents/S3/ImacDream/Game/class/include/Light.hpp
 CMakeFiles/IMACDream.dir/class/src/Game.cpp.o: /home/jeanne/Documents/S3/ImacDream/Game/class/include/MapManager.hpp
 CMakeFiles/IMACDream.dir/class/src/Game.cpp.o: /home/jeanne/Documents/S3/ImacDream/Game/class/include/Mesh.hpp
 CMakeFiles/IMACDream.dir/class/src/Game.cpp.o: /home/jeanne/Documents/S3/ImacDream/Game/class/include/Model.hpp
@@ -630,6 +632,7 @@ CMakeFiles/IMACDream.dir/class/src/GameObject.cpp.o: /home/jeanne/Documents/S3/I
 
 CMakeFiles/IMACDream.dir/class/src/Light.cpp.o: /home/jeanne/Documents/S3/ImacDream/Game/class/include/Light.hpp
 CMakeFiles/IMACDream.dir/class/src/Light.cpp.o: /home/jeanne/Documents/S3/ImacDream/Game/class/src/Light.cpp
+CMakeFiles/IMACDream.dir/class/src/Light.cpp.o: /home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/SDLWindowManager.hpp
 CMakeFiles/IMACDream.dir/class/src/Light.cpp.o: /home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/glm.hpp
 CMakeFiles/IMACDream.dir/class/src/Light.cpp.o: /home/jeanne/Documents/S3/ImacDream/Game/third-party/include/glm/common.hpp
 CMakeFiles/IMACDream.dir/class/src/Light.cpp.o: /home/jeanne/Documents/S3/ImacDream/Game/third-party/include/glm/detail/_fixes.hpp

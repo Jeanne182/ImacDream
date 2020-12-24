@@ -2,6 +2,7 @@
 #define IMACDREAM_LIGHT_HPP
 
 #include <glimac/glm.hpp>
+#include <glimac/SDLWindowManager.hpp>
 
 class Light
 {
@@ -18,6 +19,7 @@ public:
     inline glm::vec3 getIntensity(){ return _intensity; };
     inline float getShininess(){ return _shininess; };
     inline bool getLightOn(){return _lightOn;};
+    void event(SDL_Event &e);
 
 private:
     glm::vec4 _position;

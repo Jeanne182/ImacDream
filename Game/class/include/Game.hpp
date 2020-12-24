@@ -3,16 +3,17 @@
 
 #include "./Camera.hpp"
 #include "./MapManager.hpp"
+#include "./Light.hpp"
 
 class Game {
 private:
     int _score = 0;
-
     MapManager *_map;
+    Light _pointLight;
 public:
     Camera _camera;// PRIVATE
     //CONSTRUCTOR
-    inline Game():_map(new MapManager()), _camera(){};
+    inline Game():_map(new MapManager()), _camera(), _pointLight(_camera.getViewMatrix()){};
 
     //METHODS
     void display();
