@@ -37,6 +37,7 @@ void GameObject::computeMatrix(const glm::mat4 &cameraView) {
     _MV = cameraView * _M;
     _MVP = AssetManager::Get()->P() * _MV;
     _N = glm::transpose(glm::inverse(_MV));
+
 }
 
 void GameObject::update(const glm::mat4 &cameraView) {

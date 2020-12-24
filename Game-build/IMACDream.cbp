@@ -5,147 +5,148 @@
 		<Option title="IMACDream"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\CMake\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\..\usr\lib\;CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\;CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\;CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\assimp-4.1\;CMake Files\glimac\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\CMake\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\..\..\usr\lib\;CMake Files\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\;CMake Files\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\;CMake Files\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\assimp-4.1\;CMake Files\glimac\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/jeanne/Documents/S3/ImacDream/Game-build"/>
+				<Option working_dir="/home/matteo/Documents/imac2/openGL/ImacDream/Game-build"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j3 -f &quot;/home/jeanne/Documents/S3/ImacDream/Game-build/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j3 -f &quot;/home/jeanne/Documents/S3/ImacDream/Game-build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j3 -f &quot;/home/jeanne/Documents/S3/ImacDream/Game-build/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j3 -f &quot;/home/jeanne/Documents/S3/ImacDream/Game-build/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -f &quot;/home/matteo/Documents/imac2/openGL/ImacDream/Game-build/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/matteo/Documents/imac2/openGL/ImacDream/Game-build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/matteo/Documents/imac2/openGL/ImacDream/Game-build/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/matteo/Documents/imac2/openGL/ImacDream/Game-build/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/jeanne/Documents/S3/ImacDream/Game-build"/>
+				<Option working_dir="/home/matteo/Documents/imac2/openGL/ImacDream/Game-build"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j3 -f &quot;/home/jeanne/Documents/S3/ImacDream/Game-build/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j3 -f &quot;/home/jeanne/Documents/S3/ImacDream/Game-build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j3 -f &quot;/home/jeanne/Documents/S3/ImacDream/Game-build/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j3 -f &quot;/home/jeanne/Documents/S3/ImacDream/Game-build/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -f &quot;/home/matteo/Documents/imac2/openGL/ImacDream/Game-build/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/matteo/Documents/imac2/openGL/ImacDream/Game-build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/matteo/Documents/imac2/openGL/ImacDream/Game-build/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/matteo/Documents/imac2/openGL/ImacDream/Game-build/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/jeanne/Documents/S3/ImacDream/Game-build"/>
+				<Option working_dir="/home/matteo/Documents/imac2/openGL/ImacDream/Game-build"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j3 -f &quot;/home/jeanne/Documents/S3/ImacDream/Game-build/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j3 -f &quot;/home/jeanne/Documents/S3/ImacDream/Game-build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j3 -f &quot;/home/jeanne/Documents/S3/ImacDream/Game-build/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j3 -f &quot;/home/jeanne/Documents/S3/ImacDream/Game-build/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -f &quot;/home/matteo/Documents/imac2/openGL/ImacDream/Game-build/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/matteo/Documents/imac2/openGL/ImacDream/Game-build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/matteo/Documents/imac2/openGL/ImacDream/Game-build/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/matteo/Documents/imac2/openGL/ImacDream/Game-build/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="IMACDream">
-				<Option output="/home/jeanne/Documents/S3/ImacDream/Game-build/IMACDream" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/jeanne/Documents/S3/ImacDream/Game-build"/>
+				<Option output="/home/matteo/Documents/imac2/openGL/ImacDream/Game-build/IMACDream" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/matteo/Documents/imac2/openGL/ImacDream/Game-build"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/usr/include/SDL"/>
-					<Add directory="/home/jeanne/Documents/S3/ImacDream/Game/glimac/include"/>
-					<Add directory="/home/jeanne/Documents/S3/ImacDream/Game/third-party/include"/>
-					<Add directory="/home/jeanne/Documents/S3/ImacDream/Game/third-party"/>
-					<Add directory="/usr/include/c++/9"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
-					<Add directory="/usr/include/c++/9/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/home/matteo/Documents/imac2/openGL/ImacDream/Game/glimac/include"/>
+					<Add directory="/home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include"/>
+					<Add directory="/home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include-fixed"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j3 -f &quot;/home/jeanne/Documents/S3/ImacDream/Game-build/Makefile&quot;  VERBOSE=1 IMACDream"/>
-					<CompileFile command="/usr/bin/make -j3 -f &quot;/home/jeanne/Documents/S3/ImacDream/Game-build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j3 -f &quot;/home/jeanne/Documents/S3/ImacDream/Game-build/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j3 -f &quot;/home/jeanne/Documents/S3/ImacDream/Game-build/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -f &quot;/home/matteo/Documents/imac2/openGL/ImacDream/Game-build/Makefile&quot;  VERBOSE=1 IMACDream"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/matteo/Documents/imac2/openGL/ImacDream/Game-build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/matteo/Documents/imac2/openGL/ImacDream/Game-build/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/matteo/Documents/imac2/openGL/ImacDream/Game-build/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="IMACDream/fast">
-				<Option output="/home/jeanne/Documents/S3/ImacDream/Game-build/IMACDream" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/jeanne/Documents/S3/ImacDream/Game-build"/>
+				<Option output="/home/matteo/Documents/imac2/openGL/ImacDream/Game-build/IMACDream" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/matteo/Documents/imac2/openGL/ImacDream/Game-build"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/usr/include/SDL"/>
-					<Add directory="/home/jeanne/Documents/S3/ImacDream/Game/glimac/include"/>
-					<Add directory="/home/jeanne/Documents/S3/ImacDream/Game/third-party/include"/>
-					<Add directory="/home/jeanne/Documents/S3/ImacDream/Game/third-party"/>
-					<Add directory="/usr/include/c++/9"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
-					<Add directory="/usr/include/c++/9/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/home/matteo/Documents/imac2/openGL/ImacDream/Game/glimac/include"/>
+					<Add directory="/home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include"/>
+					<Add directory="/home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include-fixed"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j3 -f &quot;/home/jeanne/Documents/S3/ImacDream/Game-build/Makefile&quot;  VERBOSE=1 IMACDream/fast"/>
-					<CompileFile command="/usr/bin/make -j3 -f &quot;/home/jeanne/Documents/S3/ImacDream/Game-build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j3 -f &quot;/home/jeanne/Documents/S3/ImacDream/Game-build/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j3 -f &quot;/home/jeanne/Documents/S3/ImacDream/Game-build/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -f &quot;/home/matteo/Documents/imac2/openGL/ImacDream/Game-build/Makefile&quot;  VERBOSE=1 IMACDream/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/matteo/Documents/imac2/openGL/ImacDream/Game-build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/matteo/Documents/imac2/openGL/ImacDream/Game-build/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/matteo/Documents/imac2/openGL/ImacDream/Game-build/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="glimac">
-				<Option output="/home/jeanne/Documents/S3/ImacDream/Game-build/glimac/libglimac.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/jeanne/Documents/S3/ImacDream/Game-build/glimac"/>
+				<Option output="/home/matteo/Documents/imac2/openGL/ImacDream/Game-build/glimac/libglimac.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/matteo/Documents/imac2/openGL/ImacDream/Game-build/glimac"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/usr/include/SDL"/>
-					<Add directory="/home/jeanne/Documents/S3/ImacDream/Game/glimac/include"/>
-					<Add directory="/home/jeanne/Documents/S3/ImacDream/Game/third-party/include"/>
-					<Add directory="/home/jeanne/Documents/S3/ImacDream/Game/third-party"/>
-					<Add directory="/usr/include/c++/9"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
-					<Add directory="/usr/include/c++/9/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/home/matteo/Documents/imac2/openGL/ImacDream/Game/glimac/include"/>
+					<Add directory="/home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include"/>
+					<Add directory="/home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include-fixed"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j3 -f &quot;/home/jeanne/Documents/S3/ImacDream/Game-build/glimac/Makefile&quot;  VERBOSE=1 glimac"/>
-					<CompileFile command="/usr/bin/make -j3 -f &quot;/home/jeanne/Documents/S3/ImacDream/Game-build/glimac/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j3 -f &quot;/home/jeanne/Documents/S3/ImacDream/Game-build/glimac/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j3 -f &quot;/home/jeanne/Documents/S3/ImacDream/Game-build/glimac/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -f &quot;/home/matteo/Documents/imac2/openGL/ImacDream/Game-build/glimac/Makefile&quot;  VERBOSE=1 glimac"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/matteo/Documents/imac2/openGL/ImacDream/Game-build/glimac/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/matteo/Documents/imac2/openGL/ImacDream/Game-build/glimac/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/matteo/Documents/imac2/openGL/ImacDream/Game-build/glimac/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="glimac/fast">
-				<Option output="/home/jeanne/Documents/S3/ImacDream/Game-build/glimac/libglimac.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/jeanne/Documents/S3/ImacDream/Game-build/glimac"/>
+				<Option output="/home/matteo/Documents/imac2/openGL/ImacDream/Game-build/glimac/libglimac.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/matteo/Documents/imac2/openGL/ImacDream/Game-build/glimac"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/usr/include/SDL"/>
-					<Add directory="/home/jeanne/Documents/S3/ImacDream/Game/glimac/include"/>
-					<Add directory="/home/jeanne/Documents/S3/ImacDream/Game/third-party/include"/>
-					<Add directory="/home/jeanne/Documents/S3/ImacDream/Game/third-party"/>
-					<Add directory="/usr/include/c++/9"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
-					<Add directory="/usr/include/c++/9/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/home/matteo/Documents/imac2/openGL/ImacDream/Game/glimac/include"/>
+					<Add directory="/home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include"/>
+					<Add directory="/home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include-fixed"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j3 -f &quot;/home/jeanne/Documents/S3/ImacDream/Game-build/glimac/Makefile&quot;  VERBOSE=1 glimac/fast"/>
-					<CompileFile command="/usr/bin/make -j3 -f &quot;/home/jeanne/Documents/S3/ImacDream/Game-build/glimac/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j3 -f &quot;/home/jeanne/Documents/S3/ImacDream/Game-build/glimac/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j3 -f &quot;/home/jeanne/Documents/S3/ImacDream/Game-build/glimac/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -f &quot;/home/matteo/Documents/imac2/openGL/ImacDream/Game-build/glimac/Makefile&quot;  VERBOSE=1 glimac/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/matteo/Documents/imac2/openGL/ImacDream/Game-build/glimac/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/matteo/Documents/imac2/openGL/ImacDream/Game-build/glimac/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/matteo/Documents/imac2/openGL/ImacDream/Game-build/glimac/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
+<<<<<<< HEAD
 		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/class/include/App.hpp">
 			<Option target="IMACDream"/>
 		</Unit>
@@ -165,20 +166,34 @@
 			<Option target="IMACDream"/>
 		</Unit>
 		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/class/include/Mesh.hpp">
+=======
+		<Unit filename="/home/matteo/Documents/imac2/openGL/ImacDream/Game/class/include/Camera.hpp">
 			<Option target="IMACDream"/>
 		</Unit>
-		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/class/include/Model.hpp">
+		<Unit filename="/home/matteo/Documents/imac2/openGL/ImacDream/Game/class/include/GameObject.hpp">
 			<Option target="IMACDream"/>
 		</Unit>
+		<Unit filename="/home/matteo/Documents/imac2/openGL/ImacDream/Game/class/include/Light.hpp">
+>>>>>>> LightAndMaterials
+			<Option target="IMACDream"/>
+		</Unit>
+		<Unit filename="/home/matteo/Documents/imac2/openGL/ImacDream/Game/class/include/Mesh.hpp">
+			<Option target="IMACDream"/>
+		</Unit>
+<<<<<<< HEAD
 		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/class/include/Program.hpp">
 			<Option target="IMACDream"/>
 		</Unit>
 		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/class/include/Terrain.hpp">
+=======
+		<Unit filename="/home/matteo/Documents/imac2/openGL/ImacDream/Game/class/include/Model.hpp">
+>>>>>>> LightAndMaterials
 			<Option target="IMACDream"/>
 		</Unit>
-		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/class/include/Water.hpp">
+		<Unit filename="/home/matteo/Documents/imac2/openGL/ImacDream/Game/class/include/Terrain.hpp">
 			<Option target="IMACDream"/>
 		</Unit>
+<<<<<<< HEAD
 		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/class/src/App.cpp">
 			<Option target="IMACDream"/>
 		</Unit>
@@ -198,102 +213,121 @@
 			<Option target="IMACDream"/>
 		</Unit>
 		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/class/src/Mesh.cpp">
+=======
+		<Unit filename="/home/matteo/Documents/imac2/openGL/ImacDream/Game/class/include/Water.hpp">
 			<Option target="IMACDream"/>
 		</Unit>
-		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/class/src/Model.cpp">
+		<Unit filename="/home/matteo/Documents/imac2/openGL/ImacDream/Game/class/src/Camera.cpp">
 			<Option target="IMACDream"/>
 		</Unit>
+		<Unit filename="/home/matteo/Documents/imac2/openGL/ImacDream/Game/class/src/GameObject.cpp">
+>>>>>>> LightAndMaterials
+			<Option target="IMACDream"/>
+		</Unit>
+		<Unit filename="/home/matteo/Documents/imac2/openGL/ImacDream/Game/class/src/Light.cpp">
+			<Option target="IMACDream"/>
+		</Unit>
+<<<<<<< HEAD
 		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/class/src/Program.cpp">
 			<Option target="IMACDream"/>
 		</Unit>
 		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/class/src/Terrain.cpp">
+=======
+		<Unit filename="/home/matteo/Documents/imac2/openGL/ImacDream/Game/class/src/Mesh.cpp">
+>>>>>>> LightAndMaterials
 			<Option target="IMACDream"/>
 		</Unit>
-		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/class/src/Water.cpp">
+		<Unit filename="/home/matteo/Documents/imac2/openGL/ImacDream/Game/class/src/Model.cpp">
 			<Option target="IMACDream"/>
 		</Unit>
-		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/class/src/main.cpp">
+		<Unit filename="/home/matteo/Documents/imac2/openGL/ImacDream/Game/class/src/Terrain.cpp">
 			<Option target="IMACDream"/>
 		</Unit>
-		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/BBox.hpp">
+		<Unit filename="/home/matteo/Documents/imac2/openGL/ImacDream/Game/class/src/Water.cpp">
+			<Option target="IMACDream"/>
+		</Unit>
+		<Unit filename="/home/matteo/Documents/imac2/openGL/ImacDream/Game/class/src/main.cpp">
+			<Option target="IMACDream"/>
+		</Unit>
+		<Unit filename="/home/matteo/Documents/imac2/openGL/ImacDream/Game/glimac/include/glimac/BBox.hpp">
 			<Option target="glimac"/>
 		</Unit>
-		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/Cone.hpp">
+		<Unit filename="/home/matteo/Documents/imac2/openGL/ImacDream/Game/glimac/include/glimac/Cone.hpp">
 			<Option target="glimac"/>
 		</Unit>
-		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/FilePath.hpp">
+		<Unit filename="/home/matteo/Documents/imac2/openGL/ImacDream/Game/glimac/include/glimac/FilePath.hpp">
 			<Option target="glimac"/>
 		</Unit>
-		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/FreeflyCamera.hpp">
+		<Unit filename="/home/matteo/Documents/imac2/openGL/ImacDream/Game/glimac/include/glimac/FreeflyCamera.hpp">
 			<Option target="glimac"/>
 		</Unit>
-		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/Geometry.hpp">
+		<Unit filename="/home/matteo/Documents/imac2/openGL/ImacDream/Game/glimac/include/glimac/Geometry.hpp">
 			<Option target="glimac"/>
 		</Unit>
-		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/Image.hpp">
+		<Unit filename="/home/matteo/Documents/imac2/openGL/ImacDream/Game/glimac/include/glimac/Image.hpp">
 			<Option target="glimac"/>
 		</Unit>
-		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/Program.hpp">
+		<Unit filename="/home/matteo/Documents/imac2/openGL/ImacDream/Game/glimac/include/glimac/Program.hpp">
 			<Option target="glimac"/>
 		</Unit>
-		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/SDLWindowManager.hpp">
+		<Unit filename="/home/matteo/Documents/imac2/openGL/ImacDream/Game/glimac/include/glimac/SDLWindowManager.hpp">
 			<Option target="glimac"/>
 		</Unit>
-		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/Shader.hpp">
+		<Unit filename="/home/matteo/Documents/imac2/openGL/ImacDream/Game/glimac/include/glimac/Shader.hpp">
 			<Option target="glimac"/>
 		</Unit>
-		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/Sphere.hpp">
+		<Unit filename="/home/matteo/Documents/imac2/openGL/ImacDream/Game/glimac/include/glimac/Sphere.hpp">
 			<Option target="glimac"/>
 		</Unit>
-		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/common.hpp">
+		<Unit filename="/home/matteo/Documents/imac2/openGL/ImacDream/Game/glimac/include/glimac/common.hpp">
 			<Option target="glimac"/>
 		</Unit>
-		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/glm.hpp">
+		<Unit filename="/home/matteo/Documents/imac2/openGL/ImacDream/Game/glimac/include/glimac/glm.hpp">
 			<Option target="glimac"/>
 		</Unit>
-		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/glimac/src/Cone.cpp">
+		<Unit filename="/home/matteo/Documents/imac2/openGL/ImacDream/Game/glimac/src/Cone.cpp">
 			<Option target="glimac"/>
 		</Unit>
-		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/glimac/src/FreeflyCamera.cpp">
+		<Unit filename="/home/matteo/Documents/imac2/openGL/ImacDream/Game/glimac/src/FreeflyCamera.cpp">
 			<Option target="glimac"/>
 		</Unit>
-		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/glimac/src/Geometry.cpp">
+		<Unit filename="/home/matteo/Documents/imac2/openGL/ImacDream/Game/glimac/src/Geometry.cpp">
 			<Option target="glimac"/>
 		</Unit>
-		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/glimac/src/Image.cpp">
+		<Unit filename="/home/matteo/Documents/imac2/openGL/ImacDream/Game/glimac/src/Image.cpp">
 			<Option target="glimac"/>
 		</Unit>
-		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/glimac/src/Program.cpp">
+		<Unit filename="/home/matteo/Documents/imac2/openGL/ImacDream/Game/glimac/src/Program.cpp">
 			<Option target="glimac"/>
 		</Unit>
-		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/glimac/src/SDLWindowManager.cpp">
+		<Unit filename="/home/matteo/Documents/imac2/openGL/ImacDream/Game/glimac/src/SDLWindowManager.cpp">
 			<Option target="glimac"/>
 		</Unit>
-		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/glimac/src/Shader.cpp">
+		<Unit filename="/home/matteo/Documents/imac2/openGL/ImacDream/Game/glimac/src/Shader.cpp">
 			<Option target="glimac"/>
 		</Unit>
-		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/glimac/src/Sphere.cpp">
+		<Unit filename="/home/matteo/Documents/imac2/openGL/ImacDream/Game/glimac/src/Sphere.cpp">
 			<Option target="glimac"/>
 		</Unit>
-		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/glimac/src/tiny_obj_loader.cpp">
+		<Unit filename="/home/matteo/Documents/imac2/openGL/ImacDream/Game/glimac/src/tiny_obj_loader.cpp">
 			<Option target="glimac"/>
 		</Unit>
-		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/glimac/src/tiny_obj_loader.h">
+		<Unit filename="/home/matteo/Documents/imac2/openGL/ImacDream/Game/glimac/src/tiny_obj_loader.h">
 			<Option target="glimac"/>
 		</Unit>
-		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/CMakeLists.txt">
+		<Unit filename="/home/matteo/Documents/imac2/openGL/ImacDream/Game/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
-		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/CMake/FindGLEW.cmake">
+		<Unit filename="/home/matteo/Documents/imac2/openGL/ImacDream/Game/CMake/FindGLEW.cmake">
 			<Option virtualFolder="CMake Files\CMake\"/>
 		</Unit>
-		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/../../../../../../usr/lib/x86_64-linux-gnu/cmake/assimp-4.1/assimp-config-version.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\assimp-4.1\"/>
+		<Unit filename="/home/matteo/Documents/imac2/openGL/ImacDream/Game/../../../../../../../usr/lib/x86_64-linux-gnu/cmake/assimp-4.1/assimp-config-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\assimp-4.1\"/>
 		</Unit>
-		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/../../../../../../usr/lib/x86_64-linux-gnu/cmake/assimp-4.1/assimp-config.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\assimp-4.1\"/>
+		<Unit filename="/home/matteo/Documents/imac2/openGL/ImacDream/Game/../../../../../../../usr/lib/x86_64-linux-gnu/cmake/assimp-4.1/assimp-config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\assimp-4.1\"/>
 		</Unit>
-		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/glimac/CMakeLists.txt">
+		<Unit filename="/home/matteo/Documents/imac2/openGL/ImacDream/Game/glimac/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\glimac\"/>
 		</Unit>
 	</Project>
