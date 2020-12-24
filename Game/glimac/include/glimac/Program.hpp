@@ -41,9 +41,10 @@ public:
 		glUseProgram(m_nGLId);
 	}
 
+    Program(const Program&);
+    Program& operator =(const Program&);
+
 private:
-	Program(const Program&);
-	Program& operator =(const Program&);
 
 	GLuint m_nGLId;
 };
@@ -53,6 +54,5 @@ Program buildProgram(const GLchar* vsSrc, const GLchar* fsSrc);
 
 // Load source code from files and build a GLSL program
 Program loadProgram(const FilePath& vsFile, const FilePath& fsFile);
-
 
 }

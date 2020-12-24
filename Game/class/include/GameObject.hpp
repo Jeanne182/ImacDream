@@ -31,11 +31,11 @@ public :
     inline void addScale(float scale){ _scale += scale; }
 
     //METHODS
-    void display(Program &program, GLint &M_Location, GLint &MV_Location, GLint &MVP_Location, GLint &N_Location);
+    void display(Program &program);
     void setMatrix();
-    void computeMatrix(const glm::mat4 &cameraView, glm::mat4 &projMatrix);
-    void useMatrix(GLint &M_Location, GLint &MV_Location, GLint &MVP_Location, GLint &N_Location) const;
-    void update(const glm::mat4 &cameraView, glm::mat4 &projMatrix, Program &program, GLint &M_Location, GLint &MV_Location, GLint &MVP_Location, GLint &N_Location);
+    void computeMatrix(const glm::mat4 &cameraView);
+    void useMatrix() const;
+    void update(const glm::mat4 &cameraView);
     void deleteBuffers();
 
 };

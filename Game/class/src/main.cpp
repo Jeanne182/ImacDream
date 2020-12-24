@@ -8,7 +8,10 @@
 #include "./../include/Mesh.hpp"
 #include "./../include/GameObject.hpp"
 #include "./../include/Terrain.hpp"
-//#include "./../include/App.hpp"
+#include "./../include/App.hpp"
+#include "./../include/Game.hpp"
+#include "./../include/MapManager.hpp"
+#include "./../include/AssetsManager.hpp"
 
 using namespace glimac;
 
@@ -33,31 +36,38 @@ int main(int argc, char** argv) {
     std::cout << "GLEW Version : " << glewGetString(GLEW_VERSION) << std::endl;
 
     FilePath applicationPath(argv[0]);
+
+
+
     Program program = loadProgram(applicationPath.dirPath() + "Assets/shaders/3D.vs.glsl",
                                   applicationPath.dirPath() + "Assets/shaders/normals.fs.glsl");
     program.use();
-//    App app(WINDOW_WIDTH, WINDOW_HEIGHT, applicationPath);
 
+
+
+    glm::mat4 ProjMatrix = glm::perspective(glm::radians(70.f), ratio, 0.1f, 100.f);
     GLint MVP_Location = glGetUniformLocation(program.getGLId(), "uMVPMatrix");
     GLint MV_Location = glGetUniformLocation(program.getGLId(), "uMVMatrix");
     GLint N_Location = glGetUniformLocation(program.getGLId(), "uNormalMatrix");
     GLint M_Location = glGetUniformLocation(program.getGLId(), "uMMatrix");
 
+    AssetManager::Create(argv, ProjMatrix, MVP_Location, N_Location);
+//    AssetManager::Get()->_assetProgram.use();
+
     glEnable(GL_DEPTH_TEST); // Activation du test de profondeur GPU
 
-    glm::mat4 ProjMatrix = glm::perspective(glm::radians(70.f), ratio, 0.1f, 100.f);
-
-    Terrain terrain(applicationPath);
+    App app;
 
     // Application loop:
     SDL_WM_GrabInput( SDL_GRAB_ON );
+
     bool done = false;
     while(!done) {
 
         //EVENTS
         SDL_Event e;
         while(windowManager.pollEvent(e)) {
-            camera.event(e);
+            app.event(e);
 
             switch(e.type) {
                 case SDL_QUIT:
@@ -68,14 +78,15 @@ int main(int argc, char** argv) {
                     break;
             }
         }
+
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); // On nettoie la fenêtre afin de ne pas avoir de résidu du tour précédent
 
-        camera.update();
-        terrain.display(camera.getViewMatrix(), ProjMatrix, program, M_Location, MV_Location, MVP_Location, N_Location);
+        app.drawGame();
 
         windowManager.swapBuffers();
     }
 
-    terrain.deleteBuffers();
+    //delete
+
     return EXIT_SUCCESS;
 }

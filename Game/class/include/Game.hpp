@@ -8,10 +8,13 @@ class Game {
 private:
     int _score = 0;
     Camera _camera;
-    MapManager _mapManager;
+    MapManager *_map;
 public:
-    inline Game(const FilePath &applicationPath):_mapManager(applicationPath){auto* camera = new Camera(); _camera = *camera; };
-    void display(glm::mat4 &projMatrix, Program &program, GLint &M_Location, GLint &MV_Location, GLint &MVP_Location, GLint &N_Location);
+    //CONSTRUCTOR
+    inline Game():_map(new MapManager()), _camera(){};
+
+    //METHODS
+    void display();
     void event(const SDL_Event &e);
     inline const int score() {return _score;}
     void update();

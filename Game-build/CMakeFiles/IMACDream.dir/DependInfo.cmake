@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/jeanne/Documents/S3/ImacDream/Game/class/src/App.cpp" "/home/jeanne/Documents/S3/ImacDream/Game-build/CMakeFiles/IMACDream.dir/class/src/App.cpp.o"
+  "/home/jeanne/Documents/S3/ImacDream/Game/class/src/AssetsManager.cpp" "/home/jeanne/Documents/S3/ImacDream/Game-build/CMakeFiles/IMACDream.dir/class/src/AssetsManager.cpp.o"
   "/home/jeanne/Documents/S3/ImacDream/Game/class/src/Camera.cpp" "/home/jeanne/Documents/S3/ImacDream/Game-build/CMakeFiles/IMACDream.dir/class/src/Camera.cpp.o"
   "/home/jeanne/Documents/S3/ImacDream/Game/class/src/Game.cpp" "/home/jeanne/Documents/S3/ImacDream/Game-build/CMakeFiles/IMACDream.dir/class/src/Game.cpp.o"
   "/home/jeanne/Documents/S3/ImacDream/Game/class/src/GameObject.cpp" "/home/jeanne/Documents/S3/ImacDream/Game-build/CMakeFiles/IMACDream.dir/class/src/GameObject.cpp.o"

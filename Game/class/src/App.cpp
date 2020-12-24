@@ -1,14 +1,26 @@
 #include "../include/App.hpp"
 
 void App::event(const SDL_Event &e) {
-    _game.event(e);
+    if (_layout = LAYOUT_GAME){
+        _game.event(e);
+    }
+
 }
 
-void App::update() {
-    _game.update();
+void App::draw() {
+    switch(_layout){
+        case LAYOUT_GAME:
+            drawGame();
+            break;
+    }
 }
 
-void App::display(glm::mat4 &projMatrix, Program &program, GLint &M_Location, GLint &MV_Location, GLint &MVP_Location,
-                  GLint &N_Location) {
-    _game.display(projMatrix, program, M_Location, MV_Location, MVP_Location, N_Location);
+void App::drawGame() {
+    try{
+        _game.update();
+        _game.display();
+    }
+    catch(std::exception &e){
+        std::cout << e.what() << std::endl;
+    }
 }

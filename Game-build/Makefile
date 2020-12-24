@@ -183,6 +183,33 @@ class/src/App.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/IMACDream.dir/build.make CMakeFiles/IMACDream.dir/class/src/App.cpp.s
 .PHONY : class/src/App.cpp.s
 
+class/src/AssetsManager.o: class/src/AssetsManager.cpp.o
+
+.PHONY : class/src/AssetsManager.o
+
+# target to build an object file
+class/src/AssetsManager.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/IMACDream.dir/build.make CMakeFiles/IMACDream.dir/class/src/AssetsManager.cpp.o
+.PHONY : class/src/AssetsManager.cpp.o
+
+class/src/AssetsManager.i: class/src/AssetsManager.cpp.i
+
+.PHONY : class/src/AssetsManager.i
+
+# target to preprocess a source file
+class/src/AssetsManager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/IMACDream.dir/build.make CMakeFiles/IMACDream.dir/class/src/AssetsManager.cpp.i
+.PHONY : class/src/AssetsManager.cpp.i
+
+class/src/AssetsManager.s: class/src/AssetsManager.cpp.s
+
+.PHONY : class/src/AssetsManager.s
+
+# target to generate assembly for a file
+class/src/AssetsManager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/IMACDream.dir/build.make CMakeFiles/IMACDream.dir/class/src/AssetsManager.cpp.s
+.PHONY : class/src/AssetsManager.cpp.s
+
 class/src/Camera.o: class/src/Camera.cpp.o
 
 .PHONY : class/src/Camera.o
@@ -439,6 +466,9 @@ help:
 	@echo "... class/src/App.o"
 	@echo "... class/src/App.i"
 	@echo "... class/src/App.s"
+	@echo "... class/src/AssetsManager.o"
+	@echo "... class/src/AssetsManager.i"
+	@echo "... class/src/AssetsManager.s"
 	@echo "... class/src/Camera.o"
 	@echo "... class/src/Camera.i"
 	@echo "... class/src/Camera.s"

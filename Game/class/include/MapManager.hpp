@@ -8,8 +8,8 @@ class MapManager {
 private:
     Terrain _terrain;
 public:
-    inline MapManager(const FilePath &applicationPath):_terrain(applicationPath){}
-    void display(glm::mat4 &cameraView, glm::mat4 &projMatrix, Program &program, GLint &M_Location, GLint &MV_Location, GLint &MVP_Location, GLint &N_Location);
+    inline MapManager():_terrain(){}
+    void display(const glm::mat4 &cameraView);
 };
 
 

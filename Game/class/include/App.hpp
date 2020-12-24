@@ -18,30 +18,18 @@ enum LAYOUT
 
 class App {
 private:
-    int _width, _height, _ratio;
-    SDLWindowManager windowManager;
     Game _game;
     int _layout = LAYOUT_GAME;
 
 public:
     //Constructor
-    App(const int &width, const int &height, const FilePath &applicationPath):
-        _width(width),
-        _height(height),
-        _ratio((float)width/height),
-        _game(0),
-        windowManager(width, height, "GLImac")
-        {};
-
-    //Layouts
-    void layout2D();
-    void layoutMenu();
-    void layoutGame();
+    inline App():_game(){};
 
     //Facades Functions
-    void display(glm::mat4 &projMatrix, Program &program, GLint &M_Location, GLint &MV_Location, GLint &MVP_Location, GLint &N_Location);
+    void drawGame();
+
+    void draw();
     void event(const SDL_Event &e);
-    void update();
 
 };
 

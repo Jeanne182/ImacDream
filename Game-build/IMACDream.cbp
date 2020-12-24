@@ -149,6 +149,9 @@
 		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/class/include/App.hpp">
 			<Option target="IMACDream"/>
 		</Unit>
+		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/class/include/AssetsManager.hpp">
+			<Option target="IMACDream"/>
+		</Unit>
 		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/class/include/Camera.hpp">
 			<Option target="IMACDream"/>
 		</Unit>
@@ -174,6 +177,9 @@
 			<Option target="IMACDream"/>
 		</Unit>
 		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/class/src/App.cpp">
+			<Option target="IMACDream"/>
+		</Unit>
+		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/class/src/AssetsManager.cpp">
 			<Option target="IMACDream"/>
 		</Unit>
 		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/class/src/Camera.cpp">
