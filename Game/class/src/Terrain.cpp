@@ -4,14 +4,14 @@
 
 
 void Terrain::display(const glm::mat4 &cameraView) {
-    _objects[TREE].setPosition(glm::vec3(0.5f, 0.f, -5.f));
+    _objects[TREE].setPosition(glm::vec3(5.f, 0.f, -5.f));
     _objects[TREE].update(cameraView);
 
     _objects[SPHERE].setPosition(glm::vec3(0.5f, 0.f, -5.f));
     _objects[SPHERE].update(cameraView);
 
-    _objects[TREE].setPosition(glm::vec3(-5.f, 0.f, -4.f));
-    _objects[TREE].setScale(2.f);
+    _objects[TREE].setPosition(glm::vec3(-10.f, 0.f, -5.f));
+    _objects[TREE].setScale(4.f);
     _objects[TREE].update(cameraView);
 }
 

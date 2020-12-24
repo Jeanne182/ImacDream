@@ -82,14 +82,6 @@ glimac/FilePath.hpp
 vector
 -
 
-/home/jeanne/Documents/S3/ImacDream/Game/class/src/Model.cpp
-./../include/Model.hpp
-/home/jeanne/Documents/S3/ImacDream/Game/class/include/Model.hpp
-glimac/Image.hpp
--
-vector
--
-
 /home/jeanne/Documents/S3/ImacDream/Game/class/src/Terrain.cpp
 ../include/Terrain.hpp
 /home/jeanne/Documents/S3/ImacDream/Game/class/include/Terrain.hpp
@@ -101,18 +93,6 @@ glimac/Sphere.hpp
 /home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/FilePath.hpp
 string
 -
-
-/home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/Image.hpp
-vector
--
-memory
--
-unordered_map
--
-glm.hpp
-/home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/glm.hpp
-FilePath.hpp
-/home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/FilePath.hpp
 
 /home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/Program.hpp
 GL/glew.h
@@ -379,10 +359,6 @@ vector3.h
 /home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/vector3.h
 cmath
 -
-
-/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/glm/common.hpp
-detail/func_common.hpp
-/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/glm/detail/func_common.hpp
 
 /home/jeanne/Documents/S3/ImacDream/Game/third-party/include/glm/detail/_fixes.hpp
 cmath
