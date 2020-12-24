@@ -89,8 +89,8 @@ rebuild_cache/fast: rebuild_cache
 
 # Special rule for the target edit_cache
 edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	/snap/clion/137/bin/cmake/linux/bin/ccmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/snap/clion/137/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -291,7 +291,33 @@ class/src/GameObject.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/IMACDream.dir/build.make CMakeFiles/IMACDream.dir/class/src/GameObject.cpp.s
 .PHONY : class/src/GameObject.cpp.s
 
-<<<<<<< HEAD
+class/src/InteractiveObject.o: class/src/InteractiveObject.cpp.o
+
+.PHONY : class/src/InteractiveObject.o
+
+# target to build an object file
+class/src/InteractiveObject.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/IMACDream.dir/build.make CMakeFiles/IMACDream.dir/class/src/InteractiveObject.cpp.o
+.PHONY : class/src/InteractiveObject.cpp.o
+
+class/src/InteractiveObject.i: class/src/InteractiveObject.cpp.i
+
+.PHONY : class/src/InteractiveObject.i
+
+# target to preprocess a source file
+class/src/InteractiveObject.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/IMACDream.dir/build.make CMakeFiles/IMACDream.dir/class/src/InteractiveObject.cpp.i
+.PHONY : class/src/InteractiveObject.cpp.i
+
+class/src/InteractiveObject.s: class/src/InteractiveObject.cpp.s
+
+.PHONY : class/src/InteractiveObject.s
+
+# target to generate assembly for a file
+class/src/InteractiveObject.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/IMACDream.dir/build.make CMakeFiles/IMACDream.dir/class/src/InteractiveObject.cpp.s
+.PHONY : class/src/InteractiveObject.cpp.s
+
 class/src/Light.o: class/src/Light.cpp.o
 
 .PHONY : class/src/Light.o
@@ -345,34 +371,6 @@ class/src/MapManager.s: class/src/MapManager.cpp.s
 class/src/MapManager.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/IMACDream.dir/build.make CMakeFiles/IMACDream.dir/class/src/MapManager.cpp.s
 .PHONY : class/src/MapManager.cpp.s
-=======
-class/src/InteractiveObject.o: class/src/InteractiveObject.cpp.o
-
-.PHONY : class/src/InteractiveObject.o
-
-# target to build an object file
-class/src/InteractiveObject.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/IMACDream.dir/build.make CMakeFiles/IMACDream.dir/class/src/InteractiveObject.cpp.o
-.PHONY : class/src/InteractiveObject.cpp.o
-
-class/src/InteractiveObject.i: class/src/InteractiveObject.cpp.i
-
-.PHONY : class/src/InteractiveObject.i
-
-# target to preprocess a source file
-class/src/InteractiveObject.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/IMACDream.dir/build.make CMakeFiles/IMACDream.dir/class/src/InteractiveObject.cpp.i
-.PHONY : class/src/InteractiveObject.cpp.i
-
-class/src/InteractiveObject.s: class/src/InteractiveObject.cpp.s
-
-.PHONY : class/src/InteractiveObject.s
-
-# target to generate assembly for a file
-class/src/InteractiveObject.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/IMACDream.dir/build.make CMakeFiles/IMACDream.dir/class/src/InteractiveObject.cpp.s
-.PHONY : class/src/InteractiveObject.cpp.s
->>>>>>> click
 
 class/src/Mesh.o: class/src/Mesh.cpp.o
 
@@ -588,18 +586,15 @@ help:
 	@echo "... class/src/GameObject.o"
 	@echo "... class/src/GameObject.i"
 	@echo "... class/src/GameObject.s"
-<<<<<<< HEAD
+	@echo "... class/src/InteractiveObject.o"
+	@echo "... class/src/InteractiveObject.i"
+	@echo "... class/src/InteractiveObject.s"
 	@echo "... class/src/Light.o"
 	@echo "... class/src/Light.i"
 	@echo "... class/src/Light.s"
 	@echo "... class/src/MapManager.o"
 	@echo "... class/src/MapManager.i"
 	@echo "... class/src/MapManager.s"
-=======
-	@echo "... class/src/InteractiveObject.o"
-	@echo "... class/src/InteractiveObject.i"
-	@echo "... class/src/InteractiveObject.s"
->>>>>>> click
 	@echo "... class/src/Mesh.o"
 	@echo "... class/src/Mesh.i"
 	@echo "... class/src/Mesh.s"

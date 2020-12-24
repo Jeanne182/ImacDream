@@ -68,20 +68,20 @@ int main(int argc, char** argv) {
                     break;
 
 
-                case SDL_MOUSEBUTTONDOWN:
-                    for(auto objectToFind : *objects){
-                        glm::vec3 P1 = glm::vec3(0., 0., 0.);
-                        glm::vec3 P2 = glm::vec3(0., 0., 0.);
+                    /*case SDL_MOUSEBUTTONDOWN:
+                        for(auto objectToFind : app._game._map._terrain._objectsDisplayed.objectsManager()){
+                            glm::vec3 P1 = glm::vec3(0., 0., 0.);
+                            glm::vec3 P2 = glm::vec3(0., 0., 0.);
 
-                        if(objectToFind.isSelected(camera.getPosition(), &P1, &P2)){
-                            std::cout << "Object selected" << std::endl;
-                        }
-                        else{
-                            std::cout << "Object not selected" << std::endl;
-                        }
+                            if(objectToFind.isSelected(app._game._camera.getPosition(), &P1, &P2)){
+                                std::cout << "Object selected" << std::endl;
+                            }
+                            else{
+                                std::cout << "Object not selected" << std::endl;
+                            }
 
-                    }
-                    break;
+                        }
+                        break;*/
             }
         }
 

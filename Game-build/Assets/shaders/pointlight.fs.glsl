@@ -21,6 +21,7 @@ uniform vec3 viewPos;
 uniform sampler2D texture_diffuse1;
 
 vec3 blinnPhong(){
+
  // ambient
        vec3 ambient = Ambient * Diffuse;
 
@@ -44,6 +45,8 @@ vec3 blinnPhong(){
        vec3 specular = Specular * spec; // assuming bright white light color
 
        return vec3(ambient + diffuse + specular) * attenuation;
+
+
 }
 
 void main() {

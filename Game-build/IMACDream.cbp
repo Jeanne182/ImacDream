@@ -48,6 +48,14 @@
 					<Add directory="/home/fanny/ImacDream/Game/glimac/include"/>
 					<Add directory="/home/fanny/ImacDream/Game/third-party/include"/>
 					<Add directory="/home/fanny/ImacDream/Game/third-party"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
 					<Build command="/usr/bin/make -f &quot;/home/fanny/ImacDream/Game-build/Makefile&quot;  VERBOSE=1 IMACDream"/>
@@ -67,6 +75,14 @@
 					<Add directory="/home/fanny/ImacDream/Game/glimac/include"/>
 					<Add directory="/home/fanny/ImacDream/Game/third-party/include"/>
 					<Add directory="/home/fanny/ImacDream/Game/third-party"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
 					<Build command="/usr/bin/make -f &quot;/home/fanny/ImacDream/Game-build/Makefile&quot;  VERBOSE=1 IMACDream/fast"/>
@@ -86,6 +102,14 @@
 					<Add directory="/home/fanny/ImacDream/Game/glimac/include"/>
 					<Add directory="/home/fanny/ImacDream/Game/third-party/include"/>
 					<Add directory="/home/fanny/ImacDream/Game/third-party"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
 					<Build command="/usr/bin/make -f &quot;/home/fanny/ImacDream/Game-build/glimac/Makefile&quot;  VERBOSE=1 glimac"/>
@@ -105,6 +129,14 @@
 					<Add directory="/home/fanny/ImacDream/Game/glimac/include"/>
 					<Add directory="/home/fanny/ImacDream/Game/third-party/include"/>
 					<Add directory="/home/fanny/ImacDream/Game/third-party"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
 					<Build command="/usr/bin/make -f &quot;/home/fanny/ImacDream/Game-build/glimac/Makefile&quot;  VERBOSE=1 glimac/fast"/>
@@ -114,107 +146,79 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-<<<<<<< HEAD
-		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/class/include/App.hpp">
+		<Unit filename="/home/fanny/ImacDream/Game/class/include/App.hpp">
 			<Option target="IMACDream"/>
 		</Unit>
-		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/class/include/AssetsManager.hpp">
+		<Unit filename="/home/fanny/ImacDream/Game/class/include/AssetsManager.hpp">
 			<Option target="IMACDream"/>
 		</Unit>
-		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/class/include/Camera.hpp">
-			<Option target="IMACDream"/>
-		</Unit>
-		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/class/include/Game.hpp">
-			<Option target="IMACDream"/>
-		</Unit>
-		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/class/include/GameObject.hpp">
-			<Option target="IMACDream"/>
-		</Unit>
-		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/class/include/Light.hpp">
-			<Option target="IMACDream"/>
-		</Unit>
-		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/class/include/MapManager.hpp">
-			<Option target="IMACDream"/>
-		</Unit>
-		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/class/include/Mesh.hpp">
-=======
 		<Unit filename="/home/fanny/ImacDream/Game/class/include/Camera.hpp">
+			<Option target="IMACDream"/>
+		</Unit>
+		<Unit filename="/home/fanny/ImacDream/Game/class/include/Game.hpp">
 			<Option target="IMACDream"/>
 		</Unit>
 		<Unit filename="/home/fanny/ImacDream/Game/class/include/GameObject.hpp">
 			<Option target="IMACDream"/>
 		</Unit>
 		<Unit filename="/home/fanny/ImacDream/Game/class/include/InteractiveObject.hpp">
->>>>>>> click
+			<Option target="IMACDream"/>
+		</Unit>
+		<Unit filename="/home/fanny/ImacDream/Game/class/include/Light.hpp">
+			<Option target="IMACDream"/>
+		</Unit>
+		<Unit filename="/home/fanny/ImacDream/Game/class/include/MapManager.hpp">
 			<Option target="IMACDream"/>
 		</Unit>
 		<Unit filename="/home/fanny/ImacDream/Game/class/include/Mesh.hpp">
 			<Option target="IMACDream"/>
 		</Unit>
-<<<<<<< HEAD
-		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/class/include/Program.hpp">
+		<Unit filename="/home/fanny/ImacDream/Game/class/include/Model.hpp">
 			<Option target="IMACDream"/>
 		</Unit>
-		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/class/include/Terrain.hpp">
-=======
-		<Unit filename="/home/fanny/ImacDream/Game/class/include/Model.hpp">
->>>>>>> click
+		<Unit filename="/home/fanny/ImacDream/Game/class/include/Program.hpp">
 			<Option target="IMACDream"/>
 		</Unit>
 		<Unit filename="/home/fanny/ImacDream/Game/class/include/Terrain.hpp">
 			<Option target="IMACDream"/>
 		</Unit>
-<<<<<<< HEAD
-		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/class/src/App.cpp">
-			<Option target="IMACDream"/>
-		</Unit>
-		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/class/src/AssetsManager.cpp">
-			<Option target="IMACDream"/>
-		</Unit>
-		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/class/src/Camera.cpp">
-			<Option target="IMACDream"/>
-		</Unit>
-		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/class/src/Game.cpp">
-			<Option target="IMACDream"/>
-		</Unit>
-		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/class/src/GameObject.cpp">
-			<Option target="IMACDream"/>
-		</Unit>
-		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/class/src/Light.cpp">
-			<Option target="IMACDream"/>
-		</Unit>
-		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/class/src/MapManager.cpp">
-			<Option target="IMACDream"/>
-		</Unit>
-		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/class/src/Mesh.cpp">
-=======
 		<Unit filename="/home/fanny/ImacDream/Game/class/include/Utils.hpp">
 			<Option target="IMACDream"/>
 		</Unit>
 		<Unit filename="/home/fanny/ImacDream/Game/class/include/Water.hpp">
 			<Option target="IMACDream"/>
 		</Unit>
+		<Unit filename="/home/fanny/ImacDream/Game/class/src/App.cpp">
+			<Option target="IMACDream"/>
+		</Unit>
+		<Unit filename="/home/fanny/ImacDream/Game/class/src/AssetsManager.cpp">
+			<Option target="IMACDream"/>
+		</Unit>
 		<Unit filename="/home/fanny/ImacDream/Game/class/src/Camera.cpp">
->>>>>>> click
+			<Option target="IMACDream"/>
+		</Unit>
+		<Unit filename="/home/fanny/ImacDream/Game/class/src/Game.cpp">
 			<Option target="IMACDream"/>
 		</Unit>
 		<Unit filename="/home/fanny/ImacDream/Game/class/src/GameObject.cpp">
 			<Option target="IMACDream"/>
 		</Unit>
-<<<<<<< HEAD
-		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/class/src/Program.cpp">
+		<Unit filename="/home/fanny/ImacDream/Game/class/src/InteractiveObject.cpp">
 			<Option target="IMACDream"/>
 		</Unit>
-		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/class/src/Terrain.cpp">
-=======
-		<Unit filename="/home/fanny/ImacDream/Game/class/src/InteractiveObject.cpp">
->>>>>>> click
+		<Unit filename="/home/fanny/ImacDream/Game/class/src/Light.cpp">
+			<Option target="IMACDream"/>
+		</Unit>
+		<Unit filename="/home/fanny/ImacDream/Game/class/src/MapManager.cpp">
 			<Option target="IMACDream"/>
 		</Unit>
 		<Unit filename="/home/fanny/ImacDream/Game/class/src/Mesh.cpp">
 			<Option target="IMACDream"/>
 		</Unit>
 		<Unit filename="/home/fanny/ImacDream/Game/class/src/Model.cpp">
+			<Option target="IMACDream"/>
+		</Unit>
+		<Unit filename="/home/fanny/ImacDream/Game/class/src/Program.cpp">
 			<Option target="IMACDream"/>
 		</Unit>
 		<Unit filename="/home/fanny/ImacDream/Game/class/src/Terrain.cpp">

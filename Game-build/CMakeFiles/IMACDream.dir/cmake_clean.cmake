@@ -4,12 +4,9 @@ file(REMOVE_RECURSE
   "CMakeFiles/IMACDream.dir/class/src/Camera.cpp.o"
   "CMakeFiles/IMACDream.dir/class/src/Game.cpp.o"
   "CMakeFiles/IMACDream.dir/class/src/GameObject.cpp.o"
-<<<<<<< HEAD
+  "CMakeFiles/IMACDream.dir/class/src/InteractiveObject.cpp.o"
   "CMakeFiles/IMACDream.dir/class/src/Light.cpp.o"
   "CMakeFiles/IMACDream.dir/class/src/MapManager.cpp.o"
-=======
-  "CMakeFiles/IMACDream.dir/class/src/InteractiveObject.cpp.o"
->>>>>>> click
   "CMakeFiles/IMACDream.dir/class/src/Mesh.cpp.o"
   "CMakeFiles/IMACDream.dir/class/src/Model.cpp.o"
   "CMakeFiles/IMACDream.dir/class/src/Program.cpp.o"

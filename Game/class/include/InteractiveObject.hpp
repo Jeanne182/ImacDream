@@ -16,7 +16,7 @@ protected:
 
 public :
     //CONSTRUCTORS
-    inline InteractiveObject(const glm::vec3 &position, const float &scale, const glm::vec3 &angles, Mesh &mesh, const int &value): GameObject(position, scale, angles, mesh), _value(value){}
+    inline InteractiveObject(const glm::vec3 &position, const float &scale, const glm::vec3 &angles, Model &model, const int &value): GameObject(position, scale, angles, model), _value(value){}
 
     //GETTERS
     inline int getValue(){ return _value; };

@@ -38,8 +38,8 @@ void Terrain::ObjectsManager() {
     material.Ks = glm::vec4(0.5f,0.5f,0.5f,0.5f);
     std::vector<ShapeVertex> meshVertices;
     for (GLint i = 0; i < sphere.getVertexCount();i++){
-        indicesSphere.push_back(i);
-        meshVerticesSphere.push_back(sphere.getDataPointer()[i]);
+        indices.push_back(i);
+        meshVertices.push_back(sphere.getDataPointer()[i]);
     }
     Mesh* sphereMesh = new Mesh(meshVertices, indices, textures, material);
     Model* sphereModel = new Model();

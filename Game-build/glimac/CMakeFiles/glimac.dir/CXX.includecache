@@ -52,6 +52,14 @@ glm.hpp
 FilePath.hpp
 /home/fanny/ImacDream/Game/glimac/include/glimac/FilePath.hpp
 
+/home/fanny/ImacDream/Game/glimac/include/glimac/Program.hpp
+GL/glew.h
+-
+Shader.hpp
+/home/fanny/ImacDream/Game/glimac/include/glimac/Shader.hpp
+FilePath.hpp
+/home/fanny/ImacDream/Game/glimac/include/glimac/FilePath.hpp
+
 /home/fanny/ImacDream/Game/glimac/include/glimac/SDLWindowManager.hpp
 cstdint
 -
@@ -59,6 +67,14 @@ SDL/SDL.h
 -
 glm.hpp
 /home/fanny/ImacDream/Game/glimac/include/glimac/glm.hpp
+
+/home/fanny/ImacDream/Game/glimac/include/glimac/Shader.hpp
+GL/glew.h
+-
+string
+-
+FilePath.hpp
+/home/fanny/ImacDream/Game/glimac/include/glimac/FilePath.hpp
 
 /home/fanny/ImacDream/Game/glimac/include/glimac/Sphere.hpp
 vector
@@ -124,10 +140,28 @@ stb_image.h
 iostream
 -
 
+/home/fanny/ImacDream/Game/glimac/src/Program.cpp
+glimac/Program.hpp
+/home/fanny/ImacDream/Game/glimac/src/glimac/Program.hpp
+stdexcept
+-
+
 /home/fanny/ImacDream/Game/glimac/src/SDLWindowManager.cpp
 glimac/SDLWindowManager.hpp
 /home/fanny/ImacDream/Game/glimac/src/glimac/SDLWindowManager.hpp
 iostream
+-
+
+/home/fanny/ImacDream/Game/glimac/src/Shader.cpp
+glimac/Shader.hpp
+/home/fanny/ImacDream/Game/glimac/src/glimac/Shader.hpp
+fstream
+-
+stdexcept
+-
+string
+-
+sstream
 -
 
 /home/fanny/ImacDream/Game/glimac/src/Sphere.cpp
@@ -163,6 +197,26 @@ stddef.h
 -
 stdint.h
 -
+
+/home/fanny/ImacDream/Game/glimac/src/tiny_obj_loader.cpp
+cstdlib
+-
+cstring
+-
+cassert
+-
+string
+-
+vector
+-
+map
+-
+fstream
+-
+sstream
+-
+tiny_obj_loader.h
+/home/fanny/ImacDream/Game/glimac/src/tiny_obj_loader.h
 
 /home/fanny/ImacDream/Game/glimac/src/tiny_obj_loader.h
 string

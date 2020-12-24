@@ -21,7 +21,7 @@ uniform vec3 viewPos;
 uniform sampler2D texture_diffuse1;
 
 vec3 blinnPhong(){
-<<<<<<< HEAD
+
  // ambient
        vec3 ambient = Ambient * Diffuse;
 
@@ -45,13 +45,8 @@ vec3 blinnPhong(){
        vec3 specular = Specular * spec; // assuming bright white light color
 
        return vec3(ambient + diffuse + specular) * attenuation;
-=======
-  vec3 wi = normalize(uLightPos_vs - vPosition_vs);
-  vec3 w0 = normalize(-vPosition_vs);
-  float d = distance(vPosition_vs, uLightPos_vs);
-  vec3 Li = uLightIntensity / (d * d);
-  return vec3(Li*(uKd*dot(wi, vNormal_vs)+uKs*pow(dotProduct((w0+wi)/2.,vNormal_vs),uShininess)));
->>>>>>> click
+
+
 }
 
 void main() {
