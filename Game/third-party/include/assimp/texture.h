@@ -160,7 +160,7 @@ struct aiTexture
      * 4. One color image with B channel and 1 bit for it, achFormatHint == "rgba0010";
      * If mHeight == 0 then achFormatHint is set set to '\\0\\0\\0\\0' if the loader has no additional
      * information about the texture file format used OR the
-     * file extension of the format without a trailing dot. If there
+     * file extension of the format without a trailing dotProduct. If there
      * are multiple file extensions for a format, the shortest
      * extension is chosen (JPEG maps to 'jpg', not to 'jpeg').
      * E.g. 'dds\\0', 'pcx\\0', 'jpg\\0'.  All characters are lower-case.

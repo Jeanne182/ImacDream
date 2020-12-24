@@ -518,7 +518,7 @@ public:
     /** Returns whether a given file extension is supported by ASSIMP.
      *
      * @param szExtension Extension to be checked.
-     *   Must include a trailing dot '.'. Example: ".3ds", ".md3".
+     *   Must include a trailing dotProduct '.'. Example: ".3ds", ".md3".
      *   Cases-insensitive.
      * @return true if the extension is supported, false otherwise */
     bool IsExtensionSupported(const char* szExtension) const;
@@ -580,7 +580,7 @@ public:
     *  BaseImporter instance is returned.
     *  @param szExtension Extension to check for. The following formats
     *    are recognized (BAH being the file extension): "BAH" (comparison
-    *    is case-insensitive), ".bah", "*.bah" (wild card and dot
+    *    is case-insensitive), ".bah", "*.bah" (wild card and dotProduct
     *    characters at the beginning of the extension are skipped).
     *  @return NULL if no importer is found*/
     BaseImporter* GetImporter (const char* szExtension) const;
@@ -590,7 +590,7 @@ public:
     *
     *  @param szExtension Extension to check for. The following formats
     *    are recognized (BAH being the file extension): "BAH" (comparison
-    *    is case-insensitive), ".bah", "*.bah" (wild card and dot
+    *    is case-insensitive), ".bah", "*.bah" (wild card and dotProduct
     *    characters at the beginning of the extension are skipped).
     *  @return (size_t)-1 if no importer is found */
     size_t GetImporterIndex (const char* szExtension) const;

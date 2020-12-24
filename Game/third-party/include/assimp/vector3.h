@@ -120,7 +120,7 @@ public:
 
     /** @brief Componentwise multiplication of two vectors
      *
-     *  Note that vec*vec yields the dot product.
+     *  Note that vec*vec yields the dotProduct product.
      *  @param o Second factor */
     const aiVector3t SymMul(const aiVector3t& o);
 

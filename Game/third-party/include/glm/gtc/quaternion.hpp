@@ -179,7 +179,7 @@ namespace detail
 	GLM_FUNC_DECL detail::tquat<T, P> normalize(
 		detail::tquat<T, P> const & q);
 		
-	/// Returns dot product of q1 and q2, i.e., q1[0] * q2[0] + q1[1] * q2[1] + ...
+	/// Returns dotProduct product of q1 and q2, i.e., q1[0] * q2[0] + q1[1] * q2[1] + ...
 	/// 
 	/// @see gtc_quaternion
 	template <typename T, precision P, template <typename, precision> class quatType>

@@ -1,6 +1,8 @@
 #include "../include/GameObject.hpp"
 #include "../include/AssetsManager.hpp"
 #include <glimac/Program.hpp>
+#include "../include/Utils.hpp"
+#include <cmath>
 
 GameObject::GameObject(const glm::vec3 &position, const float &scale, const glm::vec3 &angles, Model &model)
     : _position(position),
@@ -60,4 +62,44 @@ void GameObject::deleteBuffers() {
 
 
 
+// test if the camera is pointing on an object
 
+bool GameObject::isSelected(const glm::vec3 &cameraPosition, glm::vec3 *P1, glm::vec3 *P2) {
+
+    // Distance between the camera and the center of the interactive object
+    glm::vec3 distanceVector = this->getPosition() - cameraPosition ;
+
+    // Find the direction vector of the mouse ray
+    glm::vec3 directionVectorCam = glm::vec3(cameraPosition.x, cameraPosition.y, cameraPosition.z-1.) - cameraPosition ;
+
+    // Distance between the camera and the center of the interactive object projected on the camera vector
+    double distanceToCenter = dotProduct(distanceVector, directionVectorCam) ;
+
+    // Check if the ray intersect the sphere or not depending on the position of the camera
+    if(distanceToCenter < 0){
+        return false;
+    }
+
+    // Find the closest distance between the center of the object on the camera ray (ortho proj)
+    double distanceToRay = pow(distanceToCenter, 2) - dotProduct(distanceVector, distanceVector);
+
+    // Check if the ray intersect the sphere or not depending on the radius
+    if(abs(distanceToRay) > 0.5*0.5){ // mettre this->radius quand on utilisera class interactive object
+        return false ;
+    }
+
+    // Distance between the first intersection point and the projection of the center on the camera ray
+    double insideDistance = sqrt(0.5*0.5 - distanceToRay*distanceToRay);
+
+    // To solve intersection points
+    float t1 = distanceToCenter - insideDistance;
+    float t2 = distanceToCenter + insideDistance;
+
+    // The intersections points
+    *P1 = cameraPosition + directionVectorCam*t1 ;
+    *P2 = cameraPosition + directionVectorCam*t2 ;
+
+
+    return true;
+
+}

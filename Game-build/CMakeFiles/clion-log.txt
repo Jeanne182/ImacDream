@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /snap/clion/135/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/jeanne/Documents/S3/ImacDream/Game
 -- The C compiler identification is GNU 9.2.1
 -- The CXX compiler identification is GNU 9.2.1
@@ -24,6 +25,10 @@
 -- Found Threads: TRUE  
 -- Found SDL: /usr/lib/x86_64-linux-gnu/libSDLmain.a;/usr/lib/x86_64-linux-gnu/libSDL.so;-lpthread (found version "1.2.15") 
 CMake Warning (dev) at /snap/clion/135/bin/cmake/linux/share/cmake-3.17/Modules/FindOpenGL.cmake:305 (message):
+=======
+/snap/clion/137/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/fanny/ImacDream/Game
+CMake Warning (dev) at /snap/clion/137/bin/cmake/linux/share/cmake-3.17/Modules/FindOpenGL.cmake:305 (message):
+>>>>>>> click
   Policy CMP0072 is not set: FindOpenGL prefers GLVND by default when
   available.  Run "cmake --help-policy CMP0072" for policy details.  Use the
   cmake_policy command to set the policy and suppress this warning.
@@ -46,4 +51,4 @@ This warning is for project developers.  Use -Wno-dev to suppress it.
 -- Found OpenGL: /usr/lib/x86_64-linux-gnu/libOpenGL.so   
 -- Configuring done
 -- Generating done
--- Build files have been written to: /home/jeanne/Documents/S3/ImacDream/Game-build
+-- Build files have been written to: /home/fanny/ImacDream/Game-build

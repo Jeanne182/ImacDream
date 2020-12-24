@@ -2,6 +2,8 @@
 #define IMACDREAM_GAMEOBJECT_HPP
 #include <glimac/common.hpp>
 #include "./Model.hpp"
+#include <glimac/SDLWindowManager.hpp>
+#include "./Camera.hpp"
 
 using namespace glimac;
 
@@ -35,6 +37,8 @@ public :
     void useMatrix() const; //OK
     void update(const glm::mat4 &cameraView);
     void deleteBuffers();
+    bool isSelected(const glm::vec3 &cameraPosition, glm::vec3 *P1, glm::vec3 *P2);
+
 
 };
 

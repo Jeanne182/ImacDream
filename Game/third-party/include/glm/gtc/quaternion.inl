@@ -488,7 +488,7 @@ namespace detail
 		if(a <= static_cast<T>(0)) return x;
 		if(a >= static_cast<T>(1)) return y;
 
-		T cos_t = dot(x, y);
+		T cos_t = dotProduct(x, y);
 		if(cos_t < T(0))
 		{
 			cos_t = -cos_t;

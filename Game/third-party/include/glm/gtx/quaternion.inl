@@ -122,7 +122,7 @@ namespace glm
 	//	detail::tquat<T, P> const & q
 	//)
 	//{
-	//	T q0 = static_cast<T>(1) - dot(q, q);
+	//	T q0 = static_cast<T>(1) - dotProduct(q, q);
 	//	return T(2) * (T(1) + q0) * q;
 	//}
 

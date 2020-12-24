@@ -23,7 +23,11 @@ uniform vec3 uLightIntensity;
 vec3 blinnPhong(){
   vec3 wi = normalize(uLightDir_vs);
   vec3 w0 = normalize(-vPosition_vs);
+<<<<<<< HEAD
   return vec3(uLightIntensity*(Diffuse*dot(wi, vNormal_vs)+Specular*pow(dot((w0+wi)/2.,vNormal_vs),uShininess)));
+=======
+  return vec3(uLightIntensity*(uKd*dot(wi, vNormal_vs)+uKs*pow(dotProduct((w0+wi)/2.,vNormal_vs),uShininess)));
+>>>>>>> click
 }
 
 void main() {
