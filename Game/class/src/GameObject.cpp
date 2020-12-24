@@ -35,6 +35,7 @@ void GameObject::computeMatrix(const glm::mat4 &cameraView, glm::mat4 &projMatri
     _MV = cameraView * _M;
     _MVP = projMatrix * _MV;
     _N = glm::transpose(glm::inverse(_MV));
+
 }
 
 void GameObject::useMatrix(GLint &M_Location, GLint &MV_Location, GLint &MVP_Location, GLint &N_Location) const {

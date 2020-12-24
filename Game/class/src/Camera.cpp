@@ -117,7 +117,7 @@ void Camera::event(const SDL_Event &e) {
 }
 
 void Camera::update() {
-    float speed = 0.01f;
+    float speed = 1.f;
 
     if (KEY_UP_PRESSED)
     {
