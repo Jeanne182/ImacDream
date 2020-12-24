@@ -12,7 +12,6 @@
 #include "./../include/Light.hpp"
 #include "./../include/InteractiveObject.hpp"
 
-
 using namespace glimac;
 
 int main(int argc, char** argv) {
@@ -39,8 +38,6 @@ int main(int argc, char** argv) {
     glEnable(GL_DEPTH_TEST); // Activation du test de profondeur GPU
     SDL_WM_GrabInput( SDL_GRAB_ON );
 
-    Light pointLight(app._game._camera.getViewMatrix());
-
     // Application loop:
     bool done = false;
     while(!done) {
@@ -55,43 +52,13 @@ int main(int argc, char** argv) {
                     break;
                 case SDL_KEYDOWN:
                     if (e.key.keysym.sym==SDLK_ESCAPE) {done = true;}
-                    if (e.key.keysym.sym==SDLK_a)
-                    {
-                        if(!pointLight.getLightOn()){
-                            pointLight.setIntensity(70.);
-                            pointLight.setLightOn(true);}
-                        else{
-                            pointLight.setIntensity(20.);
-                            pointLight.setLightOn(false);
-                        }
-                    };
                     break;
-
-
-                    /*case SDL_MOUSEBUTTONDOWN:
-                        for(auto objectToFind : app._game._map._terrain._objectsDisplayed.objectsManager()){
-                            glm::vec3 P1 = glm::vec3(0., 0., 0.);
-                            glm::vec3 P2 = glm::vec3(0., 0., 0.);
-
-                            if(objectToFind.isSelected(app._game._camera.getPosition(), &P1, &P2)){
-                                std::cout << "Object selected" << std::endl;
-                            }
-                            else{
-                                std::cout << "Object not selected" << std::endl;
-                            }
-
-                        }
-                        break;*/
             }
         }
 
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); // On nettoie la fenêtre afin de ne pas avoir de résidu du tour précédent
-        glUniform3fv(AssetManager::Get()->_multiLightsProgram.ViewPos_Location(), 1, glm::value_ptr( app._game._camera.getPosition()));
 
         app.draw();
-        glUniform1f(AssetManager::Get()->_multiLightsProgram.Shininess_Location(), pointLight.getShininess()); // taille de la tache glossy
-        glUniform3fv(AssetManager::Get()->_multiLightsProgram.LightPos_Location(), 1, glm::value_ptr(pointLight.getPosition()));
-        glUniform3fv(AssetManager::Get()->_multiLightsProgram.LightIntensity_Location(), 1, glm::value_ptr(pointLight.getIntensity()));
         windowManager.swapBuffers();
     }
 

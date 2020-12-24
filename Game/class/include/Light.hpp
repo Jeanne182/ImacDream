@@ -19,7 +19,9 @@ public:
     inline glm::vec3 getIntensity(){ return _intensity; };
     inline float getShininess(){ return _shininess; };
     inline bool getLightOn(){return _lightOn;};
-    void event(SDL_Event &e);
+
+    void event(const SDL_Event &e);
+    void useMatrix(const glm::mat4 &cameraView);
 
 private:
     glm::vec4 _position;

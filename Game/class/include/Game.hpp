@@ -10,8 +10,9 @@ private:
     int _score = 0;
     MapManager *_map;
     Light _pointLight;
+    Camera _camera;
+
 public:
-    Camera _camera;// PRIVATE
     //CONSTRUCTOR
     inline Game():_map(new MapManager()), _camera(), _pointLight(_camera.getViewMatrix()){};
 
