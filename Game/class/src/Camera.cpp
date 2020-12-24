@@ -59,8 +59,8 @@ void Camera::event(const SDL_Event &e) {
 //            rotateUp((e.motion.yrel) * speed_mouse);
 //            SDL_WarpMouse(800/2, 600/2);
 
-            std::cout<<"(x, y) = ("<<e.button.x<<","<<e.button.y<<")"<<std::endl;
-            std::cout<<"(xRel, yRel) = ("<<e.motion.xrel<<","<<e.motion.xrel<<")"<<std::endl;
+//            std::cout<<"(x, y) = ("<<e.button.x<<","<<e.button.y<<")"<<std::endl;
+//            std::cout<<"(xRel, yRel) = ("<<e.motion.xrel<<","<<e.motion.xrel<<")"<<std::endl;
             break;
 
 

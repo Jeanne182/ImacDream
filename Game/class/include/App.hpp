@@ -20,9 +20,9 @@ class App {
 private:
 
     int _layout = LAYOUT_GAME;
+    Game _game;
 
 public:
-    Game _game; //PRIVATE
     //Constructor
     inline App():_game(){};
 
