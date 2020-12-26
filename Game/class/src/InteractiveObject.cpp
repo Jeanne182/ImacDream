@@ -183,3 +183,11 @@ gameobject.hpp :     bool isSelected(const glm::vec3 &cameraPosition, glm::vec3 
 
 
 */
+
+
+void InteractiveObject::setHitbox(){
+    float radius = 0.0;
+    for(auto *it : this->_model){
+
+    }
+}
