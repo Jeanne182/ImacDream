@@ -43,5 +43,24 @@ public:
     inline GLint LightIntensity_Location(){ return _LightIntensity_Location; };
 };
 
+class StaticImageProgram{
+private:
+    GLuint _textureLocation;
+    GLuint _M_Location;
+public:
+    Program _program;
+    StaticImageProgram(const FilePath &applicationPath)
+            : _program(loadProgram(
+            applicationPath.dirPath() + "Assets/shaders/tex2D.vs.glsl",
+            applicationPath.dirPath() + "Assets/shaders/tex2D.fs.glsl"))
+    {
+        _textureLocation = glGetUniformLocation(_program.getGLId(), "uTexture");
+        _M_Location = glGetUniformLocation(_program.getGLId(), "uModelMatrix");
+    }
+
+//    //GETTERS
+    inline GLint textureLocation(){ return _textureLocation; };
+    inline GLint M_Location(){ return _M_Location; };
+};
 
 #endif //IMACDREAM_PROGRAM_HPP

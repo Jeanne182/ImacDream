@@ -179,6 +179,9 @@
 		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/class/include/Program.hpp">
 			<Option target="IMACDream"/>
 		</Unit>
+		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/class/include/StaticImage.hpp">
+			<Option target="IMACDream"/>
+		</Unit>
 		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/class/include/Terrain.hpp">
 			<Option target="IMACDream"/>
 		</Unit>
@@ -219,6 +222,9 @@
 			<Option target="IMACDream"/>
 		</Unit>
 		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/class/src/Program.cpp">
+			<Option target="IMACDream"/>
+		</Unit>
+		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/class/src/StaticImage.cpp">
 			<Option target="IMACDream"/>
 		</Unit>
 		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/class/src/Terrain.cpp">

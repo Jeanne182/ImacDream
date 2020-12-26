@@ -453,6 +453,33 @@ class/src/Program.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/IMACDream.dir/build.make CMakeFiles/IMACDream.dir/class/src/Program.cpp.s
 .PHONY : class/src/Program.cpp.s
 
+class/src/StaticImage.o: class/src/StaticImage.cpp.o
+
+.PHONY : class/src/StaticImage.o
+
+# target to build an object file
+class/src/StaticImage.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/IMACDream.dir/build.make CMakeFiles/IMACDream.dir/class/src/StaticImage.cpp.o
+.PHONY : class/src/StaticImage.cpp.o
+
+class/src/StaticImage.i: class/src/StaticImage.cpp.i
+
+.PHONY : class/src/StaticImage.i
+
+# target to preprocess a source file
+class/src/StaticImage.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/IMACDream.dir/build.make CMakeFiles/IMACDream.dir/class/src/StaticImage.cpp.i
+.PHONY : class/src/StaticImage.cpp.i
+
+class/src/StaticImage.s: class/src/StaticImage.cpp.s
+
+.PHONY : class/src/StaticImage.s
+
+# target to generate assembly for a file
+class/src/StaticImage.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/IMACDream.dir/build.make CMakeFiles/IMACDream.dir/class/src/StaticImage.cpp.s
+.PHONY : class/src/StaticImage.cpp.s
+
 class/src/Terrain.o: class/src/Terrain.cpp.o
 
 .PHONY : class/src/Terrain.o
@@ -604,6 +631,9 @@ help:
 	@echo "... class/src/Program.o"
 	@echo "... class/src/Program.i"
 	@echo "... class/src/Program.s"
+	@echo "... class/src/StaticImage.o"
+	@echo "... class/src/StaticImage.i"
+	@echo "... class/src/StaticImage.s"
 	@echo "... class/src/Terrain.o"
 	@echo "... class/src/Terrain.i"
 	@echo "... class/src/Terrain.s"
