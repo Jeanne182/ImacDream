@@ -28,9 +28,10 @@ public:
 
 class StaticImageManager {
 private:
-    std::map<const std::string, StaticImage *> _images;
+
     GLuint _vbo, _vao, _ibo;
 public:
+    std::map<const std::string, StaticImage *> _images;
     StaticImageManager();
     ~StaticImageManager();
     StaticImage* getStaticImage(const std::string &imageName) const;

@@ -3,6 +3,7 @@
 
 #include <glimac/SDLWindowManager.hpp>
 #include "../include/Game.hpp"
+#include "../include/StaticImage.hpp"
 
 using namespace glimac;
 
@@ -21,17 +22,23 @@ private:
 
     int _layout = LAYOUT_GAME;
     Game _game;
+    StaticImageManager _staticImages;
 
 public:
-    //Constructor
+    //CONSTRUCTOR
     inline App():_game(){};
 
-    //Facades Functions
-    void drawGame();
+
 
     void draw();
     void event(const SDL_Event &e);
     inline void Delete(){ _game.Delete(); };
+
+    //LAYOUTS
+    void drawGame();
+    void layout2D();
+    void layout3D();
+    void layoutGame();
 
 };
 

@@ -86,10 +86,10 @@ void StaticImageManager::addImage(const std::string &filename, const float &x, c
 
 void StaticImageManager::setupImage(const std::string &filename, StaticImage *img) {
     // Create the matching square
-    img->_vertices.push_back(Vertex2DUV(glm::vec2(1.f, 1.f), glm::vec2(1.0f, 1.f)));
-    img->_vertices.push_back(Vertex2DUV(glm::vec2(0.f, 1.f), glm::vec2(0.0f, 1.f)));
-    img->_vertices.push_back(Vertex2DUV(glm::vec2(1.f, 0.f), glm::vec2(1.0f, 0.f)));
-    img->_vertices.push_back(Vertex2DUV(glm::vec2(0.f, 0.f), glm::vec2(0.0f, 0.f)));
+    img->_vertices.push_back(Vertex2DUV(glm::vec2(0.5f, 0.5f*800.f/600.f), glm::vec2(1.0f, 1.f)));
+    img->_vertices.push_back(Vertex2DUV(glm::vec2(-0.5f, 0.5f*800.f/600.f), glm::vec2(0.0f, 1.f)));
+    img->_vertices.push_back(Vertex2DUV(glm::vec2(0.5f, -0.5f*800.f/600.f), glm::vec2(1.0f, 0.f)));
+    img->_vertices.push_back(Vertex2DUV(glm::vec2(-0.5f, -0.5f*800.f/600.f), glm::vec2(0.0f, 0.f)));
 
     // Create the matrix
     float ratio = float(img->_imgPtr->getHeight()) / float(img->_imgPtr->getWidth());

@@ -16,6 +16,7 @@ void normalize(glm::vec3 &vector) {
     for (size_t i =0; i<3; i++)
         vector[i] /= vec_norm;
 }
+
 /*
 template<typename Type>
 Type crossProduct(const Type &a, const Type &b){

@@ -34,7 +34,7 @@ int main(int argc, char** argv) {
     glm::mat4 ProjMatrix = glm::perspective(glm::radians(70.f), ratio, 0.1f, 100.f);
     AssetManager::Create(argv, ProjMatrix);
     App app;
-
+    app.layoutGame();
     glEnable(GL_DEPTH_TEST); // Activation du test de profondeur GPU
     SDL_WM_GrabInput( SDL_GRAB_ON );
 
