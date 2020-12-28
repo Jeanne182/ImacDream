@@ -31,7 +31,7 @@ int main(int argc, char** argv) {
     std::cout << "GLEW Version : " << glewGetString(GLEW_VERSION) << std::endl;
 
 
-    glm::mat4 ProjMatrix = glm::perspective(glm::radians(70.f), ratio, 0.1f, 100.f);
+    glm::mat4 ProjMatrix = glm::perspective(glm::radians(70.f), ratio, 0.1f, 1000.f);
     AssetManager::Create(argv, ProjMatrix);
     App app;
     app.layoutGame();
@@ -39,6 +39,7 @@ int main(int argc, char** argv) {
 
     SDL_SetRelativeMouseMode(SDL_TRUE );
 //    SDL_WarpMouseInWindow(windowManager._window,1080/2,720/2);
+
     // Application loop:
     bool done = false;
     while(!done) {

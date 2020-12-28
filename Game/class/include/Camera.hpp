@@ -21,7 +21,7 @@ private :
 
 public:
     Camera():
-            m_Position(glm::vec3(0., 0., 0.)), m_fPhi(M_PI), m_fTheta(0.){
+            m_Position(glm::vec3(0., 5., 0.)), m_fPhi(M_PI), m_fTheta(0.){
         computeDirectionVectors();
     }
     void moveLeft(float t);

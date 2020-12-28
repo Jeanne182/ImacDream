@@ -18,7 +18,6 @@ public:
     MultiLightsProgram(const FilePath &applicationPath):
         _program(loadProgram(applicationPath.dirPath() + "Assets/shaders/3D.vs.glsl",
                   applicationPath.dirPath() + "Assets/shaders/pointlight.fs.glsl")){
-        _program.use();
         _M_Location = glGetUniformLocation(_program.getGLId(), "uMMatrix");
         _MV_Location = glGetUniformLocation(_program.getGLId(), "uMVMatrix");
         _MVP_Location = glGetUniformLocation(_program.getGLId(), "uMVPMatrix");
