@@ -2,13 +2,14 @@
 #include "../include/AssetsManager.hpp"
 #include <glimac/Program.hpp>
 #include "../include/Utils.hpp"
-#include <cmath>
 
-GameObject::GameObject(const glm::vec3 &position, const float &scale, const glm::vec3 &angles, Model &model)
+GameObject::GameObject(const glm::vec3 &position, const float &scale, const glm::vec3 &angles, Model &model, const float &hitboxRadius, const glm::vec3 &center)
     : _position(position),
             _scale(scale),
             _angles(angles),
-            _model(&model)
+            _model(&model),
+            _hitboxRadius(hitboxRadius),
+            _center(center)
 {
     setMatrix();
 }
@@ -17,7 +18,9 @@ GameObject::GameObject(const GameObject &object)
         : _position(object._position),
           _scale(object._scale),
           _angles(object._angles),
-          _model(object._model)
+          _model(object._model),
+          _hitboxRadius(object._hitboxRadius),
+          _center(object._center)
 {
     setMatrix();
 }
@@ -62,44 +65,67 @@ void GameObject::deleteBuffers() {
 
 
 
-// test if the camera is pointing on an object
-
-bool GameObject::isSelected(const glm::vec3 &cameraPosition, glm::vec3 *P1, glm::vec3 *P2) {
-
-    // Distance between the camera and the center of the interactive object
-    glm::vec3 distanceVector = this->getPosition() - cameraPosition ;
-
-    // Find the direction vector of the mouse ray
-    glm::vec3 directionVectorCam = glm::vec3(cameraPosition.x, cameraPosition.y, cameraPosition.z-1.) - cameraPosition ;
-
-    // Distance between the camera and the center of the interactive object projected on the camera vector
-    double distanceToCenter = dotProduct(distanceVector, directionVectorCam) ;
-
-    // Check if the ray intersect the sphere or not depending on the position of the camera
-    if(distanceToCenter < 0){
-        return false;
-    }
-
-    // Find the closest distance between the center of the object on the camera ray (ortho proj)
-    double distanceToRay = pow(distanceToCenter, 2) - dotProduct(distanceVector, distanceVector);
-
-    // Check if the ray intersect the sphere or not depending on the radius
-    if(abs(distanceToRay) > 0.5*0.5){ // mettre this->radius quand on utilisera class interactive object
-        return false ;
-    }
-
-    // Distance between the first intersection point and the projection of the center on the camera ray
-    double insideDistance = sqrt(0.5*0.5 - distanceToRay*distanceToRay);
-
-    // To solve intersection points
-    float t1 = distanceToCenter - insideDistance;
-    float t2 = distanceToCenter + insideDistance;
-
-    // The intersections points
-    *P1 = cameraPosition + directionVectorCam*t1 ;
-    *P2 = cameraPosition + directionVectorCam*t2 ;
-
-
-    return true;
+void GameObject::setCenter(){
+    glm::vec3 max = findMax();
+    glm::vec3 min = findMin();
+    _center = (max+min)/glm::vec3(2., 2., 2.);
 
 }
+
+
+void GameObject::setHitboxRadius(){
+
+    for(auto meshes : _model->_meshes){
+
+        for(auto vertices : meshes._vertices){
+            auto* vertex = new glm::vec3(vertices.position*getScale()+getPosition());
+            auto* radius = new float(glm::distance(*vertex, getCenter()));
+            if(*radius > _hitboxRadius ) _hitboxRadius = *radius;
+        }
+    }
+}
+
+
+glm::vec3 GameObject::findMax(){
+    glm::vec3 max = getPosition();
+    for(auto meshes : _model->_meshes){
+        for(auto vertices : meshes._vertices){
+            auto* vertex = new glm::vec3(vertices.position*getScale()+getPosition());
+            if(vertex->x> max.x) max.x = vertex->x;
+            if(vertex->y > max.y) max.y = vertex->y;
+            if(vertex->z > max.z) max.z = vertex->z;
+        }
+    }
+    return max;
+}
+
+glm::vec3 GameObject::findMin(){
+    glm::vec3 min = getPosition();
+    for(auto meshes : _model->_meshes){
+        for(auto vertices : meshes._vertices){
+            auto* vertex = new glm::vec3(vertices.position*getScale()+getPosition());
+            if(vertex->x< min.x) min.x = vertex->x;
+            if(vertex->y < min.y) min.y = vertex->y;
+            if(vertex->z < min.z) min.z = vertex->z;
+        }
+    }
+    return min;
+}
+
+
+/*
+float GameObject::getTerrainHeight(const float x, const float z){
+    float xTerrain = x-getPosition().x;
+    float zTerrain = z-getPosition().z;
+    for(auto meshes : _model->_meshes){
+        for(auto vertices : meshes._vertices){
+            if(vertices.position.x == cameraPosition.x && vertices.position.z == cameraPosition.z){//ATTENTION CA PEUT TOMBER DANS UN TRIANGLE
+                // Distance between the camera and the terrain
+                yTerrain = vertices.position.y ;
+            }
+        }
+
+    }
+    return yTerrain;
+
+}*/

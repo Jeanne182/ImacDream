@@ -23,6 +23,8 @@ void Camera::moveFront(float t){
     computeDirectionVectors();
 }
 
+
+
 void Camera::rotateLeft(float degrees){
     this->m_fPhi += glm::radians(degrees);
     computeDirectionVectors();
