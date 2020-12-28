@@ -7,7 +7,9 @@ void Camera::computeDirectionVectors(){
     this->m_FrontVector = glm::vec3(glm::cos(this->m_fTheta)*glm::sin(this->m_fPhi),
                                     glm::sin(this->m_fTheta),
                                     glm::cos(this->m_fTheta)*glm::cos(this->m_fPhi)) ;
-    this->m_LeftVector = glm::vec3(glm::sin(this->m_fPhi + M_PI/2), 0, glm::cos(this->m_fTheta + M_PI/2));
+//    this->m_LeftVector = glm::vec3(glm::sin(this->m_fPhi + M_PI/2), 0, glm::cos(this->m_fTheta + M_PI/2));
+    this->m_LeftVector = glm::vec3(glm::cos(this->m_fPhi), 0, - glm::sin(this->m_fPhi));
+
     this->m_UpVector = glm::cross(this->m_FrontVector , this->m_LeftVector);
 }
 
@@ -39,44 +41,34 @@ glm::mat4 Camera::getViewMatrix() const{
 
 void Camera::event(const SDL_Event &e) {
     float speed_mouse = 0.01f;
+    float speed_scroll = 10.f;
     float xDelta, yDelta;
-    int x,y;
+
     switch(e.type)
     {
-        case SDL_MOUSEBUTTONUP :
-            if(e.button.button == SDL_BUTTON_MIDDLE){
-                moveFront(1.f);
+        case SDL_MOUSEWHEEL :
+            if(e.wheel.y > 0) // scroll up
+            {
+                moveFront(speed_scroll);
             }
-//            else if(e.button.button == SDL_BUTTON_WHEELDOWN){
-//                moveFront(-1.f);
-//            }
+            else if(e.wheel.y < 0) // scroll down
+            {
+                moveFront(-speed_scroll);
+            }
             break;
-//        case SDL_MOUSEBUTTONDOWN:
-//            OriginX = e.button.x - WINDOW_WIDTH/2;
-//            OriginY = e.button.y - WINDOW_HEIGHT/2;
+
         case SDL_MOUSEMOTION:
-            xDelta = e.button.x - _xOld;
-            yDelta = e.button.y - _yOld;
-            _xOld =  e.button.x;
-            _yOld =  e.button.y;
-//            SDL_WarpMouse(1080/2, 720/2);
+            xDelta = e.motion.xrel - _xOld;
+            yDelta = e.motion.yrel - _yOld;
+            _xOld =  e.motion.xrel;
+            _yOld =  e.motion.yrel;
 
-            rotateLeft(- e.motion.xrel * speed_mouse);
-//            rotateUp((e.motion.yrel) * speed_mouse);
-//            SDL_WarpMouse(1080/2, 720/2);
-//
-//            SDL_GetMouseState( &x, &y );
-//            SDL_ShowCursor( 1 ? SDL_DISABLE : SDL_ENABLE );
-//            SDL_WarpMouse( x, y );
-//            SDL_WarpMouse(0, 0);
-//            SDL_EventState(SDL_MOUSEMOTION, SDL_IGNORE);/*ignorer l'entrée du warpMouse*/
-
-//            SDL_EventState(SDL_MOUSEMOTION, SDL_ENABLE);/*reprendre les mouvements souris*/
+            rotateLeft(- xDelta * speed_mouse);
+//            rotateUp(- yDelta * speed_mouse);
 
 //            std::cout<<"(x, y) = ("<<e.motion.x<<","<<e.motion.y<<") - ";
 //            std::cout<<"(xRel, yRel) = ("<<e.motion.xrel<<","<<e.motion.yrel<<") - ";
 //            std::cout<<"(xDelta, yDelta) = ("<<xDelta<<","<<yDelta<<")"<<std::endl;
-//            SDL_WarpMouse(0,0);
             std::cout<<std::endl;
             break;
 
@@ -126,7 +118,7 @@ void Camera::event(const SDL_Event &e) {
 }
 
 void Camera::update() {
-    float speed = 0.1f;
+    float speed = 1.f;
 
     if (KEY_UP_PRESSED)
     {

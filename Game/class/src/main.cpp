@@ -36,17 +36,9 @@ int main(int argc, char** argv) {
     App app;
     app.layoutGame();
     glEnable(GL_DEPTH_TEST); // Activation du test de profondeur GPU
-//    SDL_WM_GrabInput( SDL_GRAB_ON );
-//    SDL_SetRelativeMouseMode();
-//    SDL_ShowCursor( 0 );
 
-
-//    SDL_Cursor *cursor; /* Make this variable visible in the point
-//                       where you exit the program */
-//    int32_t cursorData[2] = {0, 0};
-//    cursor = SDL_CreateCursor((Uint8 *)cursorData, (Uint8 *)cursorData, 8, 8, 4, 4);
-//    SDL_SetCursor(cursor);
-
+    SDL_SetRelativeMouseMode(SDL_TRUE );
+//    SDL_WarpMouseInWindow(windowManager._window,1080/2,720/2);
     // Application loop:
     bool done = false;
     while(!done) {
@@ -55,22 +47,21 @@ int main(int argc, char** argv) {
         SDL_Event e;
         while(windowManager.pollEvent(e)) {
             app.event(e);
+
             switch(e.type) {
                 case SDL_QUIT:
                     done = true; // Leave the loop after this iteration
                     break;
                 case SDL_KEYDOWN:
                     if (e.key.keysym.sym==SDLK_ESCAPE) {done = true;}
-//                    if (e.key.keysym.sym==SDLK_SPACE) {
-//                        std::cout<<"Mouse grab mode desactivated"<<std::endl;
-//                        SDL_WM_GrabInput( SDL_GRAB_OFF );
-//                        SDL_ShowCursor(SDL_ENABLE);
-//                    }
-//                    if (e.key.keysym.sym==SDLK_y) {
-//                        std::cout<<"Mouse grab mode activated"<<std::endl;
-//                        SDL_WM_GrabInput( SDL_GRAB_ON );
-//                        SDL_ShowCursor( SDL_DISABLE );
-//                    }
+                    if (e.key.keysym.sym==SDLK_SPACE) {
+                        std::cout<<"Mouse grab mode desactivated"<<std::endl;
+                        SDL_SetRelativeMouseMode(SDL_FALSE );
+                    }
+                    if (e.key.keysym.sym==SDLK_y) {
+                        std::cout<<"Mouse grab mode activated"<<std::endl;
+                        SDL_SetRelativeMouseMode(SDL_TRUE );
+                    }
                     break;
             }
         }
