@@ -13,14 +13,23 @@ protected:
     float _scale;
     glm::mat4 _M, _MV, _MVP, _N;
     Model *_model;
+    float _hitboxRadius;
+    glm::vec3 _center;
 
 public :
+
     //CONSTRUCTORS & DESCTRUCTOR
-    GameObject(const glm::vec3 &position, const float &scale, const glm::vec3 &angles, Model &model);
+    GameObject(const glm::vec3 &position, const float &scale, const glm::vec3 &angles, Model &model, const float &hitboxRadius, const glm::vec3 &center);
     GameObject(const GameObject &object);
 
     //GETTERS
     inline glm::vec3 getPosition(){ return _position; };
+    inline float getScale(){ return _scale; };
+    inline float getHitboxRadius(){ return _hitboxRadius; };
+    inline glm::vec3 getCenter(){ return _center; };
+    //float getTerrainHeight(const float x, const float z);
+
+
 
     //SETTERS
     inline void setPosition(glm::vec3 position){ _position = position; }
@@ -29,6 +38,9 @@ public :
     inline void addPosition(glm::vec3 position){ _position += position; }
     inline void addAngles(glm::vec3 angles){ _angles += angles; }
     inline void addScale(float scale){ _scale += scale; }
+    void setHitboxRadius();
+    void setCenter();
+
 
     //METHODS
     void display(); //OK
@@ -37,7 +49,9 @@ public :
     void useMatrix() const; //OK
     void update(const glm::mat4 &cameraView);
     void deleteBuffers();
-    bool isSelected(const glm::vec3 &cameraPosition, glm::vec3 *P1, glm::vec3 *P2);
+    glm::vec3 findMax();
+    glm::vec3 findMin();
+
 
 
 };

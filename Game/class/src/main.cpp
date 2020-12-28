@@ -30,13 +30,12 @@ int main(int argc, char** argv) {
     std::cout << "OpenGL Version : " << glGetString(GL_VERSION) << std::endl;
     std::cout << "GLEW Version : " << glewGetString(GLEW_VERSION) << std::endl;
 
-
     glm::mat4 ProjMatrix = glm::perspective(glm::radians(70.f), ratio, 0.1f, 100.f);
     AssetManager::Create(argv, ProjMatrix);
     App app;
 
     glEnable(GL_DEPTH_TEST); // Activation du test de profondeur GPU
-    SDL_WM_GrabInput( SDL_GRAB_ON );
+    //SDL_WM_GrabInput( SDL_GRAB_ON );
 
     // Application loop:
     bool done = false;

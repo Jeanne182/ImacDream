@@ -58,4 +58,4 @@ void main() {
             fFragColor = blinnPhong();
         }
 
-};
+}

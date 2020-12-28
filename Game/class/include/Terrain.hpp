@@ -15,15 +15,21 @@ enum TerrainObjects{
 
 class Terrain {
 private:
-    std::vector<GameObject> _objects;
+//    std::vector<GameObject> _objects;
     std::vector<GameObject> _objectsDisplayed;
 
 public:
-    inline Terrain(){ ObjectsManager(); };
-    inline Terrain(std::vector<GameObject> &objects):_objects(objects){};
+    std::vector<GameObject> _objects;//PRIVATE
+
+    inline Terrain(){ ObjectsManager();};
+    Terrain(std::vector<GameObject> &objects);
     void display(const glm::mat4 &cameraView);
     void deleteBuffers();
     void ObjectsManager();
+
+
+    //GETTERS
+
 };
 
 

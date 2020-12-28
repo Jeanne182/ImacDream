@@ -59,19 +59,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /snap/clion/135/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /snap/clion/137/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /snap/clion/135/bin/cmake/linux/bin/cmake -E rm -f
+RM = /snap/clion/137/bin/cmake/linux/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/jeanne/Documents/S3/ImacDream/Game
+CMAKE_SOURCE_DIR = /home/fanny/ImacDream/Game
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/jeanne/Documents/S3/ImacDream/Game-build
+CMAKE_BINARY_DIR = /home/fanny/ImacDream/Game-build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -79,7 +79,7 @@ CMAKE_BINARY_DIR = /home/jeanne/Documents/S3/ImacDream/Game-build
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/snap/clion/135/bin/cmake/linux/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/snap/clion/137/bin/cmake/linux/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -90,7 +90,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/snap/clion/135/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/snap/clion/137/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -100,9 +100,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jeanne/Documents/S3/ImacDream/Game-build/CMakeFiles /home/jeanne/Documents/S3/ImacDream/Game-build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fanny/ImacDream/Game-build/CMakeFiles /home/fanny/ImacDream/Game-build/CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jeanne/Documents/S3/ImacDream/Game-build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fanny/ImacDream/Game-build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -317,6 +317,33 @@ class/src/InteractiveObject.s: class/src/InteractiveObject.cpp.s
 class/src/InteractiveObject.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/IMACDream.dir/build.make CMakeFiles/IMACDream.dir/class/src/InteractiveObject.cpp.s
 .PHONY : class/src/InteractiveObject.cpp.s
+
+class/src/InteractiveObjectManager.o: class/src/InteractiveObjectManager.cpp.o
+
+.PHONY : class/src/InteractiveObjectManager.o
+
+# target to build an object file
+class/src/InteractiveObjectManager.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/IMACDream.dir/build.make CMakeFiles/IMACDream.dir/class/src/InteractiveObjectManager.cpp.o
+.PHONY : class/src/InteractiveObjectManager.cpp.o
+
+class/src/InteractiveObjectManager.i: class/src/InteractiveObjectManager.cpp.i
+
+.PHONY : class/src/InteractiveObjectManager.i
+
+# target to preprocess a source file
+class/src/InteractiveObjectManager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/IMACDream.dir/build.make CMakeFiles/IMACDream.dir/class/src/InteractiveObjectManager.cpp.i
+.PHONY : class/src/InteractiveObjectManager.cpp.i
+
+class/src/InteractiveObjectManager.s: class/src/InteractiveObjectManager.cpp.s
+
+.PHONY : class/src/InteractiveObjectManager.s
+
+# target to generate assembly for a file
+class/src/InteractiveObjectManager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/IMACDream.dir/build.make CMakeFiles/IMACDream.dir/class/src/InteractiveObjectManager.cpp.s
+.PHONY : class/src/InteractiveObjectManager.cpp.s
 
 class/src/Light.o: class/src/Light.cpp.o
 
@@ -589,6 +616,9 @@ help:
 	@echo "... class/src/InteractiveObject.o"
 	@echo "... class/src/InteractiveObject.i"
 	@echo "... class/src/InteractiveObject.s"
+	@echo "... class/src/InteractiveObjectManager.o"
+	@echo "... class/src/InteractiveObjectManager.i"
+	@echo "... class/src/InteractiveObjectManager.s"
 	@echo "... class/src/Light.o"
 	@echo "... class/src/Light.i"
 	@echo "... class/src/Light.s"
