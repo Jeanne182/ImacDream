@@ -77,8 +77,6 @@ void Camera::event(const SDL_Event &e) {
                 rotateUp(- yDelta * speed_mouse);
             }
             rotateLeft(- xDelta * speed_mouse);
-            std::cout<<"Theta : "<<m_fTheta<<std::endl;
-            std::cout<<"Phi : "<<m_fPhi<<std::endl;
 
 
 //            std::cout<<"(x, y) = ("<<e.motion.x<<","<<e.motion.y<<") - ";
