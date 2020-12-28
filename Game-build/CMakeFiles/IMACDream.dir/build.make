@@ -325,9 +325,8 @@ IMACDream: CMakeFiles/IMACDream.dir/class/src/Water.cpp.o
 IMACDream: CMakeFiles/IMACDream.dir/class/src/main.cpp.o
 IMACDream: CMakeFiles/IMACDream.dir/build.make
 IMACDream: glimac/libglimac.a
-IMACDream: /usr/lib/x86_64-linux-gnu/libSDLmain.a
-IMACDream: /usr/lib/x86_64-linux-gnu/libSDL.so
-IMACDream: /usr/lib/x86_64-linux-gnu/libGL.so
+IMACDream: /usr/lib/x86_64-linux-gnu/libOpenGL.so
+IMACDream: /usr/lib/x86_64-linux-gnu/libGLX.so
 IMACDream: /usr/lib/x86_64-linux-gnu/libGLU.so
 IMACDream: /usr/lib/x86_64-linux-gnu/libGLEW.so
 IMACDream: CMakeFiles/IMACDream.dir/link.txt

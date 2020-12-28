@@ -44,12 +44,12 @@ void Camera::event(const SDL_Event &e) {
     switch(e.type)
     {
         case SDL_MOUSEBUTTONUP :
-            if(e.button.button == SDL_BUTTON_WHEELUP){
+            if(e.button.button == SDL_BUTTON_MIDDLE){
                 moveFront(1.f);
             }
-            else if(e.button.button == SDL_BUTTON_WHEELDOWN){
-                moveFront(-1.f);
-            }
+//            else if(e.button.button == SDL_BUTTON_WHEELDOWN){
+//                moveFront(-1.f);
+//            }
             break;
 //        case SDL_MOUSEBUTTONDOWN:
 //            OriginX = e.button.x - WINDOW_WIDTH/2;
