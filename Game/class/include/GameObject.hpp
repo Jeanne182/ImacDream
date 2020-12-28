@@ -12,11 +12,12 @@ protected:
     glm::vec3 _position, _angles;
     float _scale;
     glm::mat4 _M, _MV, _MVP, _N;
-    Model *_model;
+    //Model *_model;
     float _hitboxRadius;
     glm::vec3 _center;
 
 public :
+    Model *_model;//PRIVATE
 
     //CONSTRUCTORS & DESCTRUCTOR
     GameObject(const glm::vec3 &position, const float &scale, const glm::vec3 &angles, Model &model, const float &hitboxRadius, const glm::vec3 &center);
@@ -27,7 +28,6 @@ public :
     inline float getScale(){ return _scale; };
     inline float getHitboxRadius(){ return _hitboxRadius; };
     inline glm::vec3 getCenter(){ return _center; };
-    //float getTerrainHeight(const float x, const float z);
 
 
 
@@ -51,6 +51,7 @@ public :
     void deleteBuffers();
     glm::vec3 findMax();
     glm::vec3 findMin();
+    int numberVertices();
 
 
 

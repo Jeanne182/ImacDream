@@ -6,16 +6,21 @@
 
 #IncludeRegexTransform: 
 
+<<<<<<< HEAD
 /home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/BBox.hpp
 glm.hpp
 /home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/glm.hpp
 
 /home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/Cone.hpp
+=======
+/home/fanny/ImacDream/Game/glimac/include/glimac/Cone.hpp
+>>>>>>> Collisionwithterrain
 vector
 -
 common.hpp
 /home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/common.hpp
 
+<<<<<<< HEAD
 /home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/FilePath.hpp
 string
 -
@@ -77,6 +82,9 @@ FilePath.hpp
 /home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/FilePath.hpp
 
 /home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/Sphere.hpp
+=======
+/home/fanny/ImacDream/Game/glimac/include/glimac/Sphere.hpp
+>>>>>>> Collisionwithterrain
 vector
 -
 common.hpp
@@ -86,7 +94,13 @@ common.hpp
 GL/glew.h
 -
 glm.hpp
+<<<<<<< HEAD
 /home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/glm.hpp
+=======
+/home/fanny/ImacDream/Game/glimac/include/glimac/glm.hpp
+memory
+-
+>>>>>>> Collisionwithterrain
 
 /home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/glm.hpp
 glm/glm.hpp
@@ -114,6 +128,7 @@ glimac/common.hpp
 glimac/Cone.hpp
 /home/jeanne/Documents/S3/ImacDream/Game/glimac/src/glimac/Cone.hpp
 
+<<<<<<< HEAD
 /home/jeanne/Documents/S3/ImacDream/Game/glimac/src/FreeflyCamera.cpp
 cmath
 -
@@ -165,6 +180,9 @@ sstream
 -
 
 /home/jeanne/Documents/S3/ImacDream/Game/glimac/src/Sphere.cpp
+=======
+/home/fanny/ImacDream/Game/glimac/src/Sphere.cpp
+>>>>>>> Collisionwithterrain
 cmath
 -
 vector
@@ -176,6 +194,7 @@ glimac/common.hpp
 glimac/Sphere.hpp
 /home/jeanne/Documents/S3/ImacDream/Game/glimac/src/glimac/Sphere.hpp
 
+<<<<<<< HEAD
 /home/jeanne/Documents/S3/ImacDream/Game/glimac/src/stb_image.h
 stdio.h
 -
@@ -231,6 +250,9 @@ detail/func_common.hpp
 /home/jeanne/Documents/S3/ImacDream/Game/third-party/include/glm/detail/func_common.hpp
 
 /home/jeanne/Documents/S3/ImacDream/Game/third-party/include/glm/detail/_fixes.hpp
+=======
+/home/fanny/ImacDream/Game/third-party/include/glm/detail/_fixes.hpp
+>>>>>>> Collisionwithterrain
 cmath
 -
 
