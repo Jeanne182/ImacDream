@@ -18,16 +18,9 @@ set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-<<<<<<< HEAD
-  "/home/jeanne/Documents/S3/ImacDream/Game/glimac/include"
-  "/home/jeanne/Documents/S3/ImacDream/Game/third-party/include"
-  "/home/jeanne/Documents/S3/ImacDream/Game/third-party"
-=======
-  "/usr/include/SDL"
   "/home/fanny/ImacDream/Game/glimac/include"
   "/home/fanny/ImacDream/Game/third-party/include"
   "/home/fanny/ImacDream/Game/third-party"
->>>>>>> Collision
   )
 
 # Targets to which this target links.

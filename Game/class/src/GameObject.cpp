@@ -113,19 +113,15 @@ glm::vec3 GameObject::findMin(){
 }
 
 
-/*
-float GameObject::getTerrainHeight(const float x, const float z){
-    float xTerrain = x-getPosition().x;
-    float zTerrain = z-getPosition().z;
+
+
+
+int GameObject::numberVertices() {
+    int number =0;
     for(auto meshes : _model->_meshes){
         for(auto vertices : meshes._vertices){
-            if(vertices.position.x == cameraPosition.x && vertices.position.z == cameraPosition.z){//ATTENTION CA PEUT TOMBER DANS UN TRIANGLE
-                // Distance between the camera and the terrain
-                yTerrain = vertices.position.y ;
-            }
+            number++;
         }
-
     }
-    return yTerrain;
-
-}*/
+    return number;
+}
