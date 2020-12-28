@@ -36,8 +36,8 @@ int main(int argc, char** argv) {
     app.layoutGame();
     glEnable(GL_DEPTH_TEST); // Activation du test de profondeur GPU
 
-    SDL_SetRelativeMouseMode(SDL_TRUE );
-//    SDL_WarpMouseInWindow(windowManager._window,1080/2,720/2);
+    SDL_SetRelativeMouseMode(SDL_TRUE ); //To comment if want to debug
+
     // Application loop:
     bool done = false;
     while(!done) {
@@ -61,6 +61,9 @@ int main(int argc, char** argv) {
                         std::cout<<"Mouse grab mode activated"<<std::endl;
                         SDL_SetRelativeMouseMode(SDL_TRUE );
                     }
+                    break;
+                case SDL_MOUSEMOTION:
+                    SDL_WarpMouseInWindow(windowManager._window,1080/2,720/2);
                     break;
             }
         }

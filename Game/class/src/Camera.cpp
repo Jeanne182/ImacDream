@@ -14,12 +14,14 @@ void Camera::computeDirectionVectors(){
 }
 
 void Camera::moveLeft(float t){
-    this->m_Position += t * this->m_LeftVector;
+    this->m_Position[0] += t * this->m_LeftVector[0];
+    this->m_Position[2] += t * this->m_LeftVector[2];
     computeDirectionVectors();
 }
 
 void Camera::moveFront(float t){
-    this->m_Position += t * this->m_FrontVector;
+    this->m_Position[0] += t * this->m_FrontVector[0];
+    this->m_Position[2] += t * this->m_FrontVector[2];
     computeDirectionVectors();
 }
 
@@ -49,7 +51,7 @@ void Camera::event(const SDL_Event &e) {
     switch(e.type)
     {
         case SDL_MOUSEWHEEL :
-            if(e.wheel.y > 0) // scroll up
+            if(e.wheel.y> 0) // scroll up
             {
                 moveFront(speed_scroll);
             }
@@ -65,13 +67,24 @@ void Camera::event(const SDL_Event &e) {
             _xOld =  e.motion.xrel;
             _yOld =  e.motion.yrel;
 
+            if(m_fTheta  + glm::radians(- yDelta * speed_mouse)  > -5){
+                m_fTheta = -5;
+            }
+            else if(m_fTheta + glm::radians(- yDelta * speed_mouse)  < -7.5){
+                m_fTheta = -7.5;
+            }
+            else{
+                rotateUp(- yDelta * speed_mouse);
+            }
             rotateLeft(- xDelta * speed_mouse);
-//            rotateUp(- yDelta * speed_mouse);
+            std::cout<<"Theta : "<<m_fTheta<<std::endl;
+            std::cout<<"Phi : "<<m_fPhi<<std::endl;
+
 
 //            std::cout<<"(x, y) = ("<<e.motion.x<<","<<e.motion.y<<") - ";
 //            std::cout<<"(xRel, yRel) = ("<<e.motion.xrel<<","<<e.motion.yrel<<") - ";
 //            std::cout<<"(xDelta, yDelta) = ("<<xDelta<<","<<yDelta<<")"<<std::endl;
-            std::cout<<std::endl;
+//            std::cout<<std::endl;
             break;
 
             /* Touche clavier */
