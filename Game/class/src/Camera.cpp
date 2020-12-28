@@ -38,8 +38,9 @@ glm::mat4 Camera::getViewMatrix() const{
 }
 
 void Camera::event(const SDL_Event &e) {
-    float speed_mouse = 0.1f;
-    int static counterX;
+    float speed_mouse = 0.01f;
+    float xDelta, yDelta;
+    int x,y;
     switch(e.type)
     {
         case SDL_MOUSEBUTTONUP :
@@ -54,22 +55,36 @@ void Camera::event(const SDL_Event &e) {
 //            OriginX = e.button.x - WINDOW_WIDTH/2;
 //            OriginY = e.button.y - WINDOW_HEIGHT/2;
         case SDL_MOUSEMOTION:
-            counterX += e.motion.xrel;
-            rotateLeft(- (e.motion.xrel) * speed_mouse);
+            xDelta = e.button.x - _xOld;
+            yDelta = e.button.y - _yOld;
+            _xOld =  e.button.x;
+            _yOld =  e.button.y;
+//            SDL_WarpMouse(1080/2, 720/2);
+
+            rotateLeft(- e.motion.xrel * speed_mouse);
 //            rotateUp((e.motion.yrel) * speed_mouse);
-//            SDL_WarpMouse(800/2, 600/2);
+//            SDL_WarpMouse(1080/2, 720/2);
+//
+//            SDL_GetMouseState( &x, &y );
+//            SDL_ShowCursor( 1 ? SDL_DISABLE : SDL_ENABLE );
+//            SDL_WarpMouse( x, y );
+//            SDL_WarpMouse(0, 0);
+//            SDL_EventState(SDL_MOUSEMOTION, SDL_IGNORE);/*ignorer l'entrée du warpMouse*/
 
-//            std::cout<<"(x, y) = ("<<e.button.x<<","<<e.button.y<<")"<<std::endl;
-//            std::cout<<"(xRel, yRel) = ("<<e.motion.xrel<<","<<e.motion.xrel<<")"<<std::endl;
+//            SDL_EventState(SDL_MOUSEMOTION, SDL_ENABLE);/*reprendre les mouvements souris*/
+
+//            std::cout<<"(x, y) = ("<<e.motion.x<<","<<e.motion.y<<") - ";
+//            std::cout<<"(xRel, yRel) = ("<<e.motion.xrel<<","<<e.motion.yrel<<") - ";
+//            std::cout<<"(xDelta, yDelta) = ("<<xDelta<<","<<yDelta<<")"<<std::endl;
+//            SDL_WarpMouse(0,0);
+            std::cout<<std::endl;
             break;
-
 
             /* Touche clavier */
         case SDL_KEYDOWN:
             if (e.key.keysym.sym==SDLK_z || e.key.keysym.sym==SDLK_UP)
             {
                 KEY_UP_PRESSED = true;
-
             }
             if (e.key.keysym.sym==SDLK_s || e.key.keysym.sym==SDLK_DOWN)
             {

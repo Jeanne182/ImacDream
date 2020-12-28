@@ -6,15 +6,35 @@
 
 #IncludeRegexTransform: 
 
-/home/jeanne/Documents/S3/ImacDream/Game/class/include/Utils.hpp
+/home/jeanne/Documents/S3/ImacDream/Game/class/include/Camera.hpp
+glimac/glm.hpp
+-
+glimac/SDLWindowManager.hpp
+-
+
+/home/jeanne/Documents/S3/ImacDream/Game/class/src/Camera.cpp
+./../include/Camera.hpp
+/home/jeanne/Documents/S3/ImacDream/Game/class/include/Camera.hpp
+cmath
+-
+glimac/FreeflyCamera.hpp
+/home/jeanne/Documents/S3/ImacDream/Game/class/src/glimac/FreeflyCamera.hpp
+iostream
+-
+
+/home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/FreeflyCamera.hpp
+cmath
+-
 glimac/glm.hpp
 -
 
-/home/jeanne/Documents/S3/ImacDream/Game/class/src/Utils.cpp
-../include/Utils.hpp
-/home/jeanne/Documents/S3/ImacDream/Game/class/include/Utils.hpp
-cmath
+/home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/SDLWindowManager.hpp
+cstdint
 -
+SDL/SDL.h
+-
+glm.hpp
+/home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/glm.hpp
 
 /home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/glm.hpp
 glm/glm.hpp

@@ -49,7 +49,7 @@ void App::layoutGame() {
     layout2D();
     try
     {
-        _staticImages.addImage("cursor", 0.f, 0.f, 0.1f);
+        _staticImages.addImage("cursor", 0.f, 0.f, 0.05f);
     }
     catch (std::exception &e)
     {
