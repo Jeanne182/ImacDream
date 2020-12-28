@@ -21,7 +21,7 @@ private :
 
 public:
     Camera():
-            m_Position(glm::vec3(0., 5., 0.)), m_fPhi(M_PI), m_fTheta(0.){
+            m_Position(glm::vec3(0.,0.,0.)), m_fPhi(M_PI), m_fTheta(0.){
         computeDirectionVectors();
     }
     void moveLeft(float t);
@@ -30,7 +30,7 @@ public:
     void rotateUp(float degrees);
     glm::mat4 getViewMatrix() const;
     inline glm::vec3 getPosition() const { return m_Position;};
-
+    inline void setPositionY(const float &y) { m_Position.y = y;};
     void event(const SDL_Event &e);
     void update();
 };

@@ -22,6 +22,7 @@ void Game::event(const SDL_Event &e) {
 }
 
 void Game::update() {
+    _camera.setPositionY(5.f);
     _camera.update();
     _pointLight.useMatrix(_camera.getViewMatrix());
 }
