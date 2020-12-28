@@ -7,7 +7,9 @@ void Camera::computeDirectionVectors(){
     this->m_FrontVector = glm::vec3(glm::cos(this->m_fTheta)*glm::sin(this->m_fPhi),
                                     glm::sin(this->m_fTheta),
                                     glm::cos(this->m_fTheta)*glm::cos(this->m_fPhi)) ;
-    this->m_LeftVector = glm::vec3(glm::sin(this->m_fPhi + M_PI/2), 0, glm::cos(this->m_fTheta + M_PI/2));
+//    this->m_LeftVector = glm::vec3(glm::sin(this->m_fPhi + M_PI/2), 0, glm::cos(this->m_fTheta + M_PI/2));
+    this->m_LeftVector = glm::vec3(glm::cos(this->m_fPhi), 0, - glm::sin(this->m_fPhi));
+
     this->m_UpVector = glm::cross(this->m_FrontVector , this->m_LeftVector);
 }
 
@@ -38,38 +40,43 @@ glm::mat4 Camera::getViewMatrix() const{
 }
 
 void Camera::event(const SDL_Event &e) {
-    float speed_mouse = 0.1f;
-    int static counterX;
+    float speed_mouse = 0.01f;
+    float speed_scroll = 10.f;
+    float xDelta, yDelta;
+
     switch(e.type)
     {
-        case SDL_MOUSEBUTTONUP :
-            if(e.button.button == SDL_BUTTON_WHEELUP){
-                moveFront(1.f);
+        case SDL_MOUSEWHEEL :
+            if(e.wheel.y > 0) // scroll up
+            {
+                moveFront(speed_scroll);
             }
-            else if(e.button.button == SDL_BUTTON_WHEELDOWN){
-                moveFront(-1.f);
+            else if(e.wheel.y < 0) // scroll down
+            {
+                moveFront(-speed_scroll);
             }
             break;
-//        case SDL_MOUSEBUTTONDOWN:
-//            OriginX = e.button.x - WINDOW_WIDTH/2;
-//            OriginY = e.button.y - WINDOW_HEIGHT/2;
+
         case SDL_MOUSEMOTION:
-            counterX += e.motion.xrel;
-            rotateLeft(- (e.motion.xrel) * speed_mouse);
-//            rotateUp((e.motion.yrel) * speed_mouse);
-//            SDL_WarpMouse(800/2, 600/2);
+            xDelta = e.motion.xrel - _xOld;
+            yDelta = e.motion.yrel - _yOld;
+            _xOld =  e.motion.xrel;
+            _yOld =  e.motion.yrel;
 
-//            std::cout<<"(x, y) = ("<<e.button.x<<","<<e.button.y<<")"<<std::endl;
-//            std::cout<<"(xRel, yRel) = ("<<e.motion.xrel<<","<<e.motion.xrel<<")"<<std::endl;
+            rotateLeft(- xDelta * speed_mouse);
+//            rotateUp(- yDelta * speed_mouse);
+
+//            std::cout<<"(x, y) = ("<<e.motion.x<<","<<e.motion.y<<") - ";
+//            std::cout<<"(xRel, yRel) = ("<<e.motion.xrel<<","<<e.motion.yrel<<") - ";
+//            std::cout<<"(xDelta, yDelta) = ("<<xDelta<<","<<yDelta<<")"<<std::endl;
+            std::cout<<std::endl;
             break;
-
 
             /* Touche clavier */
         case SDL_KEYDOWN:
             if (e.key.keysym.sym==SDLK_z || e.key.keysym.sym==SDLK_UP)
             {
                 KEY_UP_PRESSED = true;
-
             }
             if (e.key.keysym.sym==SDLK_s || e.key.keysym.sym==SDLK_DOWN)
             {
@@ -111,7 +118,7 @@ void Camera::event(const SDL_Event &e) {
 }
 
 void Camera::update() {
-    float speed = 0.1f;
+    float speed = 1.f;
 
     if (KEY_UP_PRESSED)
     {

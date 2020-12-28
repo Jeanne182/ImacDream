@@ -32,4 +32,19 @@ namespace glimac {
         //Mirror reflection
         glm::vec4 Ks;
     };
+
+    class Vertex2DUV
+    {
+    public:
+        glm::vec2 position;
+        glm::vec2 coord;
+
+        Vertex2DUV(const glm::vec2 &pos, const glm::vec2 &c)
+        {
+            position.x = pos.x;
+            position.y = pos.y;
+            coord.x = c.x;
+            coord.y = c.y;
+        };
+    };
 }

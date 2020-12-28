@@ -5,7 +5,7 @@
 		<Option title="IMACDream"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\CMake\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\..\usr\lib\;CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\;CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\;CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\assimp-4.1\;CMake Files\glimac\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\..\usr\lib\;CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\;CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\;CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\SDL2\;CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\assimp-4.1\;CMake Files\CMake\;CMake Files\glimac\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="/home/jeanne/Documents/S3/ImacDream/Game-build"/>
@@ -44,7 +44,6 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/usr/include/SDL"/>
 					<Add directory="/home/jeanne/Documents/S3/ImacDream/Game/glimac/include"/>
 					<Add directory="/home/jeanne/Documents/S3/ImacDream/Game/third-party/include"/>
 					<Add directory="/home/jeanne/Documents/S3/ImacDream/Game/third-party"/>
@@ -71,7 +70,6 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/usr/include/SDL"/>
 					<Add directory="/home/jeanne/Documents/S3/ImacDream/Game/glimac/include"/>
 					<Add directory="/home/jeanne/Documents/S3/ImacDream/Game/third-party/include"/>
 					<Add directory="/home/jeanne/Documents/S3/ImacDream/Game/third-party"/>
@@ -98,7 +96,6 @@
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/usr/include/SDL"/>
 					<Add directory="/home/jeanne/Documents/S3/ImacDream/Game/glimac/include"/>
 					<Add directory="/home/jeanne/Documents/S3/ImacDream/Game/third-party/include"/>
 					<Add directory="/home/jeanne/Documents/S3/ImacDream/Game/third-party"/>
@@ -125,7 +122,6 @@
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/usr/include/SDL"/>
 					<Add directory="/home/jeanne/Documents/S3/ImacDream/Game/glimac/include"/>
 					<Add directory="/home/jeanne/Documents/S3/ImacDream/Game/third-party/include"/>
 					<Add directory="/home/jeanne/Documents/S3/ImacDream/Game/third-party"/>
@@ -179,6 +175,9 @@
 		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/class/include/Program.hpp">
 			<Option target="IMACDream"/>
 		</Unit>
+		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/class/include/StaticImage.hpp">
+			<Option target="IMACDream"/>
+		</Unit>
 		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/class/include/Terrain.hpp">
 			<Option target="IMACDream"/>
 		</Unit>
@@ -219,6 +218,9 @@
 			<Option target="IMACDream"/>
 		</Unit>
 		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/class/src/Program.cpp">
+			<Option target="IMACDream"/>
+		</Unit>
+		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/class/src/StaticImage.cpp">
 			<Option target="IMACDream"/>
 		</Unit>
 		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/class/src/Terrain.cpp">
@@ -302,14 +304,17 @@
 		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
-		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/CMake/FindGLEW.cmake">
-			<Option virtualFolder="CMake Files\CMake\"/>
+		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/../../../../../../usr/lib/x86_64-linux-gnu/cmake/SDL2/sdl2-config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\SDL2\"/>
 		</Unit>
 		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/../../../../../../usr/lib/x86_64-linux-gnu/cmake/assimp-4.1/assimp-config-version.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\assimp-4.1\"/>
 		</Unit>
 		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/../../../../../../usr/lib/x86_64-linux-gnu/cmake/assimp-4.1/assimp-config.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\assimp-4.1\"/>
+		</Unit>
+		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/CMake/FindGLEW.cmake">
+			<Option virtualFolder="CMake Files\CMake\"/>
 		</Unit>
 		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/glimac/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\glimac\"/>

@@ -15,6 +15,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/jeanne/Documents/S3/ImacDream/Game/class/src/Mesh.cpp" "/home/jeanne/Documents/S3/ImacDream/Game-build/CMakeFiles/IMACDream.dir/class/src/Mesh.cpp.o"
   "/home/jeanne/Documents/S3/ImacDream/Game/class/src/Model.cpp" "/home/jeanne/Documents/S3/ImacDream/Game-build/CMakeFiles/IMACDream.dir/class/src/Model.cpp.o"
   "/home/jeanne/Documents/S3/ImacDream/Game/class/src/Program.cpp" "/home/jeanne/Documents/S3/ImacDream/Game-build/CMakeFiles/IMACDream.dir/class/src/Program.cpp.o"
+  "/home/jeanne/Documents/S3/ImacDream/Game/class/src/StaticImage.cpp" "/home/jeanne/Documents/S3/ImacDream/Game-build/CMakeFiles/IMACDream.dir/class/src/StaticImage.cpp.o"
   "/home/jeanne/Documents/S3/ImacDream/Game/class/src/Terrain.cpp" "/home/jeanne/Documents/S3/ImacDream/Game-build/CMakeFiles/IMACDream.dir/class/src/Terrain.cpp.o"
   "/home/jeanne/Documents/S3/ImacDream/Game/class/src/Utils.cpp" "/home/jeanne/Documents/S3/ImacDream/Game-build/CMakeFiles/IMACDream.dir/class/src/Utils.cpp.o"
   "/home/jeanne/Documents/S3/ImacDream/Game/class/src/Water.cpp" "/home/jeanne/Documents/S3/ImacDream/Game-build/CMakeFiles/IMACDream.dir/class/src/Water.cpp.o"
@@ -24,7 +25,6 @@ set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/usr/include/SDL"
   "/home/jeanne/Documents/S3/ImacDream/Game/glimac/include"
   "/home/jeanne/Documents/S3/ImacDream/Game/third-party/include"
   "/home/jeanne/Documents/S3/ImacDream/Game/third-party"

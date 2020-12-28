@@ -24,11 +24,13 @@ private:
 public:
     // Programs
     MultiLightsProgram _multiLightsProgram;
+    StaticImageProgram _staticImageProgram;
 
     //CONSTRUCTOR
     AssetManager(char **argv, glm::mat4 &P)
             : _appPath(argv[0]),
               _multiLightsProgram(_appPath),
+              _staticImageProgram(_appPath),
               _P(P)
               {};
 
@@ -37,6 +39,7 @@ public:
     inline glm::mat4 P(){ return _P; };
 
     inline MultiLightsProgram getMultiLightsProgram(){ return _multiLightsProgram; }
+    inline StaticImageProgram staticImageProgram(){ return _staticImageProgram; }
 
 
     //Singleton
@@ -54,6 +57,10 @@ public:
     AssetManager() = delete;
     AssetManager(AssetManager const &) = delete;
     void operator=(AssetManager const &) = delete;
+
+    //Paths
+    std::string modelFile(const std::string &model) const;
+    std::string textureFile(const std::string &texture) const;
 };
 
 #endif //IMACDREAM_ASSETSMANAGER_HPP
