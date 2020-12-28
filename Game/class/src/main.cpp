@@ -31,7 +31,7 @@ int main(int argc, char** argv) {
     std::cout << "GLEW Version : " << glewGetString(GLEW_VERSION) << std::endl;
 
 
-    glm::mat4 ProjMatrix = glm::perspective(glm::radians(70.f), ratio, 0.1f, 100.f);
+    glm::mat4 ProjMatrix = glm::perspective(glm::radians(70.f), ratio, 0.1f, 10000000000.f);
     AssetManager::Create(argv, ProjMatrix);
     App app;
 
@@ -57,6 +57,8 @@ int main(int argc, char** argv) {
         }
 
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); // On nettoie la fenêtre afin de ne pas avoir de résidu du tour précédent
+
+        //AssetManager::Get()->_skyboxProgram._program.use();
 
         app.draw();
         windowManager.swapBuffers();

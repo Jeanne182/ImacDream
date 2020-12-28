@@ -63,10 +63,10 @@ void Terrain::ObjectsManager() {
     GameObject runeObject(glm::vec3(-30.f,0.f,-5.f), 6.f, glm::vec3(90.f, 0.f, 0.f), *rune);
     objects->push_back(runeObject);
 
-    //HUT
-    Model* hut = new Model(modelsPath + "/Hut.obj");
-    GameObject hutObject(glm::vec3(-10.f,-12.f,-5.f), 4.f, glm::vec3(0.f, 45.f, 0.f), *hut);
-    objects->push_back(hutObject);
+   //HUT
+   Model* hut = new Model(modelsPath + "/hut.obj");
+   GameObject hutObject(glm::vec3(-20.f,-12.f,-5.f), 4.f, glm::vec3(0.f, 45.f, 0.f), *hut);
+   objects->push_back(hutObject);
 
     //TERRAIN
     Model* terrain = new Model(modelsPath + "/terrain.obj");
@@ -76,6 +76,3 @@ void Terrain::ObjectsManager() {
 
     _objects = *objects;
 }
-
-
-

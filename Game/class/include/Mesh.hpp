@@ -38,9 +38,13 @@ namespace glimac {
             // now that we have all the required data, set the vertex buffers and its attribute pointers.
             setupMesh();
         };
+
+        Mesh(const Mesh &mesh): _vertices(mesh._vertices), _indices(mesh._indices), _textures(mesh._textures), _materials(mesh._materials) {
+            setupMesh();
+        }
+
         void deleteBuffers();
         void Draw() const;
-        //void Draw(Program &program);
 
 
     public:

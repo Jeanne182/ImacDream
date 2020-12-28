@@ -24,11 +24,14 @@ private:
 public:
     // Programs
     MultiLightsProgram _multiLightsProgram;
+    SkyboxProgram _skyboxProgram;
+
 
     //CONSTRUCTOR
     AssetManager(char **argv, glm::mat4 &P)
             : _appPath(argv[0]),
               _multiLightsProgram(_appPath),
+              _skyboxProgram(_appPath),
               _P(P)
               {};
 
@@ -37,6 +40,7 @@ public:
     inline glm::mat4 P(){ return _P; };
 
     inline MultiLightsProgram getMultiLightsProgram(){ return _multiLightsProgram; }
+    inline SkyboxProgram getSkyboxProgram(){ return _skyboxProgram; }
 
 
     //Singleton

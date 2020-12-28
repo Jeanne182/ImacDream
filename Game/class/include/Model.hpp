@@ -24,7 +24,6 @@ namespace glimac {
         void deleteBuffers();
         void Draw();
 
-    public:
         // model data
         std::vector<Mesh> _meshes;
         std::string _directory;

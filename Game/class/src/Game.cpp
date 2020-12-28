@@ -1,4 +1,5 @@
 #include "../include/Game.hpp"
+#include "../include/AssetsManager.hpp"
 
 void Game::event(const SDL_Event &e) {
     _camera.event(e);
@@ -28,4 +29,5 @@ void Game::update() {
 
 void Game::display() {
     _map->display(_camera.getViewMatrix());
+    _sky.Draw();
 }

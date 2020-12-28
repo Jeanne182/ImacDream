@@ -28,4 +28,4 @@ vec3 blinnPhong(){
 
 void main() {
   fFragTexture = blinnPhong();
-};
+}

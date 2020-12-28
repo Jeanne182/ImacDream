@@ -13,6 +13,7 @@ namespace glimac {
     }
 
     void Mesh::Draw() const{
+
         GLuint diffuseNr = 1;
         GLuint specularNr = 1;
         for (GLuint i = 0; i < _textures.size(); i++) {
@@ -30,6 +31,7 @@ namespace glimac {
 
             glBindTexture(GL_TEXTURE_2D, _textures[i].id);
         }
+        AssetManager::Get()->_multiLightsProgram._program.use();
 
         // draw mesh
         glBindVertexArray(_vao);
@@ -52,7 +54,7 @@ namespace glimac {
         glGenBuffers(1,&_ibo);
         glGenBuffers(1, &_ubo);
         glBindBuffer(GL_ARRAY_BUFFER, _vbo);
-        glBufferData(GL_ARRAY_BUFFER, _vertices.size()*sizeof(ShapeVertex) + sizeof(Material), _vertices.data(), GL_STATIC_DRAW);
+        glBufferData(GL_ARRAY_BUFFER, _vertices.size()*sizeof(ShapeVertex)+sizeof(Material), _vertices.data(), GL_STATIC_DRAW);
         glBindBuffer(GL_ARRAY_BUFFER, 0);
 
         glBindBuffer(GL_UNIFORM_BUFFER, _ubo);
