@@ -24,7 +24,7 @@ public :
     inline void setValue(int value){ _value = value; }
 
     //METHODS
-    bool isSelected(const glm::vec3 &cameraPosition, glm::vec3 *P1, glm::vec3 *P2);
+    bool isSelected(const glm::mat4 &cameraView, const glm::vec3 &cameraPosition, glm::vec3 *P1, glm::vec3 *P2);
     //void setHitboxRadius();
 
 

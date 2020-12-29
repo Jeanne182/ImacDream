@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-/snap/clion/135/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/jeanne/Documents/S3/ImacDream/Game
-=======
 /snap/clion/137/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/fanny/ImacDream/Game
--- Found OpenGL: /usr/lib/x86_64-linux-gnu/libOpenGL.so   
->>>>>>> Collisionwithterrain
 -- Configuring done
 -- Generating done
--- Build files have been written to: /home/jeanne/Documents/S3/ImacDream/Game-build
+-- Build files have been written to: /home/fanny/ImacDream/Game-build

@@ -16,6 +16,7 @@ protected:
     float _hitboxRadius;
     glm::vec3 _center;
 
+
 public :
     Model *_model;//PRIVATE
 
@@ -51,7 +52,7 @@ public :
     void deleteBuffers();
     glm::vec3 findMax();
     glm::vec3 findMin();
-    int numberVertices();
+
 
 
 

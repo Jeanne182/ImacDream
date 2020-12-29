@@ -38,15 +38,18 @@
 
 // test if the camera is pointing on an object
 
-bool InteractiveObject::isSelected(const glm::vec3 &cameraPosition, glm::vec3 *P1, glm::vec3 *P2) {
-    std::cout << "cameraPosition : " << cameraPosition << std::endl;
+bool InteractiveObject::isSelected(const glm::mat4 &cameraView, const glm::vec3 &cameraPosition, glm::vec3 *P1, glm::vec3 *P2) {
+
 
     // Distance between the camera and the center of the interactive object
-    glm::vec3 distanceVector = getPosition() - cameraPosition ;
+    glm::vec3 distanceVector = getCenter() - cameraPosition ;
+    std::cout << "distanceVector : " << distanceVector << std::endl;
+
+    glm::vec3 directionVectorCam = glm::vec3(cameraView*glm::vec4(0, 0, -1, 0));
+    std::cout << "directionVectorCam : " <<directionVectorCam << std::endl;
 
     // Find the direction vector of the camera ray
-    glm::vec3 directionVectorCam = glm::vec3(cameraPosition.x, cameraPosition.y, cameraPosition.z-1.) - cameraPosition ;
-    std::cout << "directionVectorCam : " << directionVectorCam << std::endl;
+    //glm::vec3 directionVectorCam = glm::vec3(cameraPosition.x, cameraPosition.y, cameraPosition.z-1.) - cameraPosition ;
 
     // Distance between the camera and the center of the interactive object projected on the camera vector
     double distanceToCenter = dotProduct(distanceVector, directionVectorCam) ;

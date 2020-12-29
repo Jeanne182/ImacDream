@@ -116,12 +116,4 @@ glm::vec3 GameObject::findMin(){
 
 
 
-int GameObject::numberVertices() {
-    int number =0;
-    for(auto meshes : _model->_meshes){
-        for(auto vertices : meshes._vertices){
-            number++;
-        }
-    }
-    return number;
-}
+
