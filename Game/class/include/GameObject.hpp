@@ -12,9 +12,10 @@ protected:
     glm::vec3 _position, _angles;
     float _scale;
     glm::mat4 _M, _MV, _MVP, _N;
-    Model *_model;
+
     float _hitboxRadius;
     glm::vec3 _center;
+    Model *_model; //PRIVATE
 
 public :
 

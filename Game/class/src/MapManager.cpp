@@ -4,6 +4,11 @@
 void MapManager::display(const glm::mat4 &cameraView) {
     _terrain.display(cameraView);
     _interactiveObjectManager.display(cameraView);
+//    _water._model->_meshes[0].deleteBuffers();
+//    _water.move();
+//    _water._model->_meshes[0].setupMesh();
+//    std::cout<<"Number of vertices : "<< _water._model->_meshes[0]._vertices.size()<<" & number of indexes  : "<<_water._model->_meshes[0]._indices.size()<<std::endl;
+    _water.update(cameraView);
 }
 
 void MapManager::event(const SDL_Event &e, glm::vec3 cameraPosition) {

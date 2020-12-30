@@ -16,6 +16,7 @@ CMakeFiles/IMACDream.dir/class/src/App.cpp.o: /home/jeanne/Documents/S3/ImacDrea
 CMakeFiles/IMACDream.dir/class/src/App.cpp.o: /home/jeanne/Documents/S3/ImacDream/Game/class/include/StaticImage.hpp
 CMakeFiles/IMACDream.dir/class/src/App.cpp.o: /home/jeanne/Documents/S3/ImacDream/Game/class/include/Terrain.hpp
 CMakeFiles/IMACDream.dir/class/src/App.cpp.o: /home/jeanne/Documents/S3/ImacDream/Game/class/include/Utils.hpp
+CMakeFiles/IMACDream.dir/class/src/App.cpp.o: /home/jeanne/Documents/S3/ImacDream/Game/class/include/Water.hpp
 CMakeFiles/IMACDream.dir/class/src/App.cpp.o: /home/jeanne/Documents/S3/ImacDream/Game/class/src/App.cpp
 CMakeFiles/IMACDream.dir/class/src/App.cpp.o: /home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/FilePath.hpp
 CMakeFiles/IMACDream.dir/class/src/App.cpp.o: /home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/Image.hpp
@@ -381,6 +382,7 @@ CMakeFiles/IMACDream.dir/class/src/Game.cpp.o: /home/jeanne/Documents/S3/ImacDre
 CMakeFiles/IMACDream.dir/class/src/Game.cpp.o: /home/jeanne/Documents/S3/ImacDream/Game/class/include/Mesh.hpp
 CMakeFiles/IMACDream.dir/class/src/Game.cpp.o: /home/jeanne/Documents/S3/ImacDream/Game/class/include/Model.hpp
 CMakeFiles/IMACDream.dir/class/src/Game.cpp.o: /home/jeanne/Documents/S3/ImacDream/Game/class/include/Terrain.hpp
+CMakeFiles/IMACDream.dir/class/src/Game.cpp.o: /home/jeanne/Documents/S3/ImacDream/Game/class/include/Water.hpp
 CMakeFiles/IMACDream.dir/class/src/Game.cpp.o: /home/jeanne/Documents/S3/ImacDream/Game/class/src/Game.cpp
 CMakeFiles/IMACDream.dir/class/src/Game.cpp.o: /home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/FilePath.hpp
 CMakeFiles/IMACDream.dir/class/src/Game.cpp.o: /home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/Program.hpp
@@ -1052,6 +1054,7 @@ CMakeFiles/IMACDream.dir/class/src/MapManager.cpp.o: /home/jeanne/Documents/S3/I
 CMakeFiles/IMACDream.dir/class/src/MapManager.cpp.o: /home/jeanne/Documents/S3/ImacDream/Game/class/include/Model.hpp
 CMakeFiles/IMACDream.dir/class/src/MapManager.cpp.o: /home/jeanne/Documents/S3/ImacDream/Game/class/include/Terrain.hpp
 CMakeFiles/IMACDream.dir/class/src/MapManager.cpp.o: /home/jeanne/Documents/S3/ImacDream/Game/class/include/Utils.hpp
+CMakeFiles/IMACDream.dir/class/src/MapManager.cpp.o: /home/jeanne/Documents/S3/ImacDream/Game/class/include/Water.hpp
 CMakeFiles/IMACDream.dir/class/src/MapManager.cpp.o: /home/jeanne/Documents/S3/ImacDream/Game/class/src/MapManager.cpp
 CMakeFiles/IMACDream.dir/class/src/MapManager.cpp.o: /home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/FilePath.hpp
 CMakeFiles/IMACDream.dir/class/src/MapManager.cpp.o: /home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/Program.hpp
@@ -1842,11 +1845,17 @@ CMakeFiles/IMACDream.dir/class/src/Utils.cpp.o: /home/jeanne/Documents/S3/ImacDr
 CMakeFiles/IMACDream.dir/class/src/Utils.cpp.o: /home/jeanne/Documents/S3/ImacDream/Game/third-party/include/glm/vec4.hpp
 CMakeFiles/IMACDream.dir/class/src/Utils.cpp.o: /home/jeanne/Documents/S3/ImacDream/Game/third-party/include/glm/vector_relational.hpp
 
+CMakeFiles/IMACDream.dir/class/src/Water.cpp.o: /home/jeanne/Documents/S3/ImacDream/Game/class/include/AssetsManager.hpp
+CMakeFiles/IMACDream.dir/class/src/Water.cpp.o: /home/jeanne/Documents/S3/ImacDream/Game/class/include/Camera.hpp
+CMakeFiles/IMACDream.dir/class/src/Water.cpp.o: /home/jeanne/Documents/S3/ImacDream/Game/class/include/GameObject.hpp
 CMakeFiles/IMACDream.dir/class/src/Water.cpp.o: /home/jeanne/Documents/S3/ImacDream/Game/class/include/Mesh.hpp
 CMakeFiles/IMACDream.dir/class/src/Water.cpp.o: /home/jeanne/Documents/S3/ImacDream/Game/class/include/Model.hpp
+CMakeFiles/IMACDream.dir/class/src/Water.cpp.o: /home/jeanne/Documents/S3/ImacDream/Game/class/include/Program.hpp
+CMakeFiles/IMACDream.dir/class/src/Water.cpp.o: /home/jeanne/Documents/S3/ImacDream/Game/class/include/Water.hpp
 CMakeFiles/IMACDream.dir/class/src/Water.cpp.o: /home/jeanne/Documents/S3/ImacDream/Game/class/src/Water.cpp
 CMakeFiles/IMACDream.dir/class/src/Water.cpp.o: /home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/FilePath.hpp
 CMakeFiles/IMACDream.dir/class/src/Water.cpp.o: /home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/Program.hpp
+CMakeFiles/IMACDream.dir/class/src/Water.cpp.o: /home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/SDLWindowManager.hpp
 CMakeFiles/IMACDream.dir/class/src/Water.cpp.o: /home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/Shader.hpp
 CMakeFiles/IMACDream.dir/class/src/Water.cpp.o: /home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/common.hpp
 CMakeFiles/IMACDream.dir/class/src/Water.cpp.o: /home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/glm.hpp
@@ -1984,6 +1993,7 @@ CMakeFiles/IMACDream.dir/class/src/main.cpp.o: /home/jeanne/Documents/S3/ImacDre
 CMakeFiles/IMACDream.dir/class/src/main.cpp.o: /home/jeanne/Documents/S3/ImacDream/Game/class/include/Program.hpp
 CMakeFiles/IMACDream.dir/class/src/main.cpp.o: /home/jeanne/Documents/S3/ImacDream/Game/class/include/StaticImage.hpp
 CMakeFiles/IMACDream.dir/class/src/main.cpp.o: /home/jeanne/Documents/S3/ImacDream/Game/class/include/Terrain.hpp
+CMakeFiles/IMACDream.dir/class/src/main.cpp.o: /home/jeanne/Documents/S3/ImacDream/Game/class/include/Water.hpp
 CMakeFiles/IMACDream.dir/class/src/main.cpp.o: /home/jeanne/Documents/S3/ImacDream/Game/class/src/main.cpp
 CMakeFiles/IMACDream.dir/class/src/main.cpp.o: /home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/FilePath.hpp
 CMakeFiles/IMACDream.dir/class/src/main.cpp.o: /home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/Image.hpp

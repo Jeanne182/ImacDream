@@ -14,7 +14,16 @@ protected:
 
 public :
     //CONSTRUCTORS
-    inline InteractiveObject(const glm::vec3 &position, const float &scale, const glm::vec3 &angles, Model &model, const float &hitboxRadius, const glm::vec3 &center, const int &value): GameObject(position, scale, angles, model, hitboxRadius, center), _value(value){}
+    inline InteractiveObject(const glm::vec3 &position,
+                             const float &scale,
+                             const glm::vec3 &angles,
+                             Model &model,
+                             const float &hitboxRadius,
+                             const glm::vec3 &center,
+                             const int &value):
+                             GameObject(position, scale, angles, model, hitboxRadius, center),
+                             _value(value)
+                             {}
     inline InteractiveObject(const InteractiveObject &interactiveObject): GameObject(interactiveObject), _value(interactiveObject._value){}
 
     //GETTERS
