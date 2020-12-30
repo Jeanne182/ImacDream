@@ -19,18 +19,23 @@ private:
     static AssetManager *instance;
 
     //Matrices
-    glm::mat4 _P;
+    //glm::mat4 _P;
 
 public:
+    //Matrices
+    glm::mat4 _P;//PRIVATE
+
     // Programs
     MultiLightsProgram _multiLightsProgram;
     StaticImageProgram _staticImageProgram;
+    TextProgram _textProgram;
 
     //CONSTRUCTOR
     AssetManager(char **argv, glm::mat4 &P)
             : _appPath(argv[0]),
               _multiLightsProgram(_appPath),
               _staticImageProgram(_appPath),
+              _textProgram(_appPath),
               _P(P)
               {};
 
@@ -39,7 +44,8 @@ public:
     inline glm::mat4 P(){ return _P; };
 
     inline MultiLightsProgram getMultiLightsProgram(){ return _multiLightsProgram; }
-    inline StaticImageProgram staticImageProgram(){ return _staticImageProgram; }
+    inline StaticImageProgram getstaticImageProgram(){ return _staticImageProgram; }
+    inline TextProgram getTextProgram(){ return _textProgram; }
 
 
     //Singleton

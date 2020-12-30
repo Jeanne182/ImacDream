@@ -57,8 +57,31 @@ public:
         _M_Location = glGetUniformLocation(_program.getGLId(), "uModelMatrix");
     }
 
-//    //GETTERS
+    //GETTERS
     inline GLint textureLocation(){ return _textureLocation; };
+    inline GLint M_Location(){ return _M_Location; };
+};
+
+class TextProgram{
+private :
+    GLuint _M_Location;
+    GLuint _text_Location;
+    GLuint _textColor_Location;
+public :
+    Program _program;
+    TextProgram(const FilePath &applicationPath)
+            : _program(loadProgram(
+            applicationPath.dirPath() + "Assets/shaders/tex2D.vs.glsl",
+            applicationPath.dirPath() + "Assets/shaders/text.fs.glsl"))
+    {
+        _text_Location = glGetUniformLocation(_program.getGLId(), "uText");
+        _textColor_Location = glGetUniformLocation(_program.getGLId(), "uTextColor");
+        _M_Location = glGetUniformLocation(_program.getGLId(), "uModelMatrix");
+    }
+
+    //GETTERS
+    inline GLint text_Location(){ return _text_Location; };
+    inline GLint textColor_Location(){ return _textColor_Location; };
     inline GLint M_Location(){ return _M_Location; };
 };
 

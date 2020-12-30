@@ -4,6 +4,9 @@
 #include <glimac/SDLWindowManager.hpp>
 #include "../include/Game.hpp"
 #include "../include/StaticImage.hpp"
+#include "../include/Text.hpp"
+
+
 
 using namespace glimac;
 
@@ -23,6 +26,7 @@ private:
     int _layout = LAYOUT_GAME;
     Game _game;
     StaticImageManager _staticImages;
+    TextManager _texts;
 
 public:
     //CONSTRUCTOR

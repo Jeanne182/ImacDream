@@ -1,6 +1,5 @@
 #include "../include/App.hpp"
 #include "../include/AssetsManager.hpp"
-#include "../include/AssetsManager.hpp"
 #include "../include/Utils.hpp"
 
 void App::event(const SDL_Event &e) {
@@ -25,7 +24,12 @@ void App::drawGame() {
         _game.display();
 
         layout2D();
+        AssetManager::Get()->_staticImageProgram._program.use();
         _staticImages.displayImage("cursor");
+        AssetManager::Get()->_textProgram._program.use();
+        _texts.loadCharacters();
+        _texts.displayText("This is sample text", 10.0f, 10.0f, 1.0f, glm::vec3(0.5, 0.8f, 0.2f));
+
     }
     catch(std::exception &e){
         std::cout << e.what() << std::endl;
@@ -33,7 +37,6 @@ void App::drawGame() {
 }
 
 void App::layout2D() {
-    AssetManager::Get()->_staticImageProgram._program.use();
     glEnable(GL_BLEND);
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
     glDisable(GL_DEPTH_TEST);
@@ -49,11 +52,21 @@ void App::layoutGame() {
     layout2D();
     try
     {
+        AssetManager::Get()->_staticImageProgram._program.use();
         _staticImages.addImage("cursor", 0.f, 0.f, 0.05f);
+ //       AssetManager::Get()->_textProgram._program.use();
+//        _texts.displayText("This is sample text", 10.0f, 10.0f, 1.0f, glm::vec3(0.5, 0.8f, 0.2f));
+
+
     }
     catch (std::exception &e)
     {
         std::cerr << e.what() << std::endl;
     }
+    AssetManager::Get()->_staticImageProgram._program.use();
     _staticImages.sendVertexBuffer();
+    //AssetManager::Get()->_textProgram._program.use();
+    //_texts.loadCharacters();
+
+
 }

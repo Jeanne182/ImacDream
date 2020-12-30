@@ -47,4 +47,6 @@ public:
 };
 
 
+
+
 #endif //IMACDREAM_STATICIMAGE_HPP
