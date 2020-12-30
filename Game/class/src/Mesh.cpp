@@ -35,7 +35,6 @@ namespace glimac {
         glUniform3fv(AssetManager::Get()->_lightProgram.Ambiant_Location(), 1, glm::value_ptr(_materials.Ka));
         glUniform3fv(AssetManager::Get()->_lightProgram.Diffuse_Location(), 1, glm::value_ptr(_materials.Kd));
         glUniform3fv(AssetManager::Get()->_lightProgram.Specular_Location(), 1, glm::value_ptr(_materials.Ks));
-        glUniform1f(AssetManager::Get()->_lightProgram.Shininess_Location(), 20.f);
 
         // draw mesh
         glBindVertexArray(_vao);
