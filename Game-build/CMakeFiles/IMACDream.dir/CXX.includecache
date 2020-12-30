@@ -6,12 +6,17 @@
 
 #IncludeRegexTransform: 
 
+<<<<<<< HEAD
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/class/include/AssetsManager.hpp
+=======
+/home/jeanne/Documents/S3/ImacDream/Game/class/include/AssetsManager.hpp
+>>>>>>> Water
 string
 -
 glimac/common.hpp
 -
 ./Model.hpp
+<<<<<<< HEAD
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/class/include/Model.hpp
 ./Program.hpp
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/class/include/Program.hpp
@@ -19,11 +24,21 @@ map
 -
 
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/class/include/Camera.hpp
+=======
+/home/jeanne/Documents/S3/ImacDream/Game/class/include/Model.hpp
+./Program.hpp
+/home/jeanne/Documents/S3/ImacDream/Game/class/include/Program.hpp
+map
+-
+
+/home/jeanne/Documents/S3/ImacDream/Game/class/include/Camera.hpp
+>>>>>>> Water
 glimac/glm.hpp
 -
 glimac/SDLWindowManager.hpp
 -
 
+<<<<<<< HEAD
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/class/include/GameObject.hpp
 glimac/common.hpp
 -
@@ -35,6 +50,19 @@ glimac/SDLWindowManager.hpp
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/class/include/Camera.hpp
 
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/class/include/Mesh.hpp
+=======
+/home/jeanne/Documents/S3/ImacDream/Game/class/include/GameObject.hpp
+glimac/common.hpp
+-
+./Model.hpp
+/home/jeanne/Documents/S3/ImacDream/Game/class/include/Model.hpp
+glimac/SDLWindowManager.hpp
+-
+./Camera.hpp
+/home/jeanne/Documents/S3/ImacDream/Game/class/include/Camera.hpp
+
+/home/jeanne/Documents/S3/ImacDream/Game/class/include/Mesh.hpp
+>>>>>>> Water
 glimac/Program.hpp
 -
 GL/glew.h
@@ -60,7 +88,11 @@ assimp/scene.h
 assimp/postprocess.h
 -
 
+<<<<<<< HEAD
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/class/include/Model.hpp
+=======
+/home/jeanne/Documents/S3/ImacDream/Game/class/include/Model.hpp
+>>>>>>> Water
 glimac/Program.hpp
 -
 GL/glew.h
@@ -78,14 +110,21 @@ sstream
 iostream
 -
 ./Mesh.hpp
+<<<<<<< HEAD
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/class/include/Mesh.hpp
 
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/class/include/Program.hpp
+=======
+/home/jeanne/Documents/S3/ImacDream/Game/class/include/Mesh.hpp
+
+/home/jeanne/Documents/S3/ImacDream/Game/class/include/Program.hpp
+>>>>>>> Water
 glimac/Program.hpp
 -
 glimac/FilePath.hpp
 -
 
+<<<<<<< HEAD
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/class/include/Terrain.hpp
 ./GameObject.hpp
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/class/include/GameObject.hpp
@@ -103,6 +142,29 @@ glimac/Sphere.hpp
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/glimac/include/glimac/FilePath.hpp
 string
 -
+=======
+/home/jeanne/Documents/S3/ImacDream/Game/class/include/Water.hpp
+./GameObject.hpp
+/home/jeanne/Documents/S3/ImacDream/Game/class/include/GameObject.hpp
+
+/home/jeanne/Documents/S3/ImacDream/Game/class/src/Water.cpp
+./../include/Water.hpp
+/home/jeanne/Documents/S3/ImacDream/Game/class/include/Water.hpp
+./../include/AssetsManager.hpp
+/home/jeanne/Documents/S3/ImacDream/Game/class/include/AssetsManager.hpp
+
+/home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/FilePath.hpp
+string
+-
+
+/home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/Program.hpp
+GL/glew.h
+-
+Shader.hpp
+/home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/Shader.hpp
+FilePath.hpp
+/home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/FilePath.hpp
+>>>>>>> Water
 
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/glimac/include/glimac/Program.hpp
 GL/glew.h
@@ -120,12 +182,17 @@ SDL2/SDL.h
 glm.hpp
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/glimac/include/glimac/glm.hpp
 
+<<<<<<< HEAD
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/glimac/include/glimac/Shader.hpp
+=======
+/home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/Shader.hpp
+>>>>>>> Water
 GL/glew.h
 -
 string
 -
 FilePath.hpp
+<<<<<<< HEAD
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/glimac/include/glimac/FilePath.hpp
 
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/glimac/include/glimac/Sphere.hpp
@@ -143,6 +210,17 @@ memory
 -
 
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/glimac/include/glimac/glm.hpp
+=======
+/home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/FilePath.hpp
+
+/home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/common.hpp
+GL/glew.h
+-
+glm.hpp
+/home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/glm.hpp
+
+/home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/glm.hpp
+>>>>>>> Water
 glm/glm.hpp
 -
 glm/gtc/matrix_transform.hpp
@@ -156,9 +234,15 @@ glm/gtx/io.hpp
 glm/gtc/random.hpp
 -
 
+<<<<<<< HEAD
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include/assimp/Compiler/poppack1.h
 
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include/assimp/Compiler/pstdint.h
+=======
+/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/Compiler/poppack1.h
+
+/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/Compiler/pstdint.h
+>>>>>>> Water
 stddef.h
 -
 limits.h
@@ -178,6 +262,7 @@ stdio.h
 string.h
 -
 
+<<<<<<< HEAD
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include/assimp/Compiler/pushpack1.h
 
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include/assimp/Importer.hpp
@@ -185,11 +270,21 @@ assimp/types.h
 -
 
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include/assimp/anim.h
+=======
+/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/Compiler/pushpack1.h
+
+/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/Importer.hpp
+assimp/types.h
+-
+
+/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/anim.h
+>>>>>>> Water
 assimp/types.h
 -
 assimp/quaternion.h
 -
 
+<<<<<<< HEAD
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include/assimp/camera.h
 types.h
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include/assimp/types.h
@@ -233,6 +328,51 @@ matrix3x3.h
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include/assimp/matrix3x3.h
 matrix4x4.h
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include/assimp/matrix4x4.h
+=======
+/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/camera.h
+types.h
+/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/types.h
+
+/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/color4.h
+defs.h
+/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/defs.h
+
+/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/color4.inl
+color4.h
+/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/color4.h
+
+/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/config.h
+
+/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/defs.h
+assimp/config.h
+-
+
+/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/light.h
+types.h
+/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/types.h
+
+/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/material.h
+types.h
+/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/types.h
+./Compiler/pushpack1.h
+/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/Compiler/pushpack1.h
+./Compiler/poppack1.h
+/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/Compiler/poppack1.h
+material.inl
+/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/material.inl
+
+/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/material.inl
+
+/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/matrix3x3.h
+defs.h
+/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/defs.h
+
+/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/matrix3x3.inl
+matrix3x3.h
+/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/matrix3x3.h
+matrix4x4.h
+/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/matrix4x4.h
+>>>>>>> Water
 algorithm
 -
 cmath
@@ -240,6 +380,7 @@ cmath
 limits
 -
 
+<<<<<<< HEAD
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include/assimp/matrix4x4.h
 vector3.h
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include/assimp/vector3.h
@@ -253,6 +394,21 @@ matrix3x3.h
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include/assimp/matrix3x3.h
 quaternion.h
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include/assimp/quaternion.h
+=======
+/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/matrix4x4.h
+vector3.h
+/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/vector3.h
+defs.h
+/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/defs.h
+
+/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/matrix4x4.inl
+matrix4x4.h
+/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/matrix4x4.h
+matrix3x3.h
+/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/matrix3x3.h
+quaternion.h
+/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/quaternion.h
+>>>>>>> Water
 algorithm
 -
 limits
@@ -260,6 +416,7 @@ limits
 cmath
 -
 
+<<<<<<< HEAD
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include/assimp/mesh.h
 types.h
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include/assimp/types.h
@@ -267,11 +424,21 @@ types.h
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include/assimp/metadata.h
 Compiler/pstdint.h
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include/assimp/Compiler/pstdint.h
+=======
+/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/mesh.h
+types.h
+/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/types.h
+
+/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/metadata.h
+Compiler/pstdint.h
+/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/Compiler/pstdint.h
+>>>>>>> Water
 stdint.h
 -
 string
 -
 
+<<<<<<< HEAD
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include/assimp/postprocess.h
 types.h
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include/assimp/types.h
@@ -307,6 +474,43 @@ types.h
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include/assimp/Compiler/poppack1.h
 
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include/assimp/types.h
+=======
+/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/postprocess.h
+types.h
+/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/types.h
+
+/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/quaternion.h
+defs.h
+/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/defs.h
+
+/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/scene.h
+types.h
+/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/types.h
+texture.h
+/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/texture.h
+mesh.h
+/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/mesh.h
+light.h
+/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/light.h
+camera.h
+/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/camera.h
+material.h
+/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/material.h
+anim.h
+/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/anim.h
+metadata.h
+/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/metadata.h
+
+/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/texture.h
+types.h
+/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/types.h
+./Compiler/pushpack1.h
+/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/Compiler/pushpack1.h
+./Compiler/poppack1.h
+/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/Compiler/poppack1.h
+
+/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/types.h
+>>>>>>> Water
 sys/types.h
 -
 stddef.h
@@ -316,6 +520,7 @@ string.h
 limits.h
 -
 defs.h
+<<<<<<< HEAD
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include/assimp/defs.h
 vector3.h
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include/assimp/vector3.h
@@ -329,6 +534,21 @@ matrix4x4.h
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include/assimp/matrix4x4.h
 quaternion.h
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include/assimp/quaternion.h
+=======
+/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/defs.h
+vector3.h
+/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/vector3.h
+vector2.h
+/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/vector2.h
+color4.h
+/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/color4.h
+matrix3x3.h
+/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/matrix3x3.h
+matrix4x4.h
+/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/matrix4x4.h
+quaternion.h
+/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/quaternion.h
+>>>>>>> Water
 cstring
 -
 new
@@ -336,6 +556,7 @@ new
 string
 -
 vector2.inl
+<<<<<<< HEAD
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include/assimp/vector2.inl
 vector3.inl
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include/assimp/vector3.inl
@@ -349,11 +570,27 @@ matrix4x4.inl
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include/assimp/matrix4x4.inl
 
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include/assimp/vector2.h
+=======
+/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/vector2.inl
+vector3.inl
+/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/vector3.inl
+color4.inl
+/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/color4.inl
+quaternion.inl
+/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/quaternion.inl
+matrix3x3.inl
+/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/matrix3x3.inl
+matrix4x4.inl
+/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/matrix4x4.inl
+
+/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/vector2.h
+>>>>>>> Water
 cmath
 -
 math.h
 -
 ./Compiler/pushpack1.h
+<<<<<<< HEAD
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include/assimp/Compiler/pushpack1.h
 defs.h
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include/assimp/defs.h
@@ -367,11 +604,27 @@ cmath
 -
 
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include/assimp/vector3.h
+=======
+/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/Compiler/pushpack1.h
+defs.h
+/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/defs.h
+./Compiler/poppack1.h
+/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/Compiler/poppack1.h
+
+/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/vector2.inl
+vector2.h
+/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/vector2.h
+cmath
+-
+
+/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/vector3.h
+>>>>>>> Water
 cmath
 -
 math.h
 -
 defs.h
+<<<<<<< HEAD
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include/assimp/defs.h
 
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include/assimp/vector3.inl
@@ -379,6 +632,19 @@ vector3.h
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include/assimp/vector3.h
 cmath
 -
+=======
+/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/defs.h
+
+/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/vector3.inl
+vector3.h
+/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/vector3.h
+cmath
+-
+
+/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/glm/common.hpp
+detail/func_common.hpp
+/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/glm/detail/func_common.hpp
+>>>>>>> Water
 
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include/glm/detail/_fixes.hpp
 cmath

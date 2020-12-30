@@ -26,6 +26,7 @@ public:
     LightProgram _lightProgram;
     SkyboxProgram _skyboxProgram;
     StaticImageProgram _staticImageProgram;
+    WaterProgram _waterProgram;
 
 
     //CONSTRUCTOR
@@ -34,6 +35,7 @@ public:
               _lightProgram(_appPath),
               _skyboxProgram(_appPath),
               _staticImageProgram(_appPath),
+              _waterProgram(_appPath),
               _P(P)
               {};
 

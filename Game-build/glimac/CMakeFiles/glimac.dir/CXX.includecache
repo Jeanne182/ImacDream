@@ -6,11 +6,15 @@
 
 #IncludeRegexTransform: 
 
+<<<<<<< HEAD
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/glimac/include/glimac/BBox.hpp
 glm.hpp
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/glimac/include/glimac/glm.hpp
 
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/glimac/include/glimac/Cone.hpp
+=======
+/home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/Cone.hpp
+>>>>>>> Water
 vector
 -
 common.hpp
@@ -20,6 +24,7 @@ common.hpp
 string
 -
 
+<<<<<<< HEAD
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/glimac/include/glimac/FreeflyCamera.hpp
 cmath
 -
@@ -61,6 +66,9 @@ FilePath.hpp
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/glimac/include/glimac/FilePath.hpp
 
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/glimac/include/glimac/SDLWindowManager.hpp
+=======
+/home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/SDLWindowManager.hpp
+>>>>>>> Water
 cstdint
 -
 SDL2/SDL.h
@@ -116,6 +124,7 @@ glimac/common.hpp
 glimac/Cone.hpp
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/glimac/src/glimac/Cone.hpp
 
+<<<<<<< HEAD
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/glimac/src/FreeflyCamera.cpp
 cmath
 -
@@ -149,6 +158,9 @@ stdexcept
 -
 
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/glimac/src/SDLWindowManager.cpp
+=======
+/home/jeanne/Documents/S3/ImacDream/Game/glimac/src/SDLWindowManager.cpp
+>>>>>>> Water
 glimac/SDLWindowManager.hpp
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/glimac/src/glimac/SDLWindowManager.hpp
 iostream
@@ -180,6 +192,7 @@ glimac/common.hpp
 glimac/Sphere.hpp
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/glimac/src/glimac/Sphere.hpp
 
+<<<<<<< HEAD
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/glimac/src/stb_image.h
 stdio.h
 -
@@ -231,6 +244,9 @@ map
 -
 
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include/glm/common.hpp
+=======
+/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/glm/common.hpp
+>>>>>>> Water
 detail/func_common.hpp
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include/glm/detail/func_common.hpp
 

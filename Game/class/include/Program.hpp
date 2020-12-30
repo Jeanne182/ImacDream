@@ -101,4 +101,39 @@ public:
     inline GLint N_Location(){ return _N_Location; };
     inline GLint Texture_Location(){ return _texture_Location; };
 };
+class WaterProgram {
+private:
+    GLint _M_Location, _MV_Location, _MVP_Location, _N_Location;
+    GLint _ViewPos_Location, _Shininess_Location,_LightPos_Location, _LightIntensity_Location ;
+public:
+    Program _program;
+
+    //CONSTRUCTOR
+    WaterProgram(const FilePath &applicationPath):
+            _program(loadProgram(applicationPath.dirPath() + "Assets/shaders/water.vs.glsl",
+                                 applicationPath.dirPath() + "Assets/shaders/water.fs.glsl")){
+        _M_Location = glGetUniformLocation(_program.getGLId(), "uMMatrixWater");
+        _MV_Location = glGetUniformLocation(_program.getGLId(), "uMVMatrix");
+        _MVP_Location = glGetUniformLocation(_program.getGLId(), "uMVPMatrix");
+        _N_Location = glGetUniformLocation(_program.getGLId(), "uNormalMatrix");
+
+        //Lights
+        _ViewPos_Location = glGetUniformLocation(_program.getGLId(), "uViewPosWater");
+        _Shininess_Location = glGetUniformLocation(_program.getGLId(), "uShininessWater");
+        _LightPos_Location = glGetUniformLocation(_program.getGLId(), "uLightPos_vsWater");
+        _LightIntensity_Location = glGetUniformLocation(_program.getGLId(), "uLightIntensityWater");
+    }
+
+    //GETTERS
+    inline GLint M_Location(){ return _M_Location; };
+    inline GLint MV_Location(){ return _MV_Location; };
+    inline GLint MVP_Location(){ return _MVP_Location; };
+    inline GLint N_Location(){ return _N_Location; };
+
+    inline GLint ViewPos_Location(){ return _ViewPos_Location; };
+    inline GLint Shininess_Location(){ return _Shininess_Location; };
+    inline GLint LightPos_Location(){ return _LightPos_Location; };
+    inline GLint LightIntensity_Location(){ return _LightIntensity_Location; };
+};
+
 #endif //IMACDREAM_PROGRAM_HPP

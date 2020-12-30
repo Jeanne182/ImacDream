@@ -15,7 +15,7 @@
 ########################
 
 //The directory containing a CMake configuration file for ASSIMP.
-ASSIMP_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/assimp-4.1
+ASSIMP_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/assimp-5.0
 
 //the suffix for the openrave libraries
 ASSIMP_LIBRARY_SUFFIX:STRING=

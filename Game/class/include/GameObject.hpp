@@ -15,6 +15,7 @@ protected:
     //Model *_model;
     float _hitboxRadius;
     glm::vec3 _center;
+    Model *_model; //PRIVATE
 
 public :
     Model *_model;//PRIVATE
@@ -43,7 +44,7 @@ public :
     void setCenter();
 
 
-    //METHODS
+    virtual //METHODS
     void display(); //OK
     void setMatrix(); //OK
     void computeMatrix(const glm::mat4 &cameraView); //OK
