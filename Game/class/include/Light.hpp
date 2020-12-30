@@ -12,11 +12,8 @@ public:
     inline Light(const glm::mat4 &cameraView):
         _position(glm::vec4(0.f, 1.f, 0.f, 0.f)),_intensity(glm::vec3(5.f)), _shininess(10.f), _lightOn(false){};
 
-    inline void setIntensity(){ std::cout<<_lightOn<<std::endl;
-                                if(_lightOn) _intensity = glm::vec3(50.f);
-
-                                else _intensity = glm::vec3(5.f);};
-    inline bool setLightOn(const bool state){ _lightOn = state;};
+    void setIntensity();
+//    inline bool setLightOn(const bool state){ _lightOn = state;};
 
     inline glm::vec4 getPosition(){ return _position; };
     inline glm::vec3 getIntensity(){ return _intensity; };

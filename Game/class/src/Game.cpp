@@ -2,22 +2,12 @@
 #include "../include/AssetsManager.hpp"
 
 void Game::event(const SDL_Event &e) {
-//    switch(e.type){
-//        case SDL_KEYDOWN:
-//            _pointLight._lightOn = true;
-//            std::cout<<_pointLight._lightOn<<std::endl;
-//            break;
-//        default:
-//            //_pointLight.setIntensity(50.f);
-//            break;
-//    }
-//    _pointLight.setIntensity();
-//    _pointLight.useMatrix(_camera.getViewMatrix());
+
     _camera.event(e);
     _pointLight.event(e);
 
 
-    //update();
+    update();
 
     switch(e.type){
         case SDL_MOUSEBUTTONDOWN:
@@ -33,23 +23,6 @@ void Game::event(const SDL_Event &e) {
                 }
 
             }
-            break;
-        case SDL_KEYDOWN:
-            if (e.key.keysym.sym==SDLK_a)
-            {
-                if(!_pointLight.getLightOn()){
-                    std::cout<<_pointLight.getLightOn()<<std::endl;
-
-                    _pointLight.setIntensity();
-                    std::cout<<_pointLight.getIntensity()<<std::endl;
-                    std::cout<<"a pressed true"<<std::endl;
-                }
-                else {
-                    _pointLight.setIntensity();
-                    std::cout<<_pointLight.getIntensity()<<std::endl;
-                    std::cout<<"a pressed false"<<std::endl;
-                }
-            };
             break;
     }
 }
