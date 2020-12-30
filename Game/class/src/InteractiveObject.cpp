@@ -42,10 +42,12 @@ bool InteractiveObject::isSelected(const glm::mat4 &cameraView, const glm::vec3 
 
 
     // Distance between the camera and the center of the interactive object
-    glm::vec3 distanceVector = getCenter() - cameraPosition ;
+    glm::vec3 distanceVector = glm::vec3(cameraView*glm::vec4(getCenter(), 1.)) ;
+    std::cout << "cameraPosition : " << cameraPosition << std::endl;
     std::cout << "distanceVector : " << distanceVector << std::endl;
 
-    glm::vec3 directionVectorCam = glm::vec3(cameraView*glm::vec4(0, 0, -1, 0));
+    glm::vec3 directionVectorCam = glm::vec3(glm::vec4(0, 0, -1, 0));
+
     std::cout << "directionVectorCam : " <<directionVectorCam << std::endl;
 
     // Find the direction vector of the camera ray
