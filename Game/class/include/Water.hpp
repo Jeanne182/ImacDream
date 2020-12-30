@@ -7,7 +7,6 @@ class Water : public GameObject {
 public:
     Water();
     ~Water(){};
-    void move();
     void displayWater();
 };
 

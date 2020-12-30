@@ -15,7 +15,7 @@ protected:
     //Model *_model;
     float _hitboxRadius;
     glm::vec3 _center;
-    Model *_model; //PRIVATE
+//    Model *_model; //PRIVATE
 
 public :
     Model *_model;//PRIVATE

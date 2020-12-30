@@ -1,4 +1,5 @@
 #include "../include/MapManager.hpp"
+#include "../include/AssetsManager.hpp"
 #include "../include/Utils.hpp"
 
 
@@ -47,6 +48,7 @@ void MapManager::display(const glm::mat4 &cameraView) {
 //    _water._model->_meshes[0].setupMesh();
 //    std::cout<<"Number of vertices : "<< _water._model->_meshes[0]._vertices.size()<<" & number of indexes  : "<<_water._model->_meshes[0]._indices.size()<<std::endl;
 //    _water.update(cameraView);
+    AssetManager::Get()->_waterProgram._program.use();
     _water.useMatrix();
     _water.computeMatrix(cameraView);
     _water.displayWater();

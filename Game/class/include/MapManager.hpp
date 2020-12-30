@@ -28,8 +28,6 @@ public:
 
     void event(const SDL_Event &e, glm::vec3 cameraPosition);
 
-        void event(const SDL_Event &e, glm::vec3 cameraPosition);
-
     //SETTERS
     void setMapTerrain();
 
