@@ -50,10 +50,10 @@ void GameObject::update(const glm::mat4 &cameraView) {
 }
 
 void GameObject::useMatrix() const {
-    glUniformMatrix4fv(AssetManager::Get()->_multiLightsProgram.M_Location(), 1, GL_FALSE, glm::value_ptr(_M));
-    glUniformMatrix4fv(AssetManager::Get()->_multiLightsProgram.MV_Location(), 1, GL_FALSE, glm::value_ptr(_MV));
-    glUniformMatrix4fv(AssetManager::Get()->_multiLightsProgram.MVP_Location(), 1, GL_FALSE, glm::value_ptr(_MVP));
-    glUniformMatrix4fv(AssetManager::Get()->_multiLightsProgram.N_Location(), 1, GL_FALSE, glm::value_ptr(_N));
+    glUniformMatrix4fv(AssetManager::Get()->_lightProgram.M_Location(), 1, GL_FALSE, glm::value_ptr(_M));
+    glUniformMatrix4fv(AssetManager::Get()->_lightProgram.MV_Location(), 1, GL_FALSE, glm::value_ptr(_MV));
+    glUniformMatrix4fv(AssetManager::Get()->_lightProgram.MVP_Location(), 1, GL_FALSE, glm::value_ptr(_MVP));
+    glUniformMatrix4fv(AssetManager::Get()->_lightProgram.N_Location(), 1, GL_FALSE, glm::value_ptr(_N));
 }
 
 void GameObject::deleteBuffers() {

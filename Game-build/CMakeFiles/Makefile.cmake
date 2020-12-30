@@ -35,6 +35,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/snap/clion/137/bin/cmake/linux/share/cmake-3.17/Modules/FindPackageHandleStandardArgs.cmake"
   "/snap/clion/137/bin/cmake/linux/share/cmake-3.17/Modules/FindPackageMessage.cmake"
   "/snap/clion/137/bin/cmake/linux/share/cmake-3.17/Modules/FindSDL.cmake"
+  "/snap/clion/137/bin/cmake/linux/share/cmake-3.17/Modules/FindSDL_mixer.cmake"
   "/snap/clion/137/bin/cmake/linux/share/cmake-3.17/Modules/FindThreads.cmake"
   "/snap/clion/137/bin/cmake/linux/share/cmake-3.17/Modules/Internal/CMakeCheckCompilerFlag.cmake"
   "/snap/clion/137/bin/cmake/linux/share/cmake-3.17/Modules/Platform/Linux-GNU-C.cmake"

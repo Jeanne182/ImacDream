@@ -17,7 +17,7 @@ private:
 
 public:
     //CONSTRUCTOR
-    inline Game():_map(new MapManager()), _camera(), _pointLight(_camera.getViewMatrix()), _sky(){};
+    inline Game():_map(new MapManager()), _camera(), _pointLight(_camera.getViewMatrix()), _sky(){ };
     //METHODS
     void display();
     void event(const SDL_Event &e);

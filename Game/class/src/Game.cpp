@@ -2,8 +2,12 @@
 #include "../include/AssetsManager.hpp"
 
 void Game::event(const SDL_Event &e) {
+
     _camera.event(e);
-    _pointLight.event(e);
+    //_pointLight.event(e);
+    //_pointLight.setIntensity(50.f);
+    //update();
+
     switch(e.type){
         case SDL_MOUSEBUTTONDOWN:
             for(auto objectToFind : _map->interactiveObjects()){
@@ -19,6 +23,28 @@ void Game::event(const SDL_Event &e) {
 
             }
             break;
+        case SDL_KEYDOWN:
+            _pointLight.setIntensity(50.f);
+            std::cout<<"sal"<<std::endl;
+
+            if (e.key.keysym.sym==SDLK_a)
+            {
+                if(!_pointLight.getLightOn()){
+                    _pointLight.setIntensity(50.f);
+                    _pointLight.setLightOn(true);
+                    std::cout<<_pointLight.getIntensity()<<std::endl;
+                    std::cout<<"a pressed true"<<std::endl;
+
+                }
+                else{
+                    _pointLight.setIntensity(0.f);
+                    _pointLight.setLightOn(false);
+                    std::cout<<_pointLight.getIntensity()<<std::endl;
+                    std::cout<<"a pressed false"<<std::endl;
+
+                }
+            };
+            break;
     }
 }
 
@@ -28,6 +54,11 @@ void Game::update() {
 }
 
 void Game::display() {
+    AssetManager::Get()->_lightProgram._program.use();
     _map->display(_camera.getViewMatrix());
-    _sky.Draw();
+
+    AssetManager::Get()->_skyboxProgram._program.use();
+    _sky.computeMatrix(_camera.getViewMatrix());
+    _sky.useMatrix();
+    _sky.DrawSky();
 }

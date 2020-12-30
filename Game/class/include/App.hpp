@@ -3,6 +3,9 @@
 
 #include <glimac/SDLWindowManager.hpp>
 #include "../include/Game.hpp"
+#include "../include/Music.hpp"
+
+
 
 using namespace glimac;
 
@@ -21,17 +24,18 @@ private:
 
     int _layout = LAYOUT_GAME;
     Game _game;
+    Music _music;
 
 public:
     //Constructor
-    inline App():_game(){};
+    inline App():_game(){ _music.playGame();};
 
     //Facades Functions
     void drawGame();
 
     void draw();
     void event(const SDL_Event &e);
-    inline void Delete(){ _game.Delete(); };
+    inline void Delete(){ _game.Delete(); _music.playGame();};
 
 };
 

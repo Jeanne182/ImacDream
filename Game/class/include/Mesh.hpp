@@ -29,7 +29,6 @@ namespace glimac {
         std::vector<GLuint> _indices;
         std::vector<Texture> _textures;
         Material _materials;
-        GLuint _ubo;
 
         // constructor
         Mesh(std::vector<ShapeVertex> vertices, std::vector<GLuint> indices, std::vector<Texture> textures, Material material):

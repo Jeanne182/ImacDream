@@ -22,7 +22,10 @@ namespace glimac {
     {
         // read file via ASSIMP
         Assimp::Importer importer;
-        const aiScene* scene = importer.ReadFile(path, aiProcess_Triangulate | aiProcess_GenSmoothNormals | aiProcess_FlipUVs | aiProcess_CalcTangentSpace);
+        const aiScene* scene = importer.ReadFile(path,  aiProcess_CalcTangentSpace |
+                                                        aiProcess_Triangulate |
+                                                        aiProcess_JoinIdenticalVertices |
+                                                        aiProcess_SortByPType);
 
         // check for errors
         if(!scene || scene->mFlags & AI_SCENE_FLAGS_INCOMPLETE || !scene->mRootNode) // if is Not Zero
@@ -69,7 +72,7 @@ namespace glimac {
                 vertex.normal = position;
             }
             // texture coordinates
-            if (mesh->mTextureCoords[0]) // does the mesh contain texture coordinates?
+            if (mesh->mTextureCoords[0])
             {
                 glm::vec2 texture;
                 // a vertex can contain up to 8 different texture coordinates. We thus make the assumption that we won't
@@ -77,16 +80,7 @@ namespace glimac {
                 texture.x = mesh->mTextureCoords[0][i].x;
                 texture.y = mesh->mTextureCoords[0][i].y;
                 vertex.texCoords = texture;
-                /*// tangent
-                position.x = mesh->mTangents[i].x;
-                position.y = mesh->mTangents[i].y;
-                position.z = mesh->mTangents[i].z;
-                vertex.Tangent = position;
-                // bitangent
-                position.x = mesh->mBitangents[i].x;
-                position.y = mesh->mBitangents[i].y;
-                position.z = mesh->mBitangents[i].z;
-                vertex.Bitangent = position;*/
+
             } else
                 vertex.texCoords = glm::vec2(0.0f, 0.0f);
 

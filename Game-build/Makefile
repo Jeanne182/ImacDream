@@ -426,6 +426,33 @@ class/src/Model.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/IMACDream.dir/build.make CMakeFiles/IMACDream.dir/class/src/Model.cpp.s
 .PHONY : class/src/Model.cpp.s
 
+class/src/Music.o: class/src/Music.cpp.o
+
+.PHONY : class/src/Music.o
+
+# target to build an object file
+class/src/Music.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/IMACDream.dir/build.make CMakeFiles/IMACDream.dir/class/src/Music.cpp.o
+.PHONY : class/src/Music.cpp.o
+
+class/src/Music.i: class/src/Music.cpp.i
+
+.PHONY : class/src/Music.i
+
+# target to preprocess a source file
+class/src/Music.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/IMACDream.dir/build.make CMakeFiles/IMACDream.dir/class/src/Music.cpp.i
+.PHONY : class/src/Music.cpp.i
+
+class/src/Music.s: class/src/Music.cpp.s
+
+.PHONY : class/src/Music.s
+
+# target to generate assembly for a file
+class/src/Music.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/IMACDream.dir/build.make CMakeFiles/IMACDream.dir/class/src/Music.cpp.s
+.PHONY : class/src/Music.cpp.s
+
 class/src/Program.o: class/src/Program.cpp.o
 
 .PHONY : class/src/Program.o
@@ -628,6 +655,9 @@ help:
 	@echo "... class/src/Model.o"
 	@echo "... class/src/Model.i"
 	@echo "... class/src/Model.s"
+	@echo "... class/src/Music.o"
+	@echo "... class/src/Music.i"
+	@echo "... class/src/Music.s"
 	@echo "... class/src/Program.o"
 	@echo "... class/src/Program.i"
 	@echo "... class/src/Program.s"

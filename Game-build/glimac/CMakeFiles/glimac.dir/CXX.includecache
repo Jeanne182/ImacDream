@@ -163,6 +163,8 @@ string
 -
 sstream
 -
+iostream
+-
 
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/glimac/src/Sphere.cpp
 cmath

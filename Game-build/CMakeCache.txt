@@ -283,6 +283,12 @@ SDL_INCLUDE_DIR:PATH=/usr/include/SDL
 //Where the SDL Library can be found
 SDL_LIBRARY:STRING=/usr/lib/x86_64-linux-gnu/libSDLmain.a;/usr/lib/x86_64-linux-gnu/libSDL.so;-lpthread
 
+//Path to a file.
+SDL_MIXER_INCLUDE_DIR:PATH=/usr/include/SDL
+
+//Path to a library.
+SDL_MIXER_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libSDL_mixer.so
+
 
 ########################
 # INTERNAL cache entries
@@ -453,6 +459,8 @@ CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 FIND_PACKAGE_MESSAGE_DETAILS_OpenGL:INTERNAL=[/usr/lib/x86_64-linux-gnu/libOpenGL.so][/usr/lib/x86_64-linux-gnu/libGLX.so][/usr/include][c ][v()]
 //Details about finding SDL
 FIND_PACKAGE_MESSAGE_DETAILS_SDL:INTERNAL=[/usr/lib/x86_64-linux-gnu/libSDLmain.a;/usr/lib/x86_64-linux-gnu/libSDL.so;-lpthread][/usr/include/SDL][v1.2.15()]
+//Details about finding SDL_mixer
+FIND_PACKAGE_MESSAGE_DETAILS_SDL_mixer:INTERNAL=[/usr/lib/x86_64-linux-gnu/libSDL_mixer.so][/usr/include/SDL][v1.2.12()]
 //Details about finding Threads
 FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
 //ADVANCED property for variable: GLEW_FOUND
@@ -481,4 +489,8 @@ ProcessorCount_cmd_nproc-ADVANCED:INTERNAL=1
 ProcessorCount_cmd_sysctl-ADVANCED:INTERNAL=1
 //Path to a library.
 SDL_LIBRARY_TEMP:INTERNAL=/usr/lib/x86_64-linux-gnu/libSDL.so
+//ADVANCED property for variable: SDL_MIXER_INCLUDE_DIR
+SDL_MIXER_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: SDL_MIXER_LIBRARY
+SDL_MIXER_LIBRARY-ADVANCED:INTERNAL=1
 

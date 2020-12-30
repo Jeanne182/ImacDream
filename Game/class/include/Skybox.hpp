@@ -9,8 +9,12 @@ public:
     ~Skybox();
 
     Model loadSkybox();
-    void Draw() const;
+    void DrawSky() const;
+    void computeMatrix(const glm::mat4 &cameraView);
+    void useMatrix() const;
 
+private:
+    glm::mat4 _M, _MV, _MVP, _N;
 };
 
 

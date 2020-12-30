@@ -21,6 +21,7 @@ int main(int argc, char** argv) {
     float ratio = WINDOW_WIDTH/WINDOW_HEIGHT;
     SDLWindowManager windowManager(WINDOW_WIDTH, WINDOW_HEIGHT, "GLImac");
 
+
     // Initialize glew for OpenGL3+ support
     GLenum glewInitError = glewInit();
     if(GLEW_OK != glewInitError) {
@@ -31,12 +32,12 @@ int main(int argc, char** argv) {
     std::cout << "GLEW Version : " << glewGetString(GLEW_VERSION) << std::endl;
 
 
-    glm::mat4 ProjMatrix = glm::perspective(glm::radians(70.f), ratio, 0.1f, 10000000000.f);
+    glm::mat4 ProjMatrix = glm::perspective(glm::radians(70.f), ratio, 0.1f, 10000.f);
     AssetManager::Create(argv, ProjMatrix);
     App app;
 
     glEnable(GL_DEPTH_TEST); // Activation du test de profondeur GPU
-    SDL_WM_GrabInput( SDL_GRAB_ON );
+    //SDL_WM_GrabInput( SDL_GRAB_ON );
 
     // Application loop:
     bool done = false;
@@ -58,12 +59,9 @@ int main(int argc, char** argv) {
 
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); // On nettoie la fenêtre afin de ne pas avoir de résidu du tour précédent
 
-        //AssetManager::Get()->_skyboxProgram._program.use();
-
         app.draw();
         windowManager.swapBuffers();
     }
-
     app.Delete();
     return EXIT_SUCCESS;
 }

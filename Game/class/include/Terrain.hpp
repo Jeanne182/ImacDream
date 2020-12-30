@@ -10,7 +10,8 @@ enum TerrainObjects{
     TRUNK,
     RUNE,
     HUT,
-    TERRAIN
+    TERRAIN,
+    TRIANGLE
 };
 
 class Terrain {

@@ -14,6 +14,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/matteo/Documents/imac2/openGL/ImacDream/Game/class/src/MapManager.cpp" "/home/matteo/Documents/imac2/openGL/ImacDream/Game-build/CMakeFiles/IMACDream.dir/class/src/MapManager.cpp.o"
   "/home/matteo/Documents/imac2/openGL/ImacDream/Game/class/src/Mesh.cpp" "/home/matteo/Documents/imac2/openGL/ImacDream/Game-build/CMakeFiles/IMACDream.dir/class/src/Mesh.cpp.o"
   "/home/matteo/Documents/imac2/openGL/ImacDream/Game/class/src/Model.cpp" "/home/matteo/Documents/imac2/openGL/ImacDream/Game-build/CMakeFiles/IMACDream.dir/class/src/Model.cpp.o"
+  "/home/matteo/Documents/imac2/openGL/ImacDream/Game/class/src/Music.cpp" "/home/matteo/Documents/imac2/openGL/ImacDream/Game-build/CMakeFiles/IMACDream.dir/class/src/Music.cpp.o"
   "/home/matteo/Documents/imac2/openGL/ImacDream/Game/class/src/Program.cpp" "/home/matteo/Documents/imac2/openGL/ImacDream/Game-build/CMakeFiles/IMACDream.dir/class/src/Program.cpp.o"
   "/home/matteo/Documents/imac2/openGL/ImacDream/Game/class/src/Skybox.cpp" "/home/matteo/Documents/imac2/openGL/ImacDream/Game-build/CMakeFiles/IMACDream.dir/class/src/Skybox.cpp.o"
   "/home/matteo/Documents/imac2/openGL/ImacDream/Game/class/src/Terrain.cpp" "/home/matteo/Documents/imac2/openGL/ImacDream/Game-build/CMakeFiles/IMACDream.dir/class/src/Terrain.cpp.o"
