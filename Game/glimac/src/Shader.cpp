@@ -4,6 +4,7 @@
 #include <stdexcept>
 #include <string>
 #include <sstream>
+#include <iostream>
 
 namespace glimac {
 
@@ -35,7 +36,6 @@ Shader loadShader(GLenum type, const FilePath& filepath) {
     
     Shader shader(type);
     shader.setSource(buffer.str().c_str());
-
     return shader;
 }
 

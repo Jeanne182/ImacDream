@@ -10,8 +10,13 @@ file(REMOVE_RECURSE
   "CMakeFiles/IMACDream.dir/class/src/MapManager.cpp.o"
   "CMakeFiles/IMACDream.dir/class/src/Mesh.cpp.o"
   "CMakeFiles/IMACDream.dir/class/src/Model.cpp.o"
+  "CMakeFiles/IMACDream.dir/class/src/Music.cpp.o"
   "CMakeFiles/IMACDream.dir/class/src/Program.cpp.o"
+<<<<<<< HEAD
   "CMakeFiles/IMACDream.dir/class/src/StaticImage.cpp.o"
+=======
+  "CMakeFiles/IMACDream.dir/class/src/Skybox.cpp.o"
+>>>>>>> Skybox
   "CMakeFiles/IMACDream.dir/class/src/Terrain.cpp.o"
   "CMakeFiles/IMACDream.dir/class/src/Utils.cpp.o"
   "CMakeFiles/IMACDream.dir/class/src/Water.cpp.o"

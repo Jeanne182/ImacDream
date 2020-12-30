@@ -29,7 +29,6 @@ namespace glimac {
         std::vector<GLuint> _indices;
         std::vector<Texture> _textures;
         Material _materials;
-        GLuint _ubo;
 
         // constructor
         Mesh(std::vector<ShapeVertex> vertices, std::vector<GLuint> indices, std::vector<Texture> textures, Material material):
@@ -38,9 +37,13 @@ namespace glimac {
             // now that we have all the required data, set the vertex buffers and its attribute pointers.
             setupMesh();
         };
+
+        Mesh(const Mesh &mesh): _vertices(mesh._vertices), _indices(mesh._indices), _textures(mesh._textures), _materials(mesh._materials) {
+            setupMesh();
+        }
+
         void deleteBuffers();
         void Draw() const;
-        //void Draw(Program &program);
 
 
     public:

@@ -11,6 +11,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.17.3/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.17.3/CMakeSystem.cmake"
 <<<<<<< HEAD
+<<<<<<< HEAD
   "/home/jeanne/Documents/S3/ImacDream/Game/CMake/FindGLEW.cmake"
   "/home/jeanne/Documents/S3/ImacDream/Game/CMakeLists.txt"
   "/home/jeanne/Documents/S3/ImacDream/Game/glimac/CMakeLists.txt"
@@ -43,6 +44,11 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/home/fanny/ImacDream/Game/CMake/FindGLEW.cmake"
   "/home/fanny/ImacDream/Game/CMakeLists.txt"
   "/home/fanny/ImacDream/Game/glimac/CMakeLists.txt"
+=======
+  "/home/matteo/Documents/imac2/openGL/ImacDream/Game/CMake/FindGLEW.cmake"
+  "/home/matteo/Documents/imac2/openGL/ImacDream/Game/CMakeLists.txt"
+  "/home/matteo/Documents/imac2/openGL/ImacDream/Game/glimac/CMakeLists.txt"
+>>>>>>> Skybox
   "/snap/clion/137/bin/cmake/linux/share/cmake-3.17/Modules/CMakeCInformation.cmake"
   "/snap/clion/137/bin/cmake/linux/share/cmake-3.17/Modules/CMakeCXXInformation.cmake"
   "/snap/clion/137/bin/cmake/linux/share/cmake-3.17/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake"
@@ -54,6 +60,12 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/snap/clion/137/bin/cmake/linux/share/cmake-3.17/Modules/CMakeLanguageInformation.cmake"
   "/snap/clion/137/bin/cmake/linux/share/cmake-3.17/Modules/CMakeSystemSpecificInformation.cmake"
   "/snap/clion/137/bin/cmake/linux/share/cmake-3.17/Modules/CMakeSystemSpecificInitialize.cmake"
+<<<<<<< HEAD
+=======
+  "/snap/clion/137/bin/cmake/linux/share/cmake-3.17/Modules/CheckCSourceCompiles.cmake"
+  "/snap/clion/137/bin/cmake/linux/share/cmake-3.17/Modules/CheckIncludeFile.cmake"
+  "/snap/clion/137/bin/cmake/linux/share/cmake-3.17/Modules/CheckLibraryExists.cmake"
+>>>>>>> Skybox
   "/snap/clion/137/bin/cmake/linux/share/cmake-3.17/Modules/Compiler/CMakeCommonCompilerMacros.cmake"
   "/snap/clion/137/bin/cmake/linux/share/cmake-3.17/Modules/Compiler/GNU-C.cmake"
   "/snap/clion/137/bin/cmake/linux/share/cmake-3.17/Modules/Compiler/GNU-CXX.cmake"
@@ -61,6 +73,12 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/snap/clion/137/bin/cmake/linux/share/cmake-3.17/Modules/FindOpenGL.cmake"
   "/snap/clion/137/bin/cmake/linux/share/cmake-3.17/Modules/FindPackageHandleStandardArgs.cmake"
   "/snap/clion/137/bin/cmake/linux/share/cmake-3.17/Modules/FindPackageMessage.cmake"
+<<<<<<< HEAD
+=======
+  "/snap/clion/137/bin/cmake/linux/share/cmake-3.17/Modules/FindSDL.cmake"
+  "/snap/clion/137/bin/cmake/linux/share/cmake-3.17/Modules/FindSDL_mixer.cmake"
+  "/snap/clion/137/bin/cmake/linux/share/cmake-3.17/Modules/FindThreads.cmake"
+>>>>>>> Skybox
   "/snap/clion/137/bin/cmake/linux/share/cmake-3.17/Modules/Internal/CMakeCheckCompilerFlag.cmake"
   "/snap/clion/137/bin/cmake/linux/share/cmake-3.17/Modules/Platform/Linux-GNU-C.cmake"
   "/snap/clion/137/bin/cmake/linux/share/cmake-3.17/Modules/Platform/Linux-GNU-CXX.cmake"
@@ -68,8 +86,11 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/snap/clion/137/bin/cmake/linux/share/cmake-3.17/Modules/Platform/Linux.cmake"
   "/snap/clion/137/bin/cmake/linux/share/cmake-3.17/Modules/Platform/UnixPaths.cmake"
   "/snap/clion/137/bin/cmake/linux/share/cmake-3.17/Modules/ProcessorCount.cmake"
+<<<<<<< HEAD
 >>>>>>> Collisionwithterrain
   "/usr/lib/x86_64-linux-gnu/cmake/SDL2/sdl2-config.cmake"
+=======
+>>>>>>> Skybox
   "/usr/lib/x86_64-linux-gnu/cmake/assimp-4.1/assimp-config-version.cmake"
   "/usr/lib/x86_64-linux-gnu/cmake/assimp-4.1/assimp-config.cmake"
   )

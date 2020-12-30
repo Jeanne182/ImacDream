@@ -21,6 +21,7 @@ int main(int argc, char** argv) {
     float ratio = WINDOW_WIDTH/WINDOW_HEIGHT;
     SDLWindowManager windowManager(WINDOW_WIDTH, WINDOW_HEIGHT, "GLImac");
 
+
     // Initialize glew for OpenGL3+ support
     GLenum glewInitError = glewInit();
     if(GLEW_OK != glewInitError) {
@@ -30,7 +31,7 @@ int main(int argc, char** argv) {
     std::cout << "OpenGL Version : " << glGetString(GL_VERSION) << std::endl;
     std::cout << "GLEW Version : " << glewGetString(GLEW_VERSION) << std::endl;
 
-    glm::mat4 ProjMatrix = glm::perspective(glm::radians(70.f), ratio, 0.1f, 100.f);
+    glm::mat4 ProjMatrix = glm::perspective(glm::radians(70.f), ratio, 0.1f, 10000.f);
     AssetManager::Create(argv, ProjMatrix);
     App app;
     app.layoutGame();
@@ -73,7 +74,6 @@ int main(int argc, char** argv) {
         app.draw();
         windowManager.swapBuffers();
     }
-
     app.Delete();
     return EXIT_SUCCESS;
 }

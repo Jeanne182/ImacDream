@@ -7,23 +7,29 @@ void Light::event(const SDL_Event &e) {
             if (e.key.keysym.sym==SDLK_a)
             {
                 if(!getLightOn()){
-                    setIntensity(70.);
-                    setLightOn(true);}
-                else{
-                    setIntensity(20.);
-                    setLightOn(false);
+                    setIntensity();
+                    std::cout<<getIntensity()<<std::endl;
                 }
-            };
+                else{
+                    setIntensity();
+                    std::cout<<getIntensity()<<std::endl;
+                }
+            }
             break;
         default:
             break;
     }
 }
+void Light::setIntensity(){
+    if(_lightOn) _intensity = glm::vec3(50.f);
+    else _intensity = glm::vec3(5.f);
+}
+
 
 void Light::useMatrix(const glm::mat4 &cameraView) {
-    glUniform3fv(AssetManager::Get()->_multiLightsProgram.ViewPos_Location(), 1, glm::value_ptr(cameraView));
-    glUniform1f(AssetManager::Get()->_multiLightsProgram.Shininess_Location(), getShininess()); // taille de la tache glossy
-    glUniform3fv(AssetManager::Get()->_multiLightsProgram.LightPos_Location(), 1, glm::value_ptr(getPosition()));
-    glUniform3fv(AssetManager::Get()->_multiLightsProgram.LightIntensity_Location(), 1, glm::value_ptr(getIntensity()));
+    glUniform3fv(AssetManager::Get()->_lightProgram.ViewPos_Location(), 1, glm::value_ptr(cameraView));
+    glUniform3fv(AssetManager::Get()->_lightProgram.LightPos_Location(), 1, glm::value_ptr(getPosition()));
+    glUniform1f(AssetManager::Get()->_lightProgram.Shininess_Location(), getShininess());
+    glUniform3fv(AssetManager::Get()->_lightProgram.LightIntensity_Location(), 1, glm::value_ptr(getIntensity()));
 }
 
