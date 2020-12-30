@@ -3,16 +3,19 @@
 
 #include <glimac/glm.hpp>
 #include <glimac/SDLWindowManager.hpp>
-
+#include <iostream>
 class Light
 {
 public:
     inline Light()
         :_position(glm::vec4(0.f, 0.f, 0.f, 0.f)), _intensity(glm::vec3(0.f)), _lightOn(false){};
     inline Light(const glm::mat4 &cameraView):
-        _position(glm::vec4(0.f, 1.f, 0.f, 0.f)),_intensity(glm::vec3(0.f)), _lightOn(false){};
+        _position(glm::vec4(0.f, 1.f, 0.f, 0.f)),_intensity(glm::vec3(5.f)), _lightOn(false){};
 
-    inline void setIntensity(const float intensity){ _intensity = glm::vec3(intensity); };
+    inline void setIntensity(){ std::cout<<_lightOn<<std::endl;
+                                if(_lightOn) _intensity = glm::vec3(50.f);
+
+                                else _intensity = glm::vec3(5.f);};
     inline bool setLightOn(const bool state){ _lightOn = state;};
 
     inline glm::vec4 getPosition(){ return _position; };
@@ -23,8 +26,8 @@ public:
     void useMatrix(const glm::mat4 &cameraView);
 
 private:
+    bool _lightOn;
     glm::vec4 _position;
     glm::vec3 _intensity;
-    bool _lightOn;
 };
 #endif //IMACDREAM_LIGHT_HPP
