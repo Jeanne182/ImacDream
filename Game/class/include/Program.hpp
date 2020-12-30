@@ -73,16 +73,16 @@ public:
     WaterProgram(const FilePath &applicationPath):
             _program(loadProgram(applicationPath.dirPath() + "Assets/shaders/water.vs.glsl",
                                  applicationPath.dirPath() + "Assets/shaders/water.fs.glsl")){
-        _M_Location = glGetUniformLocation(_program.getGLId(), "uMMatrix");
+        _M_Location = glGetUniformLocation(_program.getGLId(), "uMMatrixWater");
         _MV_Location = glGetUniformLocation(_program.getGLId(), "uMVMatrix");
         _MVP_Location = glGetUniformLocation(_program.getGLId(), "uMVPMatrix");
         _N_Location = glGetUniformLocation(_program.getGLId(), "uNormalMatrix");
 
         //Lights
-        _ViewPos_Location = glGetUniformLocation(_program.getGLId(), "uViewPos");
-        _Shininess_Location = glGetUniformLocation(_program.getGLId(), "uShininess");
-        _LightPos_Location = glGetUniformLocation(_program.getGLId(), "uLightPos_vs");
-        _LightIntensity_Location = glGetUniformLocation(_program.getGLId(), "uLightIntensity");
+        _ViewPos_Location = glGetUniformLocation(_program.getGLId(), "uViewPosWater");
+        _Shininess_Location = glGetUniformLocation(_program.getGLId(), "uShininessWater");
+        _LightPos_Location = glGetUniformLocation(_program.getGLId(), "uLightPos_vsWater");
+        _LightIntensity_Location = glGetUniformLocation(_program.getGLId(), "uLightIntensityWater");
     }
 
     //GETTERS

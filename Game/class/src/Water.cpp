@@ -28,25 +28,16 @@ void Water::move() {
 //    std::cout<<" Random position : " << _model->_meshes[0]._vertices[0].position.y << std::endl;
 }
 //
-void Water::display() {
-    useMatrix();
+
+void Water::displayWater() {
+    glUniformMatrix4fv(AssetManager::Get()->_waterProgram.M_Location(), 1, GL_FALSE, glm::value_ptr(_M));
+    glUniformMatrix4fv(AssetManager::Get()->_waterProgram.MV_Location(), 1, GL_FALSE, glm::value_ptr(_MV));
+    glUniformMatrix4fv(AssetManager::Get()->_waterProgram.MVP_Location(), 1, GL_FALSE, glm::value_ptr(_MVP));
+    glUniformMatrix4fv(AssetManager::Get()->_waterProgram.N_Location(), 1, GL_FALSE, glm::value_ptr(_N));
+
     GLuint diffuseNr = 1;
     GLuint specularNr = 1;
-    for (GLuint i = 0; i < _model->_meshes[0]._textures.size(); i++) {
-        glActiveTexture(GL_TEXTURE0 + i); // activate proper texture unit before binding
-        // retrieve texture number (the N in diffuse_textureN)
-        std::string number;
-        std::string name = _model->_meshes[0]._textures[i].type;
 
-        if (name == "texture_diffuse") {
-            number = std::to_string(diffuseNr++);
-        }
-        else if (name == "texture_specular")
-            number = std::to_string(specularNr++);
-        glUniform1i(glGetUniformLocation(AssetManager::Get()->_multiLightsProgram._program.getGLId(), (name + number).c_str()), i);
-
-        glBindTexture(GL_TEXTURE_2D, _model->_meshes[0]._textures[i].id);
-    }
 
     // draw mesh
     glBindVertexArray(_model->_meshes[0]._vao);

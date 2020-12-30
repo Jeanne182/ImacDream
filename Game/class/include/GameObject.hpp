@@ -43,7 +43,7 @@ public :
     void setCenter();
 
 
-    //METHODS
+    virtual //METHODS
     void display(); //OK
     void setMatrix(); //OK
     void computeMatrix(const glm::mat4 &cameraView); //OK

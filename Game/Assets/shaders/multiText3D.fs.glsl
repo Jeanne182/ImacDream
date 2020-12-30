@@ -15,4 +15,4 @@ void main() {
   //vec3 texture = texture(uTexture, vTexCoords).rgb;
   //vec3 texture2 = texture(uTexture2, vTexCoords).rgb;
   fFragTexture = vec3(texture(uTexture, vTexCoords).rgb + texture(uTexture2, vTexCoords).rgb);
-};
+}

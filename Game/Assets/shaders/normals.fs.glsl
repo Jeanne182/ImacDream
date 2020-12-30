@@ -11,4 +11,4 @@ void main() {
 
     fFragColor = normalize(vNormal_vs);
 
-};
+}

@@ -53,9 +53,11 @@ void main() {
         vec3 tex = texture(texture_diffuse1, vTexCoords).xyz;
         if(tex != vec3(0.0)){
             fFragColor = tex * blinnPhong();
+            fFragColor = vec3(0,0,1);
         }
         else{
             fFragColor = blinnPhong();
+//            fFragColor = vec3(0,0,1);
         }
 
 }

@@ -8,7 +8,7 @@ public:
     Water();
     ~Water(){};
     void move();
-    void display();
+    void displayWater();
 };
 
 #endif //IMACDREAM_WATER_HPP

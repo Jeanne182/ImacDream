@@ -5,7 +5,7 @@
 		<Option title="IMACDream"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\..\usr\lib\;CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\;CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\;CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\SDL2\;CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\assimp-4.1\;CMake Files\CMake\;CMake Files\glimac\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\..\usr\lib\;CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\;CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\;CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\SDL2\;CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\assimp-5.0\;CMake Files\CMake\;CMake Files\glimac\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="/home/jeanne/Documents/S3/ImacDream/Game-build"/>
@@ -313,11 +313,17 @@
 		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/../../../../../../usr/lib/x86_64-linux-gnu/cmake/SDL2/sdl2-config.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\SDL2\"/>
 		</Unit>
-		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/../../../../../../usr/lib/x86_64-linux-gnu/cmake/assimp-4.1/assimp-config-version.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\assimp-4.1\"/>
+		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/../../../../../../usr/lib/x86_64-linux-gnu/cmake/assimp-5.0/assimp-config-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\assimp-5.0\"/>
 		</Unit>
-		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/../../../../../../usr/lib/x86_64-linux-gnu/cmake/assimp-4.1/assimp-config.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\assimp-4.1\"/>
+		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/../../../../../../usr/lib/x86_64-linux-gnu/cmake/assimp-5.0/assimp-config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\assimp-5.0\"/>
+		</Unit>
+		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/../../../../../../usr/lib/x86_64-linux-gnu/cmake/assimp-5.0/assimpTargets-release.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\assimp-5.0\"/>
+		</Unit>
+		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/../../../../../../usr/lib/x86_64-linux-gnu/cmake/assimp-5.0/assimpTargets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\assimp-5.0\"/>
 		</Unit>
 		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/CMake/FindGLEW.cmake">
 			<Option virtualFolder="CMake Files\CMake\"/>

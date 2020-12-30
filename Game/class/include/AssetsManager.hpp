@@ -25,12 +25,14 @@ public:
     // Programs
     MultiLightsProgram _multiLightsProgram;
     StaticImageProgram _staticImageProgram;
+    WaterProgram _waterProgram;
 
     //CONSTRUCTOR
     AssetManager(char **argv, glm::mat4 &P)
             : _appPath(argv[0]),
               _multiLightsProgram(_appPath),
               _staticImageProgram(_appPath),
+              _waterProgram(_appPath),
               _P(P)
               {};
 

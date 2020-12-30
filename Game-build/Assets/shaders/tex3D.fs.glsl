@@ -13,4 +13,4 @@ uniform sampler2D texture_diffuse1;
 void main() {
      fFragColor = texture(texture_diffuse1, vTexCoords);
 
-};
+}
