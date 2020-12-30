@@ -59,10 +59,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /snap/clion/137/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /snap/clion/138/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /snap/clion/137/bin/cmake/linux/bin/cmake -E rm -f
+RM = /snap/clion/138/bin/cmake/linux/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -79,7 +79,7 @@ CMAKE_BINARY_DIR = /home/matteo/Documents/imac2/openGL/ImacDream/Game-build
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/snap/clion/137/bin/cmake/linux/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/snap/clion/138/bin/cmake/linux/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -90,7 +90,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/snap/clion/137/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/snap/clion/138/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -507,34 +507,6 @@ class/src/Program.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/IMACDream.dir/build.make CMakeFiles/IMACDream.dir/class/src/Program.cpp.s
 .PHONY : class/src/Program.cpp.s
 
-<<<<<<< HEAD
-class/src/StaticImage.o: class/src/StaticImage.cpp.o
-
-.PHONY : class/src/StaticImage.o
-
-# target to build an object file
-class/src/StaticImage.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/IMACDream.dir/build.make CMakeFiles/IMACDream.dir/class/src/StaticImage.cpp.o
-.PHONY : class/src/StaticImage.cpp.o
-
-class/src/StaticImage.i: class/src/StaticImage.cpp.i
-
-.PHONY : class/src/StaticImage.i
-
-# target to preprocess a source file
-class/src/StaticImage.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/IMACDream.dir/build.make CMakeFiles/IMACDream.dir/class/src/StaticImage.cpp.i
-.PHONY : class/src/StaticImage.cpp.i
-
-class/src/StaticImage.s: class/src/StaticImage.cpp.s
-
-.PHONY : class/src/StaticImage.s
-
-# target to generate assembly for a file
-class/src/StaticImage.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/IMACDream.dir/build.make CMakeFiles/IMACDream.dir/class/src/StaticImage.cpp.s
-.PHONY : class/src/StaticImage.cpp.s
-=======
 class/src/Skybox.o: class/src/Skybox.cpp.o
 
 .PHONY : class/src/Skybox.o
@@ -561,7 +533,33 @@ class/src/Skybox.s: class/src/Skybox.cpp.s
 class/src/Skybox.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/IMACDream.dir/build.make CMakeFiles/IMACDream.dir/class/src/Skybox.cpp.s
 .PHONY : class/src/Skybox.cpp.s
->>>>>>> Skybox
+
+class/src/StaticImage.o: class/src/StaticImage.cpp.o
+
+.PHONY : class/src/StaticImage.o
+
+# target to build an object file
+class/src/StaticImage.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/IMACDream.dir/build.make CMakeFiles/IMACDream.dir/class/src/StaticImage.cpp.o
+.PHONY : class/src/StaticImage.cpp.o
+
+class/src/StaticImage.i: class/src/StaticImage.cpp.i
+
+.PHONY : class/src/StaticImage.i
+
+# target to preprocess a source file
+class/src/StaticImage.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/IMACDream.dir/build.make CMakeFiles/IMACDream.dir/class/src/StaticImage.cpp.i
+.PHONY : class/src/StaticImage.cpp.i
+
+class/src/StaticImage.s: class/src/StaticImage.cpp.s
+
+.PHONY : class/src/StaticImage.s
+
+# target to generate assembly for a file
+class/src/StaticImage.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/IMACDream.dir/build.make CMakeFiles/IMACDream.dir/class/src/StaticImage.cpp.s
+.PHONY : class/src/StaticImage.cpp.s
 
 class/src/Terrain.o: class/src/Terrain.cpp.o
 
@@ -720,15 +718,12 @@ help:
 	@echo "... class/src/Program.o"
 	@echo "... class/src/Program.i"
 	@echo "... class/src/Program.s"
-<<<<<<< HEAD
-	@echo "... class/src/StaticImage.o"
-	@echo "... class/src/StaticImage.i"
-	@echo "... class/src/StaticImage.s"
-=======
 	@echo "... class/src/Skybox.o"
 	@echo "... class/src/Skybox.i"
 	@echo "... class/src/Skybox.s"
->>>>>>> Skybox
+	@echo "... class/src/StaticImage.o"
+	@echo "... class/src/StaticImage.i"
+	@echo "... class/src/StaticImage.s"
 	@echo "... class/src/Terrain.o"
 	@echo "... class/src/Terrain.i"
 	@echo "... class/src/Terrain.s"

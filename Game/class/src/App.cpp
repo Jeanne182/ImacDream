@@ -40,7 +40,7 @@ void App::layout2D() {
 }
 
 void App::layout3D() {
-    AssetManager::Get()->_multiLightsProgram._program.use();
+    AssetManager::Get()->_lightProgram._program.use();
     glDisable(GL_BLEND);
     glEnable(GL_DEPTH_TEST);
 }

@@ -41,9 +41,9 @@ public:
     inline FilePath appPath(){ return _appPath; };
     inline glm::mat4 P(){ return _P; };
 
-    inline MultiLightsProgram getMultiLightsProgram(){ return _multiLightsProgram; }
+    inline LightProgram getMultiLightsProgram(){ return _lightProgram; }
     inline StaticImageProgram staticImageProgram(){ return _staticImageProgram; }
-//    inline SkyboxProgram getSkyboxProgram(){ return _skyboxProgram; }
+    inline SkyboxProgram getSkyboxProgram(){ return _skyboxProgram; }
 
 
     //Singleton

@@ -17,12 +17,12 @@ Music::Music() {
         printf("Mix_LoadMUS: %s\n", Mix_GetError());
     if(Mix_PlayMusic(_game, -1)==-1) {
         printf("Mix_PlayMusic: %s\n", Mix_GetError());
-        // well, there's no music, but most games don't break without music...
     }
 }
 
-Music::~Music() {
+void Music::Delete() {
     Mix_FreeMusic(_game);
+    delete _game;
     Mix_CloseAudio();
 }
 

@@ -11,6 +11,7 @@ Skybox::~Skybox()
 {
     glDeleteVertexArrays(1, &_vao);
     glDeleteBuffers(1, &_vbo);
+
 }
 
 void Skybox::useMatrix() const {

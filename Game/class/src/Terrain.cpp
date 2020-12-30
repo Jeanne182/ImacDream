@@ -22,14 +22,17 @@ void Terrain::display(const glm::mat4 &cameraView) {
     _objects[RUNE].update(cameraView);
     _objects[HUT].update(cameraView);
     _objects[TERRAIN].update(cameraView);
-    _objects[TRIANGLE].update(cameraView);
+    //_objects[TRIANGLE].update(cameraView);
 
 }
 
 void Terrain::deleteBuffers() {
     for(auto & _object : _objects){
         _object.deleteBuffers();
+        delete &_object;
     }
+    delete &_objects;
+    _objects.clear();
 }
 
 void Terrain::ObjectsManager() {
@@ -72,14 +75,10 @@ void Terrain::ObjectsManager() {
     objects->push_back(runeObject);
 
    //HUT
-   Model* hut = new Model(modelsPath + "/hut.obj");
-   GameObject hutObject(glm::vec3(-20.f,-12.f,-5.f), 4.f, glm::vec3(0.f, 45.f, 0.f), *hut);
-   objects->push_back(hutObject);
+    Model* hut = new Model(modelsPath + "/hut.obj");
+    GameObject hutObject(glm::vec3(-30.f,0.f,-5.f), 6.f, glm::vec3(90.f, 0.f, 0.f), *hut, 0, glm::vec3(0, 0, 0));
+    objects->push_back(hutObject);
 
-    //TRIANGLE
-    Model* triangle = new Model(modelsPath + "/triangle.obj");
-    GameObject triangleObject(glm::vec3(-0.f,-0.f,-0.f), 4.f, glm::vec3(0.f, 45.f, 0.f), *triangle);
-    objects->push_back(triangleObject);
 
     //TERRAIN
     Model* terrain = new Model(modelsPath + "/terrain.obj");

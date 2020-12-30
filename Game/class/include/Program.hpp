@@ -70,6 +70,12 @@ public:
         _textureLocation = glGetUniformLocation(_program.getGLId(), "uTexture");
         _M_Location = glGetUniformLocation(_program.getGLId(), "uModelMatrix");
     }
+
+//    //GETTERS
+    inline GLint textureLocation(){ return _textureLocation; };
+    inline GLint M_Location(){ return _M_Location; };
+};
+
 class SkyboxProgram {
 private:
     GLint _M_Location, _MV_Location, _MVP_Location, _N_Location;
@@ -95,11 +101,4 @@ public:
     inline GLint N_Location(){ return _N_Location; };
     inline GLint Texture_Location(){ return _texture_Location; };
 };
-
-
-//    //GETTERS
-    inline GLint textureLocation(){ return _textureLocation; };
-    inline GLint M_Location(){ return _M_Location; };
-};
-
 #endif //IMACDREAM_PROGRAM_HPP

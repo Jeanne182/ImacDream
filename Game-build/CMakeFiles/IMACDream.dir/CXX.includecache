@@ -6,35 +6,6 @@
 
 #IncludeRegexTransform: 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-/home/jeanne/Documents/S3/ImacDream/Game/class/include/Camera.hpp
-=======
-/home/fanny/ImacDream/Game/class/include/Camera.hpp
-glimac/glm.hpp
--
-glimac/SDLWindowManager.hpp
--
-
-/home/fanny/ImacDream/Game/class/include/GameObject.hpp
-glimac/common.hpp
--
-./Model.hpp
-/home/fanny/ImacDream/Game/class/include/Model.hpp
-glimac/SDLWindowManager.hpp
--
-./Camera.hpp
-/home/fanny/ImacDream/Game/class/include/Camera.hpp
-
-/home/fanny/ImacDream/Game/class/include/InteractiveObject.hpp
-vector
--
-./../include/Camera.hpp
-/home/fanny/ImacDream/Game/class/include/Camera.hpp
-./../include/GameObject.hpp
-/home/fanny/ImacDream/Game/class/include/GameObject.hpp
->>>>>>> Collisionwithterrain
-=======
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/class/include/AssetsManager.hpp
 string
 -
@@ -47,49 +18,23 @@ glimac/common.hpp
 map
 -
 
-/home/matteo/Documents/imac2/openGL/ImacDream/Game/class/include/Light.hpp
->>>>>>> Skybox
+/home/matteo/Documents/imac2/openGL/ImacDream/Game/class/include/Camera.hpp
 glimac/glm.hpp
 -
 glimac/SDLWindowManager.hpp
 -
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-/home/jeanne/Documents/S3/ImacDream/Game/class/src/Camera.cpp
-./../include/Camera.hpp
-/home/jeanne/Documents/S3/ImacDream/Game/class/include/Camera.hpp
-cmath
-=======
-/home/fanny/ImacDream/Game/class/include/InteractiveObjectManager.hpp
-./GameObject.hpp
-/home/fanny/ImacDream/Game/class/include/GameObject.hpp
-./InteractiveObject.hpp
-/home/fanny/ImacDream/Game/class/include/InteractiveObject.hpp
-vector
+/home/matteo/Documents/imac2/openGL/ImacDream/Game/class/include/GameObject.hpp
+glimac/common.hpp
 -
-
-/home/fanny/ImacDream/Game/class/include/MapManager.hpp
-./Terrain.hpp
-/home/fanny/ImacDream/Game/class/include/Terrain.hpp
-./Camera.hpp
-/home/fanny/ImacDream/Game/class/include/Camera.hpp
-./InteractiveObjectManager.hpp
-/home/fanny/ImacDream/Game/class/include/InteractiveObjectManager.hpp
+./Model.hpp
+/home/matteo/Documents/imac2/openGL/ImacDream/Game/class/include/Model.hpp
 glimac/SDLWindowManager.hpp
 -
-map
--
-tuple
--
-
-/home/fanny/ImacDream/Game/class/include/Mesh.hpp
-=======
-iostream
--
+./Camera.hpp
+/home/matteo/Documents/imac2/openGL/ImacDream/Game/class/include/Camera.hpp
 
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/class/include/Mesh.hpp
->>>>>>> Skybox
 glimac/Program.hpp
 -
 GL/glew.h
@@ -115,11 +60,7 @@ assimp/scene.h
 assimp/postprocess.h
 -
 
-<<<<<<< HEAD
-/home/fanny/ImacDream/Game/class/include/Model.hpp
-=======
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/class/include/Model.hpp
->>>>>>> Skybox
 glimac/Program.hpp
 -
 GL/glew.h
@@ -133,70 +74,31 @@ string
 fstream
 -
 sstream
->>>>>>> Collisionwithterrain
 -
 iostream
 -
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-/home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/FreeflyCamera.hpp
-cmath
-=======
 ./Mesh.hpp
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/class/include/Mesh.hpp
 
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/class/include/Program.hpp
 glimac/Program.hpp
->>>>>>> Skybox
 -
-glimac/glm.hpp
+glimac/FilePath.hpp
 -
 
-<<<<<<< HEAD
-/home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/SDLWindowManager.hpp
-=======
-./Mesh.hpp
-/home/fanny/ImacDream/Game/class/include/Mesh.hpp
-
-/home/fanny/ImacDream/Game/class/include/Terrain.hpp
+/home/matteo/Documents/imac2/openGL/ImacDream/Game/class/include/Terrain.hpp
 ./GameObject.hpp
-/home/fanny/ImacDream/Game/class/include/GameObject.hpp
+/home/matteo/Documents/imac2/openGL/ImacDream/Game/class/include/GameObject.hpp
 vector
 -
 
-/home/fanny/ImacDream/Game/class/include/Utils.hpp
-glimac/glm.hpp
--
-./../include/GameObject.hpp
-/home/fanny/ImacDream/Game/class/include/GameObject.hpp
-
-/home/fanny/ImacDream/Game/class/src/MapManager.cpp
-../include/MapManager.hpp
-/home/fanny/ImacDream/Game/class/include/MapManager.hpp
-../include/Utils.hpp
-/home/fanny/ImacDream/Game/class/include/Utils.hpp
-
-/home/fanny/ImacDream/Game/glimac/include/glimac/FilePath.hpp
-string
--
-
-/home/fanny/ImacDream/Game/glimac/include/glimac/Program.hpp
-GL/glew.h
--
-Shader.hpp
-/home/fanny/ImacDream/Game/glimac/include/glimac/Shader.hpp
-FilePath.hpp
-/home/fanny/ImacDream/Game/glimac/include/glimac/FilePath.hpp
-
-/home/fanny/ImacDream/Game/glimac/include/glimac/SDLWindowManager.hpp
->>>>>>> Collisionwithterrain
-=======
-/home/matteo/Documents/imac2/openGL/ImacDream/Game/class/src/Light.cpp
-../include/Light.hpp
-/home/matteo/Documents/imac2/openGL/ImacDream/Game/class/include/Light.hpp
+/home/matteo/Documents/imac2/openGL/ImacDream/Game/class/src/Terrain.cpp
+../include/Terrain.hpp
+/home/matteo/Documents/imac2/openGL/ImacDream/Game/class/include/Terrain.hpp
 ../include/AssetsManager.hpp
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/class/include/AssetsManager.hpp
+glimac/Sphere.hpp
+-
 
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/glimac/include/glimac/FilePath.hpp
 string
@@ -211,7 +113,6 @@ FilePath.hpp
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/glimac/include/glimac/FilePath.hpp
 
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/glimac/include/glimac/SDLWindowManager.hpp
->>>>>>> Skybox
 cstdint
 -
 SDL2/SDL.h
@@ -219,21 +120,6 @@ SDL2/SDL.h
 glm.hpp
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/glimac/include/glimac/glm.hpp
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-/home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/glm.hpp
-=======
-/home/fanny/ImacDream/Game/glimac/include/glimac/common.hpp
-GL/glew.h
--
-glm.hpp
-/home/fanny/ImacDream/Game/glimac/include/glimac/glm.hpp
-memory
--
-
-/home/fanny/ImacDream/Game/glimac/include/glimac/glm.hpp
->>>>>>> Collisionwithterrain
-=======
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/glimac/include/glimac/Shader.hpp
 GL/glew.h
 -
@@ -242,14 +128,21 @@ string
 FilePath.hpp
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/glimac/include/glimac/FilePath.hpp
 
+/home/matteo/Documents/imac2/openGL/ImacDream/Game/glimac/include/glimac/Sphere.hpp
+vector
+-
+common.hpp
+/home/matteo/Documents/imac2/openGL/ImacDream/Game/glimac/include/glimac/common.hpp
+
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/glimac/include/glimac/common.hpp
 GL/glew.h
 -
 glm.hpp
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/glimac/include/glimac/glm.hpp
+memory
+-
 
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/glimac/include/glimac/glm.hpp
->>>>>>> Skybox
 glm/glm.hpp
 -
 glm/gtc/matrix_transform.hpp
@@ -263,22 +156,9 @@ glm/gtx/io.hpp
 glm/gtc/random.hpp
 -
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/glm/common.hpp
-detail/func_common.hpp
-/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/glm/detail/func_common.hpp
-
-/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/glm/detail/_fixes.hpp
-=======
-/home/fanny/ImacDream/Game/third-party/include/assimp/Compiler/poppack1.h
-
-/home/fanny/ImacDream/Game/third-party/include/assimp/Compiler/pstdint.h
-=======
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include/assimp/Compiler/poppack1.h
 
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include/assimp/Compiler/pstdint.h
->>>>>>> Skybox
 stddef.h
 -
 limits.h
@@ -298,15 +178,6 @@ stdio.h
 string.h
 -
 
-<<<<<<< HEAD
-/home/fanny/ImacDream/Game/third-party/include/assimp/Compiler/pushpack1.h
-
-/home/fanny/ImacDream/Game/third-party/include/assimp/Importer.hpp
-assimp/types.h
--
-
-/home/fanny/ImacDream/Game/third-party/include/assimp/anim.h
-=======
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include/assimp/Compiler/pushpack1.h
 
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include/assimp/Importer.hpp
@@ -314,57 +185,11 @@ assimp/types.h
 -
 
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include/assimp/anim.h
->>>>>>> Skybox
 assimp/types.h
 -
 assimp/quaternion.h
 -
 
-<<<<<<< HEAD
-/home/fanny/ImacDream/Game/third-party/include/assimp/camera.h
-types.h
-/home/fanny/ImacDream/Game/third-party/include/assimp/types.h
-
-/home/fanny/ImacDream/Game/third-party/include/assimp/color4.h
-defs.h
-/home/fanny/ImacDream/Game/third-party/include/assimp/defs.h
-
-/home/fanny/ImacDream/Game/third-party/include/assimp/color4.inl
-color4.h
-/home/fanny/ImacDream/Game/third-party/include/assimp/color4.h
-
-/home/fanny/ImacDream/Game/third-party/include/assimp/config.h
-
-/home/fanny/ImacDream/Game/third-party/include/assimp/defs.h
-assimp/config.h
--
-
-/home/fanny/ImacDream/Game/third-party/include/assimp/light.h
-types.h
-/home/fanny/ImacDream/Game/third-party/include/assimp/types.h
-
-/home/fanny/ImacDream/Game/third-party/include/assimp/material.h
-types.h
-/home/fanny/ImacDream/Game/third-party/include/assimp/types.h
-./Compiler/pushpack1.h
-/home/fanny/ImacDream/Game/third-party/include/assimp/Compiler/pushpack1.h
-./Compiler/poppack1.h
-/home/fanny/ImacDream/Game/third-party/include/assimp/Compiler/poppack1.h
-material.inl
-/home/fanny/ImacDream/Game/third-party/include/assimp/material.inl
-
-/home/fanny/ImacDream/Game/third-party/include/assimp/material.inl
-
-/home/fanny/ImacDream/Game/third-party/include/assimp/matrix3x3.h
-defs.h
-/home/fanny/ImacDream/Game/third-party/include/assimp/defs.h
-
-/home/fanny/ImacDream/Game/third-party/include/assimp/matrix3x3.inl
-matrix3x3.h
-/home/fanny/ImacDream/Game/third-party/include/assimp/matrix3x3.h
-matrix4x4.h
-/home/fanny/ImacDream/Game/third-party/include/assimp/matrix4x4.h
-=======
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include/assimp/camera.h
 types.h
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include/assimp/types.h
@@ -408,7 +233,6 @@ matrix3x3.h
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include/assimp/matrix3x3.h
 matrix4x4.h
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include/assimp/matrix4x4.h
->>>>>>> Skybox
 algorithm
 -
 cmath
@@ -416,21 +240,6 @@ cmath
 limits
 -
 
-<<<<<<< HEAD
-/home/fanny/ImacDream/Game/third-party/include/assimp/matrix4x4.h
-vector3.h
-/home/fanny/ImacDream/Game/third-party/include/assimp/vector3.h
-defs.h
-/home/fanny/ImacDream/Game/third-party/include/assimp/defs.h
-
-/home/fanny/ImacDream/Game/third-party/include/assimp/matrix4x4.inl
-matrix4x4.h
-/home/fanny/ImacDream/Game/third-party/include/assimp/matrix4x4.h
-matrix3x3.h
-/home/fanny/ImacDream/Game/third-party/include/assimp/matrix3x3.h
-quaternion.h
-/home/fanny/ImacDream/Game/third-party/include/assimp/quaternion.h
-=======
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include/assimp/matrix4x4.h
 vector3.h
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include/assimp/vector3.h
@@ -444,44 +253,13 @@ matrix3x3.h
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include/assimp/matrix3x3.h
 quaternion.h
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include/assimp/quaternion.h
->>>>>>> Skybox
 algorithm
 -
 limits
 -
->>>>>>> Collisionwithterrain
 cmath
 -
 
-<<<<<<< HEAD
-/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/glm/detail/_swizzle.hpp
-
-/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/glm/detail/_swizzle_func.hpp
-
-<<<<<<< HEAD
-/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/glm/detail/_vectorize.hpp
-=======
-/home/fanny/ImacDream/Game/third-party/include/assimp/vector3.inl
-vector3.h
-/home/fanny/ImacDream/Game/third-party/include/assimp/vector3.h
-cmath
--
-
-/home/fanny/ImacDream/Game/third-party/include/glm/common.hpp
-detail/func_common.hpp
-/home/fanny/ImacDream/Game/third-party/include/glm/detail/func_common.hpp
-
-/home/fanny/ImacDream/Game/third-party/include/glm/detail/_fixes.hpp
-cmath
--
-
-/home/fanny/ImacDream/Game/third-party/include/glm/detail/_swizzle.hpp
-
-/home/fanny/ImacDream/Game/third-party/include/glm/detail/_swizzle_func.hpp
-
-/home/fanny/ImacDream/Game/third-party/include/glm/detail/_vectorize.hpp
->>>>>>> Collisionwithterrain
-=======
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include/assimp/mesh.h
 types.h
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include/assimp/types.h
@@ -602,10 +380,6 @@ vector3.h
 cmath
 -
 
-/home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include/glm/common.hpp
-detail/func_common.hpp
-/home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include/glm/detail/func_common.hpp
-
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include/glm/detail/_fixes.hpp
 cmath
 -
@@ -615,7 +389,6 @@ cmath
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include/glm/detail/_swizzle_func.hpp
 
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include/glm/detail/_vectorize.hpp
->>>>>>> Skybox
 type_vec1.hpp
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include/glm/detail/type_vec1.hpp
 type_vec2.hpp

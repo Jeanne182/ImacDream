@@ -30,13 +30,12 @@ private:
 
 public:
     //CONSTRUCTOR
-    inline App():_game(){ _music.playGame();};
-
+    inline App():_game(){_music.playGame(); };
 
 
     void draw();
     void event(const SDL_Event &e);
-    inline void Delete(){ _game.Delete(); _music.playGame();};
+    inline void Delete(){ _game.Delete(); _music.Delete(); };
 
     //LAYOUTS
     void drawGame();
