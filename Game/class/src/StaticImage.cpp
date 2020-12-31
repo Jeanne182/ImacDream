@@ -86,10 +86,10 @@ void StaticImageManager::addImage(const std::string &filename, const float &x, c
 
 void StaticImageManager::setupImage(const std::string &filename, StaticImage *img) {
     // Create the matching square
-    img->_vertices.push_back(Vertex2DUV(glm::vec2(0.5f, 0.5f*1080.f/720.f), glm::vec2(1.0f, 1.f))); //RATIO TO CHANGE
-    img->_vertices.push_back(Vertex2DUV(glm::vec2(-0.5f, 0.5f*1080.f/720.f), glm::vec2(0.0f, 1.f)));
-    img->_vertices.push_back(Vertex2DUV(glm::vec2(0.5f, -0.5f*1080.f/720.f), glm::vec2(1.0f, 0.f)));
-    img->_vertices.push_back(Vertex2DUV(glm::vec2(-0.5f, -0.5f*1080.f/720.f), glm::vec2(0.0f, 0.f)));
+    img->_vertices.push_back(Vertex2DUV(glm::vec2(0.5f * 720.f/1080.f, 0.5f), glm::vec2(1.0f, 1.f))); //RATIO TO CHANGE
+    img->_vertices.push_back(Vertex2DUV(glm::vec2(-0.5f * 720.f/1080.f, 0.5f), glm::vec2(0.0f, 1.f)));
+    img->_vertices.push_back(Vertex2DUV(glm::vec2(0.5f * 720.f/1080.f, -0.5f), glm::vec2(1.0f, 0.f)));
+    img->_vertices.push_back(Vertex2DUV(glm::vec2(-0.5f * 720.f/1080.f, -0.5f), glm::vec2(0.0f, 0.f)));
 
     // Create the matrix
     float ratio = float(img->_imgPtr->getHeight()) / float(img->_imgPtr->getWidth());

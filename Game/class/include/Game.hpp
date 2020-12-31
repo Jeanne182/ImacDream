@@ -9,7 +9,7 @@
 
 class Game {
 private:
-    int _score = 0;
+    int _score;
     MapManager *_map;
     Light _pointLight;
     Camera _camera;
@@ -17,11 +17,12 @@ private:
 
 public:
     //CONSTRUCTOR
-    inline Game():_map(new MapManager()), _camera(), _pointLight(_camera.getViewMatrix()), _sky(){ };
+    inline Game():_map(new MapManager()), _camera(), _pointLight(_camera.getViewMatrix()), _sky(), _score(0){ };
     //METHODS
     void display();
     void event(const SDL_Event &e);
-    inline const int score() {return _score;}
+    inline const int score() {return _score;};
+    inline void increaseScore() { _score++ ;};
     void update();
     inline void Delete(){ _map->Delete(); delete _map; _sky.deleteBuffers(); delete &_sky; };
 };

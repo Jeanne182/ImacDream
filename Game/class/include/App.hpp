@@ -12,10 +12,7 @@ using namespace glimac;
 
 enum LAYOUT
 {
-    LAYOUT_DEFAULT,
     LAYOUT_MENU,
-    LAYOUT_SCORES,
-    LAYOUT_PAUSE,
     LAYOUT_GAME,
     LAYOUT_GAME_OVER
 };
@@ -23,15 +20,17 @@ enum LAYOUT
 class App {
 private:
 
-    int _layout = LAYOUT_GAME;
     Game _game;
 //    Music _music;
     StaticImageManager _staticImages;
+    int _layout;
 
 public:
+
+
     //CONSTRUCTOR
 //    inline App():_game(){_music.playGame(); };
-    inline App():_game(){};
+    inline App():_game(), _layout(LAYOUT_MENU){};
 
 
     void draw();
@@ -41,7 +40,9 @@ public:
 
 
     //LAYOUTS
+    void drawMenu();
     void drawGame();
+    void drawGameOver();
     void layout2D();
     void layout3D();
     void layoutGame();

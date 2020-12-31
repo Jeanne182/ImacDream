@@ -37,21 +37,24 @@ float MapManager::getTerrainHeight(const float x, const float z){
 
         }
     }
+    return 0.f;
 }
 
 void MapManager::display(const glm::mat4 &cameraView) {
     _terrain.display(cameraView);
     setMapTerrain();
     _interactiveObjectManager.display(cameraView);
-//    _water._model->_meshes[0].deleteBuffers();
-//    _water.move();
-//    _water._model->_meshes[0].setupMesh();
-//    std::cout<<"Number of vertices : "<< _water._model->_meshes[0]._vertices.size()<<" & number of indexes  : "<<_water._model->_meshes[0]._indices.size()<<std::endl;
-//    _water.update(cameraView);
+
+    glEnable (GL_BLEND);
+    glBlendEquation(GL_ADD);
+    glBlendFunc (GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+
     AssetManager::Get()->_waterProgram._program.use();
-    _water.useMatrix();
+
     _water.computeMatrix(cameraView);
+    _water.useMatrix();
     _water.displayWater();
+    glDisable(GL_BLEND);
 
 }
 

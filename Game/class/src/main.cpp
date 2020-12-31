@@ -34,9 +34,11 @@ int main(int argc, char** argv) {
     glm::mat4 ProjMatrix = glm::perspective(glm::radians(70.f), ratio, 0.1f, 10000.f);
     AssetManager::Create(argv, ProjMatrix);
     App app;
-    app.layoutGame();
-    glEnable(GL_DEPTH_TEST); // Activation du test de profondeur GPU
 
+    app.layoutGame();
+
+    glEnable(GL_DEPTH_TEST); // Activation du test de profondeur GPU
+    SDL_GL_SetAttribute(SDL_GL_ALPHA_SIZE,8);
     SDL_SetRelativeMouseMode(SDL_TRUE ); //To comment if want to debug
 
     // Application loop:
@@ -47,7 +49,6 @@ int main(int argc, char** argv) {
         SDL_Event e;
         while(windowManager.pollEvent(e)) {
             app.event(e);
-
             switch(e.type) {
                 case SDL_QUIT:
                     done = true; // Leave the loop after this iteration
