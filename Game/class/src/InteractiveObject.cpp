@@ -38,7 +38,7 @@
 
 // test if the camera is pointing on an object
 
-bool InteractiveObject::isSelected(const glm::mat4 &cameraView, const glm::vec3 &cameraPosition, glm::vec3 *P1, glm::vec3 *P2) {
+bool InteractiveObject::isSelected(const glm::mat4 &cameraView, const glm::vec3 &cameraPosition) {
 
 
     // Distance between the camera and the center of the interactive object
@@ -71,20 +71,6 @@ bool InteractiveObject::isSelected(const glm::mat4 &cameraView, const glm::vec3 
     if(distanceToRay > _hitboxRadius){
         return false ;
     }
-
-
-
-    // Distance between the first intersection point and the projection of the center on the camera ray
-    double insideDistance = sqrt(0.5*0.5 - distanceToRay*distanceToRay);
-
-    // To solve intersection points
-    float t1 = distanceToCenter - insideDistance;
-    float t2 = distanceToCenter + insideDistance;
-
-    // The intersections points
-    *P1 = cameraPosition + directionVectorCam*t1 ;
-    *P2 = cameraPosition + directionVectorCam*t2 ;
-
 
     return true;
 

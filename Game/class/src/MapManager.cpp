@@ -61,16 +61,16 @@ void MapManager::event(const SDL_Event &e, const glm::mat4 &cameraView, const gl
                 //std::cout << "terrain position : " << getTerrainheight(cameraPosition.x, cameraPosition.z) << std::endl;
 */
 
-                for(auto objectToFind : _interactiveObjectManager._objectsToFind){
+                for(auto objectToFind : _interactiveObjectManager.getObjects()){
 
-                    glm::vec3 P1 = glm::vec3(0., 0., 0.);
-                    glm::vec3 P2 = glm::vec3(0., 0., 0.);
+
                     std::cout << "center : " <<objectToFind.getCenter()<<std::endl;
 
-                    if(objectToFind.isSelected(cameraView, cameraPosition, &P1, &P2)){
+                    if(objectToFind.isSelected(cameraView, cameraPosition)){
                         std::cout << "Object selected" << std::endl;
                         //Il faut enlever le objectToFind du vecteur mais comment ?
-                        objectToFind.deleteBuffers();
+                        //_interactiveObjectManager.getObjects()
+                        //objectToFind.deleteBuffers();
                     }
                     else{
                         std::cout << "Object not selected" << std::endl;

@@ -11,10 +11,9 @@ enum ObjectsInteractive{
 
 class InteractiveObjectManager {
 private:
-//    std::vector<InteractiveObject> _objectsToFind;
+    std::vector<InteractiveObject> _objectsToFind;
 
 public:
-    std::vector<InteractiveObject> _objectsToFind;//PRIVATE
     inline InteractiveObjectManager(){ InteractiveObjectsManager();};
     inline InteractiveObjectManager(std::vector<InteractiveObject> &objectsToFind):_objectsToFind(objectsToFind){};
     void display(const glm::mat4 &cameraView);
@@ -22,6 +21,7 @@ public:
     void InteractiveObjectsManager();
 
     //GETTERS
+    inline std::vector<InteractiveObject> getObjects(){ return _objectsToFind ;};
 
 };
 
