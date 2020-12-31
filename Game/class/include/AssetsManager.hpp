@@ -19,11 +19,13 @@ private:
     static AssetManager *instance;
 
     //Matrices
-    //glm::mat4 _P;
+    glm::mat4 _P;
+
+    //Window width and height
+    float _width;
+    float _height;
 
 public:
-    //Matrices
-    glm::mat4 _P;//PRIVATE
 
     // Programs
     MultiLightsProgram _multiLightsProgram;
@@ -31,17 +33,21 @@ public:
     TextProgram _textProgram;
 
     //CONSTRUCTOR
-    AssetManager(char **argv, glm::mat4 &P)
+    AssetManager(char **argv, glm::mat4 &P, float &width, float &height)
             : _appPath(argv[0]),
               _multiLightsProgram(_appPath),
               _staticImageProgram(_appPath),
               _textProgram(_appPath),
-              _P(P)
+              _P(P),
+              _width(width),
+              _height(height)
               {};
 
     //GETTERS
     inline FilePath appPath(){ return _appPath; };
     inline glm::mat4 P(){ return _P; };
+    inline float getWidth(){ return _width; };
+    inline float getHeight(){ return _height; };
 
     inline MultiLightsProgram getMultiLightsProgram(){ return _multiLightsProgram; }
     inline StaticImageProgram getstaticImageProgram(){ return _staticImageProgram; }
@@ -49,10 +55,10 @@ public:
 
 
     //Singleton
-    static void Create(char **argv, glm::mat4 &P)
+    static void Create(char **argv, glm::mat4 &P, float &width, float &height)
     {
         if (!instance)
-            instance = new AssetManager(argv, P);
+            instance = new AssetManager(argv, P, width, height);
     };
 
     static AssetManager *Get()

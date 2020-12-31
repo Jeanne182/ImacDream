@@ -1720,7 +1720,6 @@ CMakeFiles/IMACDream.dir/class/src/Text.cpp.o: /home/fanny/ImacDream/Game/class/
 CMakeFiles/IMACDream.dir/class/src/Text.cpp.o: /home/fanny/ImacDream/Game/class/include/Text.hpp
 CMakeFiles/IMACDream.dir/class/src/Text.cpp.o: /home/fanny/ImacDream/Game/class/src/Text.cpp
 CMakeFiles/IMACDream.dir/class/src/Text.cpp.o: /home/fanny/ImacDream/Game/glimac/include/glimac/FilePath.hpp
-CMakeFiles/IMACDream.dir/class/src/Text.cpp.o: /home/fanny/ImacDream/Game/glimac/include/glimac/Image.hpp
 CMakeFiles/IMACDream.dir/class/src/Text.cpp.o: /home/fanny/ImacDream/Game/glimac/include/glimac/Program.hpp
 CMakeFiles/IMACDream.dir/class/src/Text.cpp.o: /home/fanny/ImacDream/Game/glimac/include/glimac/Shader.hpp
 CMakeFiles/IMACDream.dir/class/src/Text.cpp.o: /home/fanny/ImacDream/Game/glimac/include/glimac/common.hpp

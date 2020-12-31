@@ -8,55 +8,61 @@
 #include <vector>
 #include <GL/glew.h>
 #include <glimac/Program.hpp>
-#include <glimac/Image.hpp>
 #include <glimac/FilePath.hpp>
 #include <glimac/common.hpp>
 #include <map>
+#include <utility>
 
 using namespace glimac;
 
-
-// Holds all state information relevant to a character as loaded using FreeType
-struct Character {
-    GLuint TextureID;   // ID handle of the glyph texture
-    glm::ivec2 Size;    // Size of glyph
-    glm::ivec2 Bearing;  // Offset from baseline to left/top of glyph
-    GLuint Advance;    // Horizontal offset to advance to next glyph
+struct Character{
+    GLuint _textureID;
+    glm::ivec2 _size;
+    glm::ivec2 _bearing;
+    FT_Pos _advance;
 };
 
-//std::map<GLchar, Character> Characters;
+class Text{
+private:
+    std::map<char, Character> _characters;
 
-
-
-class Text {
 public:
-    std::string _text;
-    glm::mat3 _modelMatrix;
-    glm::mat3 _computedMatrix;
-};
+    Text() = default;
+    ~Text();
 
+    void load();
+    inline std::map<char, Character> getCharacters() const noexcept {return _characters;};
+};
 
 
 
 class TextManager{
 private :
     GLuint _vbo, _vao;
+    std::string _text;
+    float _scale;
+    glm::vec2 _pos;
+    glm::vec3 _color;
+    glm::mat4 _projection_matrix;
+    std::vector<Text*> _allTexts;
 
-public :
-    std::map<GLchar, Character> Characters;
 
+public:
+    TextManager() = default;
+    ~TextManager();
 
-    //std::map<const std::string, Text *> _allTexts;
-    //TextManager();
-    //~TextManager();
-    //Text* getText(const std::string &text) const;
-    void loadCharacters();
-    //void moveText(const std::string &text, const float &x, const float &y, const float &scale);
-    void displayText(std::string text, GLfloat x, GLfloat y, GLfloat scale, glm::vec3 color) const;
-    //void setScale(const std::string &text, const float &scale) const;
-    //void setTranslation(const std::string &text, const float x, const float y) const;
-    //void computeMatrix(const std::string &text) const;
-    //void computeMatrix(Text *txt) const;
+    void Initialization(std::string text, const float &scale=1.0,
+                        const glm::vec2 &pos = glm::vec2(0.), const glm::vec3 &color = glm::vec3(1.));
+
+    //SETTERS
+    inline void setText(std::string text){ _text = std::move(text) ; };
+    inline void setPosition(const glm::vec2 &pos){ _pos = pos ;};
+    inline void setScale(const float &scale){ _scale = scale ; };
+    inline void setColor(const glm::vec3 &color){ _color = color ;};
+
+    //METHODS
+    void renderText(const Text& text);
+    Text* getText();
 
 };
 
