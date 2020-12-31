@@ -53,8 +53,6 @@ void main() {
         else
             fFragColor = blinnPhong();
 
-
-
 }
 
 

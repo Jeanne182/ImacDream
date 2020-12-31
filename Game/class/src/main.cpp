@@ -36,7 +36,7 @@ int main(int argc, char** argv) {
     App app;
     app.layoutGame();
     glEnable(GL_DEPTH_TEST); // Activation du test de profondeur GPU
-
+    SDL_GL_SetAttribute(SDL_GL_ALPHA_SIZE,8);
     SDL_SetRelativeMouseMode(SDL_TRUE ); //To comment if want to debug
 
     // Application loop:

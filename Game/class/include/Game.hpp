@@ -21,7 +21,7 @@ public:
     //METHODS
     void display();
     void event(const SDL_Event &e);
-    inline const int score() {return _score;}
+    inline const int score() {return _score;};
     void update();
     inline void Delete(){ _map->Delete(); delete _map; _sky.deleteBuffers(); delete &_sky; };
 };
