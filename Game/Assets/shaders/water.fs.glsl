@@ -6,7 +6,7 @@ in vec3 vPosition_vs;
 in vec3 vNormal_vs;
 in vec2 vTexCoords;
 
-out vec3 fFragColor;
+out vec4 fFragColor;
 
 uniform vec3 uAmbiant;
 uniform vec3 uDiffuse;
@@ -15,7 +15,6 @@ uniform float uShininess;
 uniform vec3 uLightPos_vs;
 uniform vec3 uLightIntensity;
 uniform vec3 viewPos;
-uniform sampler2D texture_diffuse1;
 
 vec3 blinnPhong(){
 
@@ -47,15 +46,8 @@ vec3 blinnPhong(){
 }
 
 void main() {
-       fFragColor = blinnPhong();
-
+       vec4 texColor;
+       texColor.rgb = blinnPhong();
+       texColor.a = 0.3;
+       fFragColor = texColor;
 }
-
-//
-//void main() {
-//       vec4 texColor;
-//       texColor.rgb = blinnPhong();
-//       texColor.a = 0.9;
-//
-//       fFragColor = Diffuse;
-//}

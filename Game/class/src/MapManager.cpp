@@ -44,16 +44,17 @@ void MapManager::display(const glm::mat4 &cameraView) {
     _terrain.display(cameraView);
     setMapTerrain();
     _interactiveObjectManager.display(cameraView);
-//
-//    glEnable (GL_BLEND);
-//    glBlendEquation(GL_ADD);
-//    glBlendFunc (GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+
+    glEnable (GL_BLEND);
+    glBlendEquation(GL_ADD);
+    glBlendFunc (GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
     AssetManager::Get()->_waterProgram._program.use();
-    _water.useMatrix();
+
     _water.computeMatrix(cameraView);
+    _water.useMatrix();
     _water.displayWater();
-//    glDisable(GL_BLEND);
+    glDisable(GL_BLEND);
 
 }
 
