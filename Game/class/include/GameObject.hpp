@@ -42,7 +42,6 @@ public :
     inline void addScale(float scale){ _scale += scale; }
     void setHitboxRadius();
     void setCenter();
-    bool isSelected(const glm::mat4 &cameraView, const glm::vec3 &cameraPosition);
 
 
 
@@ -60,5 +59,7 @@ public :
 
 
 };
+
+
 
 #endif //IMACDREAM_GAMEOBJECT_HPP
