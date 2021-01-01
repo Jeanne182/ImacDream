@@ -73,6 +73,7 @@ int main(int argc, char** argv) {
 
         app.draw();
         windowManager.swapBuffers();
+        SDL_Delay(30);
     }
     app.Delete();
     return EXIT_SUCCESS;

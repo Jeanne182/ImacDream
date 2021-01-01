@@ -2,6 +2,8 @@
 #include "../include/AssetsManager.hpp"
 #include "../include/Utils.hpp"
 
+#include <utility>
+
 void App::event(const SDL_Event &e) {
     switch(_layout){
         case LAYOUT_MENU:
@@ -23,7 +25,7 @@ void App::event(const SDL_Event &e) {
                 case SDL_KEYDOWN:
                     if (e.key.keysym.sym==SDLK_KP_PLUS ){
                         _game.increaseScore();
-                        std::cout<<"Score : "<< _game.score() <<std::endl;
+                        _texts.getText("oeufs")->replace("Oeufs de dragons : " + std::to_string(_game.score()));
                     }
             }
             if(_game.score() == 3){
@@ -65,7 +67,7 @@ void App::drawGame() {
         AssetManager::Get()->_staticImageProgram._program.use();
         _staticImages.displayImage("cursor");
         AssetManager::Get()->_textProgram._program.use();
-        _texts.getText("test")->renderText(_characters);
+        _texts.getText("oeufs")->renderText(_characters);
 
 
     }
@@ -129,9 +131,10 @@ void App::layoutGame() {
     _staticImages.sendVertexBuffer();
     AssetManager::Get()->_textProgram._program.use();
     _characters.load();
-    _texts.addText("Texte ici", "test", 0.5, glm::vec2(50, 50), glm::vec3(0.5));
+    _texts.addText("Texte ici", "test", 0.5f, glm::vec2(50, 50), glm::vec3(0.5));
     _texts.addText("Jouer (Enter)", "jouer", 0.5f, glm::vec2(450, 260), glm::vec3(1));
     _texts.addText("Quitter (Esc)", "quitter", 0.5f, glm::vec2(452, 180), glm::vec3(1));
+    _texts.addText("Oeufs de dragons : 0", "oeufs", 0.5f, glm::vec2(50, 670), glm::vec3(1));
 }
 
 

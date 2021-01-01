@@ -76,7 +76,7 @@ public:
     void Initialization();
     void DeleteText() ;
     void renderText(const CharactersManager &characters);
-
+    void replace(const std::string &newText);
 
 };
 
