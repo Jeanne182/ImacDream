@@ -11,20 +11,29 @@ enum ObjectsInteractive{
 
 class InteractiveObjectManager {
 private:
-//    std::vector<InteractiveObject> _objectsToFind;
+    GameObject _objectsToFind;
+    std::vector<bool> _exist;
+    int _nbObjects;
+    std::vector<std::pair<glm::vec3, float>> _eggs;
+
+
 
 public:
-    std::vector<InteractiveObject> _objectsToFind;//PRIVATE
-    inline InteractiveObjectManager(){ InteractiveObjectsManager();};
-    inline InteractiveObjectManager(std::vector<InteractiveObject> &objectsToFind):_objectsToFind(objectsToFind){};
+    InteractiveObjectManager();
+    inline InteractiveObjectManager(InteractiveObject &objectsToFind):_objectsToFind(objectsToFind){};
     void display(const glm::mat4 &cameraView);
     void deleteBuffers();
-    void InteractiveObjectsManager();
+    int selectedEgg(const glm::mat4 &cameraView, const glm::vec3 &cameraPosition);
+    void setBoolValue(const int id);
 
-    //GETTERS
+
+        //GETTERS
+    inline GameObject getObjects(){ return _objectsToFind ;};
+    inline std::vector<bool> getExist(){ return _exist ;};
 
 };
 
+bool isSelected(const glm::mat4 &cameraView, const glm::vec3 &cameraPosition,const glm::vec3 centerObj, const float radiusObj);
 
 
 #endif //IMACDREAM_INTERACTIVEOBJECTMANAGER_HPP

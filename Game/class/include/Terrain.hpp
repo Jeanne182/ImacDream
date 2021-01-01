@@ -16,6 +16,7 @@ private:
 //    std::vector<GameObject> _objectsDisplayed;
     std::vector<GameObject> _objects;
     std::map<const std::string, GameObject*> _objectsDisplayed;
+    std::map<std::tuple<int, int>, float> _mapTerrain;
 
 public:
 
@@ -24,6 +25,10 @@ public:
     void display(const glm::mat4 &cameraView);
     void deleteBuffers();
     void ObjectsManager();
+    void setMapTerrain();
+    float getTerrainHeight(const float x, const float z);
+
+
 
 
     //GETTERS

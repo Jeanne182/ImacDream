@@ -17,6 +17,7 @@ protected:
     glm::vec3 _center;
 //    Model *_model; //PRIVATE
 
+
 public :
     Model *_model;//PRIVATE
 
@@ -24,6 +25,7 @@ public :
     GameObject(const glm::vec3 &position, const float &scale, const glm::vec3 &angles, Model &model, const float &hitboxRadius, const glm::vec3 &center);
     GameObject(const GameObject &object);
     ~GameObject()=default;
+    GameObject()=default;
 
     //GETTERS
     inline glm::vec3 getPosition(){ return _position; };
@@ -53,10 +55,12 @@ public :
     void deleteBuffers();
     glm::vec3 findMax();
     glm::vec3 findMin();
-    int numberVertices();
+
 
 
 
 };
+
+
 
 #endif //IMACDREAM_GAMEOBJECT_HPP

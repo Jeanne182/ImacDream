@@ -9,7 +9,7 @@ class Camera {
 private :
     glm::vec3 m_Position;
     float m_fPhi, m_fTheta;
-    glm::vec3 m_FrontVector, m_LeftVector, m_UpVector;
+    //glm::vec3 m_FrontVector, m_LeftVector, m_UpVector;
     float _xOld = 0.f;
     float _yOld = 0.f;
     void computeDirectionVectors();
@@ -20,6 +20,7 @@ private :
     bool KEY_RIGHT_PRESSED = false;
 
 public:
+    glm::vec3 m_FrontVector, m_LeftVector, m_UpVector;//RPIVATE
     Camera():
             m_Position(glm::vec3(0.,0.,0.)), m_fPhi(M_PI), m_fTheta(0.){
         computeDirectionVectors();

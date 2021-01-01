@@ -6,6 +6,7 @@
 
 #IncludeRegexTransform: 
 
+<<<<<<< HEAD
 /home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/BBox.hpp
 glm.hpp
 /home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/glm.hpp
@@ -17,63 +18,19 @@ common.hpp
 /home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/common.hpp
 
 /home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/FilePath.hpp
+=======
+/home/fanny/ImacDream/Game/glimac/include/glimac/FilePath.hpp
+>>>>>>> Collision
 string
 -
 
-/home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/FreeflyCamera.hpp
-cmath
--
-glimac/glm.hpp
--
-
-/home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/Geometry.hpp
-glm/glm.hpp
--
-vector
--
-string
--
-Image.hpp
-/home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/Image.hpp
-FilePath.hpp
-/home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/FilePath.hpp
-BBox.hpp
-/home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/BBox.hpp
-
-/home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/Image.hpp
-vector
--
-memory
--
-unordered_map
--
-glm.hpp
-/home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/glm.hpp
-FilePath.hpp
-/home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/FilePath.hpp
-
-/home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/Program.hpp
-GL/glew.h
--
-Shader.hpp
-/home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/Shader.hpp
-FilePath.hpp
-/home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/FilePath.hpp
-
-/home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/SDLWindowManager.hpp
-cstdint
--
-SDL2/SDL.h
--
-glm.hpp
-/home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/glm.hpp
-
-/home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/Shader.hpp
+/home/fanny/ImacDream/Game/glimac/include/glimac/Shader.hpp
 GL/glew.h
 -
 string
 -
 FilePath.hpp
+<<<<<<< HEAD
 /home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/FilePath.hpp
 
 /home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/Sphere.hpp
@@ -155,8 +112,13 @@ iostream
 -
 
 /home/jeanne/Documents/S3/ImacDream/Game/glimac/src/Shader.cpp
+=======
+/home/fanny/ImacDream/Game/glimac/include/glimac/FilePath.hpp
+
+/home/fanny/ImacDream/Game/glimac/src/Shader.cpp
+>>>>>>> Collision
 glimac/Shader.hpp
-/home/jeanne/Documents/S3/ImacDream/Game/glimac/src/glimac/Shader.hpp
+/home/fanny/ImacDream/Game/glimac/src/glimac/Shader.hpp
 fstream
 -
 stdexcept
@@ -168,6 +130,7 @@ sstream
 iostream
 -
 
+<<<<<<< HEAD
 /home/jeanne/Documents/S3/ImacDream/Game/glimac/src/Sphere.cpp
 cmath
 -
@@ -966,3 +929,5 @@ detail/type_vec4.hpp
 detail/func_vector_relational.hpp
 /home/jeanne/Documents/S3/ImacDream/Game/third-party/include/glm/detail/func_vector_relational.hpp
 
+=======
+>>>>>>> Collision
