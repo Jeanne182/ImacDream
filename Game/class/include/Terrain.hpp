@@ -3,24 +3,21 @@
 
 #include "./GameObject.hpp"
 #include <vector>
+#include <map>
 
 enum TerrainObjects{
-    SPHERE,
     TREE,
-    TRUNK,
-    RUNE,
-    HUT,
-    TERRAIN,
-    TRIANGLE
+    TERRAIN
 };
 
 class Terrain {
 private:
 //    std::vector<GameObject> _objects;
-    std::vector<GameObject> _objectsDisplayed;
+//    std::vector<GameObject> _objectsDisplayed;
+    std::vector<GameObject> _objects;
+    std::map<const std::string, GameObject*> _objectsDisplayed;
 
 public:
-    std::vector<GameObject> _objects;//PRIVATE
 
     inline Terrain(){ ObjectsManager();};
     Terrain(std::vector<GameObject> &objects);

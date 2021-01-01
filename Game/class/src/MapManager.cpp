@@ -4,12 +4,12 @@
 
 
 void MapManager::setMapTerrain() {
-    for(auto meshes : _terrain._objects[TERRAIN]._model->_meshes){
-        for(auto vertices : meshes._vertices){
-           _mapTerrain[std::make_tuple(vertices.position.x*100, vertices.position.z*100)] = vertices.position.y;
-
-        }
-    }
+//    for(auto meshes : _terrain._objects[TERRAIN]._model->_meshes){
+//        for(auto vertices : meshes._vertices){
+//           _mapTerrain[std::make_tuple(vertices.position.x*100, vertices.position.z*100)] = vertices.position.y;
+//
+//        }
+//    }
 }
 
 float MapManager::getTerrainHeight(const float x, const float z){

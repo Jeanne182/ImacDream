@@ -70,6 +70,10 @@ void Text::renderText(const CharactersManager &characters) {
     glBindTexture(GL_TEXTURE_2D, 0);
 }
 
+void Text::replace(const std::string &newText) {
+    _text = newText;
+}
+
 
 void CharactersManager::load() {
     // TUTO : https://learnopengl.com/In-Practice/Text-Rendering
@@ -83,7 +87,7 @@ void CharactersManager::load() {
     }
 
     FT_Face face;
-    if(FT_New_Face(ft, "Assets/fonts/arial.ttf", 0, &face))
+    if(FT_New_Face(ft, "Assets/fonts/gameover.ttf", 0, &face))
     {
         std::cerr << "ERROR::FREETYPE: Failed to load font assets/fonts/Love_Craft.ttf" << std::endl;
         exit(EXIT_FAILURE);
@@ -164,3 +168,4 @@ void TextsManager::Delete() {
        it->second->DeleteText();
     }
 }
+
