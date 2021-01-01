@@ -6,45 +6,24 @@
 
 #IncludeRegexTransform: 
 
-<<<<<<< HEAD
-/home/jeanne/Documents/S3/ImacDream/Game/class/include/App.hpp
-glimac/SDLWindowManager.hpp
--
-../include/Game.hpp
-/home/jeanne/Documents/S3/ImacDream/Game/class/include/Game.hpp
-../include/Music.hpp
-/home/jeanne/Documents/S3/ImacDream/Game/class/include/Music.hpp
-../include/StaticImage.hpp
-/home/jeanne/Documents/S3/ImacDream/Game/class/include/StaticImage.hpp
-
-/home/jeanne/Documents/S3/ImacDream/Game/class/include/AssetsManager.hpp
-=======
 /home/fanny/ImacDream/Game/class/include/App.hpp
 glimac/SDLWindowManager.hpp
 -
 ../include/Game.hpp
 /home/fanny/ImacDream/Game/class/include/Game.hpp
+../include/Music.hpp
+/home/fanny/ImacDream/Game/class/include/Music.hpp
 ../include/StaticImage.hpp
 /home/fanny/ImacDream/Game/class/include/StaticImage.hpp
 ../include/Text.hpp
 /home/fanny/ImacDream/Game/class/include/Text.hpp
 
 /home/fanny/ImacDream/Game/class/include/AssetsManager.hpp
->>>>>>> Textes
 string
 -
 glimac/common.hpp
 -
 ./Model.hpp
-<<<<<<< HEAD
-/home/jeanne/Documents/S3/ImacDream/Game/class/include/Model.hpp
-./Program.hpp
-/home/jeanne/Documents/S3/ImacDream/Game/class/include/Program.hpp
-map
--
-
-/home/jeanne/Documents/S3/ImacDream/Game/class/include/Camera.hpp
-=======
 /home/fanny/ImacDream/Game/class/include/Model.hpp
 ./Program.hpp
 /home/fanny/ImacDream/Game/class/include/Program.hpp
@@ -52,25 +31,11 @@ map
 -
 
 /home/fanny/ImacDream/Game/class/include/Camera.hpp
->>>>>>> Textes
 glimac/glm.hpp
 -
 glimac/SDLWindowManager.hpp
 -
 
-<<<<<<< HEAD
-/home/jeanne/Documents/S3/ImacDream/Game/class/include/Game.hpp
-./Camera.hpp
-/home/jeanne/Documents/S3/ImacDream/Game/class/include/Camera.hpp
-./MapManager.hpp
-/home/jeanne/Documents/S3/ImacDream/Game/class/include/MapManager.hpp
-./Light.hpp
-/home/jeanne/Documents/S3/ImacDream/Game/class/include/Light.hpp
-./Skybox.hpp
-/home/jeanne/Documents/S3/ImacDream/Game/class/include/Skybox.hpp
-
-/home/jeanne/Documents/S3/ImacDream/Game/class/include/GameObject.hpp
-=======
 /home/fanny/ImacDream/Game/class/include/Game.hpp
 ./Camera.hpp
 /home/fanny/ImacDream/Game/class/include/Camera.hpp
@@ -78,72 +43,56 @@ glimac/SDLWindowManager.hpp
 /home/fanny/ImacDream/Game/class/include/MapManager.hpp
 ./Light.hpp
 /home/fanny/ImacDream/Game/class/include/Light.hpp
+./Skybox.hpp
+/home/fanny/ImacDream/Game/class/include/Skybox.hpp
 
 /home/fanny/ImacDream/Game/class/include/GameObject.hpp
->>>>>>> Textes
 glimac/common.hpp
 -
 ./Model.hpp
-/home/jeanne/Documents/S3/ImacDream/Game/class/include/Model.hpp
+/home/fanny/ImacDream/Game/class/include/Model.hpp
 glimac/SDLWindowManager.hpp
 -
 ./Camera.hpp
-/home/jeanne/Documents/S3/ImacDream/Game/class/include/Camera.hpp
+/home/fanny/ImacDream/Game/class/include/Camera.hpp
 
-/home/jeanne/Documents/S3/ImacDream/Game/class/include/InteractiveObject.hpp
+/home/fanny/ImacDream/Game/class/include/InteractiveObject.hpp
 vector
 -
 ./../include/Camera.hpp
-/home/jeanne/Documents/S3/ImacDream/Game/class/include/Camera.hpp
+/home/fanny/ImacDream/Game/class/include/Camera.hpp
 ./../include/GameObject.hpp
-<<<<<<< HEAD
-/home/jeanne/Documents/S3/ImacDream/Game/class/include/GameObject.hpp
-=======
 /home/fanny/ImacDream/Game/class/include/GameObject.hpp
->>>>>>> Textes
 glimac/glm.hpp
 -
 glimac/SDLWindowManager.hpp
 -
 
-<<<<<<< HEAD
-/home/jeanne/Documents/S3/ImacDream/Game/class/include/InteractiveObjectManager.hpp
-=======
 /home/fanny/ImacDream/Game/class/include/InteractiveObjectManager.hpp
->>>>>>> Textes
 ./GameObject.hpp
-/home/jeanne/Documents/S3/ImacDream/Game/class/include/GameObject.hpp
+/home/fanny/ImacDream/Game/class/include/GameObject.hpp
 ./InteractiveObject.hpp
-/home/jeanne/Documents/S3/ImacDream/Game/class/include/InteractiveObject.hpp
+/home/fanny/ImacDream/Game/class/include/InteractiveObject.hpp
 vector
 -
 
-<<<<<<< HEAD
-/home/jeanne/Documents/S3/ImacDream/Game/class/include/Light.hpp
-=======
 /home/fanny/ImacDream/Game/class/include/Light.hpp
->>>>>>> Textes
 glimac/glm.hpp
 -
 glimac/SDLWindowManager.hpp
 -
-<<<<<<< HEAD
 iostream
 -
 
-/home/jeanne/Documents/S3/ImacDream/Game/class/include/MapManager.hpp
+/home/fanny/ImacDream/Game/class/include/MapManager.hpp
 glimac/SDLWindowManager.hpp
 -
-=======
-
-/home/fanny/ImacDream/Game/class/include/MapManager.hpp
->>>>>>> Textes
 ./Terrain.hpp
-/home/jeanne/Documents/S3/ImacDream/Game/class/include/Terrain.hpp
+/home/fanny/ImacDream/Game/class/include/Terrain.hpp
 ./Camera.hpp
-/home/jeanne/Documents/S3/ImacDream/Game/class/include/Camera.hpp
+/home/fanny/ImacDream/Game/class/include/Camera.hpp
 ./InteractiveObjectManager.hpp
-/home/jeanne/Documents/S3/ImacDream/Game/class/include/InteractiveObjectManager.hpp
+/home/fanny/ImacDream/Game/class/include/InteractiveObjectManager.hpp
 glimac/SDLWindowManager.hpp
 -
 map
@@ -151,9 +100,9 @@ map
 tuple
 -
 ./Water.hpp
-/home/jeanne/Documents/S3/ImacDream/Game/class/include/Water.hpp
+/home/fanny/ImacDream/Game/class/include/Water.hpp
 
-/home/jeanne/Documents/S3/ImacDream/Game/class/include/Mesh.hpp
+/home/fanny/ImacDream/Game/class/include/Mesh.hpp
 glimac/Program.hpp
 -
 GL/glew.h
@@ -179,7 +128,7 @@ assimp/scene.h
 assimp/postprocess.h
 -
 
-/home/jeanne/Documents/S3/ImacDream/Game/class/include/Model.hpp
+/home/fanny/ImacDream/Game/class/include/Model.hpp
 glimac/Program.hpp
 -
 GL/glew.h
@@ -197,31 +146,21 @@ sstream
 iostream
 -
 ./Mesh.hpp
-<<<<<<< HEAD
-/home/jeanne/Documents/S3/ImacDream/Game/class/include/Mesh.hpp
-
-/home/jeanne/Documents/S3/ImacDream/Game/class/include/Music.hpp
-
-/home/jeanne/Documents/S3/ImacDream/Game/class/include/Program.hpp
-=======
 /home/fanny/ImacDream/Game/class/include/Mesh.hpp
 
+/home/fanny/ImacDream/Game/class/include/Music.hpp
+
 /home/fanny/ImacDream/Game/class/include/Program.hpp
->>>>>>> Textes
 glimac/Program.hpp
 -
 glimac/FilePath.hpp
 -
 
-<<<<<<< HEAD
-/home/jeanne/Documents/S3/ImacDream/Game/class/include/Skybox.hpp
+/home/fanny/ImacDream/Game/class/include/Skybox.hpp
 ../include/GameObject.hpp
-/home/jeanne/Documents/S3/ImacDream/Game/class/include/GameObject.hpp
+/home/fanny/ImacDream/Game/class/include/GameObject.hpp
 
-/home/jeanne/Documents/S3/ImacDream/Game/class/include/StaticImage.hpp
-=======
 /home/fanny/ImacDream/Game/class/include/StaticImage.hpp
->>>>>>> Textes
 iostream
 -
 glimac/glm.hpp
@@ -241,15 +180,12 @@ glimac/common.hpp
 map
 -
 
-/home/jeanne/Documents/S3/ImacDream/Game/class/include/Terrain.hpp
+/home/fanny/ImacDream/Game/class/include/Terrain.hpp
 ./GameObject.hpp
-/home/jeanne/Documents/S3/ImacDream/Game/class/include/GameObject.hpp
+/home/fanny/ImacDream/Game/class/include/GameObject.hpp
 vector
 -
 
-<<<<<<< HEAD
-/home/jeanne/Documents/S3/ImacDream/Game/class/include/Utils.hpp
-=======
 /home/fanny/ImacDream/Game/class/include/Text.hpp
 ft2build.h
 -
@@ -272,44 +208,39 @@ map
 utility
 -
 
-/home/fanny/ImacDream/Game/class/include/Utils.hpp
->>>>>>> Textes
+/home/fanny/ImacDream/Game/class/include/Water.hpp
+./GameObject.hpp
+/home/fanny/ImacDream/Game/class/include/GameObject.hpp
+
+/home/fanny/ImacDream/Game/class/src/main.cpp
+glimac/SDLWindowManager.hpp
+-
+GL/glew.h
+-
+iostream
+-
+glimac/FilePath.hpp
+-
 glimac/glm.hpp
 -
+./../include/Camera.hpp
+/home/fanny/ImacDream/Game/class/include/Camera.hpp
+./../include/Mesh.hpp
+/home/fanny/ImacDream/Game/class/include/Mesh.hpp
 ./../include/GameObject.hpp
-/home/jeanne/Documents/S3/ImacDream/Game/class/include/GameObject.hpp
-
-<<<<<<< HEAD
-/home/jeanne/Documents/S3/ImacDream/Game/class/include/Water.hpp
-./GameObject.hpp
-/home/jeanne/Documents/S3/ImacDream/Game/class/include/GameObject.hpp
-
-/home/jeanne/Documents/S3/ImacDream/Game/class/src/App.cpp
-../include/App.hpp
-/home/jeanne/Documents/S3/ImacDream/Game/class/include/App.hpp
-../include/AssetsManager.hpp
-/home/jeanne/Documents/S3/ImacDream/Game/class/include/AssetsManager.hpp
-../include/AssetsManager.hpp
-/home/jeanne/Documents/S3/ImacDream/Game/class/include/AssetsManager.hpp
-=======
-/home/fanny/ImacDream/Game/class/src/App.cpp
-../include/App.hpp
+/home/fanny/ImacDream/Game/class/include/GameObject.hpp
+./../include/Terrain.hpp
+/home/fanny/ImacDream/Game/class/include/Terrain.hpp
+./../include/App.hpp
 /home/fanny/ImacDream/Game/class/include/App.hpp
-../include/AssetsManager.hpp
+./../include/AssetsManager.hpp
 /home/fanny/ImacDream/Game/class/include/AssetsManager.hpp
->>>>>>> Textes
-../include/Utils.hpp
-/home/jeanne/Documents/S3/ImacDream/Game/class/include/Utils.hpp
 
-/home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/FilePath.hpp
+/home/fanny/ImacDream/Game/glimac/include/glimac/FilePath.hpp
 string
 -
 
-<<<<<<< HEAD
-/home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/Image.hpp
-=======
 /home/fanny/ImacDream/Game/glimac/include/glimac/Image.hpp
->>>>>>> Textes
 vector
 -
 memory
@@ -317,31 +248,19 @@ memory
 unordered_map
 -
 glm.hpp
-<<<<<<< HEAD
-/home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/glm.hpp
-FilePath.hpp
-/home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/FilePath.hpp
-
-/home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/Program.hpp
-=======
 /home/fanny/ImacDream/Game/glimac/include/glimac/glm.hpp
 FilePath.hpp
 /home/fanny/ImacDream/Game/glimac/include/glimac/FilePath.hpp
 
 /home/fanny/ImacDream/Game/glimac/include/glimac/Program.hpp
->>>>>>> Textes
 GL/glew.h
 -
 Shader.hpp
-/home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/Shader.hpp
+/home/fanny/ImacDream/Game/glimac/include/glimac/Shader.hpp
 FilePath.hpp
-/home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/FilePath.hpp
+/home/fanny/ImacDream/Game/glimac/include/glimac/FilePath.hpp
 
-<<<<<<< HEAD
-/home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/SDLWindowManager.hpp
-=======
 /home/fanny/ImacDream/Game/glimac/include/glimac/SDLWindowManager.hpp
->>>>>>> Textes
 cstdint
 -
 SDL2/SDL.h
@@ -357,31 +276,15 @@ string
 FilePath.hpp
 /home/fanny/ImacDream/Game/glimac/include/glimac/FilePath.hpp
 
-<<<<<<< HEAD
-/home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/Shader.hpp
-GL/glew.h
--
-string
--
-FilePath.hpp
-/home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/FilePath.hpp
-
-/home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/common.hpp
-=======
 /home/fanny/ImacDream/Game/glimac/include/glimac/common.hpp
->>>>>>> Textes
 GL/glew.h
 -
 glm.hpp
-/home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/glm.hpp
+/home/fanny/ImacDream/Game/glimac/include/glimac/glm.hpp
 memory
 -
 
-<<<<<<< HEAD
-/home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/glm.hpp
-=======
 /home/fanny/ImacDream/Game/glimac/include/glimac/glm.hpp
->>>>>>> Textes
 glm/glm.hpp
 -
 glm/gtc/matrix_transform.hpp
@@ -395,13 +298,9 @@ glm/gtx/io.hpp
 glm/gtc/random.hpp
 -
 
-<<<<<<< HEAD
-/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/Compiler/poppack1.h
-=======
 /home/fanny/ImacDream/Game/third-party/include/assimp/Compiler/poppack1.h
->>>>>>> Textes
 
-/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/Compiler/pstdint.h
+/home/fanny/ImacDream/Game/third-party/include/assimp/Compiler/pstdint.h
 stddef.h
 -
 limits.h
@@ -421,61 +320,61 @@ stdio.h
 string.h
 -
 
-/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/Compiler/pushpack1.h
+/home/fanny/ImacDream/Game/third-party/include/assimp/Compiler/pushpack1.h
 
-/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/Importer.hpp
+/home/fanny/ImacDream/Game/third-party/include/assimp/Importer.hpp
 assimp/types.h
 -
 
-/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/anim.h
+/home/fanny/ImacDream/Game/third-party/include/assimp/anim.h
 assimp/types.h
 -
 assimp/quaternion.h
 -
 
-/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/camera.h
+/home/fanny/ImacDream/Game/third-party/include/assimp/camera.h
 types.h
-/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/types.h
+/home/fanny/ImacDream/Game/third-party/include/assimp/types.h
 
-/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/color4.h
+/home/fanny/ImacDream/Game/third-party/include/assimp/color4.h
 defs.h
-/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/defs.h
+/home/fanny/ImacDream/Game/third-party/include/assimp/defs.h
 
-/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/color4.inl
+/home/fanny/ImacDream/Game/third-party/include/assimp/color4.inl
 color4.h
-/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/color4.h
+/home/fanny/ImacDream/Game/third-party/include/assimp/color4.h
 
-/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/config.h
+/home/fanny/ImacDream/Game/third-party/include/assimp/config.h
 
-/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/defs.h
+/home/fanny/ImacDream/Game/third-party/include/assimp/defs.h
 assimp/config.h
 -
 
-/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/light.h
+/home/fanny/ImacDream/Game/third-party/include/assimp/light.h
 types.h
-/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/types.h
+/home/fanny/ImacDream/Game/third-party/include/assimp/types.h
 
-/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/material.h
+/home/fanny/ImacDream/Game/third-party/include/assimp/material.h
 types.h
-/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/types.h
+/home/fanny/ImacDream/Game/third-party/include/assimp/types.h
 ./Compiler/pushpack1.h
-/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/Compiler/pushpack1.h
+/home/fanny/ImacDream/Game/third-party/include/assimp/Compiler/pushpack1.h
 ./Compiler/poppack1.h
-/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/Compiler/poppack1.h
+/home/fanny/ImacDream/Game/third-party/include/assimp/Compiler/poppack1.h
 material.inl
-/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/material.inl
+/home/fanny/ImacDream/Game/third-party/include/assimp/material.inl
 
-/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/material.inl
+/home/fanny/ImacDream/Game/third-party/include/assimp/material.inl
 
-/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/matrix3x3.h
+/home/fanny/ImacDream/Game/third-party/include/assimp/matrix3x3.h
 defs.h
-/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/defs.h
+/home/fanny/ImacDream/Game/third-party/include/assimp/defs.h
 
-/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/matrix3x3.inl
+/home/fanny/ImacDream/Game/third-party/include/assimp/matrix3x3.inl
 matrix3x3.h
-/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/matrix3x3.h
+/home/fanny/ImacDream/Game/third-party/include/assimp/matrix3x3.h
 matrix4x4.h
-/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/matrix4x4.h
+/home/fanny/ImacDream/Game/third-party/include/assimp/matrix4x4.h
 algorithm
 -
 cmath
@@ -483,19 +382,19 @@ cmath
 limits
 -
 
-/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/matrix4x4.h
+/home/fanny/ImacDream/Game/third-party/include/assimp/matrix4x4.h
 vector3.h
-/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/vector3.h
+/home/fanny/ImacDream/Game/third-party/include/assimp/vector3.h
 defs.h
-/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/defs.h
+/home/fanny/ImacDream/Game/third-party/include/assimp/defs.h
 
-/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/matrix4x4.inl
+/home/fanny/ImacDream/Game/third-party/include/assimp/matrix4x4.inl
 matrix4x4.h
-/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/matrix4x4.h
+/home/fanny/ImacDream/Game/third-party/include/assimp/matrix4x4.h
 matrix3x3.h
-/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/matrix3x3.h
+/home/fanny/ImacDream/Game/third-party/include/assimp/matrix3x3.h
 quaternion.h
-/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/quaternion.h
+/home/fanny/ImacDream/Game/third-party/include/assimp/quaternion.h
 algorithm
 -
 limits
@@ -503,15 +402,6 @@ limits
 cmath
 -
 
-<<<<<<< HEAD
-/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/mesh.h
-types.h
-/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/types.h
-
-/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/metadata.h
-Compiler/pstdint.h
-/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/Compiler/pstdint.h
-=======
 /home/fanny/ImacDream/Game/third-party/include/assimp/mesh.h
 types.h
 /home/fanny/ImacDream/Game/third-party/include/assimp/types.h
@@ -519,59 +409,10 @@ types.h
 /home/fanny/ImacDream/Game/third-party/include/assimp/metadata.h
 Compiler/pstdint.h
 /home/fanny/ImacDream/Game/third-party/include/assimp/Compiler/pstdint.h
->>>>>>> Textes
 stdint.h
 -
 string
 -
-<<<<<<< HEAD
-
-/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/postprocess.h
-types.h
-/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/types.h
-
-/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/quaternion.h
-defs.h
-/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/defs.h
-
-/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/scene.h
-types.h
-/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/types.h
-texture.h
-/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/texture.h
-mesh.h
-/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/mesh.h
-light.h
-/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/light.h
-camera.h
-/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/camera.h
-material.h
-/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/material.h
-anim.h
-/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/anim.h
-metadata.h
-/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/metadata.h
-
-/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/texture.h
-types.h
-/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/types.h
-./Compiler/pushpack1.h
-/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/Compiler/pushpack1.h
-./Compiler/poppack1.h
-/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/Compiler/poppack1.h
-
-/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/types.h
-sys/types.h
--
-stddef.h
--
-string.h
--
-limits.h
--
-defs.h
-/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/defs.h
-=======
 
 /home/fanny/ImacDream/Game/third-party/include/assimp/postprocess.h
 types.h
@@ -676,87 +517,24 @@ defs.h
 /home/fanny/ImacDream/Game/third-party/include/assimp/defs.h
 
 /home/fanny/ImacDream/Game/third-party/include/assimp/vector3.inl
->>>>>>> Textes
 vector3.h
-/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/vector3.h
-vector2.h
-/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/vector2.h
-color4.h
-/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/color4.h
-matrix3x3.h
-/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/matrix3x3.h
-matrix4x4.h
-/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/matrix4x4.h
-quaternion.h
-/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/quaternion.h
-cstring
--
-new
--
-string
--
-vector2.inl
-/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/vector2.inl
-vector3.inl
-/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/vector3.inl
-color4.inl
-/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/color4.inl
-quaternion.inl
-/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/quaternion.inl
-matrix3x3.inl
-/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/matrix3x3.inl
-matrix4x4.inl
-/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/matrix4x4.inl
-
-/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/vector2.h
-cmath
--
-math.h
--
-./Compiler/pushpack1.h
-/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/Compiler/pushpack1.h
-defs.h
-/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/defs.h
-./Compiler/poppack1.h
-/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/Compiler/poppack1.h
-
-/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/vector2.inl
-vector2.h
-/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/vector2.h
+/home/fanny/ImacDream/Game/third-party/include/assimp/vector3.h
 cmath
 -
 
-/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/vector3.h
-cmath
--
-math.h
--
-defs.h
-/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/defs.h
-
-/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/vector3.inl
-vector3.h
-/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/assimp/vector3.h
-cmath
--
-
-/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/glm/common.hpp
+/home/fanny/ImacDream/Game/third-party/include/glm/common.hpp
 detail/func_common.hpp
-/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/glm/detail/func_common.hpp
+/home/fanny/ImacDream/Game/third-party/include/glm/detail/func_common.hpp
 
-/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/glm/detail/_fixes.hpp
+/home/fanny/ImacDream/Game/third-party/include/glm/detail/_fixes.hpp
 cmath
 -
 
-/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/glm/detail/_swizzle.hpp
+/home/fanny/ImacDream/Game/third-party/include/glm/detail/_swizzle.hpp
 
-/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/glm/detail/_swizzle_func.hpp
+/home/fanny/ImacDream/Game/third-party/include/glm/detail/_swizzle_func.hpp
 
-<<<<<<< HEAD
-/home/jeanne/Documents/S3/ImacDream/Game/third-party/include/glm/detail/_vectorize.hpp
-=======
 /home/fanny/ImacDream/Game/third-party/include/glm/detail/_vectorize.hpp
->>>>>>> Textes
 type_vec1.hpp
 /home/fanny/ImacDream/Game/third-party/include/glm/detail/type_vec1.hpp
 type_vec2.hpp

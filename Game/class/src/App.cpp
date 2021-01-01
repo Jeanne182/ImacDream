@@ -111,10 +111,10 @@ void App::layoutGame() {
     layout2D();
     try
     {
+        AssetManager::Get()->_staticImageProgram._program.use();
         _staticImages.addImage("cursor", 0.f, 0.f, 0.1f);
         _staticImages.addImage("menu", 0.f, 0.f, 2.f);
         _staticImages.addImage("gameover", 0.f, 0.f, 2.f);
-        AssetManager::Get()->_staticImageProgram._program.use();
     }
     catch (std::exception &e)
     {

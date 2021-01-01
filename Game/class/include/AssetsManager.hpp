@@ -42,7 +42,7 @@ public:
               _skyboxProgram(_appPath),
               _staticImageProgram(_appPath),
               _waterProgram(_appPath),
-              _P(P)
+              _P(P),
               _textProgram(_appPath),
               _width(width),
               _height(height)
