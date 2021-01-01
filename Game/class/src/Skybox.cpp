@@ -32,15 +32,9 @@ void Skybox::computeMatrix(const glm::mat4 &cameraView) {
 }
 
 void Skybox::DrawSky() const {
-    GLuint diffuseNr = 1;
     for (GLuint i = 0; i < _textures.size(); i++) {
         glActiveTexture(GL_TEXTURE0 + i);
-        std::string number;
-        std::string name = _textures[i].type;
 
-        if (name == "texture_diffuse") {
-            number = std::to_string(diffuseNr++);
-        }
 
         glUniform1i(AssetManager::Get()->_skyboxProgram.Texture_Location(), i);
 

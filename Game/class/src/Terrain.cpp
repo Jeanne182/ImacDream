@@ -20,9 +20,7 @@ void Terrain::display(const glm::mat4 &cameraView) {
     _objects[TREE].update(cameraView);
 
     _objects[RUNE].update(cameraView);
-    _objects[HUT].update(cameraView);
     _objects[TERRAIN].update(cameraView);
-    //_objects[TRIANGLE].update(cameraView);
 
 }
 
@@ -31,7 +29,6 @@ void Terrain::deleteBuffers() {
         _object.deleteBuffers();
         delete &_object;
     }
-    delete &_objects;
     _objects.clear();
 }
 
@@ -53,7 +50,7 @@ void Terrain::ObjectsManager() {
         meshVertices.push_back(sphere.getDataPointer()[i]);
     }
     Mesh* sphereMesh = new Mesh(meshVertices, indices, textures, material);
-    Model* sphereModel = new Model();
+    auto* sphereModel = new Model();
     sphereModel->_meshes.push_back(*sphereMesh);
     GameObject sphereObject(glm::vec3(0.f,0.f,0.f), 1.f, glm::vec3(0.f, 0.f, 0.f), *sphereModel, 0, glm::vec3(0, 0, 0));
     objects->push_back(sphereObject);
@@ -64,24 +61,20 @@ void Terrain::ObjectsManager() {
     GameObject treeObject(glm::vec3(0.f,0.f,0.f), 1.f, glm::vec3(0.f, 0.f, 0.f), *tree, 0, glm::vec3(0, 0, 0));
     objects->push_back(treeObject);
 
-    //TRUNK
-    auto* trunk = new Model(modelsPath + "/trunk.obj");
-    GameObject trunkObject(glm::vec3(0.f,0.f,0.f), 1.f, glm::vec3(0.f, 0.f, 0.f), *trunk, 0, glm::vec3(0, 0, 0));
-    objects->push_back(trunkObject);
+//    //TRUNK
+//    auto* trunk = new Model(modelsPath + "/trunk.obj");
+//    GameObject trunkObject(glm::vec3(0.f,0.f,0.f), 1.f, glm::vec3(0.f, 0.f, 0.f), *trunk, 0, glm::vec3(0, 0, 0));
+//    objects->push_back(trunkObject);
 
     //RUNE
-    Model* rune = new Model(modelsPath + "/runejeanne.obj");
+    auto* rune = new Model(modelsPath + "/runejeanne.obj");
     GameObject runeObject(glm::vec3(-30.f,0.f,-5.f), 6.f, glm::vec3(90.f, 0.f, 0.f), *rune, 0, glm::vec3(0, 0, 0));
     objects->push_back(runeObject);
 
-   //HUT
-    Model* hut = new Model(modelsPath + "/hut.obj");
-    GameObject hutObject(glm::vec3(-30.f,0.f,-5.f), 6.f, glm::vec3(90.f, 0.f, 0.f), *hut, 0, glm::vec3(0, 0, 0));
-    objects->push_back(hutObject);
 
 
     //TERRAIN
-    Model* terrain = new Model(modelsPath + "/terrain.obj");
+    auto* terrain = new Model(modelsPath + "/terrain.obj");
     GameObject terrainObject(glm::vec3(0.f,-70.f,0.f), 1.f, glm::vec3(0.f, 0.f, 0.f), *terrain, 0, glm::vec3(0, 0, 0));
     objects->push_back(terrainObject);
 

@@ -25,19 +25,19 @@ private:
 
     int _layout = LAYOUT_GAME;
     Game _game;
-//    Music _music;
+    Music _music;
     StaticImageManager _staticImages;
 
 public:
     //CONSTRUCTOR
-//    inline App():_game(){_music.playGame(); };
-    inline App():_game(){};
+    inline App():_game(), _music(){_music.playGame(); };
+   // inline App():_game(){};
 
 
     void draw();
     void event(const SDL_Event &e);
-//    inline void Delete(){ _game.Delete(); _music.Delete(); };
-    inline void Delete(){ _game.Delete();};
+    inline void Delete(){ _game.Delete(); _music.Delete(); };
+ //   inline void Delete(){ _game.Delete();};
 
 
     //LAYOUTS

@@ -4,7 +4,7 @@
 #include "../include/Utils.hpp"
 
 void App::event(const SDL_Event &e) {
-    if (_layout = LAYOUT_GAME){
+    if (_layout == LAYOUT_GAME){
         _game.event(e);
     }
 
