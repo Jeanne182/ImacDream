@@ -23,6 +23,7 @@ public :
     //CONSTRUCTORS & DESCTRUCTOR
     GameObject(const glm::vec3 &position, const float &scale, const glm::vec3 &angles, Model &model, const float &hitboxRadius, const glm::vec3 &center);
     GameObject(const GameObject &object);
+    GameObject()=default;
 
     //GETTERS
     inline glm::vec3 getPosition(){ return _position; };
@@ -41,6 +42,8 @@ public :
     inline void addScale(float scale){ _scale += scale; }
     void setHitboxRadius();
     void setCenter();
+    bool isSelected(const glm::mat4 &cameraView, const glm::vec3 &cameraPosition);
+
 
 
     //METHODS

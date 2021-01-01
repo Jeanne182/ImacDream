@@ -61,6 +61,7 @@ public:
     //Paths
     std::string modelFile(const std::string &model) const;
     std::string textureFile(const std::string &texture) const;
+    std::string fontFile(const std::string &font) const;
 };
 
 #endif //IMACDREAM_ASSETSMANAGER_HPP

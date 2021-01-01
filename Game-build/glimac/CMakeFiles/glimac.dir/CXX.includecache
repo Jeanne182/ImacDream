@@ -6,3 +6,27 @@
 
 #IncludeRegexTransform: 
 
+/home/fanny/ImacDream/Game/glimac/include/glimac/FilePath.hpp
+string
+-
+
+/home/fanny/ImacDream/Game/glimac/include/glimac/Shader.hpp
+GL/glew.h
+-
+string
+-
+FilePath.hpp
+/home/fanny/ImacDream/Game/glimac/include/glimac/FilePath.hpp
+
+/home/fanny/ImacDream/Game/glimac/src/Shader.cpp
+glimac/Shader.hpp
+/home/fanny/ImacDream/Game/glimac/src/glimac/Shader.hpp
+fstream
+-
+stdexcept
+-
+string
+-
+sstream
+-
+

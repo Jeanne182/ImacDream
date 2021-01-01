@@ -67,7 +67,7 @@ glimac/SDLWindowManager.hpp
 /home/fanny/ImacDream/Game/class/include/GameObject.hpp
 ./InteractiveObject.hpp
 /home/fanny/ImacDream/Game/class/include/InteractiveObject.hpp
-vector
+map
 -
 
 /home/fanny/ImacDream/Game/class/include/Light.hpp
@@ -196,6 +196,8 @@ glimac/glm.hpp
 ../include/AssetsManager.hpp
 /home/fanny/ImacDream/Game/class/include/AssetsManager.hpp
 glimac/Sphere.hpp
+-
+map
 -
 
 /home/fanny/ImacDream/Game/class/src/MapManager.cpp

@@ -41,14 +41,11 @@ float Terrain::getTerrainHeight(const float x, const float z){
 }
 */
 void Terrain::display(const glm::mat4 &cameraView) {
-
-    setMapTerrain();
+    //setMapTerrain();
     _objects[TREE].setPosition(glm::vec3(5.f, 0.f, -5.f));
     _objects[TREE].setCenter();
     _objects[TREE].setHitboxRadius();
     _objects[TREE].update(cameraView);
-
-
 
     _objects[SPHERE].setPosition(glm::vec3(0.5f, 0.f, -5.f));
     _objects[SPHERE].setCenter();

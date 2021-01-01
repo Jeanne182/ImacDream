@@ -3,7 +3,7 @@
 
 #include "./GameObject.hpp"
 #include "./InteractiveObject.hpp"
-#include <vector>
+#include <map>
 
 enum ObjectsInteractive{
 
@@ -11,17 +11,20 @@ enum ObjectsInteractive{
 
 class InteractiveObjectManager {
 private:
-    std::vector<InteractiveObject> _objectsToFind;
+    GameObject _objectsToFind;
+    std::vector<bool> _exist;
+    int nbObjects=8;
+
+
 
 public:
-    inline InteractiveObjectManager(){ InteractiveObjectsManager();};
-    inline InteractiveObjectManager(std::vector<InteractiveObject> &objectsToFind):_objectsToFind(objectsToFind){};
+    InteractiveObjectManager();
+    inline InteractiveObjectManager(InteractiveObject &objectsToFind):_objectsToFind(objectsToFind){};
     void display(const glm::mat4 &cameraView);
     void deleteBuffers();
-    void InteractiveObjectsManager();
 
     //GETTERS
-    inline std::vector<InteractiveObject> getObjects(){ return _objectsToFind ;};
+    inline GameObject getObjects(){ return _objectsToFind ;};
 
 };
 

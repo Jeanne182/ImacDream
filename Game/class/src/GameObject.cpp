@@ -116,4 +116,46 @@ glm::vec3 GameObject::findMin(){
 
 
 
+// test if the camera is pointing on an object
+
+bool GameObject::isSelected(const glm::mat4 &cameraView, const glm::vec3 &cameraPosition) {
+
+
+    // Distance between the camera and the center of the interactive object
+    glm::vec3 distanceVector = glm::vec3(cameraView*glm::vec4(getCenter(), 1.)) ;
+    std::cout << "cameraPosition : " << cameraPosition << std::endl;
+    std::cout << "distanceVector : " << distanceVector << std::endl;
+
+    glm::vec3 directionVectorCam = glm::vec3(glm::vec4(0, 0, -1, 0));
+
+    std::cout << "directionVectorCam : " <<directionVectorCam << std::endl;
+
+    // Find the direction vector of the camera ray
+    //glm::vec3 directionVectorCam = glm::vec3(cameraPosition.x, cameraPosition.y, cameraPosition.z-1.) - cameraPosition ;
+
+    // Distance between the camera and the center of the interactive object projected on the camera vector
+    double distanceToCenter = dotProduct(distanceVector, directionVectorCam) ;
+    std::cout << "distanceToCenter : " << distanceToCenter << std::endl;
+
+    // Check if the ray intersect the sphere or not depending on the position of the camera
+    if(distanceToCenter < 0){
+        return false;
+    }
+
+    // Find the closest distance between the center of the object on the camera ray (ortho proj)
+    double distanceToRay = sqrt(abs(pow(distanceToCenter, 2) - dotProduct(distanceVector, distanceVector)));
+    std::cout << "hitbox radius : " << _hitboxRadius << std::endl;
+    std::cout << "distanceToRay : " << distanceToRay << std::endl;
+
+    // Check if the ray intersect the sphere or not depending on the radius
+    if(distanceToRay > _hitboxRadius){
+        return false ;
+    }
+
+    return true;
+
+}
+
+
+
 
