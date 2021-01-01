@@ -10,7 +10,6 @@ void MapManager::setMapTerrain() {
 
         }
     }
-
 }
 
 float MapManager::getTerrainHeight(const float x, const float z){

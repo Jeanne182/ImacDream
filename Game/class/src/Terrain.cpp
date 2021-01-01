@@ -82,7 +82,7 @@ void Terrain::ObjectsManager() {
 
     //TERRAIN
     Model* terrain = new Model(modelsPath + "/terrain.obj");
-    GameObject terrainObject(glm::vec3(0.f,-70.f,0.f), 1.f, glm::vec3(0.f, 0.f, 0.f), *terrain, 0, glm::vec3(0, 0, 0));
+    GameObject terrainObject(glm::vec3(0.f,0.f,0.f), 1.f, glm::vec3(0.f, 0.f, 0.f), *terrain, 0, glm::vec3(0, 0, 0));
     objects->push_back(terrainObject);
 
 

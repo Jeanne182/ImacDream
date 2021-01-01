@@ -30,7 +30,7 @@ public:
 
     //CONSTRUCTOR
 //    inline App():_game(){_music.playGame(); };
-    inline App():_game(), _layout(LAYOUT_MENU){};
+    inline App():_game(), _layout(LAYOUT_GAME){};
 
 
     void draw();

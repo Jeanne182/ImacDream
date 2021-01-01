@@ -105,7 +105,7 @@ public:
 
 class WaterProgram {
 private:
-    GLint _M_Location, _MV_Location, _MVP_Location, _N_Location;
+    GLint _M_Location, _MV_Location, _MVP_Location, _N_Location, _waveTime_Location;
     GLint _ViewPos_Location, _Shininess_Location,_LightPos_Location, _LightIntensity_Location, _Texture_Location;
 
     GLint _Ambiant_Location, _Diffuse_Location, _Specular_Location;
@@ -120,6 +120,7 @@ public:
         _MV_Location = glGetUniformLocation(_program.getGLId(), "uMVMatrix");
         _MVP_Location = glGetUniformLocation(_program.getGLId(), "uMVPMatrix");
         _N_Location = glGetUniformLocation(_program.getGLId(), "uNormalMatrix");
+        _waveTime_Location = glGetUniformLocation(_program.getGLId(), "waveTime");
 
         //Color
         _Ambiant_Location = glGetUniformLocation(_program.getGLId(), "uAmbiant");
@@ -139,6 +140,7 @@ public:
     inline GLint MV_Location(){ return _MV_Location; };
     inline GLint MVP_Location(){ return _MVP_Location; };
     inline GLint N_Location(){ return _N_Location; };
+    inline GLint waveTime_Location(){ return _waveTime_Location; };
 
     inline GLint Ambiant_Location(){ return _Ambiant_Location; };
     inline GLint Diffuse_Location(){ return _Diffuse_Location; };
