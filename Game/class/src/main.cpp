@@ -10,8 +10,8 @@
 #include "./../include/App.hpp"
 #include "./../include/AssetsManager.hpp"
 
-
 using namespace glimac;
+
 
 int main(int argc, char** argv) {
     // Initialize SDL and open a window
@@ -31,11 +31,16 @@ int main(int argc, char** argv) {
 
     glm::mat4 ProjMatrix = glm::perspective(glm::radians(70.f), ratio, 0.1f, 100.f);
     AssetManager::Create(argv, ProjMatrix, WINDOW_WIDTH, WINDOW_HEIGHT);
+
+
+
     App app;
     app.layoutGame();
+
+
     glEnable(GL_DEPTH_TEST); // Activation du test de profondeur GPU
 
-    SDL_SetRelativeMouseMode(SDL_TRUE ); //To comment if want to debug
+    //SDL_SetRelativeMouseMode(SDL_TRUE ); //To comment if want to debug
 
     // Application loop:
     bool done = false;
@@ -66,13 +71,11 @@ int main(int argc, char** argv) {
                     break;
             }
         }
-
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); // On nettoie la fenêtre afin de ne pas avoir de résidu du tour précédent
 
         app.draw();
         windowManager.swapBuffers();
     }
-
     app.Delete();
     return EXIT_SUCCESS;
 }

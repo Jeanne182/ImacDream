@@ -27,7 +27,8 @@ void App::drawGame() {
         AssetManager::Get()->_staticImageProgram._program.use();
         _staticImages.displayImage("cursor");
         AssetManager::Get()->_textProgram._program.use();
-        //_texts.renderText(*_texts.getText());
+        _texts.getText("test")->renderText(_characters);
+
 
     }
     catch(std::exception &e){
@@ -39,6 +40,7 @@ void App::layout2D() {
     glEnable(GL_BLEND);
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
     glDisable(GL_DEPTH_TEST);
+
 }
 
 void App::layout3D() {
@@ -53,10 +55,6 @@ void App::layoutGame() {
     {
         AssetManager::Get()->_staticImageProgram._program.use();
         _staticImages.addImage("cursor", 0.f, 0.f, 0.05f);
-        AssetManager::Get()->_textProgram._program.use();
-        //_texts.getText()->load();
-
-
 
     }
     catch (std::exception &e)
@@ -66,8 +64,7 @@ void App::layoutGame() {
     AssetManager::Get()->_staticImageProgram._program.use();
     _staticImages.sendVertexBuffer();
     AssetManager::Get()->_textProgram._program.use();
-    //_texts.Initialization("Ceci est un texte", 1., glm::vec2(50, 650), glm::vec3(1.0));
-
-
+    _characters.load();
+    _texts.addText("Texte ici", "test", 0.5, glm::vec2(50, 50), glm::vec3(0.5));
 
 }

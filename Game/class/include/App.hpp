@@ -26,17 +26,18 @@ private:
     int _layout = LAYOUT_GAME;
     Game _game;
     StaticImageManager _staticImages;
-    TextManager _texts;
+    TextsManager _texts;
+    CharactersManager _characters;
 
 public:
     //CONSTRUCTOR
-    inline App():_game(){};
+    inline App():_game(), _texts(), _characters(){};//static ?
 
 
 
     void draw();
     void event(const SDL_Event &e);
-    inline void Delete(){ _game.Delete(); };
+    inline void Delete(){ _game.Delete(); _texts.Delete(); _characters.Delete(); };
 
     //LAYOUTS
     void drawGame();

@@ -2,19 +2,11 @@
 #include "../include/AssetsManager.hpp"
 #include <iostream>
 
-void TextManager::Initialization(std::string text, const float &scale, const glm::vec2 &pos, const glm::vec3 &color) {
-    _text = std::move(text);
-    _scale = scale;
-    _pos = pos;
-    _color = color;
-    _projection_matrix = glm::ortho(0.f, AssetManager::Get()->getWidth(), 0.f, AssetManager::Get()->getHeight());
-    Text* newText = new Text();
-    _allTexts.push_back(newText);
-
+void Text::Initialization(){
     glGenVertexArrays(1, &_vao);
     glGenBuffers(1, &_vbo);
     glBindVertexArray(_vao);
-    glBindBuffer(GL_ARRAY_BUFFER, _vbo);
+    glBindBuffer(GL_ARRAY_BUFFER,_vbo);
     glBufferData(GL_ARRAY_BUFFER, sizeof(float) * 6 * 4, nullptr, GL_DYNAMIC_DRAW);
 
     const GLuint VERTEX_ATTR_POSITION = 0;
@@ -24,31 +16,29 @@ void TextManager::Initialization(std::string text, const float &scale, const glm
     glBindVertexArray(0);
 }
 
-TextManager::~TextManager(){
+void Text::DeleteText() {
     glDeleteBuffers(1, &_vbo);
     glDeleteVertexArrays(1, &_vao);
 }
 
-Text* TextManager::getText(){
-    return _allTexts[0];
-}
 
+void Text::renderText(const CharactersManager &characters) {
 
-void TextManager::renderText(const Text &text) {
     // Activate corresponding render state
-    glUniform3f(glGetUniformLocation(AssetManager::Get()->_textProgram.textColor_Location(), "utextColor"), _color.x, _color.y, _color.z);
-    glUniformMatrix4fv(glGetUniformLocation(AssetManager::Get()->_textProgram.Projection_Location(), "projection"), 1, GL_FALSE, glm::value_ptr(_projection_matrix));
+    glUniform3f(AssetManager::Get()->_textProgram.textColor_Location(),_color.x, _color.y, _color.z);
+    glUniformMatrix4fv(AssetManager::Get()->_textProgram.Projection_Location(), 1, GL_FALSE, glm::value_ptr(_projection_matrix));
+
 
     glActiveTexture(GL_TEXTURE0);
     glBindVertexArray(_vao);
-    float x = _pos.x;
+    float x =_pos.x;
     float y = _pos.y;
 
     // Iterate through all characters
     std::string::const_iterator c;
-    for (c = _text.begin(); c != _text.end(); c++)
+    for (c = _text.begin(); c !=_text.end(); c++)
     {
-        Character ch = text.getCharacters()[*c];
+        Character ch = characters.getCharacters()[*c];
 
         float xpos = x + ch._bearing.x * _scale;
         float ypos = y - (ch._size.y - ch._bearing.y) * _scale;
@@ -81,7 +71,7 @@ void TextManager::renderText(const Text &text) {
 }
 
 
-void Text::load() {
+void CharactersManager::load() {
     // TUTO : https://learnopengl.com/In-Practice/Text-Rendering
 
 
@@ -143,8 +133,34 @@ void Text::load() {
     FT_Done_FreeType(ft);
 }
 
-Text::~Text() {
+void CharactersManager::Delete() {
     // Deletes all the textures generated for each character
     for(auto& character: _characters)
         glDeleteTextures(1, &character.second._textureID);
+}
+
+
+void TextsManager::addText(const std::string &text, const std::string &name, const float &scale, const glm::vec2 &pos, const glm::vec3 &color) {
+    Text* newText = new Text;
+    newText->setText(text) ;
+    newText->setName(name);
+    newText->setScale(scale);
+    newText->setPosition(pos);
+    newText->setColor(color);
+    newText->setProjMatrix(glm::ortho(0.f, AssetManager::Get()->getWidth(), 0.f, AssetManager::Get()->getHeight()));
+
+    _allTexts.insert(std::pair<std::string, Text*>(newText->getName(), newText));
+    newText->Initialization();
+}
+
+Text* TextsManager::getText(const std::string &name) const {
+    return (Text*)_allTexts.find(name)->second;
+}
+
+void TextsManager::Delete() {
+    std::map<const std::string, Text *>::const_iterator it;
+    for (it = _allTexts.begin(); it != _allTexts.end(); ++it)
+    {
+       it->second->DeleteText();
+    }
 }

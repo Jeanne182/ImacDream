@@ -64,7 +64,6 @@ public:
 
 class TextProgram{
 private :
-    //GLuint _text_Location;
     GLuint _textColor_Location;
     GLuint _Projection;
 public :
@@ -74,13 +73,11 @@ public :
             applicationPath.dirPath() + "Assets/shaders/text.vs.glsl",
             applicationPath.dirPath() + "Assets/shaders/text.fs.glsl"))
     {
-        //_text_Location = glGetUniformLocation(_program.getGLId(), "uText");
         _textColor_Location = glGetUniformLocation(_program.getGLId(), "uTextColor");
         _Projection = glGetUniformLocation(_program.getGLId(), "projection");
     }
 
     //GETTERS
-    //inline GLint text_Location(){ return _text_Location; };
     inline GLint textColor_Location(){ return _textColor_Location; };
     inline GLint Projection_Location(){ return _Projection; };
 };
