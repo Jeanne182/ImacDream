@@ -10,7 +10,7 @@ void Game::event(const SDL_Event &e) {
 }
 
 
-    }
+
 
 
 void Game::update() {

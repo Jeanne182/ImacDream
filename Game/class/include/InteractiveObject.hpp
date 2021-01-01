@@ -20,11 +20,11 @@ public :
                              Model &model,
                              const float &hitboxRadius,
                              const glm::vec3 &center,
-                             const int &value):
+                             const int &id):
                              GameObject(position, scale, angles, model, hitboxRadius, center),
-                             _value(value)
+                             _id(id)
                              {}
-    inline InteractiveObject(const InteractiveObject &interactiveObject): GameObject(interactiveObject), _value(interactiveObject._value){}
+    inline InteractiveObject(const InteractiveObject &interactiveObject): GameObject(interactiveObject), _id(interactiveObject._id){}
 
     //GETTERS
     inline int getID(){ return _id; };

@@ -234,21 +234,9 @@ CMakeFiles/IMACDream.dir/class/src/Music.cpp.s: cmake_force
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/fanny/ImacDream/Game/class/src/Music.cpp -o CMakeFiles/IMACDream.dir/class/src/Music.cpp.s
 
 CMakeFiles/IMACDream.dir/class/src/Program.cpp.o: CMakeFiles/IMACDream.dir/flags.make
-<<<<<<< HEAD
-<<<<<<< HEAD
-CMakeFiles/IMACDream.dir/class/src/Program.cpp.o: /home/jeanne/Documents/S3/ImacDream/Game/class/src/Program.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jeanne/Documents/S3/ImacDream/Game-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/IMACDream.dir/class/src/Program.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/IMACDream.dir/class/src/Program.cpp.o -c /home/jeanne/Documents/S3/ImacDream/Game/class/src/Program.cpp
-=======
-CMakeFiles/IMACDream.dir/class/src/Program.cpp.o: /home/fanny/ImacDream/Game/class/src/Program.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/fanny/ImacDream/Game-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/IMACDream.dir/class/src/Program.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/IMACDream.dir/class/src/Program.cpp.o -c /home/fanny/ImacDream/Game/class/src/Program.cpp
->>>>>>> Collision
-=======
 CMakeFiles/IMACDream.dir/class/src/Program.cpp.o: /home/fanny/ImacDream/Game/class/src/Program.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/fanny/ImacDream/Game-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/IMACDream.dir/class/src/Program.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/IMACDream.dir/class/src/Program.cpp.o -c /home/fanny/ImacDream/Game/class/src/Program.cpp
->>>>>>> debug
 
 CMakeFiles/IMACDream.dir/class/src/Program.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/IMACDream.dir/class/src/Program.cpp.i"
@@ -272,21 +260,9 @@ CMakeFiles/IMACDream.dir/class/src/Skybox.cpp.s: cmake_force
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/fanny/ImacDream/Game/class/src/Skybox.cpp -o CMakeFiles/IMACDream.dir/class/src/Skybox.cpp.s
 
 CMakeFiles/IMACDream.dir/class/src/StaticImage.cpp.o: CMakeFiles/IMACDream.dir/flags.make
-<<<<<<< HEAD
-<<<<<<< HEAD
-CMakeFiles/IMACDream.dir/class/src/StaticImage.cpp.o: /home/jeanne/Documents/S3/ImacDream/Game/class/src/StaticImage.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jeanne/Documents/S3/ImacDream/Game-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/IMACDream.dir/class/src/StaticImage.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/IMACDream.dir/class/src/StaticImage.cpp.o -c /home/jeanne/Documents/S3/ImacDream/Game/class/src/StaticImage.cpp
-=======
-CMakeFiles/IMACDream.dir/class/src/StaticImage.cpp.o: /home/fanny/ImacDream/Game/class/src/StaticImage.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/fanny/ImacDream/Game-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/IMACDream.dir/class/src/StaticImage.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/IMACDream.dir/class/src/StaticImage.cpp.o -c /home/fanny/ImacDream/Game/class/src/StaticImage.cpp
->>>>>>> Collision
-=======
 CMakeFiles/IMACDream.dir/class/src/StaticImage.cpp.o: /home/fanny/ImacDream/Game/class/src/StaticImage.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/fanny/ImacDream/Game-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/IMACDream.dir/class/src/StaticImage.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/IMACDream.dir/class/src/StaticImage.cpp.o -c /home/fanny/ImacDream/Game/class/src/StaticImage.cpp
->>>>>>> debug
 
 CMakeFiles/IMACDream.dir/class/src/StaticImage.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/IMACDream.dir/class/src/StaticImage.cpp.i"
@@ -297,21 +273,9 @@ CMakeFiles/IMACDream.dir/class/src/StaticImage.cpp.s: cmake_force
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/fanny/ImacDream/Game/class/src/StaticImage.cpp -o CMakeFiles/IMACDream.dir/class/src/StaticImage.cpp.s
 
 CMakeFiles/IMACDream.dir/class/src/Terrain.cpp.o: CMakeFiles/IMACDream.dir/flags.make
-<<<<<<< HEAD
-<<<<<<< HEAD
-CMakeFiles/IMACDream.dir/class/src/Terrain.cpp.o: /home/jeanne/Documents/S3/ImacDream/Game/class/src/Terrain.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jeanne/Documents/S3/ImacDream/Game-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/IMACDream.dir/class/src/Terrain.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/IMACDream.dir/class/src/Terrain.cpp.o -c /home/jeanne/Documents/S3/ImacDream/Game/class/src/Terrain.cpp
-=======
-CMakeFiles/IMACDream.dir/class/src/Terrain.cpp.o: /home/fanny/ImacDream/Game/class/src/Terrain.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/fanny/ImacDream/Game-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/IMACDream.dir/class/src/Terrain.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/IMACDream.dir/class/src/Terrain.cpp.o -c /home/fanny/ImacDream/Game/class/src/Terrain.cpp
->>>>>>> Collision
-=======
 CMakeFiles/IMACDream.dir/class/src/Terrain.cpp.o: /home/fanny/ImacDream/Game/class/src/Terrain.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/fanny/ImacDream/Game-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/IMACDream.dir/class/src/Terrain.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/IMACDream.dir/class/src/Terrain.cpp.o -c /home/fanny/ImacDream/Game/class/src/Terrain.cpp
->>>>>>> debug
 
 CMakeFiles/IMACDream.dir/class/src/Terrain.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/IMACDream.dir/class/src/Terrain.cpp.i"
@@ -335,21 +299,9 @@ CMakeFiles/IMACDream.dir/class/src/Text.cpp.s: cmake_force
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/fanny/ImacDream/Game/class/src/Text.cpp -o CMakeFiles/IMACDream.dir/class/src/Text.cpp.s
 
 CMakeFiles/IMACDream.dir/class/src/Utils.cpp.o: CMakeFiles/IMACDream.dir/flags.make
-<<<<<<< HEAD
-<<<<<<< HEAD
-CMakeFiles/IMACDream.dir/class/src/Utils.cpp.o: /home/jeanne/Documents/S3/ImacDream/Game/class/src/Utils.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jeanne/Documents/S3/ImacDream/Game-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/IMACDream.dir/class/src/Utils.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/IMACDream.dir/class/src/Utils.cpp.o -c /home/jeanne/Documents/S3/ImacDream/Game/class/src/Utils.cpp
-=======
-CMakeFiles/IMACDream.dir/class/src/Utils.cpp.o: /home/fanny/ImacDream/Game/class/src/Utils.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/fanny/ImacDream/Game-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/IMACDream.dir/class/src/Utils.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/IMACDream.dir/class/src/Utils.cpp.o -c /home/fanny/ImacDream/Game/class/src/Utils.cpp
->>>>>>> Collision
-=======
 CMakeFiles/IMACDream.dir/class/src/Utils.cpp.o: /home/fanny/ImacDream/Game/class/src/Utils.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/fanny/ImacDream/Game-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/IMACDream.dir/class/src/Utils.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/IMACDream.dir/class/src/Utils.cpp.o -c /home/fanny/ImacDream/Game/class/src/Utils.cpp
->>>>>>> debug
 
 CMakeFiles/IMACDream.dir/class/src/Utils.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/IMACDream.dir/class/src/Utils.cpp.i"
@@ -360,21 +312,9 @@ CMakeFiles/IMACDream.dir/class/src/Utils.cpp.s: cmake_force
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/fanny/ImacDream/Game/class/src/Utils.cpp -o CMakeFiles/IMACDream.dir/class/src/Utils.cpp.s
 
 CMakeFiles/IMACDream.dir/class/src/Water.cpp.o: CMakeFiles/IMACDream.dir/flags.make
-<<<<<<< HEAD
-<<<<<<< HEAD
-CMakeFiles/IMACDream.dir/class/src/Water.cpp.o: /home/jeanne/Documents/S3/ImacDream/Game/class/src/Water.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jeanne/Documents/S3/ImacDream/Game-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/IMACDream.dir/class/src/Water.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/IMACDream.dir/class/src/Water.cpp.o -c /home/jeanne/Documents/S3/ImacDream/Game/class/src/Water.cpp
-=======
-CMakeFiles/IMACDream.dir/class/src/Water.cpp.o: /home/fanny/ImacDream/Game/class/src/Water.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/fanny/ImacDream/Game-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/IMACDream.dir/class/src/Water.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/IMACDream.dir/class/src/Water.cpp.o -c /home/fanny/ImacDream/Game/class/src/Water.cpp
->>>>>>> Collision
-=======
 CMakeFiles/IMACDream.dir/class/src/Water.cpp.o: /home/fanny/ImacDream/Game/class/src/Water.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/fanny/ImacDream/Game-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/IMACDream.dir/class/src/Water.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/IMACDream.dir/class/src/Water.cpp.o -c /home/fanny/ImacDream/Game/class/src/Water.cpp
->>>>>>> debug
 
 CMakeFiles/IMACDream.dir/class/src/Water.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/IMACDream.dir/class/src/Water.cpp.i"
@@ -385,21 +325,9 @@ CMakeFiles/IMACDream.dir/class/src/Water.cpp.s: cmake_force
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/fanny/ImacDream/Game/class/src/Water.cpp -o CMakeFiles/IMACDream.dir/class/src/Water.cpp.s
 
 CMakeFiles/IMACDream.dir/class/src/main.cpp.o: CMakeFiles/IMACDream.dir/flags.make
-<<<<<<< HEAD
-<<<<<<< HEAD
-CMakeFiles/IMACDream.dir/class/src/main.cpp.o: /home/jeanne/Documents/S3/ImacDream/Game/class/src/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jeanne/Documents/S3/ImacDream/Game-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/IMACDream.dir/class/src/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/IMACDream.dir/class/src/main.cpp.o -c /home/jeanne/Documents/S3/ImacDream/Game/class/src/main.cpp
-=======
-CMakeFiles/IMACDream.dir/class/src/main.cpp.o: /home/fanny/ImacDream/Game/class/src/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/fanny/ImacDream/Game-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/IMACDream.dir/class/src/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/IMACDream.dir/class/src/main.cpp.o -c /home/fanny/ImacDream/Game/class/src/main.cpp
->>>>>>> Collision
-=======
 CMakeFiles/IMACDream.dir/class/src/main.cpp.o: /home/fanny/ImacDream/Game/class/src/main.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/fanny/ImacDream/Game-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/IMACDream.dir/class/src/main.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/IMACDream.dir/class/src/main.cpp.o -c /home/fanny/ImacDream/Game/class/src/main.cpp
->>>>>>> debug
 
 CMakeFiles/IMACDream.dir/class/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/IMACDream.dir/class/src/main.cpp.i"
@@ -464,15 +392,7 @@ IMACDream: /usr/lib/x86_64-linux-gnu/libSDL_mixer.so
 IMACDream: /usr/lib/x86_64-linux-gnu/libGLEW.so
 IMACDream: /usr/lib/x86_64-linux-gnu/libfreetype.so
 IMACDream: CMakeFiles/IMACDream.dir/link.txt
-<<<<<<< HEAD
-<<<<<<< HEAD
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jeanne/Documents/S3/ImacDream/Game-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Linking CXX executable IMACDream"
-=======
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/fanny/ImacDream/Game-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Linking CXX executable IMACDream"
->>>>>>> Collision
-=======
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/fanny/ImacDream/Game-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Linking CXX executable IMACDream"
->>>>>>> debug
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/IMACDream.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

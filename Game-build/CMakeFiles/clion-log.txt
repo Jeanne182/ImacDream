@@ -1,13 +1,4 @@
 /snap/clion/138/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/fanny/ImacDream/Game
-<<<<<<< HEAD
-CMake Error: Parse error in cache file /home/fanny/ImacDream/Game-build/CMakeCache.txt on line 373. Offending entry: <<<<<<< HEAD
-CMake Error: Parse error in cache file /home/fanny/ImacDream/Game-build/CMakeCache.txt on line 389. Offending entry: >>>>>>> Collision
--- Found OpenGL: /usr/lib/x86_64-linux-gnu/libOpenGL.so   
--- Found Freetype: /usr/lib/x86_64-linux-gnu/libfreetype.so (found version "2.8.1") 
--- Configuring incomplete, errors occurred!
-See also "/home/fanny/ImacDream/Game-build/CMakeFiles/CMakeOutput.log".
-Cannot read project file /home/fanny/ImacDream/Game-build/IMACDream.cbp
-=======
 -- The C compiler identification is GNU 7.5.0
 -- The CXX compiler identification is GNU 7.5.0
 -- Check for working C compiler: /usr/bin/cc
@@ -28,4 +19,3 @@ Cannot read project file /home/fanny/ImacDream/Game-build/IMACDream.cbp
 -- Configuring done
 -- Generating done
 -- Build files have been written to: /home/fanny/ImacDream/Game-build
->>>>>>> debug

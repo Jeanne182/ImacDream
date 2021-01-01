@@ -7,58 +7,12 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 # The top level Makefile was generated from the following files:
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
-<<<<<<< HEAD
-<<<<<<< HEAD
-  "CMakeFiles/3.17.3/CMakeCCompiler.cmake"
-  "CMakeFiles/3.17.3/CMakeCXXCompiler.cmake"
-  "CMakeFiles/3.17.3/CMakeSystem.cmake"
-  "/home/jeanne/Documents/S3/ImacDream/Game/CMake/FindGLEW.cmake"
-  "/home/jeanne/Documents/S3/ImacDream/Game/CMakeLists.txt"
-  "/home/jeanne/Documents/S3/ImacDream/Game/glimac/CMakeLists.txt"
-  "/snap/clion/135/bin/cmake/linux/share/cmake-3.17/Modules/CMakeCInformation.cmake"
-  "/snap/clion/135/bin/cmake/linux/share/cmake-3.17/Modules/CMakeCXXInformation.cmake"
-  "/snap/clion/135/bin/cmake/linux/share/cmake-3.17/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake"
-  "/snap/clion/135/bin/cmake/linux/share/cmake-3.17/Modules/CMakeCommonLanguageInclude.cmake"
-  "/snap/clion/135/bin/cmake/linux/share/cmake-3.17/Modules/CMakeExtraGeneratorDetermineCompilerMacrosAndIncludeDirs.cmake"
-  "/snap/clion/135/bin/cmake/linux/share/cmake-3.17/Modules/CMakeFindCodeBlocks.cmake"
-  "/snap/clion/135/bin/cmake/linux/share/cmake-3.17/Modules/CMakeGenericSystem.cmake"
-  "/snap/clion/135/bin/cmake/linux/share/cmake-3.17/Modules/CMakeInitializeConfigs.cmake"
-  "/snap/clion/135/bin/cmake/linux/share/cmake-3.17/Modules/CMakeLanguageInformation.cmake"
-  "/snap/clion/135/bin/cmake/linux/share/cmake-3.17/Modules/CMakeSystemSpecificInformation.cmake"
-  "/snap/clion/135/bin/cmake/linux/share/cmake-3.17/Modules/CMakeSystemSpecificInitialize.cmake"
-  "/snap/clion/135/bin/cmake/linux/share/cmake-3.17/Modules/Compiler/CMakeCommonCompilerMacros.cmake"
-  "/snap/clion/135/bin/cmake/linux/share/cmake-3.17/Modules/Compiler/GNU-C.cmake"
-  "/snap/clion/135/bin/cmake/linux/share/cmake-3.17/Modules/Compiler/GNU-CXX.cmake"
-  "/snap/clion/135/bin/cmake/linux/share/cmake-3.17/Modules/Compiler/GNU.cmake"
-  "/snap/clion/135/bin/cmake/linux/share/cmake-3.17/Modules/FindFreetype.cmake"
-  "/snap/clion/135/bin/cmake/linux/share/cmake-3.17/Modules/FindOpenGL.cmake"
-  "/snap/clion/135/bin/cmake/linux/share/cmake-3.17/Modules/FindPackageHandleStandardArgs.cmake"
-  "/snap/clion/135/bin/cmake/linux/share/cmake-3.17/Modules/FindPackageMessage.cmake"
-  "/snap/clion/135/bin/cmake/linux/share/cmake-3.17/Modules/FindSDL_mixer.cmake"
-  "/snap/clion/135/bin/cmake/linux/share/cmake-3.17/Modules/Internal/CMakeCheckCompilerFlag.cmake"
-  "/snap/clion/135/bin/cmake/linux/share/cmake-3.17/Modules/Platform/Linux-GNU-C.cmake"
-  "/snap/clion/135/bin/cmake/linux/share/cmake-3.17/Modules/Platform/Linux-GNU-CXX.cmake"
-  "/snap/clion/135/bin/cmake/linux/share/cmake-3.17/Modules/Platform/Linux-GNU.cmake"
-  "/snap/clion/135/bin/cmake/linux/share/cmake-3.17/Modules/Platform/Linux.cmake"
-  "/snap/clion/135/bin/cmake/linux/share/cmake-3.17/Modules/Platform/UnixPaths.cmake"
-  "/snap/clion/135/bin/cmake/linux/share/cmake-3.17/Modules/ProcessorCount.cmake"
-  "/snap/clion/135/bin/cmake/linux/share/cmake-3.17/Modules/SelectLibraryConfigurations.cmake"
-=======
-=======
->>>>>>> debug
   "CMakeFiles/3.17.5/CMakeCCompiler.cmake"
   "CMakeFiles/3.17.5/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.17.5/CMakeSystem.cmake"
   "/home/fanny/ImacDream/Game/CMake/FindGLEW.cmake"
   "/home/fanny/ImacDream/Game/CMakeLists.txt"
   "/home/fanny/ImacDream/Game/glimac/CMakeLists.txt"
-<<<<<<< HEAD
-  "/snap/clion/138/bin/cmake/linux/share/cmake-3.17/Modules/CMakeCInformation.cmake"
-  "/snap/clion/138/bin/cmake/linux/share/cmake-3.17/Modules/CMakeCXXInformation.cmake"
-  "/snap/clion/138/bin/cmake/linux/share/cmake-3.17/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake"
-  "/snap/clion/138/bin/cmake/linux/share/cmake-3.17/Modules/CMakeCommonLanguageInclude.cmake"
-  "/snap/clion/138/bin/cmake/linux/share/cmake-3.17/Modules/CMakeExtraGeneratorDetermineCompilerMacrosAndIncludeDirs.cmake"
-=======
   "/snap/clion/138/bin/cmake/linux/share/cmake-3.17/Modules/CMakeCCompiler.cmake.in"
   "/snap/clion/138/bin/cmake/linux/share/cmake-3.17/Modules/CMakeCCompilerABI.c"
   "/snap/clion/138/bin/cmake/linux/share/cmake-3.17/Modules/CMakeCInformation.cmake"
@@ -77,23 +31,10 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/snap/clion/138/bin/cmake/linux/share/cmake-3.17/Modules/CMakeDetermineSystem.cmake"
   "/snap/clion/138/bin/cmake/linux/share/cmake-3.17/Modules/CMakeExtraGeneratorDetermineCompilerMacrosAndIncludeDirs.cmake"
   "/snap/clion/138/bin/cmake/linux/share/cmake-3.17/Modules/CMakeFindBinUtils.cmake"
->>>>>>> debug
   "/snap/clion/138/bin/cmake/linux/share/cmake-3.17/Modules/CMakeFindCodeBlocks.cmake"
   "/snap/clion/138/bin/cmake/linux/share/cmake-3.17/Modules/CMakeGenericSystem.cmake"
   "/snap/clion/138/bin/cmake/linux/share/cmake-3.17/Modules/CMakeInitializeConfigs.cmake"
   "/snap/clion/138/bin/cmake/linux/share/cmake-3.17/Modules/CMakeLanguageInformation.cmake"
-<<<<<<< HEAD
-  "/snap/clion/138/bin/cmake/linux/share/cmake-3.17/Modules/CMakeSystemSpecificInformation.cmake"
-  "/snap/clion/138/bin/cmake/linux/share/cmake-3.17/Modules/CMakeSystemSpecificInitialize.cmake"
-  "/snap/clion/138/bin/cmake/linux/share/cmake-3.17/Modules/Compiler/CMakeCommonCompilerMacros.cmake"
-  "/snap/clion/138/bin/cmake/linux/share/cmake-3.17/Modules/Compiler/GNU-C.cmake"
-  "/snap/clion/138/bin/cmake/linux/share/cmake-3.17/Modules/Compiler/GNU-CXX.cmake"
-  "/snap/clion/138/bin/cmake/linux/share/cmake-3.17/Modules/Compiler/GNU.cmake"
-  "/snap/clion/138/bin/cmake/linux/share/cmake-3.17/Modules/FindOpenGL.cmake"
-  "/snap/clion/138/bin/cmake/linux/share/cmake-3.17/Modules/FindPackageHandleStandardArgs.cmake"
-  "/snap/clion/138/bin/cmake/linux/share/cmake-3.17/Modules/FindPackageMessage.cmake"
-  "/snap/clion/138/bin/cmake/linux/share/cmake-3.17/Modules/Internal/CMakeCheckCompilerFlag.cmake"
-=======
   "/snap/clion/138/bin/cmake/linux/share/cmake-3.17/Modules/CMakeParseImplicitIncludeInfo.cmake"
   "/snap/clion/138/bin/cmake/linux/share/cmake-3.17/Modules/CMakeParseImplicitLinkInfo.cmake"
   "/snap/clion/138/bin/cmake/linux/share/cmake-3.17/Modules/CMakeSystem.cmake.in"
@@ -159,18 +100,13 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/snap/clion/138/bin/cmake/linux/share/cmake-3.17/Modules/Internal/CMakeCheckCompilerFlag.cmake"
   "/snap/clion/138/bin/cmake/linux/share/cmake-3.17/Modules/Internal/FeatureTesting.cmake"
   "/snap/clion/138/bin/cmake/linux/share/cmake-3.17/Modules/Platform/Linux-Determine-CXX.cmake"
->>>>>>> debug
   "/snap/clion/138/bin/cmake/linux/share/cmake-3.17/Modules/Platform/Linux-GNU-C.cmake"
   "/snap/clion/138/bin/cmake/linux/share/cmake-3.17/Modules/Platform/Linux-GNU-CXX.cmake"
   "/snap/clion/138/bin/cmake/linux/share/cmake-3.17/Modules/Platform/Linux-GNU.cmake"
   "/snap/clion/138/bin/cmake/linux/share/cmake-3.17/Modules/Platform/Linux.cmake"
   "/snap/clion/138/bin/cmake/linux/share/cmake-3.17/Modules/Platform/UnixPaths.cmake"
   "/snap/clion/138/bin/cmake/linux/share/cmake-3.17/Modules/ProcessorCount.cmake"
-<<<<<<< HEAD
->>>>>>> Collision
-=======
   "/snap/clion/138/bin/cmake/linux/share/cmake-3.17/Modules/SelectLibraryConfigurations.cmake"
->>>>>>> debug
   "/usr/lib/x86_64-linux-gnu/cmake/SDL2/sdl2-config.cmake"
   "/usr/lib/x86_64-linux-gnu/cmake/assimp-4.1/assimp-config-version.cmake"
   "/usr/lib/x86_64-linux-gnu/cmake/assimp-4.1/assimp-config.cmake"

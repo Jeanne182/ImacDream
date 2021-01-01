@@ -7,16 +7,15 @@
 
 void InteractiveObjectManager::display(const glm::mat4 &cameraView) {
 
-    //InteractiveObject *dragonegg1 = _objectsToFind.find(0)->second;
     if(_exist[0]==true){
-        _objectsToFind.setPosition(glm::vec3(3.f, -10.f, -8.f));
+        _objectsToFind.setPosition(glm::vec3(3.f, 2.f, -8.f));
         _objectsToFind.setCenter();
         _objectsToFind.setHitboxRadius();
         _eggs.push_back(std::make_pair(_objectsToFind.getCenter(), _objectsToFind.getHitboxRadius()));
         _objectsToFind.update(cameraView);
     }
     if(_exist[1]==true){
-        _objectsToFind.setPosition(glm::vec3(5.f, -10.f, -8.f));
+        _objectsToFind.setPosition(glm::vec3(5.f, 2.f, -8.f));
         _objectsToFind.setCenter();
         _objectsToFind.setHitboxRadius();
         _eggs.push_back(std::make_pair(_objectsToFind.getCenter(), _objectsToFind.getHitboxRadius()));
@@ -32,7 +31,6 @@ void InteractiveObjectManager::deleteBuffers() {
 }
 
 InteractiveObjectManager::InteractiveObjectManager():_objectsToFind(),_nbObjects(8), _exist(), _eggs(){
-    //auto* InteractiveObjects = new std::map<int, InteractiveObject*>;
 
     for(int i=0; i<_nbObjects ; i++){
         _exist.push_back(true);
@@ -42,7 +40,6 @@ InteractiveObjectManager::InteractiveObjectManager():_objectsToFind(),_nbObjects
     //DRAGON EGG
     auto* egg = new Model(AssetManager::Get()->modelFile("dragon_egg.obj"));
     GameObject eggObject(glm::vec3(0.f,0.f,0.f), 1.f, glm::vec3(0.f, 0.f, 0.f), *egg, 0, glm::vec3(0, 0, 0));
-    //InteractiveObjects->insert(std::make_pair(eggObject.getID(), &eggObject));
 
 
     _objectsToFind = eggObject;
@@ -67,13 +64,12 @@ bool isSelected(const glm::mat4 &cameraView, const glm::vec3 &cameraPosition, co
     glm::vec3 distanceVector = glm::vec3(cameraView*glm::vec4(centerObj, 1.)) ;
     std::cout << "cameraPosition : " << cameraPosition << std::endl;
     std::cout << "distanceVector : " << distanceVector << std::endl;
+    // Find the direction vector of the camera ray
 
     glm::vec3 directionVectorCam = glm::vec3(glm::vec4(0, 0, -1, 0));
 
     std::cout << "directionVectorCam : " <<directionVectorCam << std::endl;
 
-    // Find the direction vector of the camera ray
-    //glm::vec3 directionVectorCam = glm::vec3(cameraPosition.x, cameraPosition.y, cameraPosition.z-1.) - cameraPosition ;
 
     // Distance between the camera and the center of the interactive object projected on the camera vector
     double distanceToCenter = dotProduct(distanceVector, directionVectorCam) ;
