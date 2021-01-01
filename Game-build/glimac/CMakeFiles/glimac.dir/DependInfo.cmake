@@ -21,6 +21,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 <<<<<<< HEAD
   "/usr/include/SDL"
   "/usr/include/freetype2"
+<<<<<<< HEAD
   "/home/jeanne/Documents/S3/ImacDream/Game/glimac/include"
   "/home/jeanne/Documents/S3/ImacDream/Game/third-party/include"
   "/home/jeanne/Documents/S3/ImacDream/Game/third-party"
@@ -29,6 +30,11 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/home/fanny/ImacDream/Game/third-party/include"
   "/home/fanny/ImacDream/Game/third-party"
 >>>>>>> Collision
+=======
+  "/home/fanny/ImacDream/Game/glimac/include"
+  "/home/fanny/ImacDream/Game/third-party/include"
+  "/home/fanny/ImacDream/Game/third-party"
+>>>>>>> debug
   )
 
 # Targets to which this target links.

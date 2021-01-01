@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
 <<<<<<< HEAD
+<<<<<<< HEAD
   "/home/jeanne/Documents/S3/ImacDream/Game/class/src/App.cpp" "/home/jeanne/Documents/S3/ImacDream/Game-build/CMakeFiles/IMACDream.dir/class/src/App.cpp.o"
   "/home/jeanne/Documents/S3/ImacDream/Game/class/src/AssetsManager.cpp" "/home/jeanne/Documents/S3/ImacDream/Game-build/CMakeFiles/IMACDream.dir/class/src/AssetsManager.cpp.o"
   "/home/jeanne/Documents/S3/ImacDream/Game/class/src/Camera.cpp" "/home/jeanne/Documents/S3/ImacDream/Game-build/CMakeFiles/IMACDream.dir/class/src/Camera.cpp.o"
@@ -26,6 +27,8 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/jeanne/Documents/S3/ImacDream/Game/class/src/Water.cpp" "/home/jeanne/Documents/S3/ImacDream/Game-build/CMakeFiles/IMACDream.dir/class/src/Water.cpp.o"
   "/home/jeanne/Documents/S3/ImacDream/Game/class/src/main.cpp" "/home/jeanne/Documents/S3/ImacDream/Game-build/CMakeFiles/IMACDream.dir/class/src/main.cpp.o"
 =======
+=======
+>>>>>>> debug
   "/home/fanny/ImacDream/Game/class/src/App.cpp" "/home/fanny/ImacDream/Game-build/CMakeFiles/IMACDream.dir/class/src/App.cpp.o"
   "/home/fanny/ImacDream/Game/class/src/AssetsManager.cpp" "/home/fanny/ImacDream/Game-build/CMakeFiles/IMACDream.dir/class/src/AssetsManager.cpp.o"
   "/home/fanny/ImacDream/Game/class/src/Camera.cpp" "/home/fanny/ImacDream/Game-build/CMakeFiles/IMACDream.dir/class/src/Camera.cpp.o"
@@ -37,6 +40,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/fanny/ImacDream/Game/class/src/MapManager.cpp" "/home/fanny/ImacDream/Game-build/CMakeFiles/IMACDream.dir/class/src/MapManager.cpp.o"
   "/home/fanny/ImacDream/Game/class/src/Mesh.cpp" "/home/fanny/ImacDream/Game-build/CMakeFiles/IMACDream.dir/class/src/Mesh.cpp.o"
   "/home/fanny/ImacDream/Game/class/src/Model.cpp" "/home/fanny/ImacDream/Game-build/CMakeFiles/IMACDream.dir/class/src/Model.cpp.o"
+<<<<<<< HEAD
   "/home/fanny/ImacDream/Game/class/src/Program.cpp" "/home/fanny/ImacDream/Game-build/CMakeFiles/IMACDream.dir/class/src/Program.cpp.o"
   "/home/fanny/ImacDream/Game/class/src/StaticImage.cpp" "/home/fanny/ImacDream/Game-build/CMakeFiles/IMACDream.dir/class/src/StaticImage.cpp.o"
   "/home/fanny/ImacDream/Game/class/src/Terrain.cpp" "/home/fanny/ImacDream/Game-build/CMakeFiles/IMACDream.dir/class/src/Terrain.cpp.o"
@@ -44,6 +48,17 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/fanny/ImacDream/Game/class/src/Water.cpp" "/home/fanny/ImacDream/Game-build/CMakeFiles/IMACDream.dir/class/src/Water.cpp.o"
   "/home/fanny/ImacDream/Game/class/src/main.cpp" "/home/fanny/ImacDream/Game-build/CMakeFiles/IMACDream.dir/class/src/main.cpp.o"
 >>>>>>> Collision
+=======
+  "/home/fanny/ImacDream/Game/class/src/Music.cpp" "/home/fanny/ImacDream/Game-build/CMakeFiles/IMACDream.dir/class/src/Music.cpp.o"
+  "/home/fanny/ImacDream/Game/class/src/Program.cpp" "/home/fanny/ImacDream/Game-build/CMakeFiles/IMACDream.dir/class/src/Program.cpp.o"
+  "/home/fanny/ImacDream/Game/class/src/Skybox.cpp" "/home/fanny/ImacDream/Game-build/CMakeFiles/IMACDream.dir/class/src/Skybox.cpp.o"
+  "/home/fanny/ImacDream/Game/class/src/StaticImage.cpp" "/home/fanny/ImacDream/Game-build/CMakeFiles/IMACDream.dir/class/src/StaticImage.cpp.o"
+  "/home/fanny/ImacDream/Game/class/src/Terrain.cpp" "/home/fanny/ImacDream/Game-build/CMakeFiles/IMACDream.dir/class/src/Terrain.cpp.o"
+  "/home/fanny/ImacDream/Game/class/src/Text.cpp" "/home/fanny/ImacDream/Game-build/CMakeFiles/IMACDream.dir/class/src/Text.cpp.o"
+  "/home/fanny/ImacDream/Game/class/src/Utils.cpp" "/home/fanny/ImacDream/Game-build/CMakeFiles/IMACDream.dir/class/src/Utils.cpp.o"
+  "/home/fanny/ImacDream/Game/class/src/Water.cpp" "/home/fanny/ImacDream/Game-build/CMakeFiles/IMACDream.dir/class/src/Water.cpp.o"
+  "/home/fanny/ImacDream/Game/class/src/main.cpp" "/home/fanny/ImacDream/Game-build/CMakeFiles/IMACDream.dir/class/src/main.cpp.o"
+>>>>>>> debug
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -52,6 +67,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 <<<<<<< HEAD
   "/usr/include/SDL"
   "/usr/include/freetype2"
+<<<<<<< HEAD
   "/home/jeanne/Documents/S3/ImacDream/Game/glimac/include"
   "/home/jeanne/Documents/S3/ImacDream/Game/third-party/include"
   "/home/jeanne/Documents/S3/ImacDream/Game/third-party"
@@ -60,6 +76,11 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/home/fanny/ImacDream/Game/third-party/include"
   "/home/fanny/ImacDream/Game/third-party"
 >>>>>>> Collision
+=======
+  "/home/fanny/ImacDream/Game/glimac/include"
+  "/home/fanny/ImacDream/Game/third-party/include"
+  "/home/fanny/ImacDream/Game/third-party"
+>>>>>>> debug
   )
 
 # Targets to which this target links.
