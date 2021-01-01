@@ -6,14 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/fanny/ImacDream/Game/class/include/App.hpp
-glimac/SDLWindowManager.hpp
--
-../include/Game.hpp
-/home/fanny/ImacDream/Game/class/include/Game.hpp
-../include/StaticImage.hpp
-/home/fanny/ImacDream/Game/class/include/StaticImage.hpp
-
 /home/fanny/ImacDream/Game/class/include/AssetsManager.hpp
 string
 -
@@ -31,14 +23,6 @@ glimac/glm.hpp
 -
 glimac/SDLWindowManager.hpp
 -
-
-/home/fanny/ImacDream/Game/class/include/Game.hpp
-./Camera.hpp
-/home/fanny/ImacDream/Game/class/include/Camera.hpp
-./MapManager.hpp
-/home/fanny/ImacDream/Game/class/include/MapManager.hpp
-./Light.hpp
-/home/fanny/ImacDream/Game/class/include/Light.hpp
 
 /home/fanny/ImacDream/Game/class/include/GameObject.hpp
 glimac/common.hpp
@@ -67,13 +51,7 @@ glimac/SDLWindowManager.hpp
 /home/fanny/ImacDream/Game/class/include/GameObject.hpp
 ./InteractiveObject.hpp
 /home/fanny/ImacDream/Game/class/include/InteractiveObject.hpp
-map
--
-
-/home/fanny/ImacDream/Game/class/include/Light.hpp
-glimac/glm.hpp
--
-glimac/SDLWindowManager.hpp
+vector
 -
 
 /home/fanny/ImacDream/Game/class/include/MapManager.hpp
@@ -142,26 +120,6 @@ glimac/Program.hpp
 glimac/FilePath.hpp
 -
 
-/home/fanny/ImacDream/Game/class/include/StaticImage.hpp
-iostream
--
-glimac/glm.hpp
--
-vector
--
-GL/glew.h
--
-glimac/Program.hpp
--
-glimac/Image.hpp
--
-glimac/FilePath.hpp
--
-glimac/common.hpp
--
-map
--
-
 /home/fanny/ImacDream/Game/class/include/Terrain.hpp
 ./GameObject.hpp
 /home/fanny/ImacDream/Game/class/include/GameObject.hpp
@@ -170,49 +128,33 @@ vector
 map
 -
 
-/home/fanny/ImacDream/Game/class/src/main.cpp
-glimac/SDLWindowManager.hpp
--
-GL/glew.h
--
-iostream
--
-glimac/FilePath.hpp
--
+/home/fanny/ImacDream/Game/class/include/Utils.hpp
 glimac/glm.hpp
 -
-./../include/Camera.hpp
-/home/fanny/ImacDream/Game/class/include/Camera.hpp
-./../include/Mesh.hpp
-/home/fanny/ImacDream/Game/class/include/Mesh.hpp
 ./../include/GameObject.hpp
 /home/fanny/ImacDream/Game/class/include/GameObject.hpp
-./../include/Terrain.hpp
-/home/fanny/ImacDream/Game/class/include/Terrain.hpp
-./../include/App.hpp
-/home/fanny/ImacDream/Game/class/include/App.hpp
-./../include/AssetsManager.hpp
+
+/home/fanny/ImacDream/Game/class/src/InteractiveObjectManager.cpp
+../include/InteractiveObjectManager.hpp
+/home/fanny/ImacDream/Game/class/include/InteractiveObjectManager.hpp
+../include/AssetsManager.hpp
 /home/fanny/ImacDream/Game/class/include/AssetsManager.hpp
-./../include/Light.hpp
-/home/fanny/ImacDream/Game/class/include/Light.hpp
-./../include/InteractiveObject.hpp
-/home/fanny/ImacDream/Game/class/include/InteractiveObject.hpp
+glimac/Sphere.hpp
+-
+map
+-
+../include/Utils.hpp
+/home/fanny/ImacDream/Game/class/include/Utils.hpp
+
+/home/fanny/ImacDream/Game/class/src/MapManager.cpp
+../include/MapManager.hpp
+/home/fanny/ImacDream/Game/class/include/MapManager.hpp
+../include/Utils.hpp
+/home/fanny/ImacDream/Game/class/include/Utils.hpp
 
 /home/fanny/ImacDream/Game/glimac/include/glimac/FilePath.hpp
 string
 -
-
-/home/fanny/ImacDream/Game/glimac/include/glimac/Image.hpp
-vector
--
-memory
--
-unordered_map
--
-glm.hpp
-/home/fanny/ImacDream/Game/glimac/include/glimac/glm.hpp
-FilePath.hpp
-/home/fanny/ImacDream/Game/glimac/include/glimac/FilePath.hpp
 
 /home/fanny/ImacDream/Game/glimac/include/glimac/Program.hpp
 GL/glew.h
@@ -237,6 +179,12 @@ string
 -
 FilePath.hpp
 /home/fanny/ImacDream/Game/glimac/include/glimac/FilePath.hpp
+
+/home/fanny/ImacDream/Game/glimac/include/glimac/Sphere.hpp
+vector
+-
+common.hpp
+/home/fanny/ImacDream/Game/glimac/include/glimac/common.hpp
 
 /home/fanny/ImacDream/Game/glimac/include/glimac/common.hpp
 GL/glew.h

@@ -8,29 +8,27 @@
 void InteractiveObjectManager::display(const glm::mat4 &cameraView) {
 
     //InteractiveObject *dragonegg1 = _objectsToFind.find(0)->second;
+    if(_exist[0]==true){
+        _objectsToFind.setPosition(glm::vec3(3.f, -10.f, -8.f));
+        _objectsToFind.setCenter();
+        _objectsToFind.setHitboxRadius();
+        _eggs.push_back(std::make_pair(_objectsToFind.getCenter(), _objectsToFind.getHitboxRadius()));
+        _objectsToFind.update(cameraView);
+    }
+    if(_exist[1]==true){
+        _objectsToFind.setPosition(glm::vec3(5.f, -10.f, -8.f));
+        _objectsToFind.setCenter();
+        _objectsToFind.setHitboxRadius();
+        _eggs.push_back(std::make_pair(_objectsToFind.getCenter(), _objectsToFind.getHitboxRadius()));
+        _objectsToFind.update(cameraView);
+    }
 
-    _objectsToFind.setPosition(glm::vec3(3.f, -10.f, -8.f));
-    _objectsToFind.setCenter();
-    //std::cout << "center : " << _objectsToFind.getCenter() << std::endl;
-    _objectsToFind.setHitboxRadius();
-    _eggs[0].first = _objectsToFind.getCenter();
-    _eggs[0].second = _objectsToFind.getHitboxRadius();
-    _objectsToFind.update(cameraView);
-
-    _objectsToFind.setPosition(glm::vec3(5.f, -10.f, -8.f));
-    _objectsToFind.setCenter();
-    //std::cout << "center : " << _objectsToFind.getCenter() << std::endl;
-    _objectsToFind.setHitboxRadius();
-    _eggs[1].first = _objectsToFind.getCenter();
-    _eggs[1].second = _objectsToFind.getHitboxRadius();
-    _objectsToFind.update(cameraView);
 
 
 }
 
 void InteractiveObjectManager::deleteBuffers() {
-
-
+    _objectsToFind.deleteBuffers();
 }
 
 InteractiveObjectManager::InteractiveObjectManager():_objectsToFind(),_nbObjects(8), _exist(), _eggs(){
@@ -101,6 +99,6 @@ bool isSelected(const glm::mat4 &cameraView, const glm::vec3 &cameraPosition, co
 }
 
 
-
-
-
+void InteractiveObjectManager::setBoolValue(const int id){
+    _exist.at(id)=false;
+}

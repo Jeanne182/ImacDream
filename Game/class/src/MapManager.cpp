@@ -62,18 +62,13 @@ void MapManager::event(const SDL_Event &e, const glm::mat4 &cameraView, const gl
 */
 
                 int egg_id = _interactiveObjectManager.selectedEgg(cameraView, cameraPosition);
-                std::cout << "id : " << egg_id << std::endl;
-/*
-                    if(p->second->isSelected(cameraView, cameraPosition)){
-                        std::cout << "Object selected" << std::endl;
-                        _interactiveObjectManager.getObjects().erase(p->first);
-                        //p->second->deleteBuffers();
+                //std::cout << "id : " << egg_id << std::endl;
+                if(egg_id != -1){
+                    std::cout << "Object selected" << std::endl;
+                    _interactiveObjectManager.setBoolValue(egg_id);
+                    //score a augmenter
 
-                    }
-                    else{
-                        std::cout << "Object not selected" << std::endl;
-                    }
-                */
+                }
 
             }
 
