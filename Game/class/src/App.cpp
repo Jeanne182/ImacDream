@@ -77,6 +77,7 @@ void App::drawGame() {
 void App::drawMenu() {
     try{
         layout2D();
+        AssetManager::Get()->_staticImageProgram._program.use();
         _staticImages.displayImage("menu");
     }
     catch(std::exception &e){
@@ -87,6 +88,7 @@ void App::drawMenu() {
 void App::drawGameOver() {
     try{
         layout2D();
+        AssetManager::Get()->_staticImageProgram._program.use();
         _staticImages.displayImage("gameover");
     }
     catch(std::exception &e){
