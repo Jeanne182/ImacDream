@@ -79,6 +79,9 @@ void App::drawMenu() {
         layout2D();
         AssetManager::Get()->_staticImageProgram._program.use();
         _staticImages.displayImage("menu");
+        AssetManager::Get()->_textProgram._program.use();
+        _texts.getText("jouer")->renderText(_characters);
+        _texts.getText("quitter")->renderText(_characters);
     }
     catch(std::exception &e){
         std::cout << e.what() << std::endl;
@@ -127,7 +130,8 @@ void App::layoutGame() {
     AssetManager::Get()->_textProgram._program.use();
     _characters.load();
     _texts.addText("Texte ici", "test", 0.5, glm::vec2(50, 50), glm::vec3(0.5));
-
+    _texts.addText("Jouer (Enter)", "jouer", 0.5f, glm::vec2(450, 260), glm::vec3(1));
+    _texts.addText("Quitter (Esc)", "quitter", 0.5f, glm::vec2(452, 180), glm::vec3(1));
 }
 
 

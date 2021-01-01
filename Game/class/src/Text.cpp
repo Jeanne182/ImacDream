@@ -83,7 +83,7 @@ void CharactersManager::load() {
     }
 
     FT_Face face;
-    if(FT_New_Face(ft, "Assets/fonts/arial.ttf", 0, &face))
+    if(FT_New_Face(ft, "Assets/fonts/gameover.ttf", 0, &face))
     {
         std::cerr << "ERROR::FREETYPE: Failed to load font assets/fonts/Love_Craft.ttf" << std::endl;
         exit(EXIT_FAILURE);
