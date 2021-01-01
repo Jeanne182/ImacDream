@@ -4,7 +4,7 @@
 #include <random>
 
 Water::Water():GameObject(
-                glm::vec3(0.f,-15.f,0.f),
+                glm::vec3(0.f,-0.9f,0.f),
                 1.f,
                 glm::vec3(0.f, 0.f, 0.f),
                 *new Model(AssetManager::Get()->appPath().dirPath() + "Assets/models" + "/water.obj"),
@@ -28,6 +28,12 @@ void Water::useMatrix() {
     glUniformMatrix4fv(AssetManager::Get()->_waterProgram.MV_Location(), 1, GL_FALSE, glm::value_ptr(_MV));
     glUniformMatrix4fv(AssetManager::Get()->_waterProgram.MVP_Location(), 1, GL_FALSE, glm::value_ptr(_MVP));
     glUniformMatrix4fv(AssetManager::Get()->_waterProgram.N_Location(), 1, GL_FALSE, glm::value_ptr(_N));
+    updateTime();
+}
+
+void Water::updateTime() {
+    _waveTime += _waveSpeed;
+    glUniform1f(AssetManager::Get()->_waterProgram.waveTime_Location(), _waveTime);
 }
 
 
