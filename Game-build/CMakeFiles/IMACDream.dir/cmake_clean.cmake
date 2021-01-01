@@ -15,6 +15,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/IMACDream.dir/class/src/Skybox.cpp.o"
   "CMakeFiles/IMACDream.dir/class/src/StaticImage.cpp.o"
   "CMakeFiles/IMACDream.dir/class/src/Terrain.cpp.o"
+  "CMakeFiles/IMACDream.dir/class/src/Text.cpp.o"
   "CMakeFiles/IMACDream.dir/class/src/Utils.cpp.o"
   "CMakeFiles/IMACDream.dir/class/src/Water.cpp.o"
   "CMakeFiles/IMACDream.dir/class/src/main.cpp.o"

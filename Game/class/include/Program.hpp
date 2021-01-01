@@ -71,7 +71,7 @@ public:
         _M_Location = glGetUniformLocation(_program.getGLId(), "uModelMatrix");
     }
 
-//    //GETTERS
+    //GETTERS
     inline GLint textureLocation(){ return _textureLocation; };
     inline GLint M_Location(){ return _M_Location; };
 };
@@ -150,6 +150,26 @@ public:
     inline GLint Shininess_Location(){ return _Shininess_Location; };
     inline GLint LightPos_Location(){ return _LightPos_Location; };
     inline GLint LightIntensity_Location(){ return _LightIntensity_Location; };
+};
+
+class TextProgram{
+private :
+    GLuint _textColor_Location;
+    GLuint _Projection;
+public :
+    Program _program;
+    TextProgram(const FilePath &applicationPath)
+            : _program(loadProgram(
+            applicationPath.dirPath() + "Assets/shaders/text.vs.glsl",
+            applicationPath.dirPath() + "Assets/shaders/text.fs.glsl"))
+    {
+        _textColor_Location = glGetUniformLocation(_program.getGLId(), "uTextColor");
+        _Projection = glGetUniformLocation(_program.getGLId(), "projection");
+    }
+
+    //GETTERS
+    inline GLint textColor_Location(){ return _textColor_Location; };
+    inline GLint Projection_Location(){ return _Projection; };
 };
 
 #endif //IMACDREAM_PROGRAM_HPP

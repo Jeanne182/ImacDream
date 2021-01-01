@@ -11,6 +11,7 @@ find_package(OpenGL REQUIRED)
 find_package(GLEW REQUIRED)
 find_package(ASSIMP REQUIRED)
 find_package(SDL_mixer REQUIRED)
+find_package(Freetype REQUIRED)
 
 
 
@@ -18,8 +19,10 @@ find_package(SDL_mixer REQUIRED)
 #set(OPENGL_LIBRARIES /usr/lib/x86_64-linux-gnu/libGL.so.1)
 
 include_directories(${SDL2_INCLUDE_DIR} ${OPENGL_INCLUDE_DIR} ${GLEW_INCLUDE_DIR}  ${SDL_MIXER_INCLUDE_DIRS} ${ASSIMP_INCLUDE_DIR} glimac/include third-party/include third-party)
+include_directories(${SDL2_INCLUDE_DIR} ${OPENGL_INCLUDE_DIR} ${GLEW_INCLUDE_DIR} ${ASSIMP_INCLUDE_DIR} ${FREETYPE_INCLUDE_DIRS} glimac/include third-party/include third-party)
 
 set(ALL_LIBRARIES glimac ${SDL2_LIBRARIES} ${OPENGL_LIBRARIES} ${SDL_MIXER_LIBRARIES} ${GLEW_LIBRARY} assimp)
+set(ALL_LIBRARIES glimac ${SDL2_LIBRARIES} ${OPENGL_LIBRARIES} ${GLEW_LIBRARY} assimp ${FREETYPE_LIBRARIES})
 
 add_subdirectory(glimac)
 

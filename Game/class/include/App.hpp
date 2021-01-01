@@ -5,6 +5,7 @@
 #include "../include/Game.hpp"
 #include "../include/Music.hpp"
 #include "../include/StaticImage.hpp"
+#include "../include/Text.hpp"
 
 
 
@@ -23,6 +24,8 @@ private:
     Game _game;
 //    Music _music;
     StaticImageManager _staticImages;
+    TextsManager _texts;
+    CharactersManager _characters;
     int _layout;
 
 public:
@@ -35,8 +38,7 @@ public:
 
     void draw();
     void event(const SDL_Event &e);
-//    inline void Delete(){ _game.Delete(); _music.Delete(); };
-    inline void Delete(){ _game.Delete();};
+    inline void Delete(){ _game.Delete(); _texts.Delete(); _characters.Delete(); };
 
 
     //LAYOUTS

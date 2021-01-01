@@ -21,38 +21,50 @@ private:
     //Matrices
     glm::mat4 _P;
 
+    //Window width and height
+    float _width;
+    float _height;
+
 public:
+
     // Programs
     LightProgram _lightProgram;
     SkyboxProgram _skyboxProgram;
     StaticImageProgram _staticImageProgram;
     WaterProgram _waterProgram;
+    TextProgram _textProgram;
 
 
     //CONSTRUCTOR
-    AssetManager(char **argv, glm::mat4 &P)
+    AssetManager(char **argv, glm::mat4 &P, float &width, float &height)
             : _appPath(argv[0]),
               _lightProgram(_appPath),
               _skyboxProgram(_appPath),
               _staticImageProgram(_appPath),
               _waterProgram(_appPath),
               _P(P)
+              _textProgram(_appPath),
+              _width(width),
+              _height(height)
               {};
 
     //GETTERS
     inline FilePath appPath(){ return _appPath; };
     inline glm::mat4 P(){ return _P; };
+    inline float getWidth(){ return _width; };
+    inline float getHeight(){ return _height; };
 
     inline LightProgram getMultiLightsProgram(){ return _lightProgram; }
     inline StaticImageProgram staticImageProgram(){ return _staticImageProgram; }
     inline SkyboxProgram getSkyboxProgram(){ return _skyboxProgram; }
+    inline TextProgram getTextProgram(){ return _textProgram; }
 
 
     //Singleton
-    static void Create(char **argv, glm::mat4 &P)
+    static void Create(char **argv, glm::mat4 &P, float &width, float &height)
     {
         if (!instance)
-            instance = new AssetManager(argv, P);
+            instance = new AssetManager(argv, P, width, height);
     };
 
     static AssetManager *Get()

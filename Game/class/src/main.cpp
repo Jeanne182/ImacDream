@@ -9,10 +9,9 @@
 #include "./../include/Terrain.hpp"
 #include "./../include/App.hpp"
 #include "./../include/AssetsManager.hpp"
-#include "./../include/Light.hpp"
-#include "./../include/InteractiveObject.hpp"
 
 using namespace glimac;
+
 
 int main(int argc, char** argv) {
     // Initialize SDL and open a window
@@ -31,8 +30,9 @@ int main(int argc, char** argv) {
     std::cout << "OpenGL Version : " << glGetString(GL_VERSION) << std::endl;
     std::cout << "GLEW Version : " << glewGetString(GLEW_VERSION) << std::endl;
 
-    glm::mat4 ProjMatrix = glm::perspective(glm::radians(70.f), ratio, 0.1f, 10000.f);
-    AssetManager::Create(argv, ProjMatrix);
+    glm::mat4 ProjMatrix = glm::perspective(glm::radians(70.f), ratio, 0.1f, 100.f);
+    AssetManager::Create(argv, ProjMatrix, WINDOW_WIDTH, WINDOW_HEIGHT);
+
     App app;
 
     app.layoutGame();
@@ -69,7 +69,6 @@ int main(int argc, char** argv) {
                     break;
             }
         }
-
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); // On nettoie la fenêtre afin de ne pas avoir de résidu du tour précédent
 
         app.draw();
