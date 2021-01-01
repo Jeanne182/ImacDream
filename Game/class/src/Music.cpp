@@ -1,5 +1,6 @@
 #include "../include/Music.hpp"
 #include "../include/AssetsManager.hpp"
+#include <SDL2/SDL_mixer.h>
 
 Music::Music() {
     //Init music

@@ -10,9 +10,9 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.17.5/CMakeCCompiler.cmake"
   "CMakeFiles/3.17.5/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.17.5/CMakeSystem.cmake"
-  "/home/matteo/Documents/imac2/openGL/ImacDream/Game/CMake/FindGLEW.cmake"
-  "/home/matteo/Documents/imac2/openGL/ImacDream/Game/CMakeLists.txt"
-  "/home/matteo/Documents/imac2/openGL/ImacDream/Game/glimac/CMakeLists.txt"
+  "/home/pofecy/Documents/imac2/openGL/ImacDream/Game/CMake/FindGLEW.cmake"
+  "/home/pofecy/Documents/imac2/openGL/ImacDream/Game/CMakeLists.txt"
+  "/home/pofecy/Documents/imac2/openGL/ImacDream/Game/glimac/CMakeLists.txt"
   "/snap/clion/138/bin/cmake/linux/share/cmake-3.17/Modules/CMakeCInformation.cmake"
   "/snap/clion/138/bin/cmake/linux/share/cmake-3.17/Modules/CMakeCXXInformation.cmake"
   "/snap/clion/138/bin/cmake/linux/share/cmake-3.17/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake"
@@ -40,8 +40,10 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/snap/clion/138/bin/cmake/linux/share/cmake-3.17/Modules/Platform/UnixPaths.cmake"
   "/snap/clion/138/bin/cmake/linux/share/cmake-3.17/Modules/ProcessorCount.cmake"
   "/usr/lib/x86_64-linux-gnu/cmake/SDL2/sdl2-config.cmake"
-  "/usr/lib/x86_64-linux-gnu/cmake/assimp-4.1/assimp-config-version.cmake"
-  "/usr/lib/x86_64-linux-gnu/cmake/assimp-4.1/assimp-config.cmake"
+  "/usr/lib/x86_64-linux-gnu/cmake/assimp-5.0/assimp-config-version.cmake"
+  "/usr/lib/x86_64-linux-gnu/cmake/assimp-5.0/assimp-config.cmake"
+  "/usr/lib/x86_64-linux-gnu/cmake/assimp-5.0/assimpTargets-release.cmake"
+  "/usr/lib/x86_64-linux-gnu/cmake/assimp-5.0/assimpTargets.cmake"
   )
 
 # The corresponding makefile is:
