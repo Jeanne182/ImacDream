@@ -20,7 +20,7 @@ private:
     std::vector<std::pair<glm::vec3, float>> _randomMushroomsPositions;
     std::vector<std::pair<glm::vec3, float>> _randomMushroomsCenterRadius;
     std::vector<std::string> _randomMushroomsTypes;
-    int _nbMushrooms = 1000;
+    int _nbMushrooms = 2000;
 
     std::vector<std::pair<glm::vec3, float>> _randomRockPositions;
     std::vector<std::pair<glm::vec3, float>> _randomRockCenterRadius;
@@ -63,15 +63,11 @@ public:
                    std::vector<std::string> &randomTypes, std::vector<std::string> &types,  const int &nbCopies,
                    std::default_random_engine &generator, std::uniform_real_distribution<float> &positionsDistrib);
 
-    glm::vec3 findMax(const int id, std::vector<std::pair<glm::vec3, float>> &randomPosition, std::vector<std::string> &randomTypes);
-    glm::vec3 findMin(const int id, std::vector<std::pair<glm::vec3, float>> &randomPosition, std::vector<std::string> &randomTypes);
-    void setHitboxRadius(const int id, std::vector<std::pair<glm::vec3, float>> &randomPosition,
-                         std::vector<std::pair<glm::vec3, float>> &randomCenterRadius, std::vector<std::string> &randomTypes);
-    void setCenter(const int id, std::vector<std::pair<glm::vec3, float>> &randomPosition,
-                   std::vector<std::pair<glm::vec3, float>> &randomCenterRadius, std::vector<std::string> &randomTypes);
     inline void setBoolValue(const int id){ _exist.at(id)=false; };
-    int selectedEgg(const glm::mat4 &cameraView, const glm::vec3 &cameraPosition);
-    bool isSelected(const glm::mat4 &cameraView, const glm::vec3 &cameraPosition, const int i);
-};
+    int selectedEgg(const glm::mat4 &cameraView);
+    bool isSelected(const glm::mat4 &cameraView, const int i);
+    bool Collisions(const glm::mat4 &cameraView, const glm::vec3 &cameraPosition, const int i);
+
+    };
 
 #endif //IMACDREAM_TERRAIN_HPP

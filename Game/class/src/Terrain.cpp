@@ -40,6 +40,7 @@ void Terrain::ObjectsManager(std::vector<std::string> &names) {
         std::string path = "/" + names[i] + ".obj";
         GameObject object(path);
         _objects.insert(std::make_pair(names[i], object));
+
     }
 }
 
@@ -62,7 +63,7 @@ void Terrain::randomizeManager() {
 
     std::vector<std::string> eggTypes = {"dragon_egg"};
     randomize(_randomEggPositions, _randomEggCenterRadius, _randomEggTypes, eggTypes,  _nbEggs,generator, positionsDistrib);
-    for(unsigned int i=0; i<_nbEggs; i++){
+    for(int i=0; i<_nbEggs; i++){
         _exist.push_back(true);
     }
 }
@@ -77,105 +78,58 @@ void Terrain::randomize(std::vector<std::pair<glm::vec3, float>> &randomPosition
     for (int i = 0; i < nbCopies; i++){
         randomPositions.push_back(std::make_pair(glm::vec3(positionsDistrib(generator), 0.f, positionsDistrib(generator)), 1.f));
         randomTypes.push_back(types[typeId()]);
-        randomCenterRadius.push_back(std::make_pair(glm::vec3(0., 0., 0.), 0.f));
-        setCenter(i, randomPositions, randomCenterRadius, randomTypes);
-        setHitboxRadius(i, randomPositions, randomCenterRadius, randomTypes);
+        randomCenterRadius.push_back(std::make_pair(glm::vec3(randomPositions[i].first+_objects.find(randomTypes[i])->second.getCenter()), _objects.find(randomTypes[i])->second.getHitboxRadius()));
     }
+
 }
 
 
 
-void Terrain::setCenter(const int id, std::vector<std::pair<glm::vec3, float>> &randomPosition,
-                        std::vector<std::pair<glm::vec3, float>> &randomCenterRadius,
-                        std::vector<std::string> &randomTypes){
-    glm::vec3 max = findMax(id, randomPosition, randomTypes);
-    glm::vec3 min = findMin(id, randomPosition, randomTypes);
-    randomCenterRadius.at(id).first=((max+min)/glm::vec3(2., 2., 2.));
-}
-
-
-
-void Terrain::setHitboxRadius(const int id, std::vector<std::pair<glm::vec3, float>> &randomPosition,
-                              std::vector<std::pair<glm::vec3, float>> &randomCenterRadius, std::vector<std::string> &randomTypes){
-    float radius ;
-    for(auto meshes : _objects.find(randomTypes[id])->second.getModel()->_meshes){
-        for(auto vertices : meshes._vertices){
-            glm::vec3 vertex = glm::vec3(vertices.position*randomPosition[id].second+randomPosition[id].first);
-            radius = float(glm::distance(vertex, randomCenterRadius[id].first));
-            if(radius > randomCenterRadius[id].second ) {
-                randomCenterRadius[id].second = radius;
-            }
-        }
-    }
-}
-
-
-
-glm::vec3 Terrain::findMax(const int id, std::vector<std::pair<glm::vec3, float>> &randomPosition, std::vector<std::string> &randomTypes){
-    glm::vec3 max = randomPosition[id].first;
-    for(auto meshes : _objects.find(randomTypes[id])->second.getModel()->_meshes){
-        for(auto vertices : meshes._vertices){
-            glm::vec3 vertex = glm::vec3(vertices.position * randomPosition[id].second + randomPosition[id].first);
-            if(vertex.x> max.x) max.x = vertex.x;
-            if(vertex.y > max.y) max.y = vertex.y;
-            if(vertex.z > max.z) max.z = vertex.z;
-        }
-    }
-    return max;
-}
-
-glm::vec3 Terrain::findMin(const int id, std::vector<std::pair<glm::vec3, float>> &randomPosition, std::vector<std::string> &randomTypes){
-    glm::vec3 min =  randomPosition[id].first;
-    for(auto meshes : _objects.find(randomTypes[id])->second.getModel()->_meshes){
-        for(auto vertices : meshes._vertices){
-            glm::vec3 vertex = glm::vec3(vertices.position* randomPosition[id].second+ randomPosition[id].first);
-            if(vertex.x< min.x) min.x = vertex.x;
-            if(vertex.y < min.y) min.y = vertex.y;
-            if(vertex.z < min.z) min.z = vertex.z;
-        }
-    }
-    return min;
-}
-
-
-
-
-
-int Terrain::selectedEgg(const glm::mat4 &cameraView, const glm::vec3 &cameraPosition){
-    for(unsigned int i=0; i<_nbEggs; i++){
+int Terrain::selectedEgg(const glm::mat4 &cameraView){
+    for(int i=0; i<_nbEggs; i++){
         if(_exist[i]==true){
-            if(isSelected(cameraView, cameraPosition, i)) return i;
+            if(isSelected(cameraView, i)) return i;
         }
     }
     return -1;
 }
 
 
-// test if the camera is pointing on an object
-bool Terrain::isSelected(const glm::mat4 &cameraView, const glm::vec3 &cameraPosition, const int i) {
-    // Distance between the camera and the center of the interactive object
+// test if the camera is pointing on an egg
+bool Terrain::isSelected(const glm::mat4 &cameraView, const int i) {
+    // Distance between the camera and the center of the egg
     glm::vec3 distanceVector = glm::vec3(cameraView*glm::vec4(_randomEggCenterRadius[i].first, 1.)) ;
 
     // Find the direction vector of the camera ray
     glm::vec3 directionVectorCam = glm::vec3(glm::vec4(0, 0, -1, 0));
 
-    // Distance between the camera and the center of the interactive object projected on the camera vector
+    // Distance between the camera and the center of the egg projected on the camera vector
     double distanceToCenter = dotProduct(distanceVector, directionVectorCam) ;
 
     // Check if the ray intersect the sphere or not depending on the position of the camera
     if(distanceToCenter < 0) return false;
 
-    // Find the closest distance between the center of the object on the camera ray (ortho proj)
+    // Find the closest distance between the center of the egg on the camera ray (ortho proj)
     double distanceToRay = sqrt(abs(pow(distanceToCenter, 2) - dotProduct(distanceVector, distanceVector)));
 
-    // Check if the ray intersect the sphere or not depending on the radius
+    // Check if the ray intersect the egg or not depending on the radius
     if(distanceToRay > _randomEggCenterRadius[i].second) return false ;
 
     return true;
 
 }
 
+/*
+bool Terrain::Collisions(const glm::mat4 &cameraView, const glm::vec3 &cameraPosition, const int i){
+    for(unsigned int i=0; i<_nbTrees ; i++){
+//        if(glm::vec3(cameraView*glm::vec4(_randomTreeCenterRadius[i].first, 1.)) < _randomTreeCenterRadius[i].second) return true;
+        if(dotProduct(cameraView*glm::vec4(_randomTreeCenterRadius[i].first, 1.)) < _randomTreeCenterRadius[i].second) return true;
 
+    }
+    for(unsigned int i=0; i<_nbRocks ; i++){
+        if(glm::vec3(cameraView*glm::vec4(_randomTreeCenterRadius[i].first, 1.)) < _randomTreeCenterRadius[i].second) return true;
 
-
-
+    }
+    return false;
+}
+*/

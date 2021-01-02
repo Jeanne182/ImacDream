@@ -23,6 +23,8 @@ GameObject::GameObject(const GameObject &object)
           _center(object._center)
 {
     setMatrix();
+    setCenter();
+    setHitboxRadius();
 }
 
 
@@ -70,4 +72,57 @@ void GameObject::useMatrix() const {
 
 void GameObject::deleteBuffers() {
     _model->deleteBuffers();
+}
+
+
+
+
+void GameObject::setCenter(){
+    glm::vec3 max = findMax();
+    glm::vec3 min = findMin();
+    _center=(max+min)/glm::vec3(2., 2., 2.);
+}
+
+
+
+void GameObject::setHitboxRadius(){
+    float radius =0.;
+    for(auto meshes : _model->_meshes){
+        for(auto vertices : meshes._vertices){
+            //glm::vec3 vertex = glm::vec3(vertices.position*randomPosition[id].second+randomPosition[id].first);
+            glm::vec3 vertex = glm::vec3(vertices.position*getScale());
+            radius = float(glm::distance(vertex, getCenter()));
+            if(radius > _hitboxRadius ) {
+                _hitboxRadius = radius;
+            }
+        }
+    }
+}
+
+
+
+glm::vec3 GameObject::findMax(){
+    glm::vec3 max = getPosition();
+    for(auto meshes : _model->_meshes){
+        for(auto vertices : meshes._vertices){
+            glm::vec3 vertex = glm::vec3(vertices.position*getScale());
+            if(vertex.x> max.x) max.x = vertex.x;
+            if(vertex.y > max.y) max.y = vertex.y;
+            if(vertex.z > max.z) max.z = vertex.z;
+        }
+    }
+    return max;
+}
+
+glm::vec3 GameObject::findMin(){
+    glm::vec3 min = getPosition();
+    for(auto meshes : _model->_meshes){
+        for(auto vertices : meshes._vertices){
+            glm::vec3 vertex = glm::vec3(vertices.position-getPosition());
+            if(vertex.x< min.x) min.x = vertex.x;
+            if(vertex.y < min.y) min.y = vertex.y;
+            if(vertex.z < min.z) min.z = vertex.z;
+        }
+    }
+    return min;
 }
