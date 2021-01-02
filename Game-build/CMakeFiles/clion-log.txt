@@ -1,4 +1,4 @@
-/snap/clion/138/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/pofecy/Documents/imac2/openGL/ImacDream/Game
+/snap/clion/135/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/jeanne/Documents/S3/ImacDream/Game
 -- The C compiler identification is GNU 9.3.0
 -- The CXX compiler identification is GNU 9.3.0
 -- Check for working C compiler: /usr/bin/cc
@@ -32,4 +32,4 @@ This warning is for project developers.  Use -Wno-dev to suppress it.
 -- Found Freetype: /usr/lib/x86_64-linux-gnu/libfreetype.so (found version "2.10.1") 
 -- Configuring done
 -- Generating done
--- Build files have been written to: /home/pofecy/Documents/imac2/openGL/ImacDream/Game-build
+-- Build files have been written to: /home/jeanne/Documents/S3/ImacDream/Game-build

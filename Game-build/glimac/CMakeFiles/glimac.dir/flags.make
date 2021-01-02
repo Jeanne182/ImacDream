@@ -6,5 +6,5 @@ CXX_FLAGS = -g   -std=c++11 -lSDL -lSDL2_mixer
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/usr/include/SDL -I/usr/include/freetype2 -I/home/pofecy/Documents/imac2/openGL/ImacDream/Game/glimac/include -I/home/pofecy/Documents/imac2/openGL/ImacDream/Game/third-party/include -I/home/pofecy/Documents/imac2/openGL/ImacDream/Game/third-party 
+CXX_INCLUDES = -I/usr/include/SDL -I/usr/include/freetype2 -I/home/jeanne/Documents/S3/ImacDream/Game/glimac/include -I/home/jeanne/Documents/S3/ImacDream/Game/third-party/include -I/home/jeanne/Documents/S3/ImacDream/Game/third-party 
 

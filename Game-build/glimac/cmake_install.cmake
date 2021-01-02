@@ -1,4 +1,4 @@
-# Install script for directory: /home/pofecy/Documents/imac2/openGL/ImacDream/Game/glimac
+# Install script for directory: /home/jeanne/Documents/S3/ImacDream/Game/glimac
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

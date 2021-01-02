@@ -5,14 +5,14 @@
 #include<chrono>
 #include <functional>
 
-void Terrain::setMapTerrain() {
-    glm::vec3 minVector;
-    for(auto meshes : _objects[TERRAIN]._model->_meshes){
-        for(auto vertices : meshes._vertices){
-            _mapTerrain[std::make_tuple(vertices.position.x*100, vertices.position.z*100)] = vertices.position.y;
-        }
-    }
-}
+//void Terrain::setMapTerrain() {
+//    glm::vec3 minVector;
+//    for(auto meshes : _objects[TERRAIN]._model->_meshes){
+//        for(auto vertices : meshes._vertices){
+//            _mapTerrain[std::make_tuple(vertices.position.x*100, vertices.position.z*100)] = vertices.position.y;
+//        }
+//    }
+//}
 
 /*
 float Terrain::getTerrainHeight(const float x, const float z){
