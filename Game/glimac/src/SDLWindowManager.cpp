@@ -4,10 +4,11 @@
 namespace glimac {
 
 SDLWindowManager::SDLWindowManager(uint32_t width, uint32_t height, const char* title) {
-    if(0 != SDL_Init(SDL_INIT_VIDEO)) {
+    if(0 != SDL_Init(SDL_INIT_VIDEO | SDL_INIT_AUDIO)) {
         std::cerr << SDL_GetError() << std::endl;
         return;
     }
+
     _window = SDL_CreateWindow(title, SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, width, height, SDL_WINDOW_OPENGL);
     if (_window == nullptr) {
         // In the case that the window could not be made...

@@ -62,7 +62,6 @@ void Terrain::deleteBuffers() {
         _object.deleteBuffers();
         delete &_object;
     }
-    delete &_objects;
     _objects.clear();
 }
 

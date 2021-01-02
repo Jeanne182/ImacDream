@@ -68,10 +68,17 @@ RM = /snap/clion/138/bin/cmake/linux/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
+<<<<<<< HEAD
 CMAKE_SOURCE_DIR = /home/fanny/ImacDream/Game
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/fanny/ImacDream/Game-build
+=======
+CMAKE_SOURCE_DIR = /home/pofecy/Documents/imac2/openGL/ImacDream/Game
+
+# The top-level build directory on which CMake was run.
+CMAKE_BINARY_DIR = /home/pofecy/Documents/imac2/openGL/ImacDream/Game-build
+>>>>>>> Music
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -100,9 +107,15 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
+<<<<<<< HEAD
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/fanny/ImacDream/Game-build/CMakeFiles /home/fanny/ImacDream/Game-build/CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/fanny/ImacDream/Game-build/CMakeFiles 0
+=======
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pofecy/Documents/imac2/openGL/ImacDream/Game-build/CMakeFiles /home/pofecy/Documents/imac2/openGL/ImacDream/Game-build/CMakeFiles/progress.marks
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pofecy/Documents/imac2/openGL/ImacDream/Game-build/CMakeFiles 0
+>>>>>>> Music
 .PHONY : all
 
 # The main clean target
@@ -480,33 +493,6 @@ class/src/Music.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/IMACDream.dir/build.make CMakeFiles/IMACDream.dir/class/src/Music.cpp.s
 .PHONY : class/src/Music.cpp.s
 
-class/src/Program.o: class/src/Program.cpp.o
-
-.PHONY : class/src/Program.o
-
-# target to build an object file
-class/src/Program.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/IMACDream.dir/build.make CMakeFiles/IMACDream.dir/class/src/Program.cpp.o
-.PHONY : class/src/Program.cpp.o
-
-class/src/Program.i: class/src/Program.cpp.i
-
-.PHONY : class/src/Program.i
-
-# target to preprocess a source file
-class/src/Program.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/IMACDream.dir/build.make CMakeFiles/IMACDream.dir/class/src/Program.cpp.i
-.PHONY : class/src/Program.cpp.i
-
-class/src/Program.s: class/src/Program.cpp.s
-
-.PHONY : class/src/Program.s
-
-# target to generate assembly for a file
-class/src/Program.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/IMACDream.dir/build.make CMakeFiles/IMACDream.dir/class/src/Program.cpp.s
-.PHONY : class/src/Program.cpp.s
-
 class/src/Skybox.o: class/src/Skybox.cpp.o
 
 .PHONY : class/src/Skybox.o
@@ -742,9 +728,6 @@ help:
 	@echo "... class/src/Music.o"
 	@echo "... class/src/Music.i"
 	@echo "... class/src/Music.s"
-	@echo "... class/src/Program.o"
-	@echo "... class/src/Program.i"
-	@echo "... class/src/Program.s"
 	@echo "... class/src/Skybox.o"
 	@echo "... class/src/Skybox.i"
 	@echo "... class/src/Skybox.s"

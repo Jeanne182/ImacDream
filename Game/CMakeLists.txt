@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.13)
 
 project(IMACDream)
 
-add_definitions(-std=c++11) # -Wall -W -Werror
+add_definitions(-std=c++11 -lSDL -lSDL2_mixer) # -Wall -W -Werror
 
 set(CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/CMake)
 
@@ -12,6 +12,7 @@ find_package(GLEW REQUIRED)
 find_package(ASSIMP REQUIRED)
 find_package(SDL_mixer REQUIRED)
 find_package(Freetype REQUIRED)
+
 
 
 

@@ -3,14 +3,15 @@
 #include <vector>
 
 namespace glimac {
-    Model::Model() {}
+    Model::Model()=default;
 
     Model::Model(const std::string& path) {
         loadModel(path);
     }
     void Model::deleteBuffers(){
-        for(unsigned int i = 0; i < _meshes.size(); i++)
+        for(unsigned int i = 0; i < _meshes.size(); i++) {
             _meshes[i].deleteBuffers();
+        }
     }
     void Model::Draw()
     {
@@ -51,7 +52,7 @@ namespace glimac {
         }
     }
 
-    Mesh Model::processMesh(aiMesh *mesh, const aiScene *scene) {
+    Mesh Model::processMesh(aiMesh *mesh, const aiScene *scene) const {
         std::vector<ShapeVertex> vertices;
         std::vector<unsigned int> indices;
         std::vector<Texture> textures;
@@ -113,7 +114,7 @@ namespace glimac {
         return Mesh(vertices, indices, textures, mat);
     }
 
-    std::vector<Texture> Model::loadMaterialTextures(aiMaterial *mat, aiTextureType type, const std::string& typeName) {
+    std::vector<Texture> Model::loadMaterialTextures(aiMaterial *mat, aiTextureType type, const std::string& typeName) const {
             std::vector<Texture> textures;
 
         for (unsigned int i = 0; i < mat->GetTextureCount(type); i++) {
