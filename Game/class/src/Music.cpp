@@ -11,7 +11,7 @@
 //
 //    Mix_VolumeMusic(MIX_MAX_VOLUME); //Mettre le volume à la moitié
 //    _game = Mix_LoadMUS((AssetManager::Get()->appPath().dirPath() + "Assets/music/musique.mp3").c_str()); //Chargement de la musique
-//    if (_game != nullptr)
+//    if (_game != nullptr)Al
 //        printf("Loaded the file\n");
 //    else
 //        printf("Mix_LoadMUS: %s\n", Mix_GetError());
