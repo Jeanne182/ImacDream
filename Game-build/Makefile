@@ -68,17 +68,10 @@ RM = /snap/clion/138/bin/cmake/linux/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-<<<<<<< HEAD
 CMAKE_SOURCE_DIR = /home/matteo/Documents/imac2/openGL/ImacDream/Game
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/matteo/Documents/imac2/openGL/ImacDream/Game-build
-=======
-CMAKE_SOURCE_DIR = /home/fanny/ImacDream/Game
-
-# The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/fanny/ImacDream/Game-build
->>>>>>> master
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -107,15 +100,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-<<<<<<< HEAD
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/matteo/Documents/imac2/openGL/ImacDream/Game-build/CMakeFiles /home/matteo/Documents/imac2/openGL/ImacDream/Game-build/CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/matteo/Documents/imac2/openGL/ImacDream/Game-build/CMakeFiles 0
-=======
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fanny/ImacDream/Game-build/CMakeFiles /home/fanny/ImacDream/Game-build/CMakeFiles/progress.marks
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fanny/ImacDream/Game-build/CMakeFiles 0
->>>>>>> master
 .PHONY : all
 
 # The main clean target

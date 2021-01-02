@@ -22,7 +22,7 @@ class App {
 private:
 
     Game _game;
-//    Music _music;
+    Music _music;
     StaticImageManager _staticImages;
     TextsManager _texts;
     CharactersManager _characters;
