@@ -12,18 +12,19 @@ protected:
     glm::vec3 _position, _angles;
     float _scale;
     glm::mat4 _M, _MV, _MVP, _N;
-    //Model *_model;
+    Model *_model;
     float _hitboxRadius;
     glm::vec3 _center;
 //    Model *_model; //PRIVATE
 
 
 public :
-    Model *_model;//PRIVATE
+    //Model *_model;//PRIVATE
 
     //CONSTRUCTORS & DESCTRUCTOR
     GameObject(const glm::vec3 &position, const float &scale, const glm::vec3 &angles, Model &model, const float &hitboxRadius, const glm::vec3 &center);
     GameObject(const GameObject &object);
+    GameObject(const std::string &name);
     ~GameObject()=default;
     GameObject()=default;
 
@@ -32,6 +33,7 @@ public :
     inline float getScale(){ return _scale; };
     inline float getHitboxRadius(){ return _hitboxRadius; };
     inline glm::vec3 getCenter(){ return _center; };
+    inline Model* getModel(){ return _model;};
 
 
 

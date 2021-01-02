@@ -22,7 +22,7 @@ class App {
 private:
 
     Game _game;
-    Music _music;
+//    Music _music;
     StaticImageManager _staticImages;
     TextsManager _texts;
     CharactersManager _characters;
@@ -38,7 +38,9 @@ public:
 
     void draw();
     void event(const SDL_Event &e);
-    inline void Delete(){ _game.Delete(); _texts.Delete(); _characters.Delete(); _music.Delete(); };
+//    inline void Delete(){ _game.Delete(); _texts.Delete(); _characters.Delete(); _music.Delete(); };
+    inline void Delete(){ _game.Delete(); _texts.Delete(); _characters.Delete(); };
+
 
 
     //LAYOUTS

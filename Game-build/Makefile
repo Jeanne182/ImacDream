@@ -68,10 +68,17 @@ RM = /snap/clion/138/bin/cmake/linux/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
+<<<<<<< HEAD
 CMAKE_SOURCE_DIR = /home/matteo/Documents/imac2/openGL/ImacDream/Game
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/matteo/Documents/imac2/openGL/ImacDream/Game-build
+=======
+CMAKE_SOURCE_DIR = /home/fanny/ImacDream/Game
+
+# The top-level build directory on which CMake was run.
+CMAKE_BINARY_DIR = /home/fanny/ImacDream/Game-build
+>>>>>>> master
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -100,9 +107,15 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
+<<<<<<< HEAD
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/matteo/Documents/imac2/openGL/ImacDream/Game-build/CMakeFiles /home/matteo/Documents/imac2/openGL/ImacDream/Game-build/CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/matteo/Documents/imac2/openGL/ImacDream/Game-build/CMakeFiles 0
+=======
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fanny/ImacDream/Game-build/CMakeFiles /home/fanny/ImacDream/Game-build/CMakeFiles/progress.marks
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fanny/ImacDream/Game-build/CMakeFiles 0
+>>>>>>> master
 .PHONY : all
 
 # The main clean target
@@ -290,33 +303,6 @@ class/src/GameObject.s: class/src/GameObject.cpp.s
 class/src/GameObject.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/IMACDream.dir/build.make CMakeFiles/IMACDream.dir/class/src/GameObject.cpp.s
 .PHONY : class/src/GameObject.cpp.s
-
-class/src/InteractiveObject.o: class/src/InteractiveObject.cpp.o
-
-.PHONY : class/src/InteractiveObject.o
-
-# target to build an object file
-class/src/InteractiveObject.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/IMACDream.dir/build.make CMakeFiles/IMACDream.dir/class/src/InteractiveObject.cpp.o
-.PHONY : class/src/InteractiveObject.cpp.o
-
-class/src/InteractiveObject.i: class/src/InteractiveObject.cpp.i
-
-.PHONY : class/src/InteractiveObject.i
-
-# target to preprocess a source file
-class/src/InteractiveObject.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/IMACDream.dir/build.make CMakeFiles/IMACDream.dir/class/src/InteractiveObject.cpp.i
-.PHONY : class/src/InteractiveObject.cpp.i
-
-class/src/InteractiveObject.s: class/src/InteractiveObject.cpp.s
-
-.PHONY : class/src/InteractiveObject.s
-
-# target to generate assembly for a file
-class/src/InteractiveObject.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/IMACDream.dir/build.make CMakeFiles/IMACDream.dir/class/src/InteractiveObject.cpp.s
-.PHONY : class/src/InteractiveObject.cpp.s
 
 class/src/InteractiveObjectManager.o: class/src/InteractiveObjectManager.cpp.o
 
@@ -694,9 +680,6 @@ help:
 	@echo "... class/src/GameObject.o"
 	@echo "... class/src/GameObject.i"
 	@echo "... class/src/GameObject.s"
-	@echo "... class/src/InteractiveObject.o"
-	@echo "... class/src/InteractiveObject.i"
-	@echo "... class/src/InteractiveObject.s"
 	@echo "... class/src/InteractiveObjectManager.o"
 	@echo "... class/src/InteractiveObjectManager.i"
 	@echo "... class/src/InteractiveObjectManager.s"

@@ -4,7 +4,7 @@
 #include <random>
 
 Water::Water():GameObject(
-                glm::vec3(0.f,-0.9f,0.f),
+                glm::vec3(0.f,0.f,0.f),
                 1.f,
                 glm::vec3(0.f, 0.f, 0.f),
                 *new Model(AssetManager::Get()->appPath().dirPath() + "Assets/models" + "/water.obj"),
