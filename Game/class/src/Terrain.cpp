@@ -1,9 +1,76 @@
 #include "../include/Terrain.hpp"
 #include "../include/AssetsManager.hpp"
 #include <glimac/Sphere.hpp>
-#include<random>
-#include<chrono>
-#include <functional>
+
+void Terrain::displayManager(const glm::mat4 &cameraView) {
+    _objects.find("terrain")->second.update(cameraView);
+    display(_nbTrees, _randomTreePositions, _randomTreeTypes, cameraView);
+    display(_nbMushrooms, _randomMushroomsPositions, _randomMushroomsTypes, cameraView);
+    display(_nbRocks, _randomRockPositions, _randomRockTypes, cameraView);
+    display(_nbEggs, _randomEggPositions, _randomEggTypes, cameraView);
+}
+
+void Terrain::display(const int &nbCopies, const std::vector<glm::vec3> &randomPositions, const std::vector<std::string> &randomTypes,
+                      const glm::mat4 &cameraView){
+    for (int i = 0; i < nbCopies; i++) {
+        _objects.find(randomTypes[i])->second.setPosition(randomPositions[i]);
+        _objects.find(randomTypes[i])->second.setCenter();
+        _objects.find(randomTypes[i])->second.setHitboxRadius();
+        _objects.find(randomTypes[i])->second.update(cameraView);
+    }
+}
+
+void Terrain::deleteBuffers() {
+    std::map<const std::string, GameObject>::iterator it;
+    for(it = _objects.begin(); it != _objects.end(); it++){
+        it->second.deleteBuffers();
+    }
+    _objects.clear();
+}
+
+void Terrain::ObjectsManager(std::vector<std::string> &names) {
+    for(int i = 0; i < names.size(); i++){
+        std::string path = "/" + names[i] + ".obj";
+        GameObject object(path);
+        _objects.insert(std::make_pair(names[i], object));
+    }
+}
+
+void Terrain::randomizeManager() {
+    //Seed
+    unsigned seed = std::chrono::system_clock::now().time_since_epoch().count();
+    std::default_random_engine generator(seed);
+    //Random positions generator
+    std::uniform_real_distribution<float> positionsDistrib(-500,500);
+
+    std::vector<std::string> treeTypes = {"green_pine", "yellow_pine", "red_pine"};
+    randomize(_randomTreePositions, _randomTreeTypes,treeTypes,  _nbTrees,generator, positionsDistrib);
+
+    //Random mushrooms color generator
+    std::vector<std::string> mushroomTypes = {"mushroom", "mushroom_double", "mushroom_triple"};
+    randomize(_randomMushroomsPositions, _randomMushroomsTypes,mushroomTypes,  _nbMushrooms,generator, positionsDistrib);
+
+    std::vector<std::string> rockTypes = {"conic_rock", "menhir", "rock_circle", "rock_heap"};
+    randomize(_randomRockPositions, _randomRockTypes,rockTypes,  _nbRocks,generator, positionsDistrib);
+
+    std::vector<std::string> eggTypes = {"dragon_egg"};
+    randomize(_randomEggPositions, _randomEggTypes,eggTypes,  _nbEggs,generator, positionsDistrib);
+
+}
+
+void Terrain::randomize(std::vector<glm::vec3> &randomPositions, std::vector<std::string> &randomTypes,
+                    std::vector<std::string> &types,  const int &nbCopies,
+                    std::default_random_engine &generator, std::uniform_real_distribution<float> &positionsDistrib){
+
+    std::uniform_int_distribution<int> typeDistrib(0,types.size() - 1);
+    auto typeId = std::bind(typeDistrib, generator);
+
+    for (int i = 0; i < nbCopies; i++){
+        randomPositions.emplace_back(positionsDistrib(generator), 0.f, positionsDistrib(generator));
+        randomTypes.push_back(types[typeId()]);
+    }
+}
+
 
 //void Terrain::setMapTerrain() {
 //    glm::vec3 minVector;
@@ -43,90 +110,3 @@ float Terrain::getTerrainHeight(const float x, const float z){
     return 5.f;
 }
 */
-void Terrain::display(const glm::mat4 &cameraView) {
-    _objects.find("terrain")->second.update(cameraView);
-
-    for (int i = 0; i < _nbTrees; i++) {
-        _objects.find(_randomTreeTypes[i])->second.setPosition(_randomTreePositions[i]);
-        _objects.find(_randomTreeTypes[i])->second.setCenter();
-        _objects.find(_randomTreeTypes[i])->second.setHitboxRadius();
-        _objects.find(_randomTreeTypes[i])->second.update(cameraView);
-    }
-
-    for (int i = 0; i < _nbMushrooms; i++) {
-        _objects.find(_randomMushroomsTypes[i])->second.setPosition(_randomMushroomsPositions[i]);
-        _objects.find(_randomMushroomsTypes[i])->second.setCenter();
-        _objects.find(_randomMushroomsTypes[i])->second.setHitboxRadius();
-        _objects.find(_randomMushroomsTypes[i])->second.update(cameraView);
-    }
-}
-
-void Terrain::deleteBuffers() {
-    std::map<const std::string, GameObject>::iterator it;
-    for(it = _objects.begin(); it != _objects.end(); it++){
-        it->second.deleteBuffers();;
-    }
-    _objects.clear();
-}
-
-void Terrain::ObjectsManager() {
-    //Terrain
-    GameObject terrainObject("/terrain.obj");
-    _objects.insert(std::make_pair("terrain", terrainObject));
-
-    //Green pine
-    GameObject treeObject("/green_pine.obj");
-    _objects.insert(std::make_pair("tree", treeObject));
-
-    //Red pine
-    GameObject orangeTreeObject("/red_pine.obj");
-    _objects.insert(std::make_pair("orangeTree", orangeTreeObject));
-
-    //Yellow pine
-    GameObject yellowTreeObject("/yellow_pine.obj");
-    _objects.insert(std::make_pair("yellowTree", orangeTreeObject));
-
-    //Mushroom
-    GameObject mushroomObject("/mushroom1.obj");
-    _objects.insert(std::make_pair("mushroom", mushroomObject));
-
-    //Mushroom double
-    GameObject mushroomDoubleObject("/mushroom_double.obj");
-    _objects.insert(std::make_pair("mushroom_double", mushroomDoubleObject));
-
-    //Mushroom triple
-    GameObject mushroomTripleObject("/mushroom_triple.obj");
-    _objects.insert(std::make_pair("mushroom_triple", mushroomTripleObject));
-}
-
-void Terrain::randomize() {
-    //Seed
-    unsigned seed = std::chrono::system_clock::now().time_since_epoch().count();
-    std::default_random_engine generator(seed);
-
-    //Random tree positions generator
-    std::uniform_real_distribution<float> treePositionsDistrib(-500,500);
-
-    //Random tree color generator
-    std::uniform_int_distribution<int> TreeTypeDistrib(0,2);
-    auto treeTypeId = std::bind(TreeTypeDistrib, generator);
-    std::vector<std::string> treeTypes = {"tree", "yellowTree", "orangeTree"};
-
-    for (int i = 0; i < _nbTrees; i++){
-        _randomTreePositions.push_back(glm::vec3(treePositionsDistrib(generator), 0.f, treePositionsDistrib(generator)));
-        _randomTreeTypes.push_back(treeTypes[treeTypeId()]);
-    }
-
-    //Random mushrooms positions generator
-    std::uniform_real_distribution<float> mushroomPositionsDistrib(-500,500);
-
-    //Random mushrooms color generator
-    std::uniform_int_distribution<int> mushroomTypeDistrib(0,2);
-    auto mushroomTypeId = std::bind(mushroomTypeDistrib, generator);
-    std::vector<std::string> mushroomTypes = {"mushroom", "mushroom_double", "mushroom_triple"};
-
-    for (int i = 0; i < _nbTrees; i++){
-        _randomMushroomsPositions.push_back(glm::vec3(mushroomPositionsDistrib(generator), 0.f, mushroomPositionsDistrib(generator)));
-        _randomMushroomsTypes.push_back(mushroomTypes[mushroomTypeId()]);
-    }
-}
