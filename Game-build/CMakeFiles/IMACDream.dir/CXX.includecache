@@ -224,6 +224,18 @@ glimac/glm.hpp
 utility
 -
 
+/home/matteo/Documents/imac2/openGL/ImacDream/Game/class/src/Game.cpp
+../include/Game.hpp
+/home/matteo/Documents/imac2/openGL/ImacDream/Game/class/include/Game.hpp
+../include/AssetsManager.hpp
+/home/matteo/Documents/imac2/openGL/ImacDream/Game/class/include/AssetsManager.hpp
+
+/home/matteo/Documents/imac2/openGL/ImacDream/Game/class/src/Skybox.cpp
+../include/Skybox.hpp
+/home/matteo/Documents/imac2/openGL/ImacDream/Game/class/include/Skybox.hpp
+../include/AssetsManager.hpp
+/home/matteo/Documents/imac2/openGL/ImacDream/Game/class/include/AssetsManager.hpp
+
 /home/matteo/Documents/imac2/openGL/ImacDream/Game/class/src/main.cpp
 glimac/SDLWindowManager.hpp
 -

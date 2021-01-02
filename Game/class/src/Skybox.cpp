@@ -1,6 +1,8 @@
 #include "../include/Skybox.hpp"
 #include "../include/AssetsManager.hpp"
 
+
+
 Model Skybox::loadSkybox(){
     std::string modelsPath = AssetManager::Get()->appPath().dirPath() + "Assets/models";
     auto* skyModel = new Model(modelsPath + "/skybox.obj");
@@ -22,8 +24,9 @@ void Skybox::useMatrix() const {
 }
 
 void Skybox::computeMatrix(const glm::mat4 &cameraView) {
+
     _M = glm::translate(glm::mat4(1.f), glm::vec3(0.,0.,0.));
-    _M = glm::scale(_M, glm::vec3(300.f));
+    _M = glm::scale(_M, glm::vec3(200.f));
 
     _MV = cameraView * _M;
     _MVP = AssetManager::Get()->P() * _MV;
@@ -34,7 +37,6 @@ void Skybox::computeMatrix(const glm::mat4 &cameraView) {
 void Skybox::DrawSky() const {
     for (GLuint i = 0; i < _textures.size(); i++) {
         glActiveTexture(GL_TEXTURE0 + i);
-
 
         glUniform1i(AssetManager::Get()->_skyboxProgram.Texture_Location(), i);
 

@@ -28,18 +28,19 @@ private:
     CharactersManager _characters;
     int _layout;
 
+
 public:
 
 
     //CONSTRUCTOR
-    inline App():_game(), _music(), _texts(), _characters(), _layout(LAYOUT_MENU){            _music.playGame();
+    inline App():_game(), _music(), _texts(), _characters(), _layout(LAYOUT_MENU){_music.playGame();
     };
 
 
     void draw();
     void event(const SDL_Event &e);
-//    inline void Delete(){ _game.Delete(); _texts.Delete(); _characters.Delete(); _music.Delete(); };
-    inline void Delete(){ _game.Delete(); _texts.Delete(); _characters.Delete(); };
+    inline void Delete(){ _game.Delete(); _texts.Delete(); _characters.Delete(); _music.Delete(); };
+    //inline void Delete(){ _game.Delete(); _texts.Delete(); _characters.Delete(); };
 
 
 
