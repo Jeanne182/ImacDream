@@ -84,40 +84,40 @@ void GameObject::setCenter(){
 
 void GameObject::setHitboxRadius(){
 
-//    for(auto meshes : _model->_meshes){
-//
-//        for(auto vertices : meshes._vertices){
-//            auto* vertex = new glm::vec3(vertices.position*getScale()+getPosition());
-//            auto* radius = new float(glm::distance(*vertex, getCenter()));
-//            if(*radius > _hitboxRadius ) _hitboxRadius = *radius;
-//        }
-//    }
+    for(auto meshes : _model->_meshes){
+
+        for(auto vertices : meshes._vertices){
+            glm::vec3 vertex = glm::vec3(vertices.position*getScale()+getPosition());
+            float radius = float(glm::distance(vertex, getCenter()));
+            if(radius > _hitboxRadius ) _hitboxRadius = radius;
+        }
+    }
 }
 
 
 glm::vec3 GameObject::findMax(){
     glm::vec3 max = getPosition();
-//    for(auto meshes : _model->_meshes){
-//        for(auto vertices : meshes._vertices){
-//            auto* vertex = new glm::vec3(vertices.position*getScale()+getPosition());
-//            if(vertex->x> max.x) max.x = vertex->x;
-//            if(vertex->y > max.y) max.y = vertex->y;
-//            if(vertex->z > max.z) max.z = vertex->z;
-//        }
-//    }
+    for(auto meshes : _model->_meshes){
+        for(auto vertices : meshes._vertices){
+            glm::vec3 vertex = glm::vec3(vertices.position*getScale()+getPosition());
+            if(vertex.x> max.x) max.x = vertex.x;
+            if(vertex.y > max.y) max.y = vertex.y;
+            if(vertex.z > max.z) max.z = vertex.z;
+        }
+    }
     return max;
 }
 
 glm::vec3 GameObject::findMin(){
     glm::vec3 min = getPosition();
-//    for(auto meshes : _model->_meshes){
-//        for(auto vertices : meshes._vertices){
-//            auto* vertex = new glm::vec3(vertices.position*getScale()+getPosition());
-//            if(vertex->x< min.x) min.x = vertex->x;
-//            if(vertex->y < min.y) min.y = vertex->y;
-//            if(vertex->z < min.z) min.z = vertex->z;
-//        }
-//    }
+    for(auto meshes : _model->_meshes){
+        for(auto vertices : meshes._vertices){
+            glm::vec3 vertex = glm::vec3(vertices.position*getScale()+getPosition());
+            if(vertex.x< min.x) min.x = vertex.x;
+            if(vertex.y < min.y) min.y = vertex.y;
+            if(vertex.z < min.z) min.z = vertex.z;
+        }
+    }
     return min;
 }
 
