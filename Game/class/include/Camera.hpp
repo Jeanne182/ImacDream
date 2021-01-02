@@ -25,6 +25,8 @@ public:
             m_Position(glm::vec3(0.,0.,0.)), m_fPhi(M_PI), m_fTheta(0.){
         computeDirectionVectors();
     }
+    ~Camera()=default;
+
     void moveLeft(float t);
     void moveFront(float t);
     void rotateLeft(float degrees);

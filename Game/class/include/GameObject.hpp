@@ -15,11 +15,9 @@ protected:
     Model *_model;
     float _hitboxRadius;
     glm::vec3 _center;
-//    Model *_model; //PRIVATE
 
 
 public :
-    //Model *_model;//PRIVATE
 
     //CONSTRUCTORS & DESCTRUCTOR
     GameObject(const glm::vec3 &position, const float &scale, const glm::vec3 &angles, Model &model, const float &hitboxRadius, const glm::vec3 &center);
@@ -44,8 +42,7 @@ public :
     inline void addPosition(glm::vec3 position){ _position += position; }
     inline void addAngles(glm::vec3 angles){ _angles += angles; }
     inline void addScale(float scale){ _scale += scale; }
-    void setHitboxRadius();
-    void setCenter();
+
 
 
     virtual //METHODS
@@ -55,8 +52,7 @@ public :
     void useMatrix() const; //OK
     void update(const glm::mat4 &cameraView);
     void deleteBuffers();
-    glm::vec3 findMax();
-    glm::vec3 findMin();
+
 
 
 

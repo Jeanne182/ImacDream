@@ -157,10 +157,14 @@
 		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/class/include/GameObject.hpp">
 			<Option target="IMACDream"/>
 		</Unit>
+<<<<<<< HEAD
 		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/class/include/InteractiveObjectManager.hpp">
 			<Option target="IMACDream"/>
 		</Unit>
 		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/class/include/Light.hpp">
+=======
+		<Unit filename="/home/fanny/ImacDream/Game/class/include/Light.hpp">
+>>>>>>> Terrain
 			<Option target="IMACDream"/>
 		</Unit>
 		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/class/include/MapManager.hpp">
@@ -211,10 +215,14 @@
 		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/class/src/GameObject.cpp">
 			<Option target="IMACDream"/>
 		</Unit>
+<<<<<<< HEAD
 		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/class/src/InteractiveObjectManager.cpp">
 			<Option target="IMACDream"/>
 		</Unit>
 		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/class/src/Light.cpp">
+=======
+		<Unit filename="/home/fanny/ImacDream/Game/class/src/Light.cpp">
+>>>>>>> Terrain
 			<Option target="IMACDream"/>
 		</Unit>
 		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/class/src/MapManager.cpp">

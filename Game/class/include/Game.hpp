@@ -18,7 +18,7 @@ private:
 public:
     //CONSTRUCTOR
     inline Game():_map(new MapManager()), _pointLight(),  _camera(), _sky(), _score(0){ };
-
+    ~Game()=default;
     //METHODS
     void display();
     void event(const SDL_Event &e);

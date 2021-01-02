@@ -18,6 +18,7 @@ private:
 public:
     inline Light():
             _lightOn(false), _shininess(10.f), _position(glm::vec4(0.f, 1.f, 0.f, 0.f)), _intensity(glm::vec3(_LIGHT_OFF_INTENSITY)) {};
+    ~Light()=default;
 
     void setIntensity();
 //    inline bool setLightOn(const bool state){ _lightOn = state;};

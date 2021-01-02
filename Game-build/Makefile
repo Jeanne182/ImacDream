@@ -291,33 +291,6 @@ class/src/GameObject.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/IMACDream.dir/build.make CMakeFiles/IMACDream.dir/class/src/GameObject.cpp.s
 .PHONY : class/src/GameObject.cpp.s
 
-class/src/InteractiveObjectManager.o: class/src/InteractiveObjectManager.cpp.o
-
-.PHONY : class/src/InteractiveObjectManager.o
-
-# target to build an object file
-class/src/InteractiveObjectManager.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/IMACDream.dir/build.make CMakeFiles/IMACDream.dir/class/src/InteractiveObjectManager.cpp.o
-.PHONY : class/src/InteractiveObjectManager.cpp.o
-
-class/src/InteractiveObjectManager.i: class/src/InteractiveObjectManager.cpp.i
-
-.PHONY : class/src/InteractiveObjectManager.i
-
-# target to preprocess a source file
-class/src/InteractiveObjectManager.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/IMACDream.dir/build.make CMakeFiles/IMACDream.dir/class/src/InteractiveObjectManager.cpp.i
-.PHONY : class/src/InteractiveObjectManager.cpp.i
-
-class/src/InteractiveObjectManager.s: class/src/InteractiveObjectManager.cpp.s
-
-.PHONY : class/src/InteractiveObjectManager.s
-
-# target to generate assembly for a file
-class/src/InteractiveObjectManager.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/IMACDream.dir/build.make CMakeFiles/IMACDream.dir/class/src/InteractiveObjectManager.cpp.s
-.PHONY : class/src/InteractiveObjectManager.cpp.s
-
 class/src/Light.o: class/src/Light.cpp.o
 
 .PHONY : class/src/Light.o
@@ -667,9 +640,6 @@ help:
 	@echo "... class/src/GameObject.o"
 	@echo "... class/src/GameObject.i"
 	@echo "... class/src/GameObject.s"
-	@echo "... class/src/InteractiveObjectManager.o"
-	@echo "... class/src/InteractiveObjectManager.i"
-	@echo "... class/src/InteractiveObjectManager.s"
 	@echo "... class/src/Light.o"
 	@echo "... class/src/Light.i"
 	@echo "... class/src/Light.s"

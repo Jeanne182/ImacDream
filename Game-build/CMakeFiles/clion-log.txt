@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /snap/clion/135/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/jeanne/Documents/S3/ImacDream/Game
 CMake Warning (dev) at /usr/lib/x86_64-linux-gnu/cmake/assimp-5.0/assimpTargets.cmake:54 (if):
   if given arguments:
@@ -13,6 +14,9 @@ Call Stack (most recent call first):
   CMakeLists.txt:12 (find_package)
 This warning is for project developers.  Use -Wno-dev to suppress it.
 
+=======
+/snap/clion/138/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/fanny/ImacDream/Game
+>>>>>>> Terrain
 -- Configuring done
 -- Generating done
 -- Build files have been written to: /home/jeanne/Documents/S3/ImacDream/Game-build
