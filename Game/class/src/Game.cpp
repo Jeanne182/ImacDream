@@ -9,10 +9,6 @@ void Game::event(const SDL_Event &e) {
     _map->event(e,_camera.getViewMatrix(), _camera.getPosition());
 }
 
-
-
-
-
 void Game::update() {
     _camera.setPositionY(8.f);
     //float newY = _map->getTerrainHeight(_camera.getPosition().x, _camera.getPosition().z);

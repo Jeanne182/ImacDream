@@ -41,9 +41,6 @@ void InteractiveObjectManager::display(const glm::mat4 &cameraView) {
         _objectsToFind.setPosition(_positions[7].first);
         _objectsToFind.update(cameraView);
     }
-
-
-
 }
 
 void InteractiveObjectManager::deleteBuffers() {
@@ -69,10 +66,6 @@ InteractiveObjectManager::InteractiveObjectManager():_objectsToFind(),_nbObjects
         setHitboxRadius(i);
 
     }
-
-
-
-
 }
 
 int InteractiveObjectManager::selectedEgg(const glm::mat4 &cameraView, const glm::vec3 &cameraPosition){
