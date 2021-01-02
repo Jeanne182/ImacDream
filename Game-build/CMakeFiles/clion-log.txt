@@ -1,7 +1,6 @@
-<<<<<<< HEAD
-/snap/clion/138/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/fanny/ImacDream/Game
--- The C compiler identification is GNU 7.5.0
--- The CXX compiler identification is GNU 7.5.0
+/snap/clion/138/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/pofecy/Documents/imac2/openGL/ImacDream/Game
+-- The C compiler identification is GNU 9.3.0
+-- The CXX compiler identification is GNU 9.3.0
 -- Check for working C compiler: /usr/bin/cc
 -- Check for working C compiler: /usr/bin/cc - works
 -- Detecting C compiler ABI info
@@ -15,13 +14,6 @@
 -- Detecting CXX compile features
 -- Detecting CXX compile features - done
 -- Found OpenGL: /usr/lib/x86_64-linux-gnu/libOpenGL.so   
--- Found SDL_mixer: /usr/lib/x86_64-linux-gnu/libSDL_mixer.so (found version "1.2.12") 
--- Found Freetype: /usr/lib/x86_64-linux-gnu/libfreetype.so (found version "2.8.1") 
--- Configuring done
--- Generating done
--- Build files have been written to: /home/fanny/ImacDream/Game-build
-=======
-/snap/clion/138/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/pofecy/Documents/imac2/openGL/ImacDream/Game
 CMake Warning (dev) at /usr/lib/x86_64-linux-gnu/cmake/assimp-5.0/assimpTargets.cmake:54 (if):
   if given arguments:
 
@@ -36,7 +28,8 @@ Call Stack (most recent call first):
   CMakeLists.txt:12 (find_package)
 This warning is for project developers.  Use -Wno-dev to suppress it.
 
+-- Found SDL_mixer: /usr/lib/x86_64-linux-gnu/libSDL_mixer.so (found version "1.2.12") 
+-- Found Freetype: /usr/lib/x86_64-linux-gnu/libfreetype.so (found version "2.10.1") 
 -- Configuring done
 -- Generating done
 -- Build files have been written to: /home/pofecy/Documents/imac2/openGL/ImacDream/Game-build
->>>>>>> Music
