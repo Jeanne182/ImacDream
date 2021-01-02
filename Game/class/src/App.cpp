@@ -20,7 +20,7 @@ void App::event(const SDL_Event &e) {
             break;
 
         case LAYOUT_GAME:
-        _game.event(e);
+            _game.event(e);
             switch(e.type){
                 case SDL_KEYDOWN:
                     if (e.key.keysym.sym==SDLK_KP_PLUS ){

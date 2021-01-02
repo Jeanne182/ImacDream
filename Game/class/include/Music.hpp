@@ -11,7 +11,7 @@ class Music {
         void playGame();
 
     private:
-        Mix_Music *_game=NULL;
+        Mix_Music *_game = NULL;
 };
 
 #endif //IMACDREAM_MUSIC_H

@@ -4,7 +4,7 @@
 
 Music::Music() {
     //Init music
-    if (Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2, 4096) == -1) //Initialisation de l'API Mixer
+    if (Mix_OpenAudio(22050, MIX_DEFAULT_FORMAT, 2, 4096) ==-1) //Initialisation de l'API Mixer
     {
         printf("Opening MIX_AUDIO: %s\n", Mix_GetError());
     }
@@ -25,5 +25,6 @@ void Music::Delete() {
 
 void Music::playGame()
 {
-    Mix_PlayMusic(_game, -1);
+    if(Mix_PlayMusic(_game, -1)==-1)
+        printf("Play Channel: %s\n", Mix_GetError());
 }
