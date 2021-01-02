@@ -11,6 +11,7 @@
 class Terrain {
 private:
     std::map<const std::string, GameObject> _objects;
+
     std::vector<glm::vec3> _randomTreePositions;
     std::vector<std::string> _randomTreeTypes;
     int _nbTrees = 2000;
@@ -25,7 +26,7 @@ private:
 
     std::vector<glm::vec3> _randomEggPositions;
     std::vector<std::string> _randomEggTypes;
-    int _nbEggs = 2000;
+    int _nbEggs = 20;
 
 public:
     inline Terrain(){

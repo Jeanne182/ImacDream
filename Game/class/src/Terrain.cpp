@@ -7,15 +7,15 @@ void Terrain::displayManager(const glm::mat4 &cameraView) {
     display(_nbTrees, _randomTreePositions, _randomTreeTypes, cameraView);
     display(_nbMushrooms, _randomMushroomsPositions, _randomMushroomsTypes, cameraView);
     display(_nbRocks, _randomRockPositions, _randomRockTypes, cameraView);
-    display(_nbEggs, _randomEggPositions, _randomEggTypes, cameraView);
+    //display(_nbEggs, _randomEggPositions, _randomEggTypes, cameraView);
 }
 
 void Terrain::display(const int &nbCopies, const std::vector<glm::vec3> &randomPositions, const std::vector<std::string> &randomTypes,
                       const glm::mat4 &cameraView){
     for (int i = 0; i < nbCopies; i++) {
         _objects.find(randomTypes[i])->second.setPosition(randomPositions[i]);
-        _objects.find(randomTypes[i])->second.setCenter();
-        _objects.find(randomTypes[i])->second.setHitboxRadius();
+        //_objects.find(randomTypes[i])->second.setCenter();
+        //_objects.find(randomTypes[i])->second.setHitboxRadius();
         _objects.find(randomTypes[i])->second.update(cameraView);
     }
 }
@@ -53,8 +53,8 @@ void Terrain::randomizeManager() {
     std::vector<std::string> rockTypes = {"conic_rock", "menhir", "rock_circle", "rock_heap"};
     randomize(_randomRockPositions, _randomRockTypes,rockTypes,  _nbRocks,generator, positionsDistrib);
 
-    std::vector<std::string> eggTypes = {"dragon_egg"};
-    randomize(_randomEggPositions, _randomEggTypes,eggTypes,  _nbEggs,generator, positionsDistrib);
+    //std::vector<std::string> eggTypes = {"dragon_egg"};
+    //randomize(_randomEggPositions, _randomEggTypes,eggTypes,  _nbEggs,generator, positionsDistrib);
 
 }
 
@@ -70,43 +70,3 @@ void Terrain::randomize(std::vector<glm::vec3> &randomPositions, std::vector<std
         randomTypes.push_back(types[typeId()]);
     }
 }
-
-
-//void Terrain::setMapTerrain() {
-//    glm::vec3 minVector;
-//    for(auto meshes : _objects[TERRAIN]._model->_meshes){
-//        for(auto vertices : meshes._vertices){
-//            _mapTerrain[std::make_tuple(vertices.position.x*100, vertices.position.z*100)] = vertices.position.y;
-//        }
-//    }
-//}
-
-/*
-float Terrain::getTerrainHeight(const float x, const float z){
-    std::map<std::tuple<int, int>, float>::iterator low, prev;
-    std::tuple<int, int> pos = std::tuple<int, int>(x*100, z*100);
-    low = _mapTerrain.lower_bound(pos);
-    if (low == _mapTerrain.end()) {
-        std::cout << "Position not find" << std::endl;
-    }
-    else if (low == _mapTerrain.begin()) {
-        std::cout << "low= " << std::get<0>(low->first) << " & " << std::get<1>(low->first) << std::endl;
-        return low->second;
-    }
-    else {
-        prev = std::prev(low);
-        if ((std::get<0>(pos) - std::get<0>(prev->first) && std::get<1>(pos) - std::get<1>(prev->first)) < (std::get<0>(low->first) - std::get<0>(pos) && std::get<1>(low->first) - std::get<1>(pos))){
-            std::cout << "prev= " << std::get<0>(prev->first)/100 << " & " << std::get<1>(prev->first)/100 << std::endl;
-            std::cout << "y= " << prev->second << std::endl;
-            return prev->second;
-        }
-
-        else{
-            std::cout << "low= " << std::get<0>(low->first)/100 << " & " << std::get<1>(low->first)/100 << std::endl;
-            std::cout << "y= " << low->second << std::endl;
-            return low->second;
-        }
-    }
-    return 5.f;
-}
-*/
