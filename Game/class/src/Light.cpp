@@ -2,18 +2,18 @@
 #include "../include/AssetsManager.hpp"
 
 void Light::event(const SDL_Event &e) {
+
     switch(e.type) {
         case SDL_KEYDOWN:
             if (e.key.keysym.sym==SDLK_a)
             {
                 if(!getLightOn()){
-                    setIntensity();
-                    std::cout<<getIntensity()<<std::endl;
+                    _lightOn = true;
                 }
                 else{
-                    setIntensity();
-                    std::cout<<getIntensity()<<std::endl;
+                    _lightOn = false;
                 }
+                setIntensity();
             }
             break;
         default:
@@ -21,8 +21,17 @@ void Light::event(const SDL_Event &e) {
     }
 }
 void Light::setIntensity(){
-    if(_lightOn) _intensity = glm::vec3(50.f);
-    else _intensity = glm::vec3(5.f);
+    std::cout << "Old intensity : " << _intensity << std::endl;
+    if(_lightOn) {
+        std::cout<<"Light on"<<std::endl;
+        _intensity = glm::vec3(_LIGHT_ON_INTENSITY);
+    }
+    else {
+        std::cout<<"Light off"<<std::endl;
+        _intensity = glm::vec3(_LIGHT_OFF_INTENSITY);
+    }
+    std::cout << "New intensity : " << _intensity << std::endl;
+
 }
 
 

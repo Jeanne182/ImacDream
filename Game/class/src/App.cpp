@@ -25,7 +25,13 @@ void App::event(const SDL_Event &e) {
                 case SDL_KEYDOWN:
                     if (e.key.keysym.sym==SDLK_KP_PLUS ){
                         _game.increaseScore();
-                        _texts.getText("oeufs")->replace("Oeufs de dragons : " + std::to_string(_game.score()));
+                        _texts.getText("eggs")->replace("Dragon eggs : " + std::to_string(_game.score()));
+                    }
+
+                    if (e.key.keysym.sym==SDLK_a ){
+                        if (_game.lightOn()) _texts.getText("light")->replace("Light on");
+                        else _texts.getText("light")->replace("Light off");
+
                     }
             }
             if(_game.score() == 3){
@@ -67,7 +73,12 @@ void App::drawGame() {
         AssetManager::Get()->_staticImageProgram._program.use();
         _staticImages.displayImage("cursor");
         AssetManager::Get()->_textProgram._program.use();
-        _texts.getText("oeufs")->renderText(_characters);
+        _texts.getText("eggs")->renderText(_characters);
+        _texts.getText("light")->renderText(_characters);
+        _texts.getText("quit_button")->renderText(_characters);
+        _texts.getText("move_button")->renderText(_characters);
+        _texts.getText("light_button")->renderText(_characters);
+        _texts.getText("grab_button")->renderText(_characters);
 
 
     }
@@ -82,8 +93,8 @@ void App::drawMenu() {
         AssetManager::Get()->_staticImageProgram._program.use();
         _staticImages.displayImage("menu");
         AssetManager::Get()->_textProgram._program.use();
-        _texts.getText("jouer")->renderText(_characters);
-        _texts.getText("quitter")->renderText(_characters);
+        _texts.getText("play")->renderText(_characters);
+        _texts.getText("quit")->renderText(_characters);
     }
     catch(std::exception &e){
         std::cout << e.what() << std::endl;
@@ -131,10 +142,14 @@ void App::layoutGame() {
     _staticImages.sendVertexBuffer();
     AssetManager::Get()->_textProgram._program.use();
     _characters.load();
-    _texts.addText("Texte ici", "test", 0.5f, glm::vec2(50, 50), glm::vec3(0.5));
-    _texts.addText("Jouer (Enter)", "jouer", 0.5f, glm::vec2(450, 260), glm::vec3(1));
-    _texts.addText("Quitter (Esc)", "quitter", 0.5f, glm::vec2(452, 180), glm::vec3(1));
-    _texts.addText("Oeufs de dragons : 0", "oeufs", 0.5f, glm::vec2(50, 670), glm::vec3(1));
+    _texts.addText("Play (Enter)", "play", 0.5f, glm::vec2(450, 260), glm::vec3(1));
+    _texts.addText("Quit (Esc)", "quit", 0.5f, glm::vec2(463, 180), glm::vec3(1));
+    _texts.addText("Dragon eggs : 0", "eggs", 0.5f, glm::vec2(50, 90), glm::vec3(1));
+    _texts.addText("Light off", "light", 0.5f, glm::vec2(50, 50), glm::vec3(1));
+    _texts.addText("Quit (Esc)", "quit_button", 0.35f, glm::vec2(50, 670), glm::vec3(1));
+    _texts.addText("Move (Z, Q, S, D)", "move_button", 0.35f, glm::vec2(50, 640), glm::vec3(1));
+    _texts.addText("Light (A)", "light_button", 0.35f, glm::vec2(50, 610), glm::vec3(1));
+    _texts.addText("Grab (E)", "grab_button", 0.35f, glm::vec2(50, 580), glm::vec3(1));
 }
 
 

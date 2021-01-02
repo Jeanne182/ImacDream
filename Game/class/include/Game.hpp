@@ -18,6 +18,7 @@ private:
 public:
     //CONSTRUCTOR
     inline Game():_map(new MapManager()), _pointLight(),  _camera(), _sky(), _score(0){ };
+
     //METHODS
     void display();
     void event(const SDL_Event &e);
@@ -25,6 +26,9 @@ public:
     inline void increaseScore() { _score++ ;};
     void update();
     inline void Delete(){ _map->Delete(); delete _map; _sky.deleteBuffers(); };
+
+    //GETTER
+    inline bool lightOn() {return _pointLight.getLightOn();}
 };
 
 
