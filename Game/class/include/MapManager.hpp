@@ -23,7 +23,7 @@ public:
     inline void Delete(){ _terrain.deleteBuffers(); _water.deleteBuffers();};
 
 
-    void event(const SDL_Event &e,const glm::mat4 &cameraView, const glm::vec3 &cameraPosition);
+    void event(const SDL_Event &e,const glm::mat4 &cameraView);
 
     //SETTERS
 

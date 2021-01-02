@@ -42,6 +42,8 @@ public :
     inline void addPosition(glm::vec3 position){ _position += position; }
     inline void addAngles(glm::vec3 angles){ _angles += angles; }
     inline void addScale(float scale){ _scale += scale; }
+    void setCenter();
+    void setHitboxRadius();
 
 
 
@@ -52,6 +54,9 @@ public :
     void useMatrix() const; //OK
     void update(const glm::mat4 &cameraView);
     void deleteBuffers();
+    glm::vec3 findMax();
+    glm::vec3 findMin();
+
 
 
 
