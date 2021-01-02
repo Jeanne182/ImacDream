@@ -10,7 +10,7 @@
 
 class InteractiveObject : public GameObject {
 protected:
-    int _value;
+    int _id;
 
 public :
     //CONSTRUCTORS
@@ -20,21 +20,20 @@ public :
                              Model &model,
                              const float &hitboxRadius,
                              const glm::vec3 &center,
-                             const int &value):
+                             const int &id):
                              GameObject(position, scale, angles, model, hitboxRadius, center),
-                             _value(value)
+                             _id(id)
                              {}
-    inline InteractiveObject(const InteractiveObject &interactiveObject): GameObject(interactiveObject), _value(interactiveObject._value){}
+    inline InteractiveObject(const InteractiveObject &interactiveObject): GameObject(interactiveObject), _id(interactiveObject._id){}
 
     //GETTERS
-    inline int getValue(){ return _value; };
+    inline int getID(){ return _id; };
 
     //SETTERS
-    inline void setValue(int value){ _value = value; }
+    inline void setID(int id){ _id = id; }
 
     //METHODS
-    bool isSelected(const glm::vec3 &cameraPosition, glm::vec3 *P1, glm::vec3 *P2);
-    //void setHitboxRadius();
+    bool isSelected(const glm::mat4 &cameraView, const glm::vec3 &cameraPosition);
 
 
     };

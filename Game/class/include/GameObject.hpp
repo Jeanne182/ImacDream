@@ -17,6 +17,7 @@ protected:
     glm::vec3 _center;
 //    Model *_model; //PRIVATE
 
+
 public :
     Model *_model;//PRIVATE
 
@@ -25,6 +26,7 @@ public :
     GameObject(const GameObject &object);
     GameObject(const std::string &name);
     ~GameObject()=default;
+    GameObject()=default;
 
     //GETTERS
     inline glm::vec3 getPosition(){ return _position; };
@@ -54,10 +56,12 @@ public :
     void deleteBuffers();
     glm::vec3 findMax();
     glm::vec3 findMin();
-    int numberVertices();
+
 
 
 
 };
+
+
 
 #endif //IMACDREAM_GAMEOBJECT_HPP

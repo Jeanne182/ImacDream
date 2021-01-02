@@ -7,10 +7,8 @@
 class Light
 {
 public:
-    inline Light()
-        :_position(glm::vec4(0.f, 0.f, 0.f, 0.f)), _intensity(glm::vec3(0.f)), _shininess(0.f), _lightOn(false){};
-    inline Light(const glm::mat4 &cameraView):
-        _position(glm::vec4(0.f, 1.f, 0.f, 0.f)),_intensity(glm::vec3(5.f)), _shininess(10.f), _lightOn(false){};
+    inline Light():
+            _lightOn(false), _shininess(10.f), _position(glm::vec4(0.f, 1.f, 0.f, 0.f)), _intensity(glm::vec3(5.f)) {};
 
     void setIntensity();
 //    inline bool setLightOn(const bool state){ _lightOn = state;};

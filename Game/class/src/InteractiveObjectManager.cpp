@@ -1,71 +1,100 @@
 #include "../include/InteractiveObjectManager.hpp"
 #include "../include/AssetsManager.hpp"
 #include <glimac/Sphere.hpp>
+#include <map>
+#include "../include/Utils.hpp"
 
 
-void InteractiveObjectManager::display(const glm::mat4 &cameraView) {/*
-    _objectsToFind[0].setPosition(glm::vec3(1.f, 1.f, 1.f));
+void InteractiveObjectManager::display(const glm::mat4 &cameraView) {
 
-    _objectsToFind[0].setScale(0.1f);
-    _objectsToFind[0].setCenter();
+    if(_exist[0]==true){
+        _objectsToFind.setPosition(glm::vec3(3.f, 2.f, -8.f));
+        _objectsToFind.setCenter();
+        _objectsToFind.setHitboxRadius();
+        _eggs.push_back(std::make_pair(_objectsToFind.getCenter(), _objectsToFind.getHitboxRadius()));
+        _objectsToFind.update(cameraView);
+    }
+    if(_exist[1]==true){
+        _objectsToFind.setPosition(glm::vec3(5.f, 2.f, -8.f));
+        _objectsToFind.setCenter();
+        _objectsToFind.setHitboxRadius();
+        _eggs.push_back(std::make_pair(_objectsToFind.getCenter(), _objectsToFind.getHitboxRadius()));
+        _objectsToFind.update(cameraView);
+    }
 
-    _objectsToFind[0].setHitboxRadius();
-    std::cout << "position tree : " << _objectsToFind[0].getPosition() << std::endl;
-    std::cout << "center tree : " << _objectsToFind[0].getCenter() << std::endl;
-    std::cout << "radius tree : " << _objectsToFind[0].getHitboxRadius() << std::endl;
 
-    _objectsToFind[0].update(cameraView);
-
-    _objectsToFind[1].setPosition(_objectsToFind[0].getCenter());
-    _objectsToFind[1].setScale(_objectsToFind[0].getHitboxRadius());
-    _objectsToFind[1].setCenter();
-
-    _objectsToFind[1].setHitboxRadius();
-    std::cout << "position sphere : " << _objectsToFind[1].getPosition() << std::endl;
-    std::cout << "center sphere : " << _objectsToFind[1].getCenter() << std::endl;
-    std::cout << "radius sphere : " << _objectsToFind[1].getHitboxRadius() << std::endl;
-    _objectsToFind[1].update(cameraView);*/
 
 }
 
 void InteractiveObjectManager::deleteBuffers() {
-    for(auto & _objectsToFind : _objectsToFind){
-        _objectsToFind.deleteBuffers();
-    }
+    _objectsToFind.deleteBuffers();
 }
 
-void InteractiveObjectManager::InteractiveObjectsManager() {
-    auto* InteractiveObjects = new std::vector<InteractiveObject>;
-    std::string modelsPath = AssetManager::Get()->appPath().dirPath() + "Assets/models";
+InteractiveObjectManager::InteractiveObjectManager():_objectsToFind(),_nbObjects(8), _exist(), _eggs(){
 
-    //TREE
-    std::string pathModelTree = modelsPath + "/green_pine.obj";
-    auto* tree = new Model(pathModelTree);
-    InteractiveObject treeObject(glm::vec3(0.f,0.f,0.f), 1.f, glm::vec3(0.f, 0.f, 0.f), *tree, 0, glm::vec3(0, 0, 0), 2);
-    InteractiveObjects->push_back(treeObject);
-
-    //SPHERE
-    Sphere sphere(1,32,32);
-    std::vector<GLuint> indices;
-    std::vector<Texture> textures;
-    Material material;
-    material.Ka = glm::vec4(1.f,1.f,1.f,0.f);
-    material.Kd = glm::vec4(1.f,0.f,0.5f,0.f);
-    material.Ks = glm::vec4(0.5f,0.5f,0.5f,0.5f);
-    std::vector<ShapeVertex> meshVertices;
-    for (GLint i = 0; i < sphere.getVertexCount();i++){
-        indices.push_back(i);
-        meshVertices.push_back(sphere.getDataPointer()[i]);
+    for(int i=0; i<_nbObjects ; i++){
+        _exist.push_back(true);
     }
-    Mesh* sphereMesh = new Mesh(meshVertices, indices, textures, material);
-    Model* sphereModel = new Model();
-    sphereModel->_meshes.push_back(*sphereMesh);
-    InteractiveObject sphereObject(glm::vec3(0.f,0.f,0.f), 1.f, glm::vec3(0.f, 0.f, 0.f), *sphereModel, 0, glm::vec3(0, 0, 0), 2);
-    InteractiveObjects->push_back(sphereObject);
 
 
-    _objectsToFind = *InteractiveObjects;
+    //DRAGON EGG
+    auto* egg = new Model(AssetManager::Get()->modelFile("dragon_egg.obj"));
+    GameObject eggObject(glm::vec3(0.f,0.f,0.f), 1.f, glm::vec3(0.f, 0.f, 0.f), *egg, 0, glm::vec3(0, 0, 0));
+
+
+    _objectsToFind = eggObject;
+}
+
+int InteractiveObjectManager::selectedEgg(const glm::mat4 &cameraView, const glm::vec3 &cameraPosition){
+    for(unsigned int i=0; i<_nbObjects; i++){
+        if(isSelected(cameraView, cameraPosition, _eggs[i].first, _eggs[i].second)){
+            return i;
+        }
+    }
+    return -1;
 }
 
 
+// test if the camera is pointing on an object
 
+bool isSelected(const glm::mat4 &cameraView, const glm::vec3 &cameraPosition, const glm::vec3 centerObj, const float radiusObj) {
+
+
+    // Distance between the camera and the center of the interactive object
+    glm::vec3 distanceVector = glm::vec3(cameraView*glm::vec4(centerObj, 1.)) ;
+    std::cout << "cameraPosition : " << cameraPosition << std::endl;
+    std::cout << "distanceVector : " << distanceVector << std::endl;
+    // Find the direction vector of the camera ray
+
+    glm::vec3 directionVectorCam = glm::vec3(glm::vec4(0, 0, -1, 0));
+
+    std::cout << "directionVectorCam : " <<directionVectorCam << std::endl;
+
+
+    // Distance between the camera and the center of the interactive object projected on the camera vector
+    double distanceToCenter = dotProduct(distanceVector, directionVectorCam) ;
+    std::cout << "distanceToCenter : " << distanceToCenter << std::endl;
+
+    // Check if the ray intersect the sphere or not depending on the position of the camera
+    if(distanceToCenter < 0){
+        return false;
+    }
+
+    // Find the closest distance between the center of the object on the camera ray (ortho proj)
+    double distanceToRay = sqrt(abs(pow(distanceToCenter, 2) - dotProduct(distanceVector, distanceVector)));
+    std::cout << "hitbox radius : " << radiusObj << std::endl;
+    std::cout << "distanceToRay : " << distanceToRay << std::endl;
+
+    // Check if the ray intersect the sphere or not depending on the radius
+    if(distanceToRay > radiusObj){
+        return false ;
+    }
+
+    return true;
+
+}
+
+
+void InteractiveObjectManager::setBoolValue(const int id){
+    _exist.at(id)=false;
+}
