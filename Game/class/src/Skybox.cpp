@@ -24,10 +24,8 @@ void Skybox::useMatrix() const {
 }
 
 void Skybox::computeMatrix(const glm::mat4 &cameraView) {
-
     _M = glm::translate(glm::mat4(1.f), glm::vec3(0.,0.,0.));
     _M = glm::scale(_M, glm::vec3(200.f));
-
     _MV = cameraView * _M;
     _MVP = AssetManager::Get()->P() * _MV;
     _N = glm::transpose(glm::inverse(_MV));
