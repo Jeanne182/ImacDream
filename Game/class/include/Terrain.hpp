@@ -23,6 +23,10 @@ private:
     std::vector<std::string> _randomRockTypes;
     int _nbRocks = 2000;
 
+    std::vector<glm::vec3> _randomEggPositions;
+    std::vector<std::string> _randomEggTypes;
+    int _nbEggs = 2000;
+
 public:
     inline Terrain(){
         std::vector<std::string> objectsToImport = {
@@ -36,7 +40,8 @@ public:
                 "conic_rock",
                 "menhir",
                 "rock_circle",
-                "rock_heap"
+                "rock_heap",
+                "dragon_egg"
         };
 
         ObjectsManager(objectsToImport);

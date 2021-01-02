@@ -7,6 +7,7 @@ void Terrain::displayManager(const glm::mat4 &cameraView) {
     display(_nbTrees, _randomTreePositions, _randomTreeTypes, cameraView);
     display(_nbMushrooms, _randomMushroomsPositions, _randomMushroomsTypes, cameraView);
     display(_nbRocks, _randomRockPositions, _randomRockTypes, cameraView);
+    display(_nbEggs, _randomEggPositions, _randomEggTypes, cameraView);
 }
 
 void Terrain::display(const int &nbCopies, const std::vector<glm::vec3> &randomPositions, const std::vector<std::string> &randomTypes,
@@ -51,6 +52,10 @@ void Terrain::randomizeManager() {
 
     std::vector<std::string> rockTypes = {"conic_rock", "menhir", "rock_circle", "rock_heap"};
     randomize(_randomRockPositions, _randomRockTypes,rockTypes,  _nbRocks,generator, positionsDistrib);
+
+    std::vector<std::string> eggTypes = {"dragon_egg"};
+    randomize(_randomEggPositions, _randomEggTypes,eggTypes,  _nbEggs,generator, positionsDistrib);
+
 }
 
 void Terrain::randomize(std::vector<glm::vec3> &randomPositions, std::vector<std::string> &randomTypes,
