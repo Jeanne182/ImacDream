@@ -9,7 +9,7 @@ private:
     float _waveSpeed = 1.f;
 public:
     Water();
-    ~Water(){};
+    ~Water()=default;
     void displayWater();
     void useMatrix();
     void updateTime();

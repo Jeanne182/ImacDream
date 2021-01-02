@@ -50,6 +50,7 @@ namespace glimac {
         //  render data
         unsigned int _vao, _vbo, _ibo;
 
+
         void setupMesh();
     };
 }

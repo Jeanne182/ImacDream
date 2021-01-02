@@ -165,9 +165,6 @@
 		<Unit filename="/home/fanny/ImacDream/Game/class/include/GameObject.hpp">
 			<Option target="IMACDream"/>
 		</Unit>
-		<Unit filename="/home/fanny/ImacDream/Game/class/include/InteractiveObjectManager.hpp">
-			<Option target="IMACDream"/>
-		</Unit>
 		<Unit filename="/home/fanny/ImacDream/Game/class/include/Light.hpp">
 			<Option target="IMACDream"/>
 		</Unit>
@@ -217,9 +214,6 @@
 			<Option target="IMACDream"/>
 		</Unit>
 		<Unit filename="/home/fanny/ImacDream/Game/class/src/GameObject.cpp">
-			<Option target="IMACDream"/>
-		</Unit>
-		<Unit filename="/home/fanny/ImacDream/Game/class/src/InteractiveObjectManager.cpp">
 			<Option target="IMACDream"/>
 		</Unit>
 		<Unit filename="/home/fanny/ImacDream/Game/class/src/Light.cpp">

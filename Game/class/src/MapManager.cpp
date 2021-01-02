@@ -6,7 +6,6 @@
 
 void MapManager::display(const glm::mat4 &cameraView) {
     _terrain.displayManager(cameraView);
-    _interactiveObjectManager.display(cameraView);
 
     glEnable (GL_BLEND);
     glBlendEquation(GL_ADD);
@@ -24,13 +23,13 @@ void MapManager::display(const glm::mat4 &cameraView) {
 void MapManager::event(const SDL_Event &e, const glm::mat4 &cameraView, const glm::vec3 &cameraPosition) {
     switch(e.type){
         case SDL_KEYDOWN:
-            if (e.key.keysym.sym==SDLK_n){
+            if (e.key.keysym.sym==SDLK_e){
 
 
-                int egg_id = _interactiveObjectManager.selectedEgg(cameraView, cameraPosition);
+                int egg_id = _terrain.selectedEgg(cameraView, cameraPosition);
                 if(egg_id != -1){
                     std::cout << "Object selected" << std::endl;
-                    _interactiveObjectManager.setBoolValue(egg_id);
+                    _terrain.setBoolValue(egg_id);
                     //score a augmenter
 
                 }

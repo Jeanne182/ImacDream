@@ -9,7 +9,6 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/fanny/ImacDream/Game/class/src/Camera.cpp" "/home/fanny/ImacDream/Game-build/CMakeFiles/IMACDream.dir/class/src/Camera.cpp.o"
   "/home/fanny/ImacDream/Game/class/src/Game.cpp" "/home/fanny/ImacDream/Game-build/CMakeFiles/IMACDream.dir/class/src/Game.cpp.o"
   "/home/fanny/ImacDream/Game/class/src/GameObject.cpp" "/home/fanny/ImacDream/Game-build/CMakeFiles/IMACDream.dir/class/src/GameObject.cpp.o"
-  "/home/fanny/ImacDream/Game/class/src/InteractiveObjectManager.cpp" "/home/fanny/ImacDream/Game-build/CMakeFiles/IMACDream.dir/class/src/InteractiveObjectManager.cpp.o"
   "/home/fanny/ImacDream/Game/class/src/Light.cpp" "/home/fanny/ImacDream/Game-build/CMakeFiles/IMACDream.dir/class/src/Light.cpp.o"
   "/home/fanny/ImacDream/Game/class/src/MapManager.cpp" "/home/fanny/ImacDream/Game-build/CMakeFiles/IMACDream.dir/class/src/MapManager.cpp.o"
   "/home/fanny/ImacDream/Game/class/src/Mesh.cpp" "/home/fanny/ImacDream/Game-build/CMakeFiles/IMACDream.dir/class/src/Mesh.cpp.o"

@@ -4,7 +4,6 @@
 #include <glimac/SDLWindowManager.hpp>
 #include "./Terrain.hpp"
 #include "./Camera.hpp"
-#include "./InteractiveObjectManager.hpp"
 #include <glimac/SDLWindowManager.hpp>
 #include <map>
 #include<tuple>
@@ -15,17 +14,16 @@
 class MapManager {
 private:
     Terrain _terrain;
-    InteractiveObjectManager _interactiveObjectManager;
-
     Water _water;
 public:
 
-    inline MapManager():_terrain(), _interactiveObjectManager(), _water(){}
+    inline MapManager():_terrain(), _water(){}
+    ~MapManager()=default;
     void display(const glm::mat4 &cameraView);
-    inline void Delete(){ _terrain.deleteBuffers(); _interactiveObjectManager.deleteBuffers();};
+    inline void Delete(){ _terrain.deleteBuffers(); _water.deleteBuffers();};
 
 
-        void event(const SDL_Event &e,const glm::mat4 &cameraView, const glm::vec3 &cameraPosition);
+    void event(const SDL_Event &e,const glm::mat4 &cameraView, const glm::vec3 &cameraPosition);
 
     //SETTERS
 

@@ -34,7 +34,7 @@ public:
     //CONSTRUCTOR
 //    inline App():_game(), _music(), _texts(), _characters(), _layout(LAYOUT_MENU){_music.playGame(); };
     inline App():_game(), _texts(), _characters(), _layout(LAYOUT_MENU){};
-
+    ~App()=default;
 
     void draw();
     void event(const SDL_Event &e);
