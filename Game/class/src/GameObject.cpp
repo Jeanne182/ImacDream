@@ -25,6 +25,15 @@ GameObject::GameObject(const GameObject &object)
     setMatrix();
 }
 
+
+GameObject::GameObject(const std::string &name)
+                    : _position(glm::vec3(0.f,0.f,0.f)),
+                    _scale(1.f),
+                    _angles(glm::vec3(0.f,0.f,0.f)),
+                    _model(new Model(AssetManager::Get()->modelFile(name))),
+                    _hitboxRadius(1),
+                    _center(glm::vec3(0.f,0.f, 0.f)){}
+
 void GameObject::display() {
     useMatrix();
     _model->Draw();
@@ -125,3 +134,4 @@ int GameObject::numberVertices() {
     }
     return number;
 }
+

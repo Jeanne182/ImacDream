@@ -48,6 +48,6 @@ vec3 blinnPhong(){
 void main() {
        vec4 texColor;
        texColor.rgb = blinnPhong();
-       texColor.a = 0.3;
+       texColor.a = 0.6;
        fFragColor = texColor;
 }
