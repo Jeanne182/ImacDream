@@ -15,23 +15,23 @@ private:
     std::vector<std::pair<glm::vec3, float>> _randomTreePositions;
     std::vector<std::pair<glm::vec3, float>> _randomTreeCenterRadius;
     std::vector<std::string> _randomTreeTypes;
-    int _nbTrees = 2000;
+    int _nbTrees = 20;
 
     std::vector<std::pair<glm::vec3, float>> _randomMushroomsPositions;
     std::vector<std::pair<glm::vec3, float>> _randomMushroomsCenterRadius;
     std::vector<std::string> _randomMushroomsTypes;
-    int _nbMushrooms = 2000;
+    int _nbMushrooms = 20;
 
     std::vector<std::pair<glm::vec3, float>> _randomRockPositions;
     std::vector<std::pair<glm::vec3, float>> _randomRockCenterRadius;
     std::vector<std::string> _randomRockTypes;
-    int _nbRocks = 2000;
+    int _nbRocks = 20;
 
     std::vector<std::pair<glm::vec3, float>> _randomEggPositions;
     std::vector<std::pair<glm::vec3, float>> _randomEggCenterRadius;
     std::vector<std::string> _randomEggTypes;
     std::vector<bool> _exist;
-    int _nbEggs = 2000;
+    int _nbEggs = 50;
 
 public:
     inline Terrain(){
@@ -63,10 +63,12 @@ public:
                    std::vector<std::string> &randomTypes, std::vector<std::string> &types,  const int &nbCopies,
                    std::default_random_engine &generator, std::uniform_real_distribution<float> &positionsDistrib);
 
-    inline void setBoolValue(const int id){ _exist.at(id)=false; };
+    inline void setBoolValue(const int id){ _exist[id]=false; };
     int selectedEgg(const glm::mat4 &cameraView);
     bool isSelected(const glm::mat4 &cameraView, const int i);
-    bool Collisions(const glm::mat4 &cameraView, const glm::vec3 &cameraPosition, const int i);
+    bool collisions(const glm::vec3 &cameraPosition);
+
+    inline std::vector<bool> getBool(){return _exist;};
 
     };
 

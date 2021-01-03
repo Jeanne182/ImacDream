@@ -132,7 +132,7 @@ void Camera::event(const SDL_Event &e) {
 
 void Camera::update() {
     float speed = 1.f;
-
+//if pas de collisions
     if (KEY_UP_PRESSED)
     {
         moveFront(speed);

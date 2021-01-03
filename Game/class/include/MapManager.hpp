@@ -25,7 +25,11 @@ public:
 
     void event(const SDL_Event &e,const glm::mat4 &cameraView);
 
+
     //SETTERS
+
+    //GETTERS
+    inline Terrain* getTerrain(){ return &_terrain;};
 
 };
 
