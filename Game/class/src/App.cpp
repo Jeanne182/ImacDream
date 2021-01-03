@@ -21,9 +21,11 @@ void App::event(const SDL_Event &e) {
 
         case LAYOUT_GAME:
             _game.event(e);
+
             switch(e.type){
                 case SDL_KEYDOWN:
                     if (e.key.keysym.sym==SDLK_e ){
+                        std::cout << "score e : "<<_game.getScore()<< std::endl;
                         int egg_id = _game.getMap()->getTerrain()->selectedEgg(_game.getCamera().getViewMatrix());
                         if(egg_id != -1){
                             std::cout << "Object selected" << std::endl;
@@ -40,7 +42,7 @@ void App::event(const SDL_Event &e) {
 //
 //                    }
             }
-            if(_game.getScore() == 3){
+            if(_game.getScore() == 1){
                 _layout = LAYOUT_GAME_OVER;
             }
 
@@ -50,7 +52,7 @@ void App::event(const SDL_Event &e) {
                 case SDL_KEYDOWN:
                     if (e.key.keysym.sym==SDLK_RETURN) {
                         _game.ResetGame();
-                        _layout = LAYOUT_MENU;
+                        _layout = LAYOUT_GAME;
                     }
             }
     }

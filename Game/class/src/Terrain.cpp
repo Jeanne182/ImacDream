@@ -11,17 +11,17 @@ void Terrain::displayManager(const glm::mat4 &cameraView) {
     display(_nbEggs, _randomEggPositions, _randomEggTypes, cameraView);
 }
 
-void Terrain::display(const int &nbCopies, const std::vector<std::pair<glm::vec3, float>> &randomPositions, const std::vector<std::string> &randomTypes,
+void Terrain::display(const int &nbCopies, const std::vector<glm::vec3> &randomPositions, const std::vector<std::string> &randomTypes,
                       const glm::mat4 &cameraView){
     for (int i = 0; i < nbCopies; i++) {
         if(randomTypes==_randomEggTypes){
             if(_exist[i]){
-                _objects.find(randomTypes[i])->second.setPosition(randomPositions[i].first);
+                _objects.find(randomTypes[i])->second.setPosition(randomPositions[i]);
                 _objects.find(randomTypes[i])->second.update(cameraView);
             }
         }
         else{
-            _objects.find(randomTypes[i])->second.setPosition(randomPositions[i].first);
+            _objects.find(randomTypes[i])->second.setPosition(randomPositions[i]);
             _objects.find(randomTypes[i])->second.update(cameraView);
         }
     }
@@ -68,7 +68,7 @@ void Terrain::randomizeManager() {
     }
 }
 
-void Terrain::randomize(std::vector<std::pair<glm::vec3, float>> &randomPositions, std::vector<std::pair<glm::vec3, float>> &randomCenterRadius,
+void Terrain::randomize(std::vector<glm::vec3> &randomPositions, std::vector<std::pair<glm::vec3, float>> &randomCenterRadius,
                         std::vector<std::string> &randomTypes, std::vector<std::string> &types,  const int &nbCopies,
                         std::default_random_engine &generator, std::uniform_real_distribution<float> &positionsDistrib){
 
@@ -76,10 +76,10 @@ void Terrain::randomize(std::vector<std::pair<glm::vec3, float>> &randomPosition
     auto typeId = std::bind(typeDistrib, generator);
 
     for (int i = 0; i < nbCopies; i++){
-        randomPositions.push_back(std::make_pair(glm::vec3(positionsDistrib(generator), 0.f, positionsDistrib(generator)), 1.f));
+        randomPositions.push_back(glm::vec3(positionsDistrib(generator), 0.f, positionsDistrib(generator)));
         randomTypes.push_back(types[typeId()]);
         if(types[typeId()]=="menhir") _nbMenhirs++;
-        randomCenterRadius.push_back(std::make_pair(glm::vec3(randomPositions[i].first+_objects.find(randomTypes[i])->second.getCenter()), _objects.find(randomTypes[i])->second.getHitboxRadius()));
+        randomCenterRadius.push_back(std::make_pair(glm::vec3(randomPositions[i]+_objects.find(randomTypes[i])->second.getCenter()), _objects.find(randomTypes[i])->second.getHitboxRadius()));
     }
 
 }

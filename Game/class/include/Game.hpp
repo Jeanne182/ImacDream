@@ -29,6 +29,7 @@ public:
     void display();
     void event(const SDL_Event &e);
     inline void increaseScore() { _soundCollect.play(0); _score++ ;};
+    inline void setScore(const int score) { _score=score ;};
     void update();
     void collisionsManager(const float t);
     void checkCollisions(const int nbObj, const std::vector<std::pair<glm::vec3, float>> CenterRadius);
