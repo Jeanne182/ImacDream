@@ -1,5 +1,7 @@
 #include "../include/Light.hpp"
 #include "../include/AssetsManager.hpp"
+#include <stdio.h>
+
 
 void Light::event(const SDL_Event &e) {
 
@@ -7,11 +9,9 @@ void Light::event(const SDL_Event &e) {
         case SDL_KEYDOWN:
             if (e.key.keysym.sym==SDLK_a)
             {
-                if(!getLightOn()){
+                if(!getLightOn() && _elapsed > _LIGHT_OFF_TIMING){
                     _lightOn = true;
-                }
-                else{
-                    _lightOn = false;
+                    _time = clock();
                 }
                 setIntensity();
             }
@@ -21,19 +21,25 @@ void Light::event(const SDL_Event &e) {
     }
 }
 void Light::setIntensity(){
-    std::cout << "Old intensity : " << _intensity << std::endl;
     if(_lightOn) {
-        std::cout<<"Light on"<<std::endl;
         _intensity = glm::vec3(_LIGHT_ON_INTENSITY);
     }
     else {
-        std::cout<<"Light off"<<std::endl;
         _intensity = glm::vec3(_LIGHT_OFF_INTENSITY);
     }
-    std::cout << "New intensity : " << _intensity << std::endl;
-
 }
 
+void Light::updateTime() {
+    double elapsed = ((int)clock() - _time) / CLOCKS_PER_SEC;
+    if (elapsed != _elapsed ){
+        _elapsed = elapsed;
+    }
+    if(_elapsed >= _LIGHT_ON_TIMING && _lightOn){
+        _lightOn = false;
+        _time = clock();
+        setIntensity();
+    }
+}
 
 void Light::useMatrix(const glm::mat4 &cameraView) {
     AssetManager::Get()->_lightProgram._program.use();

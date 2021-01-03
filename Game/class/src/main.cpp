@@ -39,7 +39,7 @@ int main(int argc, char** argv) {
 
     glEnable(GL_DEPTH_TEST); // Activation du test de profondeur GPU
     SDL_GL_SetAttribute(SDL_GL_ALPHA_SIZE,8);
-    SDL_SetRelativeMouseMode(SDL_TRUE ); //To comment if want to debug
+    SDL_SetRelativeMouseMode(SDL_TRUE );
 
     // Application loop:
     bool done = false;
@@ -55,17 +55,9 @@ int main(int argc, char** argv) {
                     break;
                 case SDL_KEYDOWN:
                     if (e.key.keysym.sym==SDLK_ESCAPE) {done = true;}
-                    if (e.key.keysym.sym==SDLK_SPACE) {
-                        std::cout<<"Mouse grab mode desactivated"<<std::endl;
-                        SDL_SetRelativeMouseMode(SDL_FALSE );
-                    }
-                    if (e.key.keysym.sym==SDLK_y) {
-                        std::cout<<"Mouse grab mode activated"<<std::endl;
-                        SDL_SetRelativeMouseMode(SDL_TRUE );
-                    }
                     break;
                 case SDL_MOUSEMOTION:
-                    SDL_WarpMouseInWindow(windowManager._window,1080/2,720/2);
+//                    SDL_WarpMouseInWindow(windowManager._window,1080/2,720/2);
                     break;
             }
         }

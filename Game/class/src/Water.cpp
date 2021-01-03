@@ -28,7 +28,7 @@ void Water::useMatrix() {
     glUniformMatrix4fv(AssetManager::Get()->_waterProgram.MV_Location(), 1, GL_FALSE, glm::value_ptr(_MV));
     glUniformMatrix4fv(AssetManager::Get()->_waterProgram.MVP_Location(), 1, GL_FALSE, glm::value_ptr(_MVP));
     glUniformMatrix4fv(AssetManager::Get()->_waterProgram.N_Location(), 1, GL_FALSE, glm::value_ptr(_N));
-    updateTime();
+//    updateTime();
 }
 
 void Water::updateTime() {

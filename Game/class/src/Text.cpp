@@ -70,11 +70,6 @@ void Text::renderText(const CharactersManager &characters) {
     glBindTexture(GL_TEXTURE_2D, 0);
 }
 
-void Text::replace(const std::string &newText) {
-    _text = newText;
-}
-
-
 void CharactersManager::load() {
     // TUTO : https://learnopengl.com/In-Practice/Text-Rendering
 

@@ -14,6 +14,7 @@ void Game::update() {
     //if collisions de cam.futurepos ==true
     _camera.update();
     _pointLight.useMatrix(_camera.getViewMatrix());
+    _pointLight.updateTime();
 }
 
 void Game::display() {

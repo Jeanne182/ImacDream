@@ -194,7 +194,14 @@
 		<Unit filename="/home/fanny/ImacDream/Game/class/include/Utils.hpp">
 			<Option target="IMACDream"/>
 		</Unit>
+<<<<<<< HEAD
 		<Unit filename="/home/fanny/ImacDream/Game/class/include/Water.hpp">
+=======
+		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/class/include/Time.hpp">
+			<Option target="IMACDream"/>
+		</Unit>
+		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/class/include/Utils.hpp">
+>>>>>>> Lights
 			<Option target="IMACDream"/>
 		</Unit>
 		<Unit filename="/home/fanny/ImacDream/Game/class/src/App.cpp">
@@ -245,7 +252,14 @@
 		<Unit filename="/home/fanny/ImacDream/Game/class/src/Water.cpp">
 			<Option target="IMACDream"/>
 		</Unit>
+<<<<<<< HEAD
 		<Unit filename="/home/fanny/ImacDream/Game/class/src/main.cpp">
+=======
+		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/class/src/Time.cpp">
+			<Option target="IMACDream"/>
+		</Unit>
+		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/class/src/Utils.cpp">
+>>>>>>> Lights
 			<Option target="IMACDream"/>
 		</Unit>
 		<Unit filename="/home/fanny/ImacDream/Game/glimac/include/glimac/BBox.hpp">

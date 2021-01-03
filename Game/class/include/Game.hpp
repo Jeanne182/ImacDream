@@ -33,7 +33,7 @@ public:
     inline bool lightOn() {return _pointLight.getLightOn();}
     inline MapManager* getMap(){ return _map;};
     inline Camera getCamera(){ return _camera;};
-
+    inline Light light() { return _pointLight; }
 };
 
 

@@ -35,15 +35,16 @@ void App::event(const SDL_Event &e) {
                         _texts.getText("eggs")->replace("Dragon eggs : " + std::to_string(_game.getScore()));
                     }
 
-                    if (e.key.keysym.sym==SDLK_a ){
-                        if (_game.lightOn()) _texts.getText("light")->replace("Light on");
-                        else _texts.getText("light")->replace("Light off");
-
-                    }
+//                    if (e.key.keysym.sym==SDLK_a ){
+//                        if (_game.lightOn()) _texts.getText("light")->replace("Light on");
+//                        else _texts.getText("light")->replace("Light off");
+//
+//                    }
             }
             if(_game.getScore() == 3){
                 _layout = LAYOUT_GAME_OVER;
             }
+
 
         case LAYOUT_GAME_OVER:
             switch(e.type){
@@ -87,8 +88,24 @@ void App::drawGame() {
         _texts.getText("light_button")->renderText(_characters);
         _texts.getText("grab_button")->renderText(_characters);
 
+        if(_game.lightOn()) {
+            _texts.getText("light")->changeColor(glm::vec3(0.5f, 0.5f, 0.5f));
+            std::string text = "Light on (" + std::to_string(_game.light()._LIGHT_ON_TIMING - _game.light().elapsedTime()) + ")";
+            _texts.getText("light")->replace(text);
+        }
+        if(!_game.lightOn()) {
+            int time = _game.light()._LIGHT_OFF_TIMING - _game.light().elapsedTime();
+            std::string text = "Light off" ;
 
+            _texts.getText("light")->changeColor(glm::vec3(1.f, 1.f, 1.f));
+            if (time > 0) {
+                _texts.getText("light")->changeColor(glm::vec3(0.5f, 0.5f, 0.5f));
+                text += " (" + std::to_string(_game.light()._LIGHT_OFF_TIMING - _game.light().elapsedTime()) + ")";
+            }
+            _texts.getText("light")->replace(text);
+        }
     }
+
     catch(std::exception &e){
         std::cout << e.what() << std::endl;
     }
