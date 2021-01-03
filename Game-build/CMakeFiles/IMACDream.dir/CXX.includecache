@@ -6,8 +6,6 @@
 
 #IncludeRegexTransform: 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 /home/fanny/ImacDream/Game/class/include/App.hpp
 glimac/SDLWindowManager.hpp
 -
@@ -21,21 +19,6 @@ glimac/SDLWindowManager.hpp
 /home/fanny/ImacDream/Game/class/include/Text.hpp
 
 /home/fanny/ImacDream/Game/class/include/AssetsManager.hpp
-=======
-/home/jeanne/Documents/S3/ImacDream/Game/class/include/App.hpp
-glimac/SDLWindowManager.hpp
--
-../include/Game.hpp
-/home/jeanne/Documents/S3/ImacDream/Game/class/include/Game.hpp
-../include/Music.hpp
-/home/jeanne/Documents/S3/ImacDream/Game/class/include/Music.hpp
-../include/StaticImage.hpp
-/home/jeanne/Documents/S3/ImacDream/Game/class/include/StaticImage.hpp
-../include/Text.hpp
-/home/jeanne/Documents/S3/ImacDream/Game/class/include/Text.hpp
-
-/home/jeanne/Documents/S3/ImacDream/Game/class/include/AssetsManager.hpp
->>>>>>> Lights
 string
 -
 glimac/common.hpp
@@ -52,6 +35,8 @@ glimac/glm.hpp
 -
 glimac/SDLWindowManager.hpp
 -
+map
+-
 
 /home/fanny/ImacDream/Game/class/include/Game.hpp
 ./Camera.hpp
@@ -62,6 +47,10 @@ glimac/SDLWindowManager.hpp
 /home/fanny/ImacDream/Game/class/include/Light.hpp
 ./Skybox.hpp
 /home/fanny/ImacDream/Game/class/include/Skybox.hpp
+./Music.hpp
+/home/fanny/ImacDream/Game/class/include/Music.hpp
+map
+-
 
 /home/fanny/ImacDream/Game/class/include/GameObject.hpp
 glimac/common.hpp
@@ -74,18 +63,14 @@ glimac/SDLWindowManager.hpp
 /home/fanny/ImacDream/Game/class/include/Camera.hpp
 
 /home/fanny/ImacDream/Game/class/include/Light.hpp
-=======
-/home/matteo/Documents/imac2/openGL/ImacDream/Game/class/include/Camera.hpp
->>>>>>> TryToFIxSkybox
 glimac/glm.hpp
 -
 glimac/SDLWindowManager.hpp
 -
-<<<<<<< HEAD
 iostream
 -
-../include/Time.hpp
-/home/jeanne/Documents/S3/ImacDream/Game/class/include/Time.hpp
+time.h
+-
 
 /home/fanny/ImacDream/Game/class/include/MapManager.hpp
 glimac/SDLWindowManager.hpp
@@ -152,16 +137,10 @@ iostream
 /home/fanny/ImacDream/Game/class/include/Music.hpp
 SDL2/SDL_mixer.h
 -
-
-<<<<<<< HEAD
-/home/fanny/ImacDream/Game/class/include/Program.hpp
-=======
-/home/jeanne/Documents/S3/ImacDream/Game/class/include/Music.hpp
-SDL2/SDL_mixer.h
+map
 -
 
-/home/jeanne/Documents/S3/ImacDream/Game/class/include/Program.hpp
->>>>>>> Lights
+/home/fanny/ImacDream/Game/class/include/Program.hpp
 glimac/Program.hpp
 -
 glimac/FilePath.hpp
@@ -171,11 +150,7 @@ glimac/FilePath.hpp
 ../include/GameObject.hpp
 /home/fanny/ImacDream/Game/class/include/GameObject.hpp
 
-<<<<<<< HEAD
 /home/fanny/ImacDream/Game/class/include/StaticImage.hpp
-=======
-/home/jeanne/Documents/S3/ImacDream/Game/class/include/StaticImage.hpp
->>>>>>> Lights
 iostream
 -
 glimac/glm.hpp
@@ -195,11 +170,7 @@ glimac/common.hpp
 map
 -
 
-<<<<<<< HEAD
 /home/fanny/ImacDream/Game/class/include/Terrain.hpp
-=======
-/home/jeanne/Documents/S3/ImacDream/Game/class/include/Terrain.hpp
->>>>>>> Lights
 ./GameObject.hpp
 /home/fanny/ImacDream/Game/class/include/GameObject.hpp
 vector
@@ -213,25 +184,11 @@ chrono
 functional
 -
 
-<<<<<<< HEAD
 /home/fanny/ImacDream/Game/class/include/Text.hpp
-=======
-/home/jeanne/Documents/S3/ImacDream/Game/class/include/Text.hpp
->>>>>>> Lights
 ft2build.h
-=======
-
-/home/matteo/Documents/imac2/openGL/ImacDream/Game/class/src/Camera.cpp
-./../include/Camera.hpp
-/home/matteo/Documents/imac2/openGL/ImacDream/Game/class/include/Camera.hpp
-cmath
->>>>>>> TryToFIxSkybox
 -
-glimac/FreeflyCamera.hpp
-/home/matteo/Documents/imac2/openGL/ImacDream/Game/class/src/glimac/FreeflyCamera.hpp
 iostream
 -
-<<<<<<< HEAD
 glimac/glm.hpp
 -
 vector
@@ -249,7 +206,6 @@ map
 utility
 -
 
-<<<<<<< HEAD
 /home/fanny/ImacDream/Game/class/include/Utils.hpp
 glimac/glm.hpp
 -
@@ -257,25 +213,6 @@ glimac/glm.hpp
 /home/fanny/ImacDream/Game/class/include/GameObject.hpp
 
 /home/fanny/ImacDream/Game/class/include/Water.hpp
-=======
-/home/jeanne/Documents/S3/ImacDream/Game/class/include/Time.hpp
-iostream
--
-chrono
--
-ctime
--
-cmath
--
-
-/home/jeanne/Documents/S3/ImacDream/Game/class/include/Utils.hpp
-glimac/glm.hpp
--
-./../include/GameObject.hpp
-/home/jeanne/Documents/S3/ImacDream/Game/class/include/GameObject.hpp
-
-/home/jeanne/Documents/S3/ImacDream/Game/class/include/Water.hpp
->>>>>>> Lights
 ./GameObject.hpp
 /home/fanny/ImacDream/Game/class/include/GameObject.hpp
 
@@ -289,44 +226,31 @@ glimac/glm.hpp
 utility
 -
 
-<<<<<<< HEAD
 /home/fanny/ImacDream/Game/class/src/Game.cpp
-=======
-/home/jeanne/Documents/S3/ImacDream/Game/class/src/App.cpp
-../include/App.hpp
-/home/jeanne/Documents/S3/ImacDream/Game/class/include/App.hpp
-../include/AssetsManager.hpp
-/home/jeanne/Documents/S3/ImacDream/Game/class/include/AssetsManager.hpp
-../include/Utils.hpp
-/home/jeanne/Documents/S3/ImacDream/Game/class/include/Utils.hpp
-utility
--
-
-/home/jeanne/Documents/S3/ImacDream/Game/class/src/Game.cpp
->>>>>>> Lights
 ../include/Game.hpp
 /home/fanny/ImacDream/Game/class/include/Game.hpp
 ../include/AssetsManager.hpp
 /home/fanny/ImacDream/Game/class/include/AssetsManager.hpp
 
-<<<<<<< HEAD
-/home/fanny/ImacDream/Game/glimac/include/glimac/FilePath.hpp
-string
+/home/fanny/ImacDream/Game/class/src/MapManager.cpp
+../include/MapManager.hpp
+/home/fanny/ImacDream/Game/class/include/MapManager.hpp
+../include/AssetsManager.hpp
+/home/fanny/ImacDream/Game/class/include/AssetsManager.hpp
+../include/Utils.hpp
+/home/fanny/ImacDream/Game/class/include/Utils.hpp
+
+/home/fanny/ImacDream/Game/class/src/Terrain.cpp
+../include/Terrain.hpp
+/home/fanny/ImacDream/Game/class/include/Terrain.hpp
+../include/Utils.hpp
+/home/fanny/ImacDream/Game/class/include/Utils.hpp
+../include/AssetsManager.hpp
+/home/fanny/ImacDream/Game/class/include/AssetsManager.hpp
+glimac/Sphere.hpp
 -
 
-/home/fanny/ImacDream/Game/glimac/include/glimac/Image.hpp
-=======
-/home/jeanne/Documents/S3/ImacDream/Game/class/src/Light.cpp
-../include/Light.hpp
-/home/jeanne/Documents/S3/ImacDream/Game/class/include/Light.hpp
-../include/AssetsManager.hpp
-/home/jeanne/Documents/S3/ImacDream/Game/class/include/AssetsManager.hpp
-
-/home/jeanne/Documents/S3/ImacDream/Game/class/src/Time.cpp
-../include/Time.hpp
-/home/jeanne/Documents/S3/ImacDream/Game/class/include/Time.hpp
-
-/home/jeanne/Documents/S3/ImacDream/Game/class/src/main.cpp
+/home/fanny/ImacDream/Game/class/src/main.cpp
 glimac/SDLWindowManager.hpp
 -
 GL/glew.h
@@ -338,24 +262,23 @@ glimac/FilePath.hpp
 glimac/glm.hpp
 -
 ./../include/Camera.hpp
-/home/jeanne/Documents/S3/ImacDream/Game/class/include/Camera.hpp
+/home/fanny/ImacDream/Game/class/include/Camera.hpp
 ./../include/Mesh.hpp
-/home/jeanne/Documents/S3/ImacDream/Game/class/include/Mesh.hpp
+/home/fanny/ImacDream/Game/class/include/Mesh.hpp
 ./../include/GameObject.hpp
-/home/jeanne/Documents/S3/ImacDream/Game/class/include/GameObject.hpp
+/home/fanny/ImacDream/Game/class/include/GameObject.hpp
 ./../include/Terrain.hpp
-/home/jeanne/Documents/S3/ImacDream/Game/class/include/Terrain.hpp
+/home/fanny/ImacDream/Game/class/include/Terrain.hpp
 ./../include/App.hpp
-/home/jeanne/Documents/S3/ImacDream/Game/class/include/App.hpp
+/home/fanny/ImacDream/Game/class/include/App.hpp
 ./../include/AssetsManager.hpp
-/home/jeanne/Documents/S3/ImacDream/Game/class/include/AssetsManager.hpp
+/home/fanny/ImacDream/Game/class/include/AssetsManager.hpp
 
-/home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/FilePath.hpp
+/home/fanny/ImacDream/Game/glimac/include/glimac/FilePath.hpp
 string
 -
 
-/home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/Image.hpp
->>>>>>> Lights
+/home/fanny/ImacDream/Game/glimac/include/glimac/Image.hpp
 vector
 -
 memory
@@ -363,33 +286,17 @@ memory
 unordered_map
 -
 glm.hpp
-<<<<<<< HEAD
 /home/fanny/ImacDream/Game/glimac/include/glimac/glm.hpp
 FilePath.hpp
 /home/fanny/ImacDream/Game/glimac/include/glimac/FilePath.hpp
 
 /home/fanny/ImacDream/Game/glimac/include/glimac/Program.hpp
-=======
-/home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/glm.hpp
-FilePath.hpp
-/home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/FilePath.hpp
-
-/home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/Program.hpp
->>>>>>> Lights
 GL/glew.h
 -
 Shader.hpp
 /home/fanny/ImacDream/Game/glimac/include/glimac/Shader.hpp
 FilePath.hpp
 /home/fanny/ImacDream/Game/glimac/include/glimac/FilePath.hpp
-=======
-
-/home/matteo/Documents/imac2/openGL/ImacDream/Game/glimac/include/glimac/FreeflyCamera.hpp
-cmath
--
-glimac/glm.hpp
--
->>>>>>> TryToFIxSkybox
 
 /home/fanny/ImacDream/Game/glimac/include/glimac/SDLWindowManager.hpp
 cstdint
@@ -399,7 +306,6 @@ SDL2/SDL.h
 glm.hpp
 /home/fanny/ImacDream/Game/glimac/include/glimac/glm.hpp
 
-<<<<<<< HEAD
 /home/fanny/ImacDream/Game/glimac/include/glimac/Shader.hpp
 GL/glew.h
 -
@@ -407,6 +313,12 @@ string
 -
 FilePath.hpp
 /home/fanny/ImacDream/Game/glimac/include/glimac/FilePath.hpp
+
+/home/fanny/ImacDream/Game/glimac/include/glimac/Sphere.hpp
+vector
+-
+common.hpp
+/home/fanny/ImacDream/Game/glimac/include/glimac/common.hpp
 
 /home/fanny/ImacDream/Game/glimac/include/glimac/common.hpp
 GL/glew.h
@@ -417,9 +329,6 @@ memory
 -
 
 /home/fanny/ImacDream/Game/glimac/include/glimac/glm.hpp
-=======
-/home/matteo/Documents/imac2/openGL/ImacDream/Game/glimac/include/glimac/glm.hpp
->>>>>>> TryToFIxSkybox
 glm/glm.hpp
 -
 glm/gtc/matrix_transform.hpp
@@ -433,7 +342,6 @@ glm/gtx/io.hpp
 glm/gtc/random.hpp
 -
 
-<<<<<<< HEAD
 /home/fanny/ImacDream/Game/third-party/include/assimp/Compiler/poppack1.h
 
 /home/fanny/ImacDream/Game/third-party/include/assimp/Compiler/pstdint.h
@@ -659,9 +567,6 @@ cmath
 -
 
 /home/fanny/ImacDream/Game/third-party/include/glm/common.hpp
-=======
-/home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include/glm/common.hpp
->>>>>>> TryToFIxSkybox
 detail/func_common.hpp
 /home/fanny/ImacDream/Game/third-party/include/glm/detail/func_common.hpp
 

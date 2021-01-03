@@ -3,16 +3,18 @@
 
 
 void Game::event(const SDL_Event &e) {
-    _camera.event(e);
+    collisionsManager(10.f);
+    _camera.event(e, _move);
+    ResetMove();
     _pointLight.event(e);
     _map->event(e,_camera.getViewMatrix());
 }
 
 void Game::update() {
+    collisionsManager(3.f);
     _camera.setPositionY(8.f);
-    //if(collisions(_))
-    //if collisions de cam.futurepos ==true
-    _camera.update();
+    _camera.update(_move);
+    ResetMove();
     _pointLight.useMatrix(_camera.getViewMatrix());
     _pointLight.updateTime();
 }
@@ -26,4 +28,45 @@ void Game::display() {
     _sky.useMatrix();
     _sky.DrawSky();
 }
+
+void Game::ResetMove(){
+    _move["UP"]=true;
+    _move["DOWN"]=true;
+    _move["LEFT"]=true;
+    _move["RIGHT"]=true;
+}
+
+void Game::collisionsManager(const float t){
+    _camera.setFuturesPositions(t);
+    checkCollisions(getMap()->getTerrain()->getNbTree(), getMap()->getTerrain()->getTreesCenters());
+    checkCollisions(getMap()->getTerrain()->getNbMenhirs(), getMap()->getTerrain()->getMenhirsCenters());
+
+}
+
+
+void Game::checkCollisions(const int nbObj, const std::vector<std::pair<glm::vec3, float>> CenterRadius){
+    //With the edges of the map
+    for(auto it : getCamera().getFuturesPositions()){
+        if(it.second.x < -490  || it.second.x > 490
+            || it.second.z < -490  || it.second.z > 490) _move[it.first]=false;
+    }
+
+
+    //With Trees and Menhirs
+    for(int i=0; i<nbObj; i++){
+        if(glm::distance(getCamera().getFuturesPositions()["UP"], CenterRadius[i].first) < CenterRadius[i].second){
+            _move["UP"]=false;
+        }
+        if(glm::distance(getCamera().getFuturesPositions()["DOWN"], CenterRadius[i].first) < CenterRadius[i].second){
+            _move["DOWN"]=false;
+        }
+        if(glm::distance(getCamera().getFuturesPositions()["LEFT"], CenterRadius[i].first) < CenterRadius[i].second){
+            _move["LEFT"]=false;
+        }
+        if(glm::distance(getCamera().getFuturesPositions()["RIGHT"], CenterRadius[i].first) < CenterRadius[i].second){
+            _move["RIGHT"]=false;
+        }
+    }
+}
+
 

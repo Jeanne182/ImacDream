@@ -15,23 +15,24 @@ private:
     std::vector<std::pair<glm::vec3, float>> _randomTreePositions;
     std::vector<std::pair<glm::vec3, float>> _randomTreeCenterRadius;
     std::vector<std::string> _randomTreeTypes;
-    int _nbTrees = 20;
+    int _nbTrees = 200;
 
     std::vector<std::pair<glm::vec3, float>> _randomMushroomsPositions;
     std::vector<std::pair<glm::vec3, float>> _randomMushroomsCenterRadius;
     std::vector<std::string> _randomMushroomsTypes;
-    int _nbMushrooms = 20;
+    int _nbMushrooms = 200;
 
     std::vector<std::pair<glm::vec3, float>> _randomRockPositions;
     std::vector<std::pair<glm::vec3, float>> _randomRockCenterRadius;
     std::vector<std::string> _randomRockTypes;
-    int _nbRocks = 20;
+    int _nbRocks = 200;
+    int _nbMenhirs = 0 ;
 
     std::vector<std::pair<glm::vec3, float>> _randomEggPositions;
     std::vector<std::pair<glm::vec3, float>> _randomEggCenterRadius;
     std::vector<std::string> _randomEggTypes;
     std::vector<bool> _exist;
-    int _nbEggs = 50;
+    int _nbEggs = 200;
 
 public:
     inline Terrain(){
@@ -66,9 +67,13 @@ public:
     inline void setBoolValue(const int id){ _exist[id]=false; };
     int selectedEgg(const glm::mat4 &cameraView);
     bool isSelected(const glm::mat4 &cameraView, const int i);
-    bool collisions(const glm::vec3 &cameraPosition);
+    //bool collisions(const glm::vec3 &cameraPosition);
 
     inline std::vector<bool> getBool(){return _exist;};
+    inline int getNbTree(){return _nbTrees;};
+    inline int getNbMenhirs(){return _nbMenhirs;};
+    inline std::vector<std::pair<glm::vec3, float>> getTreesCenters(){return _randomTreeCenterRadius;};
+    std::vector<std::pair<glm::vec3, float>> getMenhirsCenters();
 
     };
 
