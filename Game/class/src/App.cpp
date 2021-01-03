@@ -29,7 +29,6 @@ void App::event(const SDL_Event &e) {
                             std::cout << "Object selected" << std::endl;
                             _game.getMap()->getTerrain()->setBoolValue(egg_id);
                             _game.increaseScore();
-                            //son
 
                         }
                         _texts.getText("eggs")->replace("Dragon eggs : " + std::to_string(_game.getScore()));
@@ -50,6 +49,7 @@ void App::event(const SDL_Event &e) {
             switch(e.type){
                 case SDL_KEYDOWN:
                     if (e.key.keysym.sym==SDLK_RETURN) {
+                        _game.ResetGame();
                         _layout = LAYOUT_MENU;
                     }
             }

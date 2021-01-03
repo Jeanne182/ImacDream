@@ -34,6 +34,7 @@ public:
     void checkCollisions(const int nbObj, const std::vector<std::pair<glm::vec3, float>> CenterRadius);
     inline void Delete(){ _map->Delete(); delete _map; _sky.deleteBuffers(); _soundCollect.Delete();};
     void ResetMove();
+    void ResetGame();
 
     //GETTERS
     inline const int getScore() {return _score;};
