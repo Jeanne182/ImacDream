@@ -6,5 +6,5 @@ CXX_FLAGS = -g   -std=c++11 -Wall -W
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/usr/include/freetype2 -I/home/fanny/ImacDream/Game/glimac/include -I/home/fanny/ImacDream/Game/third-party/include -I/home/fanny/ImacDream/Game/third-party 
+CXX_INCLUDES = -I/usr/include/freetype2 -I/home/matteo/Documents/imac2/openGL/ImacDream/Game/glimac/include -I/home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include -I/home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party 
 

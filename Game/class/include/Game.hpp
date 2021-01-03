@@ -17,6 +17,7 @@ private:
     Skybox _sky;
     Music _soundCollect;
 
+
 public:
     //CONSTRUCTOR
     inline Game():_map(new MapManager()), _pointLight(),  _camera(), _sky(), _score(0), _soundCollect("collect"){ };

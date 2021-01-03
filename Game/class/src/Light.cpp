@@ -10,6 +10,7 @@ void Light::event(const SDL_Event &e) {
             if (e.key.keysym.sym==SDLK_a)
             {
                 if(!getLightOn() && _elapsed > _LIGHT_OFF_TIMING){
+                    _soundLight.play(0);
                     _lightOn = true;
                     _time = clock();
                 }

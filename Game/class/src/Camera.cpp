@@ -59,6 +59,7 @@ void Camera::event(const SDL_Event &e) {
             break;
 
         case SDL_MOUSEMOTION:
+
             xDelta = e.motion.xrel - _xOld;
             yDelta = e.motion.yrel - _yOld;
             _xOld =  e.motion.xrel;
@@ -77,10 +78,10 @@ void Camera::event(const SDL_Event &e) {
             }
             rotateLeft(- xDelta * speed_mouse);
 
-//            std::cout<<"(x, y) = ("<<e.motion.x<<","<<e.motion.y<<") - ";
-//            std::cout<<"(xRel, yRel) = ("<<e.motion.xrel<<","<<e.motion.yrel<<") - ";
-//            std::cout<<"(xDelta, yDelta) = ("<<xDelta<<","<<yDelta<<")"<<std::endl;
-//            std::cout<<std::endl;
+            std::cout<<"(x, y) = ("<<e.motion.x<<","<<e.motion.y<<") - ";
+            std::cout<<"(xRel, yRel) = ("<<e.motion.xrel<<","<<e.motion.yrel<<") - ";
+            std::cout<<"(xDelta, yDelta) = ("<<xDelta<<","<<yDelta<<")"<<std::endl;
+            std::cout<<std::endl;
             break;
 
             /* Touche clavier */
