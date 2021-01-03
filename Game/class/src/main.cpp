@@ -39,7 +39,6 @@ int main(int argc, char** argv) {
 
     glEnable(GL_DEPTH_TEST); // Activation du test de profondeur GPU
     SDL_GL_SetAttribute(SDL_GL_ALPHA_SIZE,8);
-    //USE THIS LINE ON A VIRTUAL MACHINE
     SDL_SetRelativeMouseMode(SDL_TRUE );
 
     // Application loop:
