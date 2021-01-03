@@ -7,9 +7,7 @@ void Camera::computeDirectionVectors(){
     this->m_FrontVector = glm::vec3(glm::cos(this->m_fTheta)*glm::sin(this->m_fPhi),
                                     glm::sin(this->m_fTheta),
                                     glm::cos(this->m_fTheta)*glm::cos(this->m_fPhi)) ;
-//    this->m_LeftVector = glm::vec3(glm::sin(this->m_fPhi + M_PI/2), 0, glm::cos(this->m_fTheta + M_PI/2));
     this->m_LeftVector = glm::vec3(glm::cos(this->m_fPhi), 0, - glm::sin(this->m_fPhi));
-
     this->m_UpVector = glm::cross(this->m_FrontVector , this->m_LeftVector);
 }
 
@@ -24,7 +22,6 @@ void Camera::moveFront(float t){
     this->m_Position[2] += t * this->m_FrontVector[2];
     computeDirectionVectors();
 }
-
 
 
 void Camera::rotateLeft(float degrees){
@@ -67,6 +64,8 @@ void Camera::event(const SDL_Event &e) {
             _xOld =  e.motion.xrel;
             _yOld =  e.motion.yrel;
 
+//            e.motion.xrel = e.button.x (nouveau) - e.button.x (ancien)
+
             if(m_fTheta  + glm::radians(- yDelta * speed_mouse)  > -5){
                 m_fTheta = -5;
             }
@@ -77,7 +76,6 @@ void Camera::event(const SDL_Event &e) {
                 rotateUp(- yDelta * speed_mouse);
             }
             rotateLeft(- xDelta * speed_mouse);
-
 
 //            std::cout<<"(x, y) = ("<<e.motion.x<<","<<e.motion.y<<") - ";
 //            std::cout<<"(xRel, yRel) = ("<<e.motion.xrel<<","<<e.motion.yrel<<") - ";
@@ -131,7 +129,7 @@ void Camera::event(const SDL_Event &e) {
 }
 
 void Camera::update() {
-    float speed = 1.f;
+    float speed = 3.f;
 
     if (KEY_UP_PRESSED)
     {

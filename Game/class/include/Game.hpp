@@ -28,7 +28,8 @@ public:
     inline void Delete(){ _map->Delete(); delete _map; _sky.deleteBuffers(); };
 
     //GETTER
-    inline bool lightOn() {return _pointLight.getLightOn();}
+    inline bool lightOn() { return _pointLight.getLightOn();}
+    inline Light light() { return _pointLight; }
 };
 
 

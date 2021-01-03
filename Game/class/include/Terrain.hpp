@@ -14,7 +14,7 @@ private:
 
     std::vector<glm::vec3> _randomTreePositions;
     std::vector<std::string> _randomTreeTypes;
-    int _nbTrees = 2000;
+    int _nbTrees = 10;
 
     std::vector<glm::vec3> _randomMushroomsPositions;
     std::vector<std::string> _randomMushroomsTypes;

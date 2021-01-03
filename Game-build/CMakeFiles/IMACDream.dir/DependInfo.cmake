@@ -19,6 +19,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/jeanne/Documents/S3/ImacDream/Game/class/src/StaticImage.cpp" "/home/jeanne/Documents/S3/ImacDream/Game-build/CMakeFiles/IMACDream.dir/class/src/StaticImage.cpp.o"
   "/home/jeanne/Documents/S3/ImacDream/Game/class/src/Terrain.cpp" "/home/jeanne/Documents/S3/ImacDream/Game-build/CMakeFiles/IMACDream.dir/class/src/Terrain.cpp.o"
   "/home/jeanne/Documents/S3/ImacDream/Game/class/src/Text.cpp" "/home/jeanne/Documents/S3/ImacDream/Game-build/CMakeFiles/IMACDream.dir/class/src/Text.cpp.o"
+  "/home/jeanne/Documents/S3/ImacDream/Game/class/src/Time.cpp" "/home/jeanne/Documents/S3/ImacDream/Game-build/CMakeFiles/IMACDream.dir/class/src/Time.cpp.o"
   "/home/jeanne/Documents/S3/ImacDream/Game/class/src/Utils.cpp" "/home/jeanne/Documents/S3/ImacDream/Game-build/CMakeFiles/IMACDream.dir/class/src/Utils.cpp.o"
   "/home/jeanne/Documents/S3/ImacDream/Game/class/src/Water.cpp" "/home/jeanne/Documents/S3/ImacDream/Game-build/CMakeFiles/IMACDream.dir/class/src/Water.cpp.o"
   "/home/jeanne/Documents/S3/ImacDream/Game/class/src/main.cpp" "/home/jeanne/Documents/S3/ImacDream/Game-build/CMakeFiles/IMACDream.dir/class/src/main.cpp.o"

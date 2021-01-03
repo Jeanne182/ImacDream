@@ -15,6 +15,7 @@ void Game::update() {
     //_camera.setPositionY((newY+_camera.getPosition().y)/2.);
     _camera.update();
     _pointLight.useMatrix(_camera.getViewMatrix());
+    _pointLight.updateTime();
 }
 
 void Game::display() {

@@ -561,6 +561,33 @@ class/src/Text.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/IMACDream.dir/build.make CMakeFiles/IMACDream.dir/class/src/Text.cpp.s
 .PHONY : class/src/Text.cpp.s
 
+class/src/Time.o: class/src/Time.cpp.o
+
+.PHONY : class/src/Time.o
+
+# target to build an object file
+class/src/Time.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/IMACDream.dir/build.make CMakeFiles/IMACDream.dir/class/src/Time.cpp.o
+.PHONY : class/src/Time.cpp.o
+
+class/src/Time.i: class/src/Time.cpp.i
+
+.PHONY : class/src/Time.i
+
+# target to preprocess a source file
+class/src/Time.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/IMACDream.dir/build.make CMakeFiles/IMACDream.dir/class/src/Time.cpp.i
+.PHONY : class/src/Time.cpp.i
+
+class/src/Time.s: class/src/Time.cpp.s
+
+.PHONY : class/src/Time.s
+
+# target to generate assembly for a file
+class/src/Time.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/IMACDream.dir/build.make CMakeFiles/IMACDream.dir/class/src/Time.cpp.s
+.PHONY : class/src/Time.cpp.s
+
 class/src/Utils.o: class/src/Utils.cpp.o
 
 .PHONY : class/src/Utils.o
@@ -697,6 +724,9 @@ help:
 	@echo "... class/src/Text.o"
 	@echo "... class/src/Text.i"
 	@echo "... class/src/Text.s"
+	@echo "... class/src/Time.o"
+	@echo "... class/src/Time.i"
+	@echo "... class/src/Time.s"
 	@echo "... class/src/Utils.o"
 	@echo "... class/src/Utils.i"
 	@echo "... class/src/Utils.s"

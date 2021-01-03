@@ -190,6 +190,9 @@
 		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/class/include/Text.hpp">
 			<Option target="IMACDream"/>
 		</Unit>
+		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/class/include/Time.hpp">
+			<Option target="IMACDream"/>
+		</Unit>
 		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/class/include/Utils.hpp">
 			<Option target="IMACDream"/>
 		</Unit>
@@ -239,6 +242,9 @@
 			<Option target="IMACDream"/>
 		</Unit>
 		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/class/src/Text.cpp">
+			<Option target="IMACDream"/>
+		</Unit>
+		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/class/src/Time.cpp">
 			<Option target="IMACDream"/>
 		</Unit>
 		<Unit filename="/home/jeanne/Documents/S3/ImacDream/Game/class/src/Utils.cpp">

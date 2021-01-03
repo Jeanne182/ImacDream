@@ -17,6 +17,7 @@ CMakeFiles/IMACDream.dir/class/src/App.cpp.o: /home/jeanne/Documents/S3/ImacDrea
 CMakeFiles/IMACDream.dir/class/src/App.cpp.o: /home/jeanne/Documents/S3/ImacDream/Game/class/include/StaticImage.hpp
 CMakeFiles/IMACDream.dir/class/src/App.cpp.o: /home/jeanne/Documents/S3/ImacDream/Game/class/include/Terrain.hpp
 CMakeFiles/IMACDream.dir/class/src/App.cpp.o: /home/jeanne/Documents/S3/ImacDream/Game/class/include/Text.hpp
+CMakeFiles/IMACDream.dir/class/src/App.cpp.o: /home/jeanne/Documents/S3/ImacDream/Game/class/include/Time.hpp
 CMakeFiles/IMACDream.dir/class/src/App.cpp.o: /home/jeanne/Documents/S3/ImacDream/Game/class/include/Utils.hpp
 CMakeFiles/IMACDream.dir/class/src/App.cpp.o: /home/jeanne/Documents/S3/ImacDream/Game/class/include/Water.hpp
 CMakeFiles/IMACDream.dir/class/src/App.cpp.o: /home/jeanne/Documents/S3/ImacDream/Game/class/src/App.cpp
@@ -388,6 +389,7 @@ CMakeFiles/IMACDream.dir/class/src/Game.cpp.o: /home/jeanne/Documents/S3/ImacDre
 CMakeFiles/IMACDream.dir/class/src/Game.cpp.o: /home/jeanne/Documents/S3/ImacDream/Game/class/include/Program.hpp
 CMakeFiles/IMACDream.dir/class/src/Game.cpp.o: /home/jeanne/Documents/S3/ImacDream/Game/class/include/Skybox.hpp
 CMakeFiles/IMACDream.dir/class/src/Game.cpp.o: /home/jeanne/Documents/S3/ImacDream/Game/class/include/Terrain.hpp
+CMakeFiles/IMACDream.dir/class/src/Game.cpp.o: /home/jeanne/Documents/S3/ImacDream/Game/class/include/Time.hpp
 CMakeFiles/IMACDream.dir/class/src/Game.cpp.o: /home/jeanne/Documents/S3/ImacDream/Game/class/include/Water.hpp
 CMakeFiles/IMACDream.dir/class/src/Game.cpp.o: /home/jeanne/Documents/S3/ImacDream/Game/class/src/Game.cpp
 CMakeFiles/IMACDream.dir/class/src/Game.cpp.o: /home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/FilePath.hpp
@@ -790,6 +792,7 @@ CMakeFiles/IMACDream.dir/class/src/Light.cpp.o: /home/jeanne/Documents/S3/ImacDr
 CMakeFiles/IMACDream.dir/class/src/Light.cpp.o: /home/jeanne/Documents/S3/ImacDream/Game/class/include/Mesh.hpp
 CMakeFiles/IMACDream.dir/class/src/Light.cpp.o: /home/jeanne/Documents/S3/ImacDream/Game/class/include/Model.hpp
 CMakeFiles/IMACDream.dir/class/src/Light.cpp.o: /home/jeanne/Documents/S3/ImacDream/Game/class/include/Program.hpp
+CMakeFiles/IMACDream.dir/class/src/Light.cpp.o: /home/jeanne/Documents/S3/ImacDream/Game/class/include/Time.hpp
 CMakeFiles/IMACDream.dir/class/src/Light.cpp.o: /home/jeanne/Documents/S3/ImacDream/Game/class/src/Light.cpp
 CMakeFiles/IMACDream.dir/class/src/Light.cpp.o: /home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/FilePath.hpp
 CMakeFiles/IMACDream.dir/class/src/Light.cpp.o: /home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/Program.hpp
@@ -1978,6 +1981,9 @@ CMakeFiles/IMACDream.dir/class/src/Text.cpp.o: /home/jeanne/Documents/S3/ImacDre
 CMakeFiles/IMACDream.dir/class/src/Text.cpp.o: /usr/include/freetype2/freetype/config/ftheader.h
 CMakeFiles/IMACDream.dir/class/src/Text.cpp.o: /usr/include/freetype2/ft2build.h
 
+CMakeFiles/IMACDream.dir/class/src/Time.cpp.o: /home/jeanne/Documents/S3/ImacDream/Game/class/include/Time.hpp
+CMakeFiles/IMACDream.dir/class/src/Time.cpp.o: /home/jeanne/Documents/S3/ImacDream/Game/class/src/Time.cpp
+
 CMakeFiles/IMACDream.dir/class/src/Utils.cpp.o: /home/jeanne/Documents/S3/ImacDream/Game/class/include/Camera.hpp
 CMakeFiles/IMACDream.dir/class/src/Utils.cpp.o: /home/jeanne/Documents/S3/ImacDream/Game/class/include/GameObject.hpp
 CMakeFiles/IMACDream.dir/class/src/Utils.cpp.o: /home/jeanne/Documents/S3/ImacDream/Game/class/include/Mesh.hpp
@@ -2260,6 +2266,7 @@ CMakeFiles/IMACDream.dir/class/src/main.cpp.o: /home/jeanne/Documents/S3/ImacDre
 CMakeFiles/IMACDream.dir/class/src/main.cpp.o: /home/jeanne/Documents/S3/ImacDream/Game/class/include/StaticImage.hpp
 CMakeFiles/IMACDream.dir/class/src/main.cpp.o: /home/jeanne/Documents/S3/ImacDream/Game/class/include/Terrain.hpp
 CMakeFiles/IMACDream.dir/class/src/main.cpp.o: /home/jeanne/Documents/S3/ImacDream/Game/class/include/Text.hpp
+CMakeFiles/IMACDream.dir/class/src/main.cpp.o: /home/jeanne/Documents/S3/ImacDream/Game/class/include/Time.hpp
 CMakeFiles/IMACDream.dir/class/src/main.cpp.o: /home/jeanne/Documents/S3/ImacDream/Game/class/include/Water.hpp
 CMakeFiles/IMACDream.dir/class/src/main.cpp.o: /home/jeanne/Documents/S3/ImacDream/Game/class/src/main.cpp
 CMakeFiles/IMACDream.dir/class/src/main.cpp.o: /home/jeanne/Documents/S3/ImacDream/Game/glimac/include/glimac/FilePath.hpp

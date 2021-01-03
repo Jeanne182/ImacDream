@@ -76,8 +76,8 @@ public:
     void Initialization();
     void DeleteText() ;
     void renderText(const CharactersManager &characters);
-    void replace(const std::string &newText);
-
+    inline void replace(const std::string &newText){ if(_text != newText) _text = newText; };
+    inline void changeColor(glm::vec3 color){ if(_color != color) _color = color ; }
 };
 
 

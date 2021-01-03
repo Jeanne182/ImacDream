@@ -55,7 +55,6 @@ void Terrain::randomizeManager() {
 
     //std::vector<std::string> eggTypes = {"dragon_egg"};
     //randomize(_randomEggPositions, _randomEggTypes,eggTypes,  _nbEggs,generator, positionsDistrib);
-
 }
 
 void Terrain::randomize(std::vector<glm::vec3> &randomPositions, std::vector<std::string> &randomTypes,
