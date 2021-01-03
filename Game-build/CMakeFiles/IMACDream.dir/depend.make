@@ -385,6 +385,7 @@ CMakeFiles/IMACDream.dir/class/src/Game.cpp.o: /home/matteo/Documents/imac2/open
 CMakeFiles/IMACDream.dir/class/src/Game.cpp.o: /home/matteo/Documents/imac2/openGL/ImacDream/Game/class/include/MapManager.hpp
 CMakeFiles/IMACDream.dir/class/src/Game.cpp.o: /home/matteo/Documents/imac2/openGL/ImacDream/Game/class/include/Mesh.hpp
 CMakeFiles/IMACDream.dir/class/src/Game.cpp.o: /home/matteo/Documents/imac2/openGL/ImacDream/Game/class/include/Model.hpp
+CMakeFiles/IMACDream.dir/class/src/Game.cpp.o: /home/matteo/Documents/imac2/openGL/ImacDream/Game/class/include/Music.hpp
 CMakeFiles/IMACDream.dir/class/src/Game.cpp.o: /home/matteo/Documents/imac2/openGL/ImacDream/Game/class/include/Program.hpp
 CMakeFiles/IMACDream.dir/class/src/Game.cpp.o: /home/matteo/Documents/imac2/openGL/ImacDream/Game/class/include/Skybox.hpp
 CMakeFiles/IMACDream.dir/class/src/Game.cpp.o: /home/matteo/Documents/imac2/openGL/ImacDream/Game/class/include/Terrain.hpp

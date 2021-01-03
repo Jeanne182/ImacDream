@@ -9,7 +9,7 @@ class Camera {
 private :
     glm::vec3 m_Position;
     float m_fPhi, m_fTheta;
-    //glm::vec3 m_FrontVector, m_LeftVector, m_UpVector;
+    glm::vec3 m_FrontVector, m_LeftVector, m_UpVector;
     float _xOld = 0.f;
     float _yOld = 0.f;
     void computeDirectionVectors();
@@ -20,7 +20,7 @@ private :
     bool KEY_RIGHT_PRESSED = false;
 
 public:
-    glm::vec3 m_FrontVector, m_LeftVector, m_UpVector;//RPIVATE
+    //glm::vec3 m_FrontVector, m_LeftVector, m_UpVector;//RPIVATE
     Camera():
             m_Position(glm::vec3(0.,0.,0.)), m_fPhi(M_PI), m_fTheta(0.){
         computeDirectionVectors();
@@ -31,6 +31,11 @@ public:
     void rotateUp(float degrees);
     glm::mat4 getViewMatrix() const;
     inline glm::vec3 getPosition() const { return m_Position;};
+    inline glm::vec3 getFrontVector() const { return m_FrontVector;};
+    inline glm::vec3 getLeftVector() const { return m_LeftVector;};
+    inline glm::vec3 getUpVector() const { return m_UpVector;};
+
+
     inline void setPositionY(const float &y) { m_Position.y = y;};
     void event(const SDL_Event &e);
     void update();

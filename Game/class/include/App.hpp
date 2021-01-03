@@ -33,8 +33,7 @@ public:
 
 
     //CONSTRUCTOR
-    inline App():_game(), _music(), _texts(), _characters(), _layout(LAYOUT_MENU){_music.playGame();
-    };
+    inline App():_game(), _music("musique"), _texts(), _characters(), _layout(LAYOUT_MENU){_music.play(-1);};
 
 
     void draw();

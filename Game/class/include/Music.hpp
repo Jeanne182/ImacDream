@@ -1,16 +1,17 @@
 #ifndef IMACDREAM_MUSIC_H
 #define IMACDREAM_MUSIC_H
 #include <SDL2/SDL_mixer.h>
+#include <map>
 
 class Music {
     public:
-        Music();
+        Music(const std::string &musicName);
 
         void Delete();
-        void playGame();
+        void play(const int loop);
 
-    private:
-        Mix_Music *_game = NULL;
+private:
+        Mix_Chunk*_music = NULL;
 };
 
 #endif //IMACDREAM_MUSIC_H
