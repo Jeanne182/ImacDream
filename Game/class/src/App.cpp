@@ -29,20 +29,18 @@ void App::event(const SDL_Event &e) {
                         if(egg_id != -1){
                             _game.getMap()->getTerrain()->setBoolValue(egg_id, false);
                             _game.increaseScore();
+                            _time = clock();
 
                         }
-                        _texts.getText("eggs")->replace("Dragon eggs : " + std::to_string(_game.getScore()));
+                        _texts.getText("eggs")->replace("Dragon eggs : " + std::to_string(_game.getScore()) + " / " + std::to_string(_game.scoreMax()));
                     }
-
-//                    if (e.key.keysym.sym==SDLK_a ){
-//                        if (_game.lightOn()) _texts.getText("light")->replace("Light on");
-//                        else _texts.getText("light")->replace("Light off");
-//
-//                    }
             }
-            if(_game.getScore() == 8){
-                _layout = LAYOUT_GAME_OVER;
-                _texts.getText("eggs")->replace("Dragon eggs : " + std::to_string(0));
+            if(_game.getScore() == _game.scoreMax()){
+                float elapsed = ((float)clock() - _time) / CLOCKS_PER_SEC;
+                if(elapsed > 1.f){
+                    _layout = LAYOUT_GAME_OVER;
+                }
+
             }
             break;
 
@@ -50,6 +48,7 @@ void App::event(const SDL_Event &e) {
             switch(e.type){
                 case SDL_KEYDOWN:
                     if (e.key.keysym.sym==SDLK_RETURN) {
+                        _texts.getText("eggs")->replace("Dragon eggs : 0 / " + std::to_string(_game.scoreMax()));
                         _game.ResetGame();
                         _layout = LAYOUT_GAME;
                     }
@@ -169,7 +168,7 @@ void App::layoutGame() {
     _characters.load();
     _texts.addText("Play (Enter)", "play", 0.5f, glm::vec2(450, 260), glm::vec3(1));
     _texts.addText("Quit (Esc)", "quit", 0.5f, glm::vec2(463, 180), glm::vec3(1));
-    _texts.addText("Dragon eggs : 0", "eggs", 0.5f, glm::vec2(50, 90), glm::vec3(1));
+    _texts.addText("Dragon eggs : 0 / " + std::to_string(_game.scoreMax()), "eggs", 0.5f, glm::vec2(50, 90), glm::vec3(1));
     _texts.addText("Light off", "light", 0.5f, glm::vec2(50, 50), glm::vec3(1));
     _texts.addText("Quit (Esc)", "quit_button", 0.35f, glm::vec2(50, 670), glm::vec3(1));
     _texts.addText("Move (Z, Q, S, D)", "move_button", 0.35f, glm::vec2(50, 640), glm::vec3(1));

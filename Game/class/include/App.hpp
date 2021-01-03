@@ -6,6 +6,7 @@
 #include "../include/Music.hpp"
 #include "../include/StaticImage.hpp"
 #include "../include/Text.hpp"
+#include <time.h>
 
 
 
@@ -27,6 +28,8 @@ private:
     TextsManager _texts;
     CharactersManager _characters;
     int _layout;
+    clock_t _time = clock();
+    clock_t _elapsed = clock();
 
 
 public:
