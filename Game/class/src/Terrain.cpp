@@ -3,6 +3,30 @@
 #include "../include/AssetsManager.hpp"
 #include <glimac/Sphere.hpp>
 
+Terrain::Terrain(){
+    std::vector<std::string> objectsToImport = {
+            "terrain",
+            "green_pine",
+            "red_pine",
+            "yellow_pine",
+            "mushroom",
+            "mushroom_double",
+            "mushroom_triple",
+            "conic_rock",
+            "menhir",
+            "rock_circle",
+            "rock_heap",
+            "dragon_egg"
+    };
+
+    ObjectsManager(objectsToImport);
+    randomizeManager();
+    for(int i=0; i<_nbEggs; i++){
+        _exist.push_back(true);
+    }
+};
+
+
 void Terrain::displayManager(const glm::mat4 &cameraView) {
     _objects.find("terrain")->second.update(cameraView);
     display(_nbTrees, _randomTreePositions, _randomTreeTypes, cameraView);
@@ -63,9 +87,7 @@ void Terrain::randomizeManager() {
 
     std::vector<std::string> eggTypes = {"dragon_egg"};
     randomize(_randomEggPositions, _randomEggCenterRadius, _randomEggTypes, eggTypes,  _nbEggs,generator, positionsDistrib);
-    for(int i=0; i<_nbEggs; i++){
-        _exist.push_back(true);
-    }
+
 }
 
 void Terrain::randomize(std::vector<glm::vec3> &randomPositions, std::vector<std::pair<glm::vec3, float>> &randomCenterRadius,
@@ -129,4 +151,29 @@ std::vector<std::pair<glm::vec3, float>> Terrain::getMenhirsCenters(){
         }
     }
     return menhirsCenters;
+}
+
+
+void Terrain::clearVectors(){
+    for(int i=0; i<_nbEggs; i++){
+        _randomEggPositions.clear();
+        _randomEggCenterRadius.clear();
+        _randomEggTypes.clear();
+    }
+    for(int i=0; i<_nbTrees; i++){
+        _randomTreePositions.clear();
+        _randomTreeCenterRadius.clear();
+        _randomTreeTypes.clear();
+    }
+    for(int i=0; i<_nbMushrooms; i++){
+        _randomMushroomsPositions.clear();
+        _randomMushroomsCenterRadius.clear();
+        _randomMushroomsTypes.clear();
+    }
+    for(int i=0; i<_nbRocks; i++){
+        _randomRockPositions.clear();
+        _randomRockCenterRadius.clear();
+        _randomRockTypes.clear();
+    }
+    _nbMenhirs=0;
 }
