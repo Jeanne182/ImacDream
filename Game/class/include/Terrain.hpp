@@ -51,7 +51,6 @@ public:
     inline void setBoolValue(const int id, const bool value){ _exist[id]=value; };
     int selectedEgg(const glm::mat4 &cameraView);
     bool isSelected(const glm::mat4 &cameraView, const int i);
-    //bool collisions(const glm::vec3 &cameraPosition);
 
     inline std::vector<bool> getBool(){return _exist;};
     inline int getNbTree(){return _nbTrees;};

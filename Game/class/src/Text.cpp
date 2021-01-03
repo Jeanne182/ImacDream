@@ -84,7 +84,7 @@ void CharactersManager::load() {
     FT_Face face;
     if(FT_New_Face(ft, "Assets/fonts/gameover.ttf", 0, &face))
     {
-        std::cerr << "ERROR::FREETYPE: Failed to load font assets/fonts/Love_Craft.ttf" << std::endl;
+        std::cerr << "ERROR::FREETYPE: Failed to load font assets/fonts/gameover.ttf" << std::endl;
         exit(EXIT_FAILURE);
     }
     FT_Set_Pixel_Sizes(face, 0, 48);
@@ -95,7 +95,7 @@ void CharactersManager::load() {
         // load character glyph
         if (FT_Load_Char(face, c, FT_LOAD_RENDER))
         {
-            std::cout << "ERROR::FREETYTPE: Failed to load Glyph" << std::endl;
+            std::cout << "ERROR::FREETYTPE: Failed to load" << std::endl;
             continue;
         }
         // generate texture

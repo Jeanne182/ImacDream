@@ -94,12 +94,7 @@ void Camera::event(const SDL_Event &e, std::map<const std::string, bool> &movePo
             {
                 KEY_RIGHT_PRESSED = true;
             }
-            if (e.key.keysym.sym==SDLK_x)
-            {
-                _i++;
-                m_Position = glm::vec3(_vector.at(_i)[0], 2.f, _vector.at(_i)[2]);
-                std::cout<<"Position : "<<m_Position[0]<< " , "<<m_Position[1]<<" , "<<m_Position[2]<<std::endl;
-            }
+
             break;
 
         case SDL_KEYUP:

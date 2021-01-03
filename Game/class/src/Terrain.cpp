@@ -98,11 +98,6 @@ void Terrain::loadModels() {
             }
         }
     }
-    std::cout<<"{"; //TO DELETE
-    for(int j = 0; j<_modelsLoadedPositions.size(); j++){
-        std::cout<<"glm::vec3("<<_modelsLoadedPositions[j][0]<<","<<_modelsLoadedPositions[j][1]<<","<<_modelsLoadedPositions[j][2]<<"), ";
-    }
-    std::cout<<std::endl;
 }
 
 void Terrain::randomizeManager() {
