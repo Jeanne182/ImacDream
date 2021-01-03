@@ -80,6 +80,7 @@ public:
     std::string modelFile(const std::string &model) const;
     std::string textureFile(const std::string &texture) const;
     std::string fontFile(const std::string &font) const;
+    std::string txtFile(const std::string &file) const;
 };
 
 #endif //IMACDREAM_ASSETSMANAGER_HPP

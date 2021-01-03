@@ -2,6 +2,7 @@
 #include "../include/Utils.hpp"
 #include "../include/AssetsManager.hpp"
 #include <glimac/Sphere.hpp>
+#include <cstdio>
 
 void Terrain::displayManager(const glm::mat4 &cameraView) {
     _objects.find("terrain")->second.update(cameraView);
@@ -9,6 +10,7 @@ void Terrain::displayManager(const glm::mat4 &cameraView) {
     display(_nbMushrooms, _randomMushroomsPositions, _randomMushroomsTypes, cameraView);
     display(_nbRocks, _randomRockPositions, _randomRockTypes, cameraView);
     display(_nbEggs, _randomEggPositions, _randomEggTypes, cameraView);
+    display(_modelsLoadedPositions.size(), _modelsLoadedPositions, _modelsLoadedTypes, cameraView);
 }
 
 void Terrain::display(const int &nbCopies, const std::vector<glm::vec3> &randomPositions, const std::vector<std::string> &randomTypes,
@@ -36,11 +38,39 @@ void Terrain::deleteBuffers() {
 }
 
 void Terrain::ObjectsManager(std::vector<std::string> &names) {
-    for(int i = 0; i < names.size(); i++){
-        std::string path = "/" + names[i] + ".obj";
+    for(auto & name : names){
+        std::string path = "/" + name + ".obj";
         GameObject object(path);
-        _objects.insert(std::make_pair(names[i], object));
+        _objects.insert(std::make_pair(name, object));
 
+
+    }
+}
+
+void Terrain::loadModels() {
+    std::ifstream is(AssetManager::Get()->txtFile("modelsLoader.txt"));
+    std::cout<< std::endl;
+
+    char xPos[5], yPos[5], zPos[5];
+    glm::vec3 pos;
+    char type[50], path[50];
+    for (std::string str; std::getline(is, str);) {
+        char c[str.size() + 1];
+        strcpy(c, str.c_str());
+        sscanf((const char *)c, "%s", type);
+        if (std::strcmp ("model", type) == 0){
+            sscanf((const char *)c, "%s %s", type, path);
+            std::cout << "Path : "<< path << std::endl;
+            _modelsLoadedTypes.emplace_back(path);
+        }
+        if (std::strcmp ("pos", type) == 0) {
+            sscanf((const char *) c, "%s %s %s %s", type, xPos, yPos, zPos);
+            pos = glm::vec3(std::stof(xPos), std::stof(yPos), std::stof(zPos));
+            std::cout << "Pos : " << pos << std::endl;
+            _modelsLoadedPositions.emplace_back(pos);
+            _modelsLoadedCenterRadius.emplace_back(glm::vec3(pos + _objects.find(path)->second.getCenter()),
+                                                               _objects.find(path)->second.getHitboxRadius());
+        }
     }
 }
 
@@ -66,6 +96,8 @@ void Terrain::randomizeManager() {
     for(int i=0; i<_nbEggs; i++){
         _exist.push_back(true);
     }
+
+    loadModels();
 }
 
 void Terrain::randomize(std::vector<glm::vec3> &randomPositions, std::vector<std::pair<glm::vec3, float>> &randomCenterRadius,
@@ -76,10 +108,10 @@ void Terrain::randomize(std::vector<glm::vec3> &randomPositions, std::vector<std
     auto typeId = std::bind(typeDistrib, generator);
 
     for (int i = 0; i < nbCopies; i++){
-        randomPositions.push_back(glm::vec3(positionsDistrib(generator), 0.f, positionsDistrib(generator)));
+        randomPositions.emplace_back(positionsDistrib(generator), 0.f, positionsDistrib(generator));
         randomTypes.push_back(types[typeId()]);
         if(types[typeId()]=="menhir") _nbMenhirs++;
-        randomCenterRadius.push_back(std::make_pair(glm::vec3(randomPositions[i]+_objects.find(randomTypes[i])->second.getCenter()), _objects.find(randomTypes[i])->second.getHitboxRadius()));
+        randomCenterRadius.emplace_back(glm::vec3(randomPositions[i]+_objects.find(randomTypes[i])->second.getCenter()), _objects.find(randomTypes[i])->second.getHitboxRadius());
     }
 
 }

@@ -14,3 +14,7 @@ std::string AssetManager::textureFile(const std::string &texture) const {
 std::string AssetManager::fontFile(const std::string &font) const {
     return _appPath.dirPath() + "Assets/fonts/" + font;
 }
+
+std::string AssetManager::txtFile(const std::string &file) const {
+    return _appPath.dirPath() + "Assets/txt/" + file;
+}
