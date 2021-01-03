@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /snap/clion/135/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/jeanne/Documents/S3/ImacDream/Game
 -- The C compiler identification is GNU 9.3.0
 -- The CXX compiler identification is GNU 9.3.0
@@ -32,3 +33,9 @@ This warning is for project developers.  Use -Wno-dev to suppress it.
 -- Configuring done
 -- Generating done
 -- Build files have been written to: /home/jeanne/Documents/S3/ImacDream/Game-build
+=======
+/snap/clion/138/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/matteo/Documents/imac2/openGL/ImacDream/Game
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/matteo/Documents/imac2/openGL/ImacDream/Game-build
+>>>>>>> warnings

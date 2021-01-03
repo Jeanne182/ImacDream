@@ -39,6 +39,7 @@ int main(int argc, char** argv) {
 
     glEnable(GL_DEPTH_TEST); // Activation du test de profondeur GPU
     SDL_GL_SetAttribute(SDL_GL_ALPHA_SIZE,8);
+    //USE THIS LINE ON A VIRTUAL MACHINE
     SDL_SetRelativeMouseMode(SDL_TRUE );
 
     // Application loop:
@@ -60,8 +61,8 @@ int main(int argc, char** argv) {
                     if (e.key.keysym.sym==SDLK_ESCAPE) {done = true;}
                     break;
                 case SDL_MOUSEMOTION:
-
-                    SDL_WarpMouseInWindow(windowManager._window,1080/2,720/2);
+                    //COMMENT THIS LINE ON A VIRTUAL MACHINE
+                    //SDL_WarpMouseInWindow(windowManager._window,1080/2,720/2);
                     break;
             }
         }
