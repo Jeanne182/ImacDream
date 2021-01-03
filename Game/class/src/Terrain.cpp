@@ -17,7 +17,9 @@ Terrain::Terrain(){
             "menhir",
             "rock_circle",
             "rock_heap",
-            "dragon_egg"
+            "dragon_egg",
+            "green_egg",
+            "orange_egg"
     };
 
     ObjectsManager(objectsToImport);
@@ -115,7 +117,7 @@ void Terrain::randomizeManager() {
     std::vector<std::string> rockTypes = {"conic_rock", "menhir", "rock_circle", "rock_heap"};
     randomize(_randomRockPositions, _randomRockCenterRadius, _randomRockTypes, rockTypes,  _nbRocks,generator, positionsDistrib);
 
-    std::vector<std::string> eggTypes = {"dragon_egg"};
+    std::vector<std::string> eggTypes = {"dragon_egg", "green_egg", "orange_egg"};
     randomize(_randomEggPositions, _randomEggCenterRadius, _randomEggTypes, eggTypes,  _nbEggs,generator, positionsDistrib);
     loadModels();
 }
@@ -130,7 +132,7 @@ void Terrain::randomize(std::vector<glm::vec3> &randomPositions, std::vector<std
     for (int i = 0; i < nbCopies; i++){
         randomPositions.emplace_back(positionsDistrib(generator), 0.f, positionsDistrib(generator));
         randomTypes.push_back(types[typeId()]);
-        if(types[typeId()]=="menhir") _nbMenhirs++;
+        if(randomTypes[i]=="menhir") _nbMenhirs++;
         randomCenterRadius.emplace_back(glm::vec3(randomPositions[i]+_objects.find(randomTypes[i])->second.getCenter()), _objects.find(randomTypes[i])->second.getHitboxRadius());
     }
 

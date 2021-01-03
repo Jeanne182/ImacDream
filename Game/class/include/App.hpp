@@ -29,6 +29,7 @@ private:
     int _layout;
 
 
+
 public:
 
 
@@ -50,6 +51,8 @@ public:
     void layout2D();
     void layout3D();
     void layoutGame();
+
+
 
 };
 

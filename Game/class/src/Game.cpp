@@ -3,7 +3,7 @@
 
 
 void Game::event(const SDL_Event &e) {
-    collisionsManager(10.f);
+    collisionsManager(3.f);
     _camera.event(e, _move);
     ResetMove();
     _pointLight.event(e);
@@ -36,20 +36,21 @@ void Game::ResetMove(){
 
 void Game::collisionsManager(const float t){
     _camera.setFuturesPositions(t);
-    checkCollisions(getMap()->getTerrain()->getNbTree(), getMap()->getTerrain()->getTreesCenters());
-    checkCollisions(getMap()->getTerrain()->getNbMenhirs(), getMap()->getTerrain()->getMenhirsCenters());
-
+    checkCollisionsObj(getMap()->getTerrain()->getNbTree(), getMap()->getTerrain()->getTreesCenters());
+    checkCollisionsObj(getMap()->getTerrain()->getNbMenhirs(), getMap()->getTerrain()->getMenhirsCenters());
+    checkCollisionsMap();
 }
 
-
-void Game::checkCollisions(const int nbObj, const std::vector<std::pair<glm::vec3, float>> CenterRadius){
+void Game::checkCollisionsMap() {
     //With the edges of the map
-    for(auto it : getCamera().getFuturesPositions()){
-        if(it.second.x < -490  || it.second.x > 490
-            || it.second.z < -490  || it.second.z > 490) _move[it.first]=false;
+    for (auto it : getCamera().getFuturesPositions()) {
+        if (it.second.x < -490 || it.second.x > 490
+            || it.second.z < -490 || it.second.z > 490)
+            _move[it.first] = false;
     }
+}
 
-
+void Game::checkCollisionsObj(const int nbObj, const std::vector<std::pair<glm::vec3, float>> CenterRadius){
     //With Trees and Menhirs
     for(int i=0; i<nbObj; i++){
         if(glm::distance(getCamera().getFuturesPositions()["UP"], CenterRadius[i].first) < CenterRadius[i].second){
@@ -69,8 +70,6 @@ void Game::checkCollisions(const int nbObj, const std::vector<std::pair<glm::vec
 
 void Game::ResetGame(){
     setScore(0);
-    std::cout <<_score<< std::endl;
-
     _pointLight.setLightOn(true);
     _pointLight.setShininess(10.f);
     _pointLight.setPosition(glm::vec4(0.f, 1.f, 0.f, 0.f));

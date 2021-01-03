@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-# Install script for directory: /home/jeanne/Documents/S3/ImacDream/Game/glimac
-=======
-# Install script for directory: /home/matteo/Documents/imac2/openGL/ImacDream/Game/glimac
->>>>>>> Camerafix
+# Install script for directory: /home/fanny/ImacDream/Game/glimac
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

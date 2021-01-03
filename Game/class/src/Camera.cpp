@@ -139,11 +139,11 @@ void Camera::update(std::map<const std::string, bool> &movePossible) {
     {
         moveFront(-speed);
     }
-    if (KEY_LEFT_PRESSED && movePossible["UP"]==true)
+    if (KEY_LEFT_PRESSED && movePossible["LEFT"]==true)
     {
         moveLeft(speed);
     }
-    if (KEY_RIGHT_PRESSED && movePossible["UP"]==true)
+    if (KEY_RIGHT_PRESSED && movePossible["RIGHT"]==true)
     {
         moveLeft(-speed);
     }

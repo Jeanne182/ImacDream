@@ -32,7 +32,8 @@ public:
     inline void setScore(const int score) { _score=score ;};
     void update();
     void collisionsManager(const float t);
-    void checkCollisions(const int nbObj, const std::vector<std::pair<glm::vec3, float>> CenterRadius);
+    void checkCollisionsObj(const int nbObj, const std::vector<std::pair<glm::vec3, float>> CenterRadius);
+    void checkCollisionsMap();
     inline void Delete(){ _map->Delete(); delete _map; _sky.deleteBuffers(); _soundCollect.Delete();};
     void ResetMove();
     void ResetGame();

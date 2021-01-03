@@ -2,7 +2,6 @@
 #include "../include/AssetsManager.hpp"
 #include "../include/Utils.hpp"
 
-#include <utility>
 
 void App::event(const SDL_Event &e) {
     switch(_layout){
@@ -25,7 +24,6 @@ void App::event(const SDL_Event &e) {
             switch(e.type){
                 case SDL_KEYDOWN:
                     if (e.key.keysym.sym==SDLK_e ){
-                        std::cout << "score e : "<<_game.getScore()<< std::endl;
                         int egg_id = _game.getMap()->getTerrain()->selectedEgg(_game.getCamera().getViewMatrix());
                         if(egg_id != -1){
                             std::cout << "Object selected" << std::endl;
