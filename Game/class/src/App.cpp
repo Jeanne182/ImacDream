@@ -44,7 +44,7 @@ void App::event(const SDL_Event &e) {
             if(_game.getScore() == 3){
                 _layout = LAYOUT_GAME_OVER;
             }
-
+            break;
 
         case LAYOUT_GAME_OVER:
             switch(e.type){

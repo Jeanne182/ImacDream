@@ -17,10 +17,9 @@ private:
     Skybox _sky;
     Music _soundCollect;
 
-
 public:
     //CONSTRUCTOR
-    inline Game():_map(new MapManager()), _pointLight(),  _camera(), _sky(), _score(0), _soundCollect("collect"){ };
+    inline Game():_score(0), _map(new MapManager()), _pointLight(),  _camera(), _sky(),_soundCollect("collect"){ };
     ~Game()=default;
     //METHODS
     void display();
@@ -29,7 +28,7 @@ public:
     void update();
     inline void Delete(){ _map->Delete(); delete _map; _sky.deleteBuffers(); _soundCollect.Delete();};
     //GETTER
-    inline const int getScore() {return _score;};
+    inline int getScore() {return _score;};
     inline bool lightOn() {return _pointLight.getLightOn();}
     inline MapManager* getMap(){ return _map;};
     inline Camera getCamera(){ return _camera;};

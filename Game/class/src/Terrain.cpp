@@ -36,7 +36,7 @@ void Terrain::deleteBuffers() {
 }
 
 void Terrain::ObjectsManager(std::vector<std::string> &names) {
-    for(int i = 0; i < names.size(); i++){
+    for(uint i = 0; i < names.size(); i++){
         std::string path = "/" + names[i] + ".obj";
         GameObject object(path);
         _objects.insert(std::make_pair(names[i], object));
