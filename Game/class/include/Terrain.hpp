@@ -24,7 +24,7 @@ private:
     std::vector<glm::vec3> _randomMushroomsPositions;
     std::vector<std::pair<glm::vec3, float>> _randomMushroomsCenterRadius;
     std::vector<std::string> _randomMushroomsTypes;
-    int _nbMushrooms = 200;
+    int _nbMushrooms = 20;
 
     std::vector<glm::vec3> _randomRockPositions;
     std::vector<std::pair<glm::vec3, float>> _randomRockCenterRadius;
@@ -32,11 +32,8 @@ private:
     int _nbRocks = 200;
     int _nbMenhirs = 0 ;
 
-    std::vector<glm::vec3> _randomEggPositions;
-    std::vector<std::pair<glm::vec3, float>> _randomEggCenterRadius;
-    std::vector<std::string> _randomEggTypes;
     std::vector<bool> _exist;
-    int _nbEggs = 200;
+    int _nbEggs;
 
 public:
     Terrain();

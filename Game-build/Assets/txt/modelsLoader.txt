@@ -1,2 +1,116 @@
 model dragon_egg
-pos -1 5.5 0
+pos 0 -0.2 0
+
+model green_egg
+pos -1 0 1
+
+model orange_egg
+pos 293.967 -1 -384.882
+
+model green_egg
+pos 141.253 0.3 -299.407
+
+model dragon_egg
+pos 101.643 -2 -47.177
+
+model orange_egg
+pos 181.422 0.3 322.057
+
+model dragon_egg
+pos 279.425 0.3 -162.389
+
+model dragon_egg
+pos 12.149 -2 -295.055
+
+model dragon_egg
+pos -216.376 0 183.185
+
+model green_egg
+pos -437.107 0.3 368.451
+
+model dragon_egg
+pos -275.794 0.3 -451.495
+
+model orange_egg
+pos 47.953 0.2 -274.169
+
+model dragon_egg
+pos -190.991 0.5 -61.355
+
+model green_egg
+pos -446.450 0.3 13.658
+
+model dragon_egg
+pos -127.644 0.3 -482.366
+
+model dragon_egg
+pos -470.803 0.3 -319.657
+
+model orange_egg
+pos 0.072 0.000 208.485
+
+model dragon_egg
+pos 491.218 0.6 215.118
+
+model green_egg
+pos 290.157 0.000 -95.479
+
+model green_egg
+pos -269.462 0.3 302.001
+
+model orange_egg
+pos -279.860 0.000 151.289
+
+model orange_egg
+pos 153.646 0.000 392.346
+
+model dragon_egg
+pos 198.261 0.000 327.970
+
+model dragon_egg
+pos 171.311 0.000 169.106
+
+model dragon_egg
+pos -239.459 0.000 223.167
+
+model dragon_egg
+pos 1.859 0.3 411.852
+
+model dragon_egg
+pos 44.102 0.000 238.534
+
+model dragon_egg
+pos -36.210 0.000 218.657
+
+model dragon_egg
+pos 377.912 0.000 425.083
+
+model dragon_egg
+pos -301.882 0.6 -431.267
+
+model dragon_egg
+pos -311.922 0.000 261.539
+
+model dragon_egg
+pos -339.667 0.000 -475.060
+
+model dragon_egg
+pos 229.562 0.000 222.362
+
+model dragon_egg
+pos -17.263 0.000 256.083
+
+model dragon_egg
+pos -101.591 -0.6 -139.948
+
+model dragon_egg
+pos -285.004 0.3 -442.749
+
+model dragon_egg
+pos -460.953 0.000 -68.451
+
+model dragon_egg
+pos 490.354 0.000 -240.287
+
+model dragon_egg
+pos 25.046 0.000 373.536

@@ -17,15 +17,20 @@ Terrain::Terrain(){
             "menhir",
             "rock_circle",
             "rock_heap",
-            "dragon_egg"
+            "dragon_egg",
+            "orange_egg",
+            "green_egg"
     };
 
     ObjectsManager(objectsToImport);
     randomizeManager();
+
+    loadModels();
+    _nbEggs = _modelsLoadedPositions.size();
     for(int i=0; i<_nbEggs; i++){
         _exist.push_back(true);
     }
-};
+}
 
 
 void Terrain::displayManager(const glm::mat4 &cameraView) {
@@ -33,14 +38,13 @@ void Terrain::displayManager(const glm::mat4 &cameraView) {
     display(_nbTrees, _randomTreePositions, _randomTreeTypes, cameraView);
     display(_nbMushrooms, _randomMushroomsPositions, _randomMushroomsTypes, cameraView);
     display(_nbRocks, _randomRockPositions, _randomRockTypes, cameraView);
-    display(_nbEggs, _randomEggPositions, _randomEggTypes, cameraView);
     display(_modelsLoadedPositions.size(), _modelsLoadedPositions, _modelsLoadedTypes, cameraView);
 }
 
 void Terrain::display(const int &nbCopies, const std::vector<glm::vec3> &randomPositions, const std::vector<std::string> &randomTypes,
                       const glm::mat4 &cameraView){
     for (int i = 0; i < nbCopies; i++) {
-        if(randomTypes==_randomEggTypes){
+        if(randomTypes==_modelsLoadedTypes){
             if(_exist[i]){
                 _objects.find(randomTypes[i])->second.setPosition(randomPositions[i]);
                 _objects.find(randomTypes[i])->second.update(cameraView);
@@ -73,29 +77,32 @@ void Terrain::ObjectsManager(std::vector<std::string> &names) {
 
 void Terrain::loadModels() {
     std::ifstream is(AssetManager::Get()->txtFile("modelsLoader.txt"));
-    std::cout<< std::endl;
 
-    char xPos[5], yPos[5], zPos[5];
+    char xPos[10], yPos[10], zPos[10];
     glm::vec3 pos;
     char type[50], path[50];
     for (std::string str; std::getline(is, str);) {
-        char c[str.size() + 1];
-        strcpy(c, str.c_str());
-        sscanf((const char *)c, "%s", type);
-        if (std::strcmp ("model", type) == 0){
-            sscanf((const char *)c, "%s %s", type, path);
-            std::cout << "Path : "<< path << std::endl;
-            _modelsLoadedTypes.emplace_back(path);
-        }
-        if (std::strcmp ("pos", type) == 0) {
-            sscanf((const char *) c, "%s %s %s %s", type, xPos, yPos, zPos);
-            pos = glm::vec3(std::stof(xPos), std::stof(yPos), std::stof(zPos));
-            std::cout << "Pos : " << pos << std::endl;
-            _modelsLoadedPositions.emplace_back(pos);
-            _modelsLoadedCenterRadius.emplace_back(glm::vec3(pos + _objects.find(path)->second.getCenter()),
-                                                               _objects.find(path)->second.getHitboxRadius());
+        if(!str.empty()){
+            char c[str.size() + 1];
+            strcpy(c, str.c_str());
+            sscanf((const char *)c, "%s", type);
+            if (std::strcmp ("model", type) == 0){
+                sscanf((const char *)c, "%s %s", type, path);
+                _modelsLoadedTypes.emplace_back(path);
+            }
+            else if (std::strcmp ("pos", type) == 0) {
+                sscanf((const char *) c, "%s %s %s %s", type, xPos, yPos, zPos);
+                pos = glm::vec3(std::stof(xPos), std::stof(yPos), std::stof(zPos));
+                _modelsLoadedPositions.emplace_back(pos);
+                _modelsLoadedCenterRadius.emplace_back(glm::vec3(pos + _objects.find(path)->second.getCenter()),_objects.find(path)->second.getHitboxRadius());
+            }
         }
     }
+    std::cout<<"{"; //TO DELETE
+    for(int j = 0; j<_modelsLoadedPositions.size(); j++){
+        std::cout<<"glm::vec3("<<_modelsLoadedPositions[j][0]<<","<<_modelsLoadedPositions[j][1]<<","<<_modelsLoadedPositions[j][2]<<"), ";
+    }
+    std::cout<<std::endl;
 }
 
 void Terrain::randomizeManager() {
@@ -114,10 +121,6 @@ void Terrain::randomizeManager() {
 
     std::vector<std::string> rockTypes = {"conic_rock", "menhir", "rock_circle", "rock_heap"};
     randomize(_randomRockPositions, _randomRockCenterRadius, _randomRockTypes, rockTypes,  _nbRocks,generator, positionsDistrib);
-
-    std::vector<std::string> eggTypes = {"dragon_egg"};
-    randomize(_randomEggPositions, _randomEggCenterRadius, _randomEggTypes, eggTypes,  _nbEggs,generator, positionsDistrib);
-    loadModels();
 }
 
 void Terrain::randomize(std::vector<glm::vec3> &randomPositions, std::vector<std::pair<glm::vec3, float>> &randomCenterRadius,
@@ -128,12 +131,11 @@ void Terrain::randomize(std::vector<glm::vec3> &randomPositions, std::vector<std
     auto typeId = std::bind(typeDistrib, generator);
 
     for (int i = 0; i < nbCopies; i++){
-        randomPositions.emplace_back(positionsDistrib(generator), 0.f, positionsDistrib(generator));
+        randomPositions.emplace_back(positionsDistrib(generator), -2.5f, positionsDistrib(generator));
         randomTypes.push_back(types[typeId()]);
         if(types[typeId()]=="menhir") _nbMenhirs++;
         randomCenterRadius.emplace_back(glm::vec3(randomPositions[i]+_objects.find(randomTypes[i])->second.getCenter()), _objects.find(randomTypes[i])->second.getHitboxRadius());
     }
-
 }
 
 
@@ -151,7 +153,7 @@ int Terrain::selectedEgg(const glm::mat4 &cameraView){
 // test if the camera is pointing on an egg
 bool Terrain::isSelected(const glm::mat4 &cameraView, const int i) {
     // Distance between the camera and the center of the egg
-    glm::vec3 distanceVector = glm::vec3(cameraView*glm::vec4(_randomEggCenterRadius[i].first, 1.)) ;
+    glm::vec3 distanceVector = glm::vec3(cameraView*glm::vec4(_modelsLoadedCenterRadius[i].first, 1.)) ;
 
     // Find the direction vector of the camera ray
     glm::vec3 directionVectorCam = glm::vec3(glm::vec4(0, 0, -1, 0));
@@ -166,7 +168,7 @@ bool Terrain::isSelected(const glm::mat4 &cameraView, const int i) {
     double distanceToRay = sqrt(abs(pow(distanceToCenter, 2) - dotProduct(distanceVector, distanceVector)));
 
     // Check if the ray intersect the egg or not depending on the radius
-    if(distanceToRay > _randomEggCenterRadius[i].second) return false ;
+    if(distanceToRay > _modelsLoadedCenterRadius[i].second) return false ;
 
     return true;
 
@@ -185,10 +187,10 @@ std::vector<std::pair<glm::vec3, float>> Terrain::getMenhirsCenters(){
 
 
 void Terrain::clearVectors(){
-    for(int i=0; i<_nbEggs; i++){
-        _randomEggPositions.clear();
-        _randomEggCenterRadius.clear();
-        _randomEggTypes.clear();
+    for(int i=0; i<_modelsLoadedPositions.size(); i++){
+        _modelsLoadedPositions.clear();
+        _modelsLoadedCenterRadius.clear();
+        _modelsLoadedTypes.clear();
     }
     for(int i=0; i<_nbTrees; i++){
         _randomTreePositions.clear();

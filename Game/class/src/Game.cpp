@@ -70,14 +70,12 @@ void Game::checkCollisions(const int nbObj, const std::vector<std::pair<glm::vec
 
 void Game::ResetGame(){
     setScore(0);
-    std::cout <<_score<< std::endl;
 
     _pointLight.setLightOn(true);
     _pointLight.setShininess(10.f);
     _pointLight.setPosition(glm::vec4(0.f, 1.f, 0.f, 0.f));
     _pointLight.setIntensity();
     _camera.setPosition(glm::vec3(0., 4., 0.));
-    std::cout << _camera.getPosition()<< std::endl;
     ResetMove();
     for(int i=0; i<_map->getTerrain()->getNbEggs(); i++){
         _map->getTerrain()->setBoolValue(i, true);

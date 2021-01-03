@@ -21,7 +21,7 @@ private:
 
 public:
     int _LIGHT_ON_TIMING = 10;
-    int _LIGHT_OFF_TIMING = 20;
+    int _LIGHT_OFF_TIMING = 10;
     inline Light():
             _lightOn(true), _shininess(10.f), _position(glm::vec4(0.f, 1.f, 0.f, 0.f)), _intensity(glm::vec3(_LIGHT_OFF_INTENSITY)) {
         setIntensity();

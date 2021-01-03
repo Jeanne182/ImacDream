@@ -1,5 +1,4 @@
 #include "./../include/Camera.hpp"
-#include <cmath>
 #include "glimac/FreeflyCamera.hpp"
 #include <iostream>
 
@@ -48,11 +47,11 @@ void Camera::event(const SDL_Event &e, std::map<const std::string, bool> &movePo
     switch(e.type)
     {
         case SDL_MOUSEWHEEL :
-            if(e.wheel.y> 0 && movePossible["UP"]==true) // scroll up
+            if(e.wheel.y> 0 && movePossible["UP"]) // scroll up
             {
                 moveFront(speed_scroll);
             }
-            else if(e.wheel.y < 0 && movePossible["DOWN"]==true) // scroll down
+            else if(e.wheel.y < 0 && movePossible["DOWN"]) // scroll down
             {
                 moveFront(-speed_scroll);
             }
@@ -64,8 +63,6 @@ void Camera::event(const SDL_Event &e, std::map<const std::string, bool> &movePo
             _xOld =  e.motion.xrel;
             _yOld =  e.motion.yrel;
 
-//            e.motion.xrel = e.button.x (nouveau) - e.button.x (ancien)
-
             if(m_fTheta  + glm::radians(- yDelta * speed_mouse)  > -5){
                 m_fTheta = -5;
             }
@@ -76,15 +73,11 @@ void Camera::event(const SDL_Event &e, std::map<const std::string, bool> &movePo
                 rotateUp(- yDelta * speed_mouse);
             }
             rotateLeft(- xDelta * speed_mouse);
-
-//            std::cout<<"(x, y) = ("<<e.motion.x<<","<<e.motion.y<<") - ";
-//            std::cout<<"(xRel, yRel) = ("<<e.motion.xrel<<","<<e.motion.yrel<<") - ";
-//            std::cout<<"(xDelta, yDelta) = ("<<xDelta<<","<<yDelta<<")"<<std::endl;
-//            std::cout<<std::endl;
             break;
 
             /* Touche clavier */
         case SDL_KEYDOWN:
+
             if (e.key.keysym.sym==SDLK_z || e.key.keysym.sym==SDLK_UP)
             {
                 KEY_UP_PRESSED = true;
@@ -100,6 +93,12 @@ void Camera::event(const SDL_Event &e, std::map<const std::string, bool> &movePo
             if (e.key.keysym.sym==SDLK_d || e.key.keysym.sym==SDLK_RIGHT)
             {
                 KEY_RIGHT_PRESSED = true;
+            }
+            if (e.key.keysym.sym==SDLK_x)
+            {
+                _i++;
+                m_Position = glm::vec3(_vector.at(_i)[0], 2.f, _vector.at(_i)[2]);
+                std::cout<<"Position : "<<m_Position[0]<< " , "<<m_Position[1]<<" , "<<m_Position[2]<<std::endl;
             }
             break;
 
@@ -130,19 +129,19 @@ void Camera::event(const SDL_Event &e, std::map<const std::string, bool> &movePo
 
 void Camera::update(std::map<const std::string, bool> &movePossible) {
     float speed = 3.f;
-    if (KEY_UP_PRESSED && movePossible["UP"]==true)
+    if (KEY_UP_PRESSED && movePossible["UP"])
     {
         moveFront(speed);
     }
-    if (KEY_DOWN_PRESSED && movePossible["DOWN"]==true)
+    if (KEY_DOWN_PRESSED && movePossible["DOWN"])
     {
         moveFront(-speed);
     }
-    if (KEY_LEFT_PRESSED && movePossible["UP"]==true)
+    if (KEY_LEFT_PRESSED && movePossible["UP"])
     {
         moveLeft(speed);
     }
-    if (KEY_RIGHT_PRESSED && movePossible["UP"]==true)
+    if (KEY_RIGHT_PRESSED && movePossible["UP"])
     {
         moveLeft(-speed);
     }
