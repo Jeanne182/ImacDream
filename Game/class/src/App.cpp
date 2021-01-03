@@ -23,9 +23,16 @@ void App::event(const SDL_Event &e) {
             _game.event(e);
             switch(e.type){
                 case SDL_KEYDOWN:
-                    if (e.key.keysym.sym==SDLK_KP_PLUS ){
-                        _game.increaseScore();
-                        _texts.getText("eggs")->replace("Dragon eggs : " + std::to_string(_game.score()));
+                    if (e.key.keysym.sym==SDLK_e ){
+                        int egg_id = _game.getMap()->getTerrain()->selectedEgg(_game.getCamera().getViewMatrix());
+                        if(egg_id != -1){
+                            std::cout << "Object selected" << std::endl;
+                            _game.getMap()->getTerrain()->setBoolValue(egg_id);
+                            _game.increaseScore();
+                            //son
+
+                        }
+                        _texts.getText("eggs")->replace("Dragon eggs : " + std::to_string(_game.getScore()));
                     }
 
                     if (e.key.keysym.sym==SDLK_a ){
@@ -34,7 +41,7 @@ void App::event(const SDL_Event &e) {
 
                     }
             }
-            if(_game.score() == 3){
+            if(_game.getScore() == 3){
                 _layout = LAYOUT_GAME_OVER;
             }
 

@@ -26,20 +26,12 @@ void MapManager::event(const SDL_Event &e, const glm::mat4 &cameraView) {
             if (e.key.keysym.sym==SDLK_e){
 
 
-                int egg_id = _terrain.selectedEgg(cameraView);
-                if(egg_id != -1){
-                    std::cout << "Object selected" << std::endl;
-                    _terrain.setBoolValue(egg_id);
-                    //score a augmenter
-
-                }
-
-
             }
 
             break;
     }
 }
+
 
 
 

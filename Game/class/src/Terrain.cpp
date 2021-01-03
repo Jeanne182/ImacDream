@@ -87,7 +87,7 @@ void Terrain::randomize(std::vector<std::pair<glm::vec3, float>> &randomPosition
 
 int Terrain::selectedEgg(const glm::mat4 &cameraView){
     for(int i=0; i<_nbEggs; i++){
-        if(_exist[i]==true){
+        if(_exist[i]){
             if(isSelected(cameraView, i)) return i;
         }
     }
@@ -119,17 +119,14 @@ bool Terrain::isSelected(const glm::mat4 &cameraView, const int i) {
 
 }
 
-/*
-bool Terrain::Collisions(const glm::mat4 &cameraView, const glm::vec3 &cameraPosition, const int i){
-    for(unsigned int i=0; i<_nbTrees ; i++){
-//        if(glm::vec3(cameraView*glm::vec4(_randomTreeCenterRadius[i].first, 1.)) < _randomTreeCenterRadius[i].second) return true;
-        if(dotProduct(cameraView*glm::vec4(_randomTreeCenterRadius[i].first, 1.)) < _randomTreeCenterRadius[i].second) return true;
 
+bool Terrain::collisions(const glm::vec3 &cameraPosition){//+positions touches // si okmove sinon non
+    for(int i=0; i<_nbTrees ; i++){
+        if(glm::distance(cameraPosition, _randomTreeCenterRadius[i].first) < _randomTreeCenterRadius[i].second){
+            std::cout << "trop proche de l'arbre" << std::endl;
+            return true;
+        }
     }
-    for(unsigned int i=0; i<_nbRocks ; i++){
-        if(glm::vec3(cameraView*glm::vec4(_randomTreeCenterRadius[i].first, 1.)) < _randomTreeCenterRadius[i].second) return true;
-
-    }
+    //menhir
     return false;
 }
-*/

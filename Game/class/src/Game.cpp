@@ -3,7 +3,6 @@
 
 
 void Game::event(const SDL_Event &e) {
-
     _camera.event(e);
     _pointLight.event(e);
     _map->event(e,_camera.getViewMatrix());
@@ -11,6 +10,8 @@ void Game::event(const SDL_Event &e) {
 
 void Game::update() {
     _camera.setPositionY(8.f);
+    //if(collisions(_))
+    //if collisions de cam.futurepos ==true
     _camera.update();
     _pointLight.useMatrix(_camera.getViewMatrix());
 }
@@ -24,3 +25,4 @@ void Game::display() {
     _sky.useMatrix();
     _sky.DrawSky();
 }
+

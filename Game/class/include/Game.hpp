@@ -22,13 +22,18 @@ public:
     //METHODS
     void display();
     void event(const SDL_Event &e);
-    inline const int score() {return _score;};
     inline void increaseScore() { _score++ ;};
     void update();
     inline void Delete(){ _map->Delete(); delete _map; _sky.deleteBuffers(); };
 
+
+
     //GETTER
+    inline const int getScore() {return _score;};
     inline bool lightOn() {return _pointLight.getLightOn();}
+    inline MapManager* getMap(){ return _map;};
+    inline Camera getCamera(){ return _camera;};
+
 };
 
 
