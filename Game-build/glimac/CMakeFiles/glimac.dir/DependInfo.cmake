@@ -4,17 +4,6 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-<<<<<<< HEAD
-  "/home/jeanne/Documents/S3/ImacDream/Game/glimac/src/Cone.cpp" "/home/jeanne/Documents/S3/ImacDream/Game-build/glimac/CMakeFiles/glimac.dir/src/Cone.cpp.o"
-  "/home/jeanne/Documents/S3/ImacDream/Game/glimac/src/FreeflyCamera.cpp" "/home/jeanne/Documents/S3/ImacDream/Game-build/glimac/CMakeFiles/glimac.dir/src/FreeflyCamera.cpp.o"
-  "/home/jeanne/Documents/S3/ImacDream/Game/glimac/src/Geometry.cpp" "/home/jeanne/Documents/S3/ImacDream/Game-build/glimac/CMakeFiles/glimac.dir/src/Geometry.cpp.o"
-  "/home/jeanne/Documents/S3/ImacDream/Game/glimac/src/Image.cpp" "/home/jeanne/Documents/S3/ImacDream/Game-build/glimac/CMakeFiles/glimac.dir/src/Image.cpp.o"
-  "/home/jeanne/Documents/S3/ImacDream/Game/glimac/src/Program.cpp" "/home/jeanne/Documents/S3/ImacDream/Game-build/glimac/CMakeFiles/glimac.dir/src/Program.cpp.o"
-  "/home/jeanne/Documents/S3/ImacDream/Game/glimac/src/SDLWindowManager.cpp" "/home/jeanne/Documents/S3/ImacDream/Game-build/glimac/CMakeFiles/glimac.dir/src/SDLWindowManager.cpp.o"
-  "/home/jeanne/Documents/S3/ImacDream/Game/glimac/src/Shader.cpp" "/home/jeanne/Documents/S3/ImacDream/Game-build/glimac/CMakeFiles/glimac.dir/src/Shader.cpp.o"
-  "/home/jeanne/Documents/S3/ImacDream/Game/glimac/src/Sphere.cpp" "/home/jeanne/Documents/S3/ImacDream/Game-build/glimac/CMakeFiles/glimac.dir/src/Sphere.cpp.o"
-  "/home/jeanne/Documents/S3/ImacDream/Game/glimac/src/tiny_obj_loader.cpp" "/home/jeanne/Documents/S3/ImacDream/Game-build/glimac/CMakeFiles/glimac.dir/src/tiny_obj_loader.cpp.o"
-=======
   "/home/matteo/Documents/imac2/openGL/ImacDream/Game/glimac/src/Cone.cpp" "/home/matteo/Documents/imac2/openGL/ImacDream/Game-build/glimac/CMakeFiles/glimac.dir/src/Cone.cpp.o"
   "/home/matteo/Documents/imac2/openGL/ImacDream/Game/glimac/src/FreeflyCamera.cpp" "/home/matteo/Documents/imac2/openGL/ImacDream/Game-build/glimac/CMakeFiles/glimac.dir/src/FreeflyCamera.cpp.o"
   "/home/matteo/Documents/imac2/openGL/ImacDream/Game/glimac/src/Geometry.cpp" "/home/matteo/Documents/imac2/openGL/ImacDream/Game-build/glimac/CMakeFiles/glimac.dir/src/Geometry.cpp.o"
@@ -24,22 +13,15 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/matteo/Documents/imac2/openGL/ImacDream/Game/glimac/src/Shader.cpp" "/home/matteo/Documents/imac2/openGL/ImacDream/Game-build/glimac/CMakeFiles/glimac.dir/src/Shader.cpp.o"
   "/home/matteo/Documents/imac2/openGL/ImacDream/Game/glimac/src/Sphere.cpp" "/home/matteo/Documents/imac2/openGL/ImacDream/Game-build/glimac/CMakeFiles/glimac.dir/src/Sphere.cpp.o"
   "/home/matteo/Documents/imac2/openGL/ImacDream/Game/glimac/src/tiny_obj_loader.cpp" "/home/matteo/Documents/imac2/openGL/ImacDream/Game-build/glimac/CMakeFiles/glimac.dir/src/tiny_obj_loader.cpp.o"
->>>>>>> Camerafix
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/usr/include/freetype2"
-<<<<<<< HEAD
-  "/home/jeanne/Documents/S3/ImacDream/Game/glimac/include"
-  "/home/jeanne/Documents/S3/ImacDream/Game/third-party/include"
-  "/home/jeanne/Documents/S3/ImacDream/Game/third-party"
-=======
   "/home/matteo/Documents/imac2/openGL/ImacDream/Game/glimac/include"
   "/home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include"
   "/home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party"
->>>>>>> Camerafix
   )
 
 # Targets to which this target links.

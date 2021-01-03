@@ -2,8 +2,6 @@
 #include "../include/AssetsManager.hpp"
 #include "../include/Utils.hpp"
 
-#include <utility>
-
 void App::event(const SDL_Event &e) {
     switch(_layout){
         case LAYOUT_MENU:

@@ -60,8 +60,14 @@ void Camera::event(const SDL_Event &e, std::map<const std::string, bool> &movePo
 
         case SDL_MOUSEMOTION:
 
+            ////USE THESE TWO LINES TO PLAY ON A VIRTUAL MACHINE
             xDelta = e.motion.xrel - _xOld;
             yDelta = e.motion.yrel - _yOld;
+
+            /////USE THESE TWO LINES TO PLAY ON ANOTHER DEVICE
+//            xDelta = e.motion.xrel;
+//            yDelta = e.motion.yrel;
+
             _xOld =  e.motion.xrel;
             _yOld =  e.motion.yrel;
 
@@ -78,10 +84,10 @@ void Camera::event(const SDL_Event &e, std::map<const std::string, bool> &movePo
             }
             rotateLeft(- xDelta * speed_mouse);
 
-            std::cout<<"(x, y) = ("<<e.motion.x<<","<<e.motion.y<<") - ";
-            std::cout<<"(xRel, yRel) = ("<<e.motion.xrel<<","<<e.motion.yrel<<") - ";
-            std::cout<<"(xDelta, yDelta) = ("<<xDelta<<","<<yDelta<<")"<<std::endl;
-            std::cout<<std::endl;
+//            std::cout<<"(x, y) = ("<<e.motion.x<<","<<e.motion.y<<") - ";
+//            std::cout<<"(xRel, yRel) = ("<<e.motion.xrel<<","<<e.motion.yrel<<") - ";
+//            std::cout<<"(xDelta, yDelta) = ("<<xDelta<<","<<yDelta<<")"<<std::endl;
+//            std::cout<<std::endl;
             break;
 
             /* Touche clavier */

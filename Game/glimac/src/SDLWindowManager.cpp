@@ -9,7 +9,7 @@ SDLWindowManager::SDLWindowManager(uint32_t width, uint32_t height, const char* 
         return;
     }
 
-    _window = SDL_CreateWindow(title, SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, width, height, SDL_WINDOW_OPENGL);
+    _window = SDL_CreateWindow(title, SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, width, height, SDL_WINDOW_OPENGL | SDL_WINDOW_FULLSCREEN_DESKTOP);
     if (_window == nullptr) {
         // In the case that the window could not be made...
         printf("Could not create window: %s\n", SDL_GetError());
