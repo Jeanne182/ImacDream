@@ -42,7 +42,7 @@ void App::event(const SDL_Event &e) {
 //
 //                    }
             }
-            if(_game.getScore() == 1){
+            if(_game.getScore() == 8){
                 _layout = LAYOUT_GAME_OVER;
                 _texts.getText("eggs")->replace("Dragon eggs : " + std::to_string(0));
             }
