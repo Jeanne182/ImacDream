@@ -79,6 +79,10 @@ void Game::ResetGame(){
     _camera.setPosition(glm::vec3(0., 4., 0.));
     std::cout << _camera.getPosition()<< std::endl;
     ResetMove();
+    for(int i=0; i<_map->getTerrain()->getNbEggs(); i++){
+        _map->getTerrain()->setBoolValue(i, true);
+    }
+    _map->getTerrain()->clearVectors();
     _map->getTerrain()->randomizeManager();
 
 }

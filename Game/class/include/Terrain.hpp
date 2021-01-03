@@ -39,42 +39,26 @@ private:
     int _nbEggs = 200;
 
 public:
-    inline Terrain(){
-        std::vector<std::string> objectsToImport = {
-                "terrain",
-                "green_pine",
-                "red_pine",
-                "yellow_pine",
-                "mushroom",
-                "mushroom_double",
-                "mushroom_triple",
-                "conic_rock",
-                "menhir",
-                "rock_circle",
-                "rock_heap",
-                "dragon_egg"
-        };
-
-        ObjectsManager(objectsToImport);
-        randomizeManager();
-    };
+    Terrain();
     ~Terrain()=default;
     void displayManager(const glm::mat4 &cameraView);
     void display(const int &nbCopies,const std::vector<glm::vec3> &randomPositions, const std::vector<std::string> &randomTypes, const glm::mat4 &cameraView);
     void deleteBuffers();
+    void clearVectors();
     void ObjectsManager(std::vector<std::string> &names);
     void randomizeManager();
     void randomize(std::vector<glm::vec3> &randomPositions, std::vector<std::pair<glm::vec3, float>> &randomCenterRadius,
                    std::vector<std::string> &randomTypes, std::vector<std::string> &types,  const int &nbCopies,
                    std::default_random_engine &generator, std::uniform_real_distribution<float> &positionsDistrib);
 
-    inline void setBoolValue(const int id){ _exist[id]=false; };
+    inline void setBoolValue(const int id, const bool value){ _exist[id]=value; };
     int selectedEgg(const glm::mat4 &cameraView);
     bool isSelected(const glm::mat4 &cameraView, const int i);
     //bool collisions(const glm::vec3 &cameraPosition);
 
     inline std::vector<bool> getBool(){return _exist;};
     inline int getNbTree(){return _nbTrees;};
+    inline int getNbEggs(){return _nbEggs;};
     inline int getNbMenhirs(){return _nbMenhirs;};
     inline std::vector<std::pair<glm::vec3, float>> getTreesCenters(){return _randomTreeCenterRadius;};
     std::vector<std::pair<glm::vec3, float>> getMenhirsCenters();
