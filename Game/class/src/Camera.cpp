@@ -40,7 +40,7 @@ glm::mat4 Camera::getViewMatrix() const{
 
 }
 
-void Camera::event(const SDL_Event &e) {
+void Camera::event(const SDL_Event &e, std::map<const std::string, bool> &movePossible) {
     float speed_mouse = 0.01f;
     float speed_scroll = 10.f;
     float xDelta, yDelta;
@@ -48,11 +48,11 @@ void Camera::event(const SDL_Event &e) {
     switch(e.type)
     {
         case SDL_MOUSEWHEEL :
-            if(e.wheel.y> 0) // scroll up
+            if(e.wheel.y> 0 && movePossible["UP"]==true) // scroll up
             {
                 moveFront(speed_scroll);
             }
-            else if(e.wheel.y < 0) // scroll down
+            else if(e.wheel.y < 0 && movePossible["DOWN"]==true) // scroll down
             {
                 moveFront(-speed_scroll);
             }
@@ -128,24 +128,30 @@ void Camera::event(const SDL_Event &e) {
 
 }
 
-void Camera::update() {
+void Camera::update(std::map<const std::string, bool> &movePossible) {
     float speed = 3.f;
-
-//if pas de collisions
-    if (KEY_UP_PRESSED)
+    if (KEY_UP_PRESSED && movePossible["UP"]==true)
     {
         moveFront(speed);
     }
-    if (KEY_DOWN_PRESSED)
+    if (KEY_DOWN_PRESSED && movePossible["DOWN"]==true)
     {
         moveFront(-speed);
     }
-    if (KEY_LEFT_PRESSED)
+    if (KEY_LEFT_PRESSED && movePossible["UP"]==true)
     {
         moveLeft(speed);
     }
-    if (KEY_RIGHT_PRESSED)
+    if (KEY_RIGHT_PRESSED && movePossible["UP"]==true)
     {
         moveLeft(-speed);
     }
+}
+
+void Camera::setFuturesPositions(const float t) {
+    _futuresPositions["UP"]=glm::vec3(m_Position[0]+t*m_FrontVector[0], 0., m_Position[2]+t*m_FrontVector[2]);
+    _futuresPositions["DOWN"]=glm::vec3(m_Position[0]-t*m_FrontVector[0], 0., m_Position[2]-t*m_FrontVector[2]);
+    _futuresPositions["LEFT"]=glm::vec3(m_Position[0]+t*m_LeftVector[0], 0., m_Position[2]+t*m_LeftVector[2]);
+    _futuresPositions["RIGHT"]=glm::vec3(m_Position[0]-t*m_LeftVector[0], 0., m_Position[2]-t*m_LeftVector[2]);
+
 }

@@ -78,6 +78,7 @@ void Terrain::randomize(std::vector<std::pair<glm::vec3, float>> &randomPosition
     for (int i = 0; i < nbCopies; i++){
         randomPositions.push_back(std::make_pair(glm::vec3(positionsDistrib(generator), 0.f, positionsDistrib(generator)), 1.f));
         randomTypes.push_back(types[typeId()]);
+        if(types[typeId()]=="menhir") _nbMenhirs++;
         randomCenterRadius.push_back(std::make_pair(glm::vec3(randomPositions[i].first+_objects.find(randomTypes[i])->second.getCenter()), _objects.find(randomTypes[i])->second.getHitboxRadius()));
     }
 
@@ -120,13 +121,12 @@ bool Terrain::isSelected(const glm::mat4 &cameraView, const int i) {
 }
 
 
-bool Terrain::collisions(const glm::vec3 &cameraPosition){//+positions touches // si okmove sinon non
-    for(int i=0; i<_nbTrees ; i++){
-        if(glm::distance(cameraPosition, _randomTreeCenterRadius[i].first) < _randomTreeCenterRadius[i].second){
-            std::cout << "trop proche de l'arbre" << std::endl;
-            return true;
+std::vector<std::pair<glm::vec3, float>> Terrain::getMenhirsCenters(){
+    std::vector<std::pair<glm::vec3, float>> menhirsCenters;
+    for(int i=0 ; i<_nbRocks; i++){
+        if(_randomRockTypes[i]=="menhir"){
+            menhirsCenters.push_back(_randomRockCenterRadius[i]);
         }
     }
-    //menhir
-    return false;
+    return menhirsCenters;
 }

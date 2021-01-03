@@ -4,7 +4,6 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-<<<<<<< HEAD
   "/home/fanny/ImacDream/Game/class/src/App.cpp" "/home/fanny/ImacDream/Game-build/CMakeFiles/IMACDream.dir/class/src/App.cpp.o"
   "/home/fanny/ImacDream/Game/class/src/AssetsManager.cpp" "/home/fanny/ImacDream/Game-build/CMakeFiles/IMACDream.dir/class/src/AssetsManager.cpp.o"
   "/home/fanny/ImacDream/Game/class/src/Camera.cpp" "/home/fanny/ImacDream/Game-build/CMakeFiles/IMACDream.dir/class/src/Camera.cpp.o"
@@ -19,30 +18,10 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/fanny/ImacDream/Game/class/src/StaticImage.cpp" "/home/fanny/ImacDream/Game-build/CMakeFiles/IMACDream.dir/class/src/StaticImage.cpp.o"
   "/home/fanny/ImacDream/Game/class/src/Terrain.cpp" "/home/fanny/ImacDream/Game-build/CMakeFiles/IMACDream.dir/class/src/Terrain.cpp.o"
   "/home/fanny/ImacDream/Game/class/src/Text.cpp" "/home/fanny/ImacDream/Game-build/CMakeFiles/IMACDream.dir/class/src/Text.cpp.o"
+  "/home/fanny/ImacDream/Game/class/src/Time.cpp" "/home/fanny/ImacDream/Game-build/CMakeFiles/IMACDream.dir/class/src/Time.cpp.o"
   "/home/fanny/ImacDream/Game/class/src/Utils.cpp" "/home/fanny/ImacDream/Game-build/CMakeFiles/IMACDream.dir/class/src/Utils.cpp.o"
   "/home/fanny/ImacDream/Game/class/src/Water.cpp" "/home/fanny/ImacDream/Game-build/CMakeFiles/IMACDream.dir/class/src/Water.cpp.o"
   "/home/fanny/ImacDream/Game/class/src/main.cpp" "/home/fanny/ImacDream/Game-build/CMakeFiles/IMACDream.dir/class/src/main.cpp.o"
-=======
-  "/home/jeanne/Documents/S3/ImacDream/Game/class/src/App.cpp" "/home/jeanne/Documents/S3/ImacDream/Game-build/CMakeFiles/IMACDream.dir/class/src/App.cpp.o"
-  "/home/jeanne/Documents/S3/ImacDream/Game/class/src/AssetsManager.cpp" "/home/jeanne/Documents/S3/ImacDream/Game-build/CMakeFiles/IMACDream.dir/class/src/AssetsManager.cpp.o"
-  "/home/jeanne/Documents/S3/ImacDream/Game/class/src/Camera.cpp" "/home/jeanne/Documents/S3/ImacDream/Game-build/CMakeFiles/IMACDream.dir/class/src/Camera.cpp.o"
-  "/home/jeanne/Documents/S3/ImacDream/Game/class/src/Game.cpp" "/home/jeanne/Documents/S3/ImacDream/Game-build/CMakeFiles/IMACDream.dir/class/src/Game.cpp.o"
-  "/home/jeanne/Documents/S3/ImacDream/Game/class/src/GameObject.cpp" "/home/jeanne/Documents/S3/ImacDream/Game-build/CMakeFiles/IMACDream.dir/class/src/GameObject.cpp.o"
-  "/home/jeanne/Documents/S3/ImacDream/Game/class/src/InteractiveObjectManager.cpp" "/home/jeanne/Documents/S3/ImacDream/Game-build/CMakeFiles/IMACDream.dir/class/src/InteractiveObjectManager.cpp.o"
-  "/home/jeanne/Documents/S3/ImacDream/Game/class/src/Light.cpp" "/home/jeanne/Documents/S3/ImacDream/Game-build/CMakeFiles/IMACDream.dir/class/src/Light.cpp.o"
-  "/home/jeanne/Documents/S3/ImacDream/Game/class/src/MapManager.cpp" "/home/jeanne/Documents/S3/ImacDream/Game-build/CMakeFiles/IMACDream.dir/class/src/MapManager.cpp.o"
-  "/home/jeanne/Documents/S3/ImacDream/Game/class/src/Mesh.cpp" "/home/jeanne/Documents/S3/ImacDream/Game-build/CMakeFiles/IMACDream.dir/class/src/Mesh.cpp.o"
-  "/home/jeanne/Documents/S3/ImacDream/Game/class/src/Model.cpp" "/home/jeanne/Documents/S3/ImacDream/Game-build/CMakeFiles/IMACDream.dir/class/src/Model.cpp.o"
-  "/home/jeanne/Documents/S3/ImacDream/Game/class/src/Music.cpp" "/home/jeanne/Documents/S3/ImacDream/Game-build/CMakeFiles/IMACDream.dir/class/src/Music.cpp.o"
-  "/home/jeanne/Documents/S3/ImacDream/Game/class/src/Skybox.cpp" "/home/jeanne/Documents/S3/ImacDream/Game-build/CMakeFiles/IMACDream.dir/class/src/Skybox.cpp.o"
-  "/home/jeanne/Documents/S3/ImacDream/Game/class/src/StaticImage.cpp" "/home/jeanne/Documents/S3/ImacDream/Game-build/CMakeFiles/IMACDream.dir/class/src/StaticImage.cpp.o"
-  "/home/jeanne/Documents/S3/ImacDream/Game/class/src/Terrain.cpp" "/home/jeanne/Documents/S3/ImacDream/Game-build/CMakeFiles/IMACDream.dir/class/src/Terrain.cpp.o"
-  "/home/jeanne/Documents/S3/ImacDream/Game/class/src/Text.cpp" "/home/jeanne/Documents/S3/ImacDream/Game-build/CMakeFiles/IMACDream.dir/class/src/Text.cpp.o"
-  "/home/jeanne/Documents/S3/ImacDream/Game/class/src/Time.cpp" "/home/jeanne/Documents/S3/ImacDream/Game-build/CMakeFiles/IMACDream.dir/class/src/Time.cpp.o"
-  "/home/jeanne/Documents/S3/ImacDream/Game/class/src/Utils.cpp" "/home/jeanne/Documents/S3/ImacDream/Game-build/CMakeFiles/IMACDream.dir/class/src/Utils.cpp.o"
-  "/home/jeanne/Documents/S3/ImacDream/Game/class/src/Water.cpp" "/home/jeanne/Documents/S3/ImacDream/Game-build/CMakeFiles/IMACDream.dir/class/src/Water.cpp.o"
-  "/home/jeanne/Documents/S3/ImacDream/Game/class/src/main.cpp" "/home/jeanne/Documents/S3/ImacDream/Game-build/CMakeFiles/IMACDream.dir/class/src/main.cpp.o"
->>>>>>> Lights
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
