@@ -28,9 +28,13 @@ public:
     };
     ~Light()=default;
 
+    //SETTERS
     void setIntensity();
-//    inline bool setLightOn(const bool state){ _lightOn = state;};
+    inline void setLightOn(const bool state){ _lightOn = state;};
+    inline void setShininess(const int shininess){ _shininess = shininess;};
+    inline void setPosition(const glm::vec4 position){ _position = position;};
 
+    //GETTERS
     inline glm::vec4 getPosition(){ return _position; };
     inline glm::vec3 getIntensity(){return _intensity; };
     inline float getShininess(){ return _shininess; };
