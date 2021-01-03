@@ -1,6 +1,7 @@
 #include "../include/Text.hpp"
 #include "../include/AssetsManager.hpp"
 #include <iostream>
+#include <string>
 
 void Text::Initialization(){
     glGenVertexArrays(1, &_vao);
@@ -82,7 +83,7 @@ void CharactersManager::load() {
     }
 
     FT_Face face;
-    if(FT_New_Face(ft, "Assets/fonts/gameover.ttf", 0, &face))
+    if(FT_New_Face(ft, AssetManager::Get()->fontFile("gameover.ttf").c_str(), 0, &face))
     {
         std::cerr << "ERROR::FREETYPE: Failed to load font assets/fonts/gameover.ttf" << std::endl;
         exit(EXIT_FAILURE);

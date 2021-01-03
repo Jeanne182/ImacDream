@@ -128,7 +128,7 @@ void Terrain::randomize(std::vector<glm::vec3> &randomPositions, std::vector<std
     for (int i = 0; i < nbCopies; i++){
         randomPositions.emplace_back(positionsDistrib(generator), -2.5f, positionsDistrib(generator));
         randomTypes.push_back(types[typeId()]);
-        if(types[typeId()]=="menhir") _nbMenhirs++;
+        if(randomTypes[i]=="menhir") _nbMenhirs++;
         randomCenterRadius.emplace_back(glm::vec3(randomPositions[i]+_objects.find(randomTypes[i])->second.getCenter()), _objects.find(randomTypes[i])->second.getHitboxRadius());
     }
 }

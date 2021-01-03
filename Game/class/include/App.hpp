@@ -32,6 +32,7 @@ private:
     clock_t _elapsed = clock();
 
 
+
 public:
 
 
@@ -53,6 +54,8 @@ public:
     void layout2D();
     void layout3D();
     void layoutGame();
+
+
 
 };
 
