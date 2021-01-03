@@ -2,7 +2,8 @@
 #include "../include/AssetsManager.hpp"
 #include <SDL2/SDL_mixer.h>
 
-Music::Music() {
+Music::Music(const std::string &musicName) {
+    Mix_AllocateChannels(5);
     //Init music
     if (Mix_OpenAudio(22050, MIX_DEFAULT_FORMAT, 2, 4096) ==-1) //Initialisation de l'API Mixer
     {
@@ -10,8 +11,12 @@ Music::Music() {
     }
 
     Mix_VolumeMusic(MIX_MAX_VOLUME); //Mettre le volume à la moitié
-    _game = Mix_LoadMUS((AssetManager::Get()->appPath().dirPath() + "Assets/music/musique.mp3").c_str()); //Chargement de la musique
-    if (_game != nullptr)
+
+    const char* musicpath = (musicName + ".wav").c_str();
+    _music = Mix_LoadWAV((AssetManager::Get()->appPath().dirPath() + "/Assets/music/" + musicpath).c_str()); //Chargement de la musique
+
+
+    if (_music != nullptr)
         printf("Loaded the file\n");
     else
         printf("Mix_LoadMUS: %s\n", Mix_GetError());
@@ -19,12 +24,12 @@ Music::Music() {
 }
 
 void Music::Delete() {
-    Mix_FreeMusic(_game);
+    Mix_FreeChunk(_music);
     Mix_CloseAudio();
 }
 
-void Music::playGame()
+void Music::play(const int loop)
 {
-    if(Mix_PlayMusic(_game, -1)==-1)
+    if(Mix_PlayChannel(-1, _music, loop)==-1)
         printf("Play Channel: %s\n", Mix_GetError());
 }

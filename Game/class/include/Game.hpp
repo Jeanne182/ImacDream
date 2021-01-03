@@ -5,6 +5,7 @@
 #include "./MapManager.hpp"
 #include "./Light.hpp"
 #include "./Skybox.hpp"
+#include "./Music.hpp"
 
 
 class Game {
@@ -14,20 +15,18 @@ private:
     Light _pointLight;
     Camera _camera;
     Skybox _sky;
+    Music _soundCollect;
 
 public:
     //CONSTRUCTOR
-    inline Game():_map(new MapManager()), _pointLight(),  _camera(), _sky(), _score(0){ };
+    inline Game():_map(new MapManager()), _pointLight(),  _camera(), _sky(), _score(0), _soundCollect("collect"){ };
     ~Game()=default;
     //METHODS
     void display();
     void event(const SDL_Event &e);
-    inline void increaseScore() { _score++ ;};
+    inline void increaseScore() { _soundCollect.play(0); _score++ ;};
     void update();
-    inline void Delete(){ _map->Delete(); delete _map; _sky.deleteBuffers(); };
-
-
-
+    inline void Delete(){ _map->Delete(); delete _map; _sky.deleteBuffers(); _soundCollect.Delete();};
     //GETTER
     inline const int getScore() {return _score;};
     inline bool lightOn() {return _pointLight.getLightOn();}

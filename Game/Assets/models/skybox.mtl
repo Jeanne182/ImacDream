@@ -1,4 +1,4 @@
-# Blender MTL File: 'None'
+# Blender MTL File: 'skybox.blend'
 # Material Count: 1
 
 newmtl Material.003
@@ -10,4 +10,4 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 1
-map_Kd -o -2.700000 -2.700000 -2.700000 -s -7.900000 -7.900000 -7.900000 maxresdefault.jpg
+map_Kd -o -2.700000 -2.700000 -2.700000 maxresdefault.jpg

@@ -7,6 +7,7 @@
 #IncludeRegexTransform: 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /home/fanny/ImacDream/Game/class/include/App.hpp
 glimac/SDLWindowManager.hpp
 -
@@ -73,10 +74,14 @@ glimac/SDLWindowManager.hpp
 /home/fanny/ImacDream/Game/class/include/Camera.hpp
 
 /home/fanny/ImacDream/Game/class/include/Light.hpp
+=======
+/home/matteo/Documents/imac2/openGL/ImacDream/Game/class/include/Camera.hpp
+>>>>>>> TryToFIxSkybox
 glimac/glm.hpp
 -
 glimac/SDLWindowManager.hpp
 -
+<<<<<<< HEAD
 iostream
 -
 ../include/Time.hpp
@@ -214,9 +219,19 @@ functional
 /home/jeanne/Documents/S3/ImacDream/Game/class/include/Text.hpp
 >>>>>>> Lights
 ft2build.h
+=======
+
+/home/matteo/Documents/imac2/openGL/ImacDream/Game/class/src/Camera.cpp
+./../include/Camera.hpp
+/home/matteo/Documents/imac2/openGL/ImacDream/Game/class/include/Camera.hpp
+cmath
+>>>>>>> TryToFIxSkybox
 -
+glimac/FreeflyCamera.hpp
+/home/matteo/Documents/imac2/openGL/ImacDream/Game/class/src/glimac/FreeflyCamera.hpp
 iostream
 -
+<<<<<<< HEAD
 glimac/glm.hpp
 -
 vector
@@ -367,6 +382,14 @@ Shader.hpp
 /home/fanny/ImacDream/Game/glimac/include/glimac/Shader.hpp
 FilePath.hpp
 /home/fanny/ImacDream/Game/glimac/include/glimac/FilePath.hpp
+=======
+
+/home/matteo/Documents/imac2/openGL/ImacDream/Game/glimac/include/glimac/FreeflyCamera.hpp
+cmath
+-
+glimac/glm.hpp
+-
+>>>>>>> TryToFIxSkybox
 
 /home/fanny/ImacDream/Game/glimac/include/glimac/SDLWindowManager.hpp
 cstdint
@@ -376,6 +399,7 @@ SDL2/SDL.h
 glm.hpp
 /home/fanny/ImacDream/Game/glimac/include/glimac/glm.hpp
 
+<<<<<<< HEAD
 /home/fanny/ImacDream/Game/glimac/include/glimac/Shader.hpp
 GL/glew.h
 -
@@ -393,6 +417,9 @@ memory
 -
 
 /home/fanny/ImacDream/Game/glimac/include/glimac/glm.hpp
+=======
+/home/matteo/Documents/imac2/openGL/ImacDream/Game/glimac/include/glimac/glm.hpp
+>>>>>>> TryToFIxSkybox
 glm/glm.hpp
 -
 glm/gtc/matrix_transform.hpp
@@ -406,6 +433,7 @@ glm/gtx/io.hpp
 glm/gtc/random.hpp
 -
 
+<<<<<<< HEAD
 /home/fanny/ImacDream/Game/third-party/include/assimp/Compiler/poppack1.h
 
 /home/fanny/ImacDream/Game/third-party/include/assimp/Compiler/pstdint.h
@@ -631,6 +659,9 @@ cmath
 -
 
 /home/fanny/ImacDream/Game/third-party/include/glm/common.hpp
+=======
+/home/matteo/Documents/imac2/openGL/ImacDream/Game/third-party/include/glm/common.hpp
+>>>>>>> TryToFIxSkybox
 detail/func_common.hpp
 /home/fanny/ImacDream/Game/third-party/include/glm/detail/func_common.hpp
 
@@ -1365,12 +1396,6 @@ detail/type_vec4.hpp
 /home/fanny/ImacDream/Game/third-party/include/glm/vector_relational.hpp
 detail/func_vector_relational.hpp
 /home/fanny/ImacDream/Game/third-party/include/glm/detail/func_vector_relational.hpp
-
-/usr/include/freetype2/freetype/config/ftheader.h
-
-/usr/include/freetype2/ft2build.h
-freetype/config/ftheader.h
--
 
 /usr/include/freetype2/freetype/config/ftheader.h
 
