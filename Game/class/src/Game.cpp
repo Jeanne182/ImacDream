@@ -81,5 +81,6 @@ void Game::ResetGame(){
     }
     _map->getTerrain()->clearVectors();
     _map->getTerrain()->randomizeManager();
+    _map->getTerrain()->loadModels();
 
 }

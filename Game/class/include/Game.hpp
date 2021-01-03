@@ -12,6 +12,7 @@
 class Game {
 private:
     int _score;
+    int _scoreMax = 2;
     MapManager *_map;
     Light _pointLight;
     Camera _camera;
@@ -43,6 +44,7 @@ public:
     inline MapManager* getMap(){ return _map;};
     inline Camera getCamera(){ return _camera;};
     inline Light light() { return _pointLight; }
+    inline int scoreMax() { return _scoreMax; }
 };
 
 
