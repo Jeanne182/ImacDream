@@ -41,9 +41,7 @@ public:
     //GETTERS
     glm::mat4 getViewMatrix() const;
     inline glm::vec3 getPosition() const { return m_Position;};
-    inline glm::vec3 getFrontVector() const { return m_FrontVector;};
     inline glm::vec3 getLeftVector() const { return m_LeftVector;};
-    inline glm::vec3 getUpVector() const { return m_UpVector;};
     inline std::map<std::string, glm::vec3> getFuturesPositions() const { return _futuresPositions;};
 
     //SETTERS

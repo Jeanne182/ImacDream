@@ -22,7 +22,7 @@ private:
 
 public:
     //CONSTRUCTOR
-    inline Game():_map(new MapManager()), _pointLight(),  _camera(), _sky(), _score(0), _soundCollect("collect"),
+    inline Game():_score(0), _map(new MapManager()),  _pointLight(), _camera(), _sky(), _soundCollect("collect"),
     _move{std::make_pair("UP", true), std::make_pair("DOWN", true), std::make_pair("LEFT", true), std::make_pair("RIGHT", true)}{};
     ~Game()=default;
 
@@ -40,7 +40,7 @@ public:
     void ResetGame();
 
     //GETTERS
-    inline const int getScore() {return _score;};
+    inline int getScore() {return _score;};
     inline bool lightOn() {return _pointLight.getLightOn();}
     inline MapManager* getMap(){ return _map;};
     inline Camera getCamera(){ return _camera;};

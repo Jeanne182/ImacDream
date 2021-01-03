@@ -9,31 +9,6 @@
 #include <functional>
 
 class Terrain {
-private:
-    std::map<const std::string, GameObject> _objects;
-
-    std::vector<glm::vec3> _modelsLoadedPositions;
-    std::vector<std::pair<glm::vec3, float>> _modelsLoadedCenterRadius;
-    std::vector<std::string> _modelsLoadedTypes;
-
-    std::vector<glm::vec3> _randomTreePositions;
-    std::vector<std::pair<glm::vec3, float>> _randomTreeCenterRadius;
-    std::vector<std::string> _randomTreeTypes;
-    int _nbTrees = 500;
-
-    std::vector<glm::vec3> _randomMushroomsPositions;
-    std::vector<std::pair<glm::vec3, float>> _randomMushroomsCenterRadius;
-    std::vector<std::string> _randomMushroomsTypes;
-    int _nbMushrooms = 20;
-
-    std::vector<glm::vec3> _randomRockPositions;
-    std::vector<std::pair<glm::vec3, float>> _randomRockCenterRadius;
-    std::vector<std::string> _randomRockTypes;
-    int _nbRocks = 500;
-    int _nbMenhirs = 0 ;
-
-    std::vector<bool> _exist;
-    int _nbEggs;
 
 public:
     Terrain();
@@ -60,6 +35,32 @@ public:
     std::vector<std::pair<glm::vec3, float>> getMenhirsCenters();
 
     void loadModels();
+
+private:
+    std::map<const std::string, GameObject> _objects;
+
+    std::vector<glm::vec3> _modelsLoadedPositions;
+    std::vector<std::pair<glm::vec3, float>> _modelsLoadedCenterRadius;
+    std::vector<std::string> _modelsLoadedTypes;
+
+    std::vector<glm::vec3> _randomTreePositions;
+    std::vector<std::pair<glm::vec3, float>> _randomTreeCenterRadius;
+    std::vector<std::string> _randomTreeTypes;
+    int _nbTrees = 500;
+
+    std::vector<glm::vec3> _randomMushroomsPositions;
+    std::vector<std::pair<glm::vec3, float>> _randomMushroomsCenterRadius;
+    std::vector<std::string> _randomMushroomsTypes;
+    int _nbMushrooms = 20;
+
+    std::vector<glm::vec3> _randomRockPositions;
+    std::vector<std::pair<glm::vec3, float>> _randomRockCenterRadius;
+    std::vector<std::string> _randomRockTypes;
+    int _nbRocks = 500;
+    int _nbMenhirs = 0 ;
+
+    std::vector<bool> _exist;
+    int _nbEggs;
 
     };
 

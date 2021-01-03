@@ -42,7 +42,7 @@ void Text::renderText(const CharactersManager &characters) {
         Character ch = characters.getCharacters()[*c];
 
         float xpos = x + ch._bearing.x * _scale;
-        float ypos = y - (ch._size.y - ch._bearing.y) * _scale;
+        float ypos = y - float((ch._size.y - ch._bearing.y)) * _scale;
 
         float w = ch._size.x * _scale;
         float h = ch._size.y * _scale;

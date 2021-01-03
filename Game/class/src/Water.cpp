@@ -1,6 +1,5 @@
 #include "./../include/Water.hpp"
 #include "./../include/AssetsManager.hpp"
-#include <chrono>
 #include <random>
 
 Water::Water():GameObject(
@@ -19,7 +18,7 @@ void Water::displayWater() {
 
     // draw mesh
     glBindVertexArray(_model->_meshes[0]._vao);
-    glDrawElements(GL_TRIANGLES, _model->_meshes[0]._indices.size(), GL_UNSIGNED_INT, 0);
+    glDrawElements(GL_TRIANGLES, _model->_meshes[0]._indices.size(), GL_UNSIGNED_INT, nullptr);
     glBindVertexArray(0);
 }
 
@@ -28,12 +27,7 @@ void Water::useMatrix() {
     glUniformMatrix4fv(AssetManager::Get()->_waterProgram.MV_Location(), 1, GL_FALSE, glm::value_ptr(_MV));
     glUniformMatrix4fv(AssetManager::Get()->_waterProgram.MVP_Location(), 1, GL_FALSE, glm::value_ptr(_MVP));
     glUniformMatrix4fv(AssetManager::Get()->_waterProgram.N_Location(), 1, GL_FALSE, glm::value_ptr(_N));
-//    updateTime();
 }
 
-void Water::updateTime() {
-    _waveTime += _waveSpeed;
-    glUniform1f(AssetManager::Get()->_waterProgram.waveTime_Location(), _waveTime);
-}
 
 

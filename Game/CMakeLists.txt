@@ -28,5 +28,5 @@ file(GLOB SRC_FILES ${CMAKE_SOURCE_DIR}/class/src/*.cpp)
 file(GLOB SHADER_FILES ${CMAKE_SOURCE_DIR}/class/shaders/*.glsl)
 
 set(OUTPUT ${PROJECT_NAME})
-add_executable(${OUTPUT} ${HEADER_FILES} ${SRC_FILES} ${SHADER_FILES} class/src/StaticImage.cpp class/include/StaticImage.hpp)
+add_executable(${OUTPUT} ${HEADER_FILES} ${SRC_FILES} ${SHADER_FILES})
 target_link_libraries(${OUTPUT} ${ALL_LIBRARIES} -lSDL2 -lSDL2main -lSDL2_image -lSDL2_mixer)

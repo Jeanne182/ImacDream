@@ -12,7 +12,6 @@ public:
     ~Water()=default;
     void displayWater();
     void useMatrix();
-    void updateTime();
 };
 
 #endif //IMACDREAM_WATER_HPP

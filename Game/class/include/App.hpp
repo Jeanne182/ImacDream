@@ -8,8 +8,6 @@
 #include "../include/Text.hpp"
 #include <time.h>
 
-
-
 using namespace glimac;
 
 enum LAYOUT
@@ -21,7 +19,6 @@ enum LAYOUT
 
 class App {
 private:
-
     Game _game;
     Music _music;
     StaticImageManager _staticImages;
@@ -29,34 +26,24 @@ private:
     CharactersManager _characters;
     int _layout;
     clock_t _time = clock();
-    clock_t _elapsed = clock();
-
-
 
 public:
-
-
     //CONSTRUCTOR
     inline App():_game(), _music("musique"), _texts(), _characters(), _layout(LAYOUT_MENU){_music.play(-1);};
     ~App()=default;
 
+    //DRAW FUNCTIONS
     void draw();
-    void event(const SDL_Event &e);
-    inline void Delete(){ _game.Delete(); _texts.Delete(); _characters.Delete(); _music.Delete(); };
-    //inline void Delete(){ _game.Delete(); _texts.Delete(); _characters.Delete(); };
-
-
-
-    //LAYOUTS
     void drawMenu();
     void drawGame();
     void drawGameOver();
-    void layout2D();
-    void layout3D();
+    void event(const SDL_Event &e);
+    inline void Delete(){ _game.Delete(); _texts.Delete(); _characters.Delete(); _music.Delete(); };
+
+    //LAYOUTS
+    static void layout2D();
+    static void layout3D();
     void layoutGame();
-
-
-
 };
 
 

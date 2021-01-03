@@ -46,12 +46,10 @@ private :
     glm::vec3 _color;
     glm::mat4 _projection_matrix;
 
-
 public:
 
     Text() = default;
     ~Text() = default;
-
 
     //SETTERS
     inline void setText(const std::string &text){ _text = std::move(text) ; };
@@ -63,14 +61,8 @@ public:
 
     //GETTERS
     inline std::string getName(){ return _name; };
-    inline std::string getText(){ return _text; };
-    inline GLuint getVAO(){ return _vao; };
-    inline GLuint getVBO(){ return _vbo; };
     inline float getScale(){ return _scale; };
     inline glm::vec2 getPosition(){ return _pos; };
-    inline glm::vec3 getColor(){ return _color; };
-    inline glm::mat4 getProjMatrix(){ return _projection_matrix; };
-
 
     //METHODS
     void Initialization();
@@ -95,8 +87,6 @@ public:
     //METHODS
     void addText(const std::string &text, const std::string &name, const float &scale, const glm::vec2 &pos, const glm::vec3 &color);
     void Delete();
-
-
 };
 
 #endif //IMACDREAM_TEXT_HPP

@@ -34,7 +34,6 @@ public:
     WaterProgram _waterProgram;
     TextProgram _textProgram;
 
-
     //CONSTRUCTOR
     AssetManager(char **argv, glm::mat4 &P, float &width, float &height)
             : _appPath(argv[0]),
@@ -46,7 +45,6 @@ public:
               _staticImageProgram(_appPath),
               _waterProgram(_appPath),
               _textProgram(_appPath)
-
               {};
 
     //GETTERS
@@ -56,10 +54,6 @@ public:
     inline float getHeight(){ return _height; };
 
     inline LightProgram getMultiLightsProgram(){ return _lightProgram; }
-    inline StaticImageProgram staticImageProgram(){ return _staticImageProgram; }
-    inline SkyboxProgram getSkyboxProgram(){ return _skyboxProgram; }
-    inline TextProgram getTextProgram(){ return _textProgram; }
-
 
     //Singleton
     static void Create(char **argv, glm::mat4 &P, float &width, float &height)
