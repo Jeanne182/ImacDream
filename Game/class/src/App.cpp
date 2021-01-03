@@ -44,7 +44,7 @@ void App::event(const SDL_Event &e) {
                 _layout = LAYOUT_GAME_OVER;
                 _texts.getText("eggs")->replace("Dragon eggs : " + std::to_string(0));
             }
-
+            break;
 
         case LAYOUT_GAME_OVER:
             switch(e.type){

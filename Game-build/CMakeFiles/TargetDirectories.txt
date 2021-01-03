@@ -1,6 +1,15 @@
+<<<<<<< HEAD
 /home/jeanne/Documents/S3/ImacDream/Game-build/CMakeFiles/rebuild_cache.dir
 /home/jeanne/Documents/S3/ImacDream/Game-build/CMakeFiles/edit_cache.dir
 /home/jeanne/Documents/S3/ImacDream/Game-build/CMakeFiles/IMACDream.dir
 /home/jeanne/Documents/S3/ImacDream/Game-build/glimac/CMakeFiles/rebuild_cache.dir
 /home/jeanne/Documents/S3/ImacDream/Game-build/glimac/CMakeFiles/edit_cache.dir
 /home/jeanne/Documents/S3/ImacDream/Game-build/glimac/CMakeFiles/glimac.dir
+=======
+/home/matteo/Documents/imac2/openGL/ImacDream/Game-build/CMakeFiles/rebuild_cache.dir
+/home/matteo/Documents/imac2/openGL/ImacDream/Game-build/CMakeFiles/edit_cache.dir
+/home/matteo/Documents/imac2/openGL/ImacDream/Game-build/CMakeFiles/IMACDream.dir
+/home/matteo/Documents/imac2/openGL/ImacDream/Game-build/glimac/CMakeFiles/rebuild_cache.dir
+/home/matteo/Documents/imac2/openGL/ImacDream/Game-build/glimac/CMakeFiles/edit_cache.dir
+/home/matteo/Documents/imac2/openGL/ImacDream/Game-build/glimac/CMakeFiles/glimac.dir
+>>>>>>> Camerafix

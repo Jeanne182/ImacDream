@@ -58,6 +58,7 @@ void Camera::event(const SDL_Event &e, std::map<const std::string, bool> &movePo
             break;
 
         case SDL_MOUSEMOTION:
+
             xDelta = e.motion.xrel - _xOld;
             yDelta = e.motion.yrel - _yOld;
             _xOld =  e.motion.xrel;
