@@ -7,7 +7,6 @@ void Game::event(const SDL_Event &e) {
     _camera.event(e, _move);
     ResetMove();
     _pointLight.event(e);
-    _map->event(e,_camera.getViewMatrix());
 }
 
 void Game::update() {

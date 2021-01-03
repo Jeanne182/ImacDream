@@ -20,17 +20,6 @@ void MapManager::display(const glm::mat4 &cameraView) {
 
 }
 
-void MapManager::event(const SDL_Event &e, const glm::mat4 &cameraView) {
-    switch(e.type){
-        case SDL_KEYDOWN:
-            if (e.key.keysym.sym==SDLK_e){
-
-
-            }
-
-            break;
-    }
-}
 
 
 

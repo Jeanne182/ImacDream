@@ -14,19 +14,9 @@ namespace glimac {
 
     void Mesh::Draw() const{
 
-        GLuint diffuseNr = 1;
-        GLuint specularNr = 1;
         for (GLuint i = 0; i < _textures.size(); i++) {
             glActiveTexture(GL_TEXTURE0 + i); // activate proper texture unit before binding
-            // retrieve texture number (the N in diffuse_textureN)
-            std::string number;
-            std::string name = _textures[i].type;
 
-//            if (name == "texture_diffuse") {
-//                number = std::to_string(diffuseNr++);
-//            }
-//            else if (name == "texture_specular")
-//                number = std::to_string(specularNr++);
             glUniform1i(AssetManager::Get()->_lightProgram.Texture_Location(), i);
 
             glBindTexture(GL_TEXTURE_2D, _textures[i].id);

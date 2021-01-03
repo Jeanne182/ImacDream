@@ -5,6 +5,7 @@
 #include <glimac/SDLWindowManager.hpp>
 #include <iostream>
 #include <time.h>
+#include "./Music.hpp"
 
 class Light
 {
@@ -18,12 +19,12 @@ private:
     glm::vec3 _intensity;
     clock_t _time = clock();
     clock_t _elapsed = clock();
-
+    Music _soundLight;
 public:
     int _LIGHT_ON_TIMING = 10;
     int _LIGHT_OFF_TIMING = 20;
     inline Light():
-            _lightOn(true), _shininess(10.f), _position(glm::vec4(0.f, 1.f, 0.f, 0.f)), _intensity(glm::vec3(_LIGHT_OFF_INTENSITY)) {
+            _lightOn(true), _shininess(10.f), _position(glm::vec4(0.f, 1.f, 0.f, 0.f)), _intensity(glm::vec3(_LIGHT_OFF_INTENSITY)),  _soundLight("light") {
         setIntensity();
     };
     ~Light()=default;

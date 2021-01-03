@@ -43,10 +43,13 @@ int main(int argc, char** argv) {
 
     // Application loop:
     bool done = false;
+    const int FPS = 30;
+    Uint32 start;
     while(!done) {
 
         //EVENTS
         SDL_Event e;
+        start = SDL_GetTicks();
         while(windowManager.pollEvent(e)) {
             app.event(e);
             switch(e.type) {
@@ -57,7 +60,8 @@ int main(int argc, char** argv) {
                     if (e.key.keysym.sym==SDLK_ESCAPE) {done = true;}
                     break;
                 case SDL_MOUSEMOTION:
-//                    SDL_WarpMouseInWindow(windowManager._window,1080/2,720/2);
+
+                    SDL_WarpMouseInWindow(windowManager._window,1080/2,720/2);
                     break;
             }
         }
@@ -65,7 +69,8 @@ int main(int argc, char** argv) {
 
         app.draw();
         windowManager.swapBuffers();
-        SDL_Delay(30);
+        if(1000/FPS>SDL_GetTicks()-start)
+            SDL_Delay(1000/FPS- (SDL_GetTicks()-start));
     }
     app.Delete();
     return EXIT_SUCCESS;

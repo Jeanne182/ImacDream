@@ -38,14 +38,15 @@ public:
     //CONSTRUCTOR
     AssetManager(char **argv, glm::mat4 &P, float &width, float &height)
             : _appPath(argv[0]),
+              _P(P),
+              _width(width),
+              _height(height),
               _lightProgram(_appPath),
               _skyboxProgram(_appPath),
               _staticImageProgram(_appPath),
               _waterProgram(_appPath),
-              _P(P),
-              _textProgram(_appPath),
-              _width(width),
-              _height(height)
+              _textProgram(_appPath)
+
               {};
 
     //GETTERS
