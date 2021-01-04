@@ -20,7 +20,7 @@ include_directories(${SDL2_INCLUDE_DIR} ${OPENGL_INCLUDE_DIR} ${GLEW_INCLUDE_DIR
 set(ALL_LIBRARIES glimac ${SDL2_LIBRARIES} ${OPENGL_LIBRARIES} ${SDL2_MIXER_LIBRARIES} ${GLEW_LIBRARY} ${FREETYPE_LIBRARIES} assimp)
 
 add_subdirectory(glimac)
-add_compile_options( -Wall -W)
+add_compile_options( -Wall -W -Werror)
 
 file(COPY Assets DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
 file(GLOB HEADER_FILES ${CMAKE_SOURCE_DIR}/class/include/*.hpp)

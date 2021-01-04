@@ -14,6 +14,8 @@ using namespace glimac;
 
 
 int main(int argc, char** argv) {
+
+    (void)argc;
     // Initialize SDL and open a window
     float WINDOW_WIDTH = 1080.f;
     float WINDOW_HEIGHT = 720.f;
