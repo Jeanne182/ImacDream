@@ -61,7 +61,7 @@ int main(int argc, char** argv) {
                     break;
                 case SDL_MOUSEMOTION:
                     ///COMMENT THIS LINE ON A VIRTUAL MACHINE
-                    //SDL_WarpMouseInWindow(windowManager._window,1080/2,720/2);
+                    SDL_WarpMouseInWindow(windowManager._window,1080/2,720/2);
                     break;
             }
         }
