@@ -15,7 +15,7 @@ void MapManager::display(const glm::mat4 &cameraView) {
 
     _water.computeMatrix(cameraView);
     _water.useMatrix();
-    _water.displayWater();
+    _water.display();
     glDisable(GL_BLEND);
 
 }

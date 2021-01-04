@@ -11,8 +11,8 @@ class Light
 {
 
 private:
-    float _LIGHT_ON_INTENSITY = 5.f;
-    float _LIGHT_OFF_INTENSITY = 2.f;
+    static constexpr float _LIGHT_ON_INTENSITY = 5.f;
+    static constexpr float _LIGHT_OFF_INTENSITY = 2.f;
     bool _lightOn;
     float _shininess;
     glm::vec4 _position;
@@ -21,8 +21,8 @@ private:
     clock_t _elapsed = clock();
     Music _soundLight;
 public:
-    int _LIGHT_ON_TIMING = 10;
-    int _LIGHT_OFF_TIMING = 10;
+    static constexpr int _LIGHT_ON_TIMING = 10;
+    static constexpr int _LIGHT_OFF_TIMING = 10;
     inline Light():
             _lightOn(true), _shininess(10.f), _position(glm::vec4(0.f, 1.f, 0.f, 0.f)), _intensity(glm::vec3(_LIGHT_OFF_INTENSITY)),  _soundLight("light") {
         setIntensity();

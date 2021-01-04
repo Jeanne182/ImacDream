@@ -12,7 +12,7 @@
 class Game {
 private:
     int _score;
-    int _scoreMax = 2;
+    static constexpr int _scoreMax = 5;
     MapManager *_map;
     Light _pointLight;
     Camera _camera;

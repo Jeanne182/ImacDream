@@ -60,7 +60,7 @@ int main(int argc, char** argv) {
                     if (e.key.keysym.sym==SDLK_ESCAPE) {done = true;}
                     break;
                 case SDL_MOUSEMOTION:
-                    //COMMENT THIS LINE ON A VIRTUAL MACHINE
+                    ///COMMENT THIS LINE ON A VIRTUAL MACHINE
                     //SDL_WarpMouseInWindow(windowManager._window,1080/2,720/2);
                     break;
             }

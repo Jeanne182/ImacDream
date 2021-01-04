@@ -75,14 +75,11 @@ void GameObject::deleteBuffers() {
 }
 
 
-
-
 void GameObject::setCenter(){
     glm::vec3 max = findMax();
     glm::vec3 min = findMin();
     _center=(max+min)/glm::vec3(2., 2., 2.);
 }
-
 
 
 void GameObject::setHitboxRadius(){

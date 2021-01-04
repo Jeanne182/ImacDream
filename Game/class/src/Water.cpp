@@ -11,7 +11,7 @@ Water::Water():GameObject(
                 glm::vec3(0, 0, 0))
                 {}
 
-void Water::displayWater() {
+void Water::display() {
     glUniform3fv(AssetManager::Get()->_waterProgram.Ambiant_Location(), 1, glm::value_ptr(_model->_meshes[0]._materials.Ka));
     glUniform3fv(AssetManager::Get()->_waterProgram.Diffuse_Location(), 1, glm::value_ptr(_model->_meshes[0]._materials.Kd));
     glUniform3fv(AssetManager::Get()->_waterProgram.Specular_Location(), 1, glm::value_ptr(_model->_meshes[0]._materials.Ks));

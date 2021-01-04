@@ -42,7 +42,7 @@ StaticImage *StaticImageManager::getStaticImage(const std::string &imageName) co
     return (StaticImage *)_images.find(imageName)->second;
 }
 
-void StaticImageManager::moveImage(const std::string &filename, const float &x, const float &y, const float &scale) {
+void StaticImageManager::moveImage(const std::string &filename, const float &x, const float &y, const float &scale) const {
     StaticImage *img = getStaticImage(filename);
     img->_x = x;
     img->_y = y;
@@ -52,7 +52,7 @@ void StaticImageManager::moveImage(const std::string &filename, const float &x, 
 
 void StaticImageManager::addImage(const std::string &filename, const float &x, const float &y, const float &scale) {
 
-    StaticImage *img = new StaticImage;
+    auto *img = new StaticImage;
 
     // Load Image
     img->_filename = filename;
@@ -81,15 +81,15 @@ void StaticImageManager::addImage(const std::string &filename, const float &x, c
     glBindTexture(GL_TEXTURE_2D, 0);
 
     // Setup the Square, and update the IBO
-    setupImage(filename, img);
+    setupImage(img);
 }
 
-void StaticImageManager::setupImage(const std::string &filename, StaticImage *img) {
+void StaticImageManager::setupImage(StaticImage *img) {
     // Create the matching square
-    img->_vertices.push_back(Vertex2DUV(glm::vec2(0.5f * 720.f/1080.f, 0.5f), glm::vec2(1.0f, 1.f))); //RATIO TO CHANGE
-    img->_vertices.push_back(Vertex2DUV(glm::vec2(-0.5f * 720.f/1080.f, 0.5f), glm::vec2(0.0f, 1.f)));
-    img->_vertices.push_back(Vertex2DUV(glm::vec2(0.5f * 720.f/1080.f, -0.5f), glm::vec2(1.0f, 0.f)));
-    img->_vertices.push_back(Vertex2DUV(glm::vec2(-0.5f * 720.f/1080.f, -0.5f), glm::vec2(0.0f, 0.f)));
+    img->_vertices.emplace_back(glm::vec2(0.5f * 720.f/1080.f, 0.5f), glm::vec2(1.0f, 1.f)); //RATIO TO CHANGE
+    img->_vertices.emplace_back(glm::vec2(-0.5f * 720.f/1080.f, 0.5f), glm::vec2(0.0f, 1.f));
+    img->_vertices.emplace_back(glm::vec2(0.5f * 720.f/1080.f, -0.5f), glm::vec2(1.0f, 0.f));
+    img->_vertices.emplace_back(glm::vec2(-0.5f * 720.f/1080.f, -0.5f), glm::vec2(0.0f, 0.f));
 
     // Create the matrix
     float ratio = float(img->_imgPtr->getHeight()) / float(img->_imgPtr->getWidth());
@@ -142,7 +142,7 @@ void StaticImageManager::displayImage(const std::string &imageName) const {
 
     // DRAWING
     glBindVertexArray(_vao);
-    glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
+    glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, nullptr);
     glBindVertexArray(0);
 
     glBindTexture(GL_TEXTURE_2D, 0);
@@ -154,18 +154,7 @@ void StaticImageManager::setScale(const std::string &imageName, const float &sca
     computeMatrix(img);
 }
 
-void StaticImageManager::setTranslation(const std::string &imageName, const float x, const float y) const {
-    StaticImage *img = getStaticImage(imageName);
-    img->_x = x;
-    img->_y = y;
-    computeMatrix(img);
-}
-
-void StaticImageManager::computeMatrix(const std::string &imageName) const {
-    computeMatrix(getStaticImage(imageName));
-}
-
-void StaticImageManager::computeMatrix(StaticImage *img) const {
+void StaticImageManager::computeMatrix(StaticImage *img) {
     glm::mat3 T = glm::mat3(
             glm::vec3(1, 0, 0),
             glm::vec3(0, 1, 0),

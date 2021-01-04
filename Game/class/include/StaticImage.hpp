@@ -36,14 +36,12 @@ public:
     ~StaticImageManager();
     StaticImage* getStaticImage(const std::string &imageName) const;
     void addImage(const std::string &filename, const float &x, const float &y, const float &scale);
-    void setupImage(const std::string &filename, StaticImage *img);
-    void moveImage(const std::string &filename, const float &x, const float &y, const float &scale);
+    void setupImage(StaticImage *img);
+    void moveImage(const std::string &filename, const float &x, const float &y, const float &scale) const;
     void sendVertexBuffer() const;
     void displayImage(const std::string &imageName) const;
     void setScale(const std::string &imageName, const float &scale) const;
-    void setTranslation(const std::string &imageName, const float x, const float y) const;
-    void computeMatrix(const std::string &imageName) const;
-    void computeMatrix(StaticImage *img) const;
+    static void computeMatrix(StaticImage *img) ;
 };
 
 

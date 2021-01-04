@@ -126,7 +126,7 @@ void Terrain::randomize(std::vector<glm::vec3> &randomPositions, std::vector<std
     auto typeId = std::bind(typeDistrib, generator);
 
     for (int i = 0; i < nbCopies; i++){
-        randomPositions.emplace_back(positionsDistrib(generator), -2.5f, positionsDistrib(generator));
+        randomPositions.emplace_back(positionsDistrib(generator), -.5f, positionsDistrib(generator));
         randomTypes.push_back(types[typeId()]);
         if(randomTypes[i]=="menhir") _nbMenhirs++;
         randomCenterRadius.emplace_back(glm::vec3(randomPositions[i]+_objects.find(randomTypes[i])->second.getCenter()), _objects.find(randomTypes[i])->second.getHitboxRadius());
@@ -182,7 +182,7 @@ std::vector<std::pair<glm::vec3, float>> Terrain::getMenhirsCenters(){
 
 
 void Terrain::clearVectors(){
-    for(int i=0; i<_modelsLoadedPositions.size(); i++){
+    for(uint i=0; i<_modelsLoadedPositions.size(); i++){
         _modelsLoadedPositions.clear();
         _modelsLoadedCenterRadius.clear();
         _modelsLoadedTypes.clear();

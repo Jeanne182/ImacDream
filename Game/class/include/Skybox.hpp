@@ -8,7 +8,7 @@ public:
     Skybox():Mesh(loadSkybox()._meshes[0]){};
     ~Skybox();
 
-    Model loadSkybox();
+    static Model loadSkybox();
     void DrawSky() const;
     void computeMatrix(const glm::mat4 &cameraView);
     void useMatrix() const;

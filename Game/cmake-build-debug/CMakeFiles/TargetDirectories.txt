@@ -1,6 +1,0 @@
-/home/fanny/ImacDream/Game/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/fanny/ImacDream/Game/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/fanny/ImacDream/Game/cmake-build-debug/CMakeFiles/IMACDream.dir
-/home/fanny/ImacDream/Game/cmake-build-debug/glimac/CMakeFiles/rebuild_cache.dir
-/home/fanny/ImacDream/Game/cmake-build-debug/glimac/CMakeFiles/edit_cache.dir
-/home/fanny/ImacDream/Game/cmake-build-debug/glimac/CMakeFiles/glimac.dir

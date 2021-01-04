@@ -9,14 +9,14 @@ namespace glimac {
         loadModel(path);
     }
     void Model::deleteBuffers(){
-        for(unsigned int i = 0; i < _meshes.size(); i++) {
-            _meshes[i].deleteBuffers();
+        for(auto & _meshe : _meshes) {
+            _meshe.deleteBuffers();
         }
     }
     void Model::Draw()
     {
-        for(unsigned int i = 0; i < _meshes.size(); i++)
-            _meshes[i].Draw();
+        for(auto & _meshe : _meshes)
+            _meshe.Draw();
     }
 
     void Model::loadModel(std::string const &path)

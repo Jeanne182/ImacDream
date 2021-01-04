@@ -5,12 +5,11 @@
 
 class Water : public GameObject {
 private:
-    float _waveTime = 0.f;
-    float _waveSpeed = 1.f;
+    static constexpr float _waveSpeed = 1.f;
 public:
     Water();
     ~Water()=default;
-    void displayWater();
+    void display();
     void useMatrix();
 };
 

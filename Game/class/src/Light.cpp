@@ -1,6 +1,6 @@
 #include "../include/Light.hpp"
 #include "../include/AssetsManager.hpp"
-#include <stdio.h>
+#include <cstdio>
 
 
 void Light::event(const SDL_Event &e) {
@@ -21,6 +21,7 @@ void Light::event(const SDL_Event &e) {
             break;
     }
 }
+
 void Light::setIntensity(){
     if(_lightOn) {
         _intensity = glm::vec3(_LIGHT_ON_INTENSITY);
@@ -31,7 +32,7 @@ void Light::setIntensity(){
 }
 
 void Light::updateTime() {
-    double elapsed = ((int)clock() - _time) / CLOCKS_PER_SEC;
+    double elapsed = ((double)clock() - _time) / CLOCKS_PER_SEC;
     if (elapsed != _elapsed ){
         _elapsed = elapsed;
     }

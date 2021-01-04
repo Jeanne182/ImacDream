@@ -29,7 +29,6 @@ void Text::renderText(const CharactersManager &characters) {
     glUniform3f(AssetManager::Get()->_textProgram.textColor_Location(),_color.x, _color.y, _color.z);
     glUniformMatrix4fv(AssetManager::Get()->_textProgram.Projection_Location(), 1, GL_FALSE, glm::value_ptr(_projection_matrix));
 
-
     glActiveTexture(GL_TEXTURE0);
     glBindVertexArray(_vao);
     float x =_pos.x;

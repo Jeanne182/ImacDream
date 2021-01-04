@@ -159,7 +159,7 @@ void App::layoutGame() {
     }
     catch (std::exception &e)
     {
-        std::cerr << e.what() << std::endl;
+        std::cerr << "Erreur : " << e.what() << std::endl;
     }
     AssetManager::Get()->_staticImageProgram._program.use();
     _staticImages.sendVertexBuffer();

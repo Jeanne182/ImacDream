@@ -51,7 +51,7 @@ private:
     std::vector<glm::vec3> _randomMushroomsPositions;
     std::vector<std::pair<glm::vec3, float>> _randomMushroomsCenterRadius;
     std::vector<std::string> _randomMushroomsTypes;
-    int _nbMushrooms = 20;
+    int _nbMushrooms = 400;
 
     std::vector<glm::vec3> _randomRockPositions;
     std::vector<std::pair<glm::vec3, float>> _randomRockCenterRadius;
