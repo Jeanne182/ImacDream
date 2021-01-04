@@ -38,7 +38,7 @@ glm::mat4 Camera::getViewMatrix() const{
 }
 
 void Camera::event(const SDL_Event &e, std::map<const std::string, bool> &movePossible) {
-    float speed_mouse = 0.01f;
+    float speed_mouse = 1.5f;
     float speed_scroll = 10.f;
     float xDelta, yDelta;
 
@@ -88,7 +88,7 @@ void Camera::event(const SDL_Event &e, std::map<const std::string, bool> &movePo
 }
 
 void Camera::update(std::map<const std::string, bool> &movePossible) {
-    float speed = 3.f;
+    float speed = 1.5f;
     if (KEY_UP_PRESSED && movePossible["UP"]) moveFront(speed);
     if (KEY_DOWN_PRESSED && movePossible["DOWN"]) moveFront(-speed);
     if (KEY_LEFT_PRESSED && movePossible["LEFT"])  moveLeft(speed);

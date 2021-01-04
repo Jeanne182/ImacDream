@@ -10,7 +10,7 @@ void Game::event(const SDL_Event &e) {
 }
 
 void Game::update() {
-    collisionsManager(3.f);
+    collisionsManager(1.5f);
     _camera.update(_move);
     ResetMove();
     _pointLight.useMatrix(_camera.getViewMatrix());

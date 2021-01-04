@@ -1,7 +1,3 @@
-//
-// Created by matteo on 14/12/2020.
-//
-
 #ifndef IMACDREAM_MESH_HPP
 #define IMACDREAM_MESH_HPP
 

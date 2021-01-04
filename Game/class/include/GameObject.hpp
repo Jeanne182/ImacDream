@@ -9,8 +9,9 @@ using namespace glimac;
 
 class GameObject {
 protected:
-    glm::vec3 _position, _angles;
+    glm::vec3 _position;
     float _scale;
+    glm::vec3 _angles;
     glm::mat4 _M, _MV, _MVP, _N;
     Model *_model;
     float _hitboxRadius;

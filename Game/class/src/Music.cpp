@@ -15,12 +15,7 @@ Music::Music(const std::string &musicName) {
     const char* musicpath = (musicName + ".wav").c_str();
     _music = Mix_LoadWAV((AssetManager::Get()->appPath().dirPath() + "/Assets/music/" + musicpath).c_str()); //Chargement de la musique
 
-
-    if (_music != nullptr)
-        printf("Loaded the file\n");
-    else
-        printf("Mix_LoadMUS: %s\n", Mix_GetError());
-
+    if (_music == nullptr) printf("Mix_LoadMUS: %s\n", Mix_GetError());
 }
 
 void Music::Delete() {

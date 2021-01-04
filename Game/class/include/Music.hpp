@@ -2,6 +2,7 @@
 #define IMACDREAM_MUSIC_H
 #include <SDL2/SDL_mixer.h>
 #include <map>
+#include <string>
 
 class Music {
     public:
